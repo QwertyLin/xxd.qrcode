@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_qrcode_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:visibility="gone"
+    android:background="#ffffff"
+    >
+    
+    <ImageView 
+        android:id="@+id/home_qrcode_img"
+        android:layout_width="160dip"
+        android:layout_height="160dip"
+        android:maxWidth="160dip"
+        android:maxHeight="160dip"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_gravity="center_vertical"
+        />
+    
+    <q.view.RotateTextView 
+        android:id="@+id/home_qrcode_text"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:maxWidth="200dip"
+        android:maxHeight="200dip"
+        android:layout_gravity="center_vertical"
+        android:rotation="-90"
+        />
+
+</LinearLayout>

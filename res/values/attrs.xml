@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="qview">  
+        <!-- <attr name="arg" format="reference(@)|color(#)|boolean(true)|dimension(dip)|float(0.0)|integer|string|fraction(%)" /> -->
+        <!-- <attr name="enum"><enum name="a" value="0" /><enum name="b" value="1" /></attr> -->
+        <attr name="arg_float" format="float" />  
+    </declare-styleable>  
+</resources>
