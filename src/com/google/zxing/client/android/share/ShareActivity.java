@@ -66,20 +66,12 @@ public final class ShareActivity extends Activity {
   private final Button.OnClickListener bookmarkListener = new Button.OnClickListener() {
     @Override
     public void onClick(View v) {
-      Intent intent = new Intent(Intent.ACTION_PICK);
-      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-      intent.setClassName(ShareActivity.this, BookmarkPickerActivity.class.getName());
-      startActivityForResult(intent, PICK_BOOKMARK);
     }
   };
 
   private final Button.OnClickListener appListener = new Button.OnClickListener() {
     @Override
     public void onClick(View v) {
-      Intent intent = new Intent(Intent.ACTION_PICK);
-      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-      intent.setClassName(ShareActivity.this, AppPickerActivity.class.getName());
-      startActivityForResult(intent, PICK_APP);
     }
   };
 

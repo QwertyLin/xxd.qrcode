@@ -56,9 +56,9 @@ public abstract class ResultParser {
       new WifiResultParser(),
       new URLTOResultParser(),
       new URIResultParser(),
-      new ISBNResultParser(),
-      new ProductResultParser(),
-      new ExpandedProductResultParser(),
+      //new ISBNResultParser(),
+      //new ProductResultParser(),
+      //new ExpandedProductResultParser(),
   };
 
   private static final Pattern DIGITS = Pattern.compile("\\d*");

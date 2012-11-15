@@ -25,13 +25,13 @@ import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.google.zxing.client.android.PreferencesActivity;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import q.util.QConfig;
 
 /**
  * A class which deals with reading, parsing, and setting the camera parameters which are used to
@@ -97,8 +97,8 @@ final class CameraConfigurationManager {
     initializeTorch(parameters, prefs);
 
     String focusMode = null;
-    if (prefs.getBoolean(PreferencesActivity.KEY_AUTO_FOCUS, true)) {
-      if (safeMode || prefs.getBoolean(PreferencesActivity.KEY_DISABLE_CONTINUOUS_FOCUS, false)) {
+    if (QConfig.SETTING_AUTO_FOCUS) {
+      if (safeMode || QConfig.SETTING_DISABLE_CONTINUOUS_FOCUS) {
         focusMode = findSettableValue(parameters.getSupportedFocusModes(),
                                       Camera.Parameters.FOCUS_MODE_AUTO);
       } else {

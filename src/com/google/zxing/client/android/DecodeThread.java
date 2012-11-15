@@ -16,18 +16,12 @@
 
 package com.google.zxing.client.android;
 
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
 
-import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Looper;
-import android.preference.PreferenceManager;
-
-import java.util.Collection;
 import java.util.EnumMap;
-import java.util.EnumSet;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
@@ -46,8 +40,6 @@ final class DecodeThread extends Thread {
   private final CountDownLatch handlerInitLatch;
 
   DecodeThread(CaptureActivity activity,
-               Collection<BarcodeFormat> decodeFormats,
-               String characterSet,
                ResultPointCallback resultPointCallback) {
 
     this.activity = activity;
@@ -56,24 +48,8 @@ final class DecodeThread extends Thread {
     hints = new EnumMap<DecodeHintType,Object>(DecodeHintType.class);
 
     // The prefs can't change while the thread is running, so pick them up once here.
-    if (decodeFormats == null || decodeFormats.isEmpty()) {
-      SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-      decodeFormats = EnumSet.noneOf(BarcodeFormat.class);
-      if (prefs.getBoolean(PreferencesActivity.KEY_DECODE_1D, false)) {
-        decodeFormats.addAll(DecodeFormatManager.ONE_D_FORMATS);
-      }
-      if (prefs.getBoolean(PreferencesActivity.KEY_DECODE_QR, false)) {
-        decodeFormats.addAll(DecodeFormatManager.QR_CODE_FORMATS);
-      }
-      if (prefs.getBoolean(PreferencesActivity.KEY_DECODE_DATA_MATRIX, false)) {
-        decodeFormats.addAll(DecodeFormatManager.DATA_MATRIX_FORMATS);
-      }
-    }
-    hints.put(DecodeHintType.POSSIBLE_FORMATS, decodeFormats);
+    //hints.put(DecodeHintType.POSSIBLE_FORMATS, DecodeFormatManager.QR_CODE_FORMATS);
 
-    if (characterSet != null) {
-      hints.put(DecodeHintType.CHARACTER_SET, characterSet);
-    }
     hints.put(DecodeHintType.NEED_RESULT_POINT_CALLBACK, resultPointCallback);
   }
 

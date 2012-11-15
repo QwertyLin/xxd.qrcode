@@ -49,12 +49,6 @@ public final class StringUtils {
    *  default encoding if none of these can possibly be correct
    */
   public static String guessEncoding(byte[] bytes, Map<DecodeHintType,?> hints) {
-    if (hints != null) {
-      String characterSet = (String) hints.get(DecodeHintType.CHARACTER_SET);
-      if (characterSet != null) {
-        return characterSet;
-      }
-    }
     // For now, merely tries to distinguish ISO-8859-1, UTF-8 and Shift_JIS,
     // which should be by far the most common encodings.
     int length = bytes.length;

@@ -42,7 +42,7 @@ public enum DecodeHintType {
    * Image is known to be of one of a few possible formats.
    * Maps to a {@link java.util.List} of {@link BarcodeFormat}s.
    */
-  POSSIBLE_FORMATS,
+  //POSSIBLE_FORMATS,
 
   /**
    * Spend more time to try to find a barcode; optimize for accuracy, not speed.
@@ -53,7 +53,7 @@ public enum DecodeHintType {
   /**
    * Specifies what character encoding to use when decoding, where applicable (type String)
    */
-  CHARACTER_SET,
+  //CHARACTER_SET,
 
   /**
    * Allowed lengths of encoded data -- reject anything else. Maps to an int[].

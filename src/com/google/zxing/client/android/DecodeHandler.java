@@ -36,6 +36,8 @@ import android.util.Log;
 
 import java.util.Map;
 
+import q.util.QLog;
+
 final class DecodeHandler extends Handler {
 
   private static final String TAG = DecodeHandler.class.getSimpleName();
@@ -75,6 +77,7 @@ final class DecodeHandler extends Handler {
    * @param height The height of the preview frame.
    */
   private void decode(byte[] data, int width, int height) {
+	  QLog.log(this, "decode");
     long start = System.currentTimeMillis();
     Result rawResult = null;
     PlanarYUVLuminanceSource source = activity.getCameraManager().buildLuminanceSource(data, width, height);

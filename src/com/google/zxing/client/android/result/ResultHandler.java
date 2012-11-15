@@ -20,10 +20,7 @@ import cn.xxd.qr.R;
 
 import com.google.zxing.Result;
 import com.google.zxing.client.android.Contents;
-import com.google.zxing.client.android.Intents;
 import com.google.zxing.client.android.LocaleManager;
-import com.google.zxing.client.android.PreferencesActivity;
-import com.google.zxing.client.android.book.SearchBookContentsActivity;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ParsedResultType;
 import com.google.zxing.client.result.ResultParser;
@@ -34,16 +31,15 @@ import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
 import android.util.Log;
-import android.view.View;
 
 import java.util.Collection;
 import java.util.Locale;
+
+import q.util.QConfig;
 
 /**
  * A base class for the Android-specific barcode handlers. These allow the app to polymorphically
@@ -117,8 +113,8 @@ public abstract class ResultHandler {
 
     // Make sure the Shopper button is hidden by default. Without this, scanning a product followed
     // by a QR Code would leave the button on screen among the QR Code actions.
-    View shopperButton = activity.findViewById(R.id.shopper_button);
-    shopperButton.setVisibility(View.GONE);
+    /*View shopperButton = activity.findViewById(R.id.shopper_button);
+    shopperButton.setVisibility(View.GONE);*/
   }
 
   public ParsedResult getResult() {
@@ -164,17 +160,6 @@ public abstract class ResultHandler {
    */
   public boolean areContentsSecure() {
     return false;
-  }
-
-  /**
-   * The Google Shopper button is special and is not handled by the abstract button methods above.
-   *
-   * @param listener The on click listener to install for this button.
-   */
-  void showGoogleShopperButton(View.OnClickListener listener) {
-    View shopperButton = activity.findViewById(R.id.shopper_button);
-    shopperButton.setVisibility(View.VISIBLE);
-    shopperButton.setOnClickListener(listener);
   }
 
   /**
@@ -394,24 +379,17 @@ public abstract class ResultHandler {
   }
 
   // Uses the mobile-specific version of Product Search, which is formatted for small screens.
-  final void openProductSearch(String upc) {
+  /*final void openProductSearch(String upc) {
     Uri uri = Uri.parse("http://www.google." + LocaleManager.getProductSearchCountryTLD(activity) +
         "/m/products?q=" + upc + "&source=zxing");
     launchIntent(new Intent(Intent.ACTION_VIEW, uri));
-  }
+  }*/
 
-  final void openBookSearch(String isbn) {
+  /*final void openBookSearch(String isbn) {
     Uri uri = Uri.parse("http://books.google." + LocaleManager.getBookSearchCountryTLD(activity) +
         "/books?vid=isbn" + isbn);
     launchIntent(new Intent(Intent.ACTION_VIEW, uri));
-  }
-
-  final void searchBookContents(String isbnOrUrl) {
-    Intent intent = new Intent(Intents.SearchBookContents.ACTION);
-    intent.setClassName(activity, SearchBookContentsActivity.class.getName());
-    putExtra(intent, Intents.SearchBookContents.ISBN, isbnOrUrl);
-    launchIntent(intent);
-  }
+  }*/
 
   final void openURL(String url) {
     // Strangely, some Android browsers don't seem to register to handle HTTP:// or HTTPS://.
@@ -497,9 +475,7 @@ public abstract class ResultHandler {
   }
 
   private String parseCustomSearchURL() {
-    SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-    String customProductSearch = prefs.getString(PreferencesActivity.KEY_CUSTOM_PRODUCT_SEARCH,
-        null);
+    String customProductSearch = QConfig.SETTING_CUSTOM_PRODUCT_SEARCH;
     if (customProductSearch != null && customProductSearch.trim().length() == 0) {
       return null;
     }

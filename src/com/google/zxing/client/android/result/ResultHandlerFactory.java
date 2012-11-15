@@ -37,8 +37,8 @@ public final class ResultHandlerFactory {
         return new AddressBookResultHandler(activity, result);
       case EMAIL_ADDRESS:
         return new EmailAddressResultHandler(activity, result);
-      case PRODUCT:
-        return new ProductResultHandler(activity, result, rawResult);
+      /*case PRODUCT:
+        return new ProductResultHandler(activity, result, rawResult);*/
       case URI:
         return new URIResultHandler(activity, result);
       case WIFI:
@@ -51,8 +51,8 @@ public final class ResultHandlerFactory {
         return new SMSResultHandler(activity, result);
       case CALENDAR:
         return new CalendarResultHandler(activity, result);
-      case ISBN:
-        return new ISBNResultHandler(activity, result, rawResult);
+      /*case ISBN:
+        return new ISBNResultHandler(activity, result, rawResult);*/
       default:
         return new TextResultHandler(activity, result, rawResult);
     }
