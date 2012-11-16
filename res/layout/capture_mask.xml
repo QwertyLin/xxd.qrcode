@@ -13,11 +13,11 @@
        android:orientation="vertical"
        >
        <q.view.RotateImageButton 
-           android:id="@+id/home_setting"
+           android:id="@+id/capture_setting"
            android:layout_width="@dimen/base_footer_height"
            android:layout_height="@dimen/base_footer_height"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_action_settings"
+           android:src="@drawable/a_action_settings_x"
            qview:arg_float="-90"
            />
        <View 
@@ -26,11 +26,11 @@
            android:layout_weight="1"
            />
        <q.view.RotateImageButton 
-           android:id="@+id/home_flash"
+           android:id="@+id/capture_flash"
            android:layout_width="@dimen/base_footer_height"
            android:layout_height="@dimen/base_footer_height"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_device_access_flash_off"
+           android:src="@drawable/a_device_access_flash_off_x"
            qview:arg_float="-90"
            />
        <View 
@@ -39,11 +39,11 @@
            android:layout_weight="1"
            />
        <q.view.RotateImageButton 
-           android:id="@+id/home_favorite"
+           android:id="@+id/capture_favorite"
            android:layout_width="@dimen/base_footer_height"
            android:layout_height="@dimen/base_footer_height"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_collections_view_as_list"
+           android:src="@drawable/a_collections_view_as_list_x"
            qview:arg_float="-90"
            />
    </LinearLayout>

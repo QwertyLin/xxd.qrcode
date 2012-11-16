@@ -14,7 +14,6 @@ public class QrCode implements ISqlite, Serializable {
 	private String text;
 	private long time;
 	private String timeStr;
-	private boolean isFavorite;
 	
 	public long getId() {
 		return id;
@@ -40,11 +39,26 @@ public class QrCode implements ISqlite, Serializable {
 		}
 		return timeStr;
 	}
-	public boolean isFavorite() {
-		return isFavorite;
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
 	}
-	public void setFavorite(boolean isFavorite) {
-		this.isFavorite = isFavorite;
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		QrCode other = (QrCode) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 	
 	

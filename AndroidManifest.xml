@@ -61,7 +61,7 @@
       </activity>
                
       <activity android:name=".QrCodeA" android:screenOrientation="portrait"  />
-      <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
+      <activity android:name=".FavoriteA" android:screenOrientation="portrait"  />
             
     <activity android:name="com.google.zxing.client.android.CaptureActivity"
               android:screenOrientation="landscape"

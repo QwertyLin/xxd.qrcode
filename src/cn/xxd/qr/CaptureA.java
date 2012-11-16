@@ -37,8 +37,9 @@ public class CaptureA implements OnClickListener {
 
 	public void onCreate(){
 		//
-		mAct.findViewById(R.id.home_setting).setOnClickListener(this);
-		btnFlash = (ImageButton)mAct.findViewById(R.id.home_flash);
+		mAct.findViewById(R.id.capture_favorite).setOnClickListener(this);
+		mAct.findViewById(R.id.capture_setting).setOnClickListener(this);
+		btnFlash = (ImageButton)mAct.findViewById(R.id.capture_flash);
 		btnFlash.setOnClickListener(this);
 		//
 	}
@@ -46,11 +47,14 @@ public class CaptureA implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
-		case R.id.home_flash:
-			onClickFlash();
+		case R.id.capture_favorite:
+			mAct.startActivity(new Intent(mAct, FavoriteA.class));
 			break;
-		case R.id.home_setting:
+		case R.id.capture_setting:
 			mAct.startActivity(new Intent(mAct, PreferencesActivity.class));
+			break;
+		case R.id.capture_flash:
+			onClickFlash();
 			break;
 		}
 	}
@@ -60,9 +64,9 @@ public class CaptureA implements OnClickListener {
 	private void onClickFlash(){
 		isFlashOn = !isFlashOn;
 		if(isFlashOn){
-			btnFlash.setImageResource(R.drawable.a_device_access_flash_on);
+			btnFlash.setImageResource(R.drawable.a_device_access_flash_on_x);
 		}else{
-			btnFlash.setImageResource(R.drawable.a_device_access_flash_off);
+			btnFlash.setImageResource(R.drawable.a_device_access_flash_off_x);
 		}
 		mCameraMgr.setTorch(isFlashOn);
 	}

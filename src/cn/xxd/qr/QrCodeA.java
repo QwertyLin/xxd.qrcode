@@ -5,7 +5,7 @@ import java.util.EnumMap;
 import java.util.Map;
 
 import cn.xxd.qr.bean.QrCode;
-import cn.xxd.qr.bean.QrCodeDb;
+import cn.xxd.qr.bean.FavoriteDb;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -24,8 +24,10 @@ import q.util.FileMgr;
 import q.util.QConfig;
 import q.util.QUI;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,6 +40,7 @@ import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,24 +48,52 @@ import android.widget.Toast;
 public class QrCodeA extends Activity implements OnClickListener {
 	
 	public static final String EXTRA_QRCODE = "qrcode";
-	public static final String EXTRA_FROM_SCAN = "scan", EXTRA_FROM_HISTORY = "history";
+	public static final String EXTRA_FROM_SCAN = "scan", EXTRA_FROM_FAVORITE = "favorite";
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
+	private boolean isFromScan;
 	private ImageView ivImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.qrcode);
-		QUI.baseHeaderBackDelete(this, "");
-		//
 		//ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, RESULT);
+		//
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
 		//
-		initImage(intent);
-		addToHistory();
+		isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
+		QUI.baseHeaderBackSaveOrDelete(this, "", isFromScan, new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				if(!isFromScan){
+					new AlertDialog.Builder(QrCodeA.this)
+					.setMessage("确定删除？")
+					.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							if(FavoriteA.DATAS != null){
+								FavoriteA.DATAS.remove(qrcode);
+							}
+							finish();
+						}
+					})
+					.setNegativeButton("取消", null)
+					.show();
+				}else{
+					v.setVisibility(View.GONE);
+					Toast.makeText(QrCodeA.this, "已添加到收藏", Toast.LENGTH_SHORT).show();
+					FavoriteDb db = new FavoriteDb(QrCodeA.this);
+					db.open(true);
+					db.insert(qrcode);
+					db.close();
+				}
+			}
+		});
+		//
+		initImage(isFromScan);
 		//
 		ParsedResult result = ResultParser.parseResult(qrcode.getText());
 		System.out.println(result.getType());
@@ -71,7 +102,6 @@ public class QrCodeA extends Activity implements OnClickListener {
 		((TextView)findViewById(R.id.qrcode_text)).setText(qrcode.getText());
 		
 		findViewById(R.id.qrcode_copy).setOnClickListener(this);
-		findViewById(R.id.qrcode_favorite).setOnClickListener(this);
 		switch(result.getType()){
 		case URI:
 			View vWebsie = findViewById(R.id.qrcode_website);
@@ -82,10 +112,10 @@ public class QrCodeA extends Activity implements OnClickListener {
 		//
 	}
 	
-	private void initImage(final Intent intent){
+	private void initImage(final boolean isFromScan){
 		new Thread(){
 			public void run() {
-				if(intent.getBooleanExtra(EXTRA_FROM_SCAN, false)){
+				if(isFromScan){
 					Matrix m = new Matrix();
 					m.setRotate(90);
 					final Bitmap bm = Bitmap.createBitmap(SCAN_BITMAP, 0, 0, SCAN_BITMAP.getWidth(), SCAN_BITMAP.getHeight(), m, false);
@@ -176,22 +206,12 @@ public class QrCodeA extends Activity implements OnClickListener {
 	    }
 	    return null;
 	  }
-	
-	private void addToHistory(){
-		QrCodeDb db = new QrCodeDb(this);
-		db.open(true);
-		db.insert(qrcode);
-		db.close();
-	}
 
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.qrcode_copy:
 			copy(qrcode.getText());
-			break;
-		case R.id.qrcode_favorite:
-			favorite();
 			break;
 		case R.id.qrcode_website:
 			openURL(qrcode.getText());
@@ -205,15 +225,6 @@ public class QrCodeA extends Activity implements OnClickListener {
 		Toast.makeText(this, "已复制到剪贴板", Toast.LENGTH_SHORT).show();
 		ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 		clipboard.setText(text);
-	}
-	
-	private void favorite(){
-		Toast.makeText(this, "已添加到收藏", Toast.LENGTH_SHORT).show();
-		QrCodeDb db = new QrCodeDb(this);
-		db.open(true);
-		qrcode.setFavorite(true);
-		db.update(qrcode);
-		db.close();
 	}
 	
 	private void openURL(String url) {

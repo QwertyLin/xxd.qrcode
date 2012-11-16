@@ -29,8 +29,8 @@ public class MainA extends Activity {
 	     
 		
 		//
-		//startActivity(new Intent(this, CaptureActivity.class));
-		startActivity(new Intent(this, HistoryA.class));
+		startActivity(new Intent(this, CaptureActivity.class));
+		//startActivity(new Intent(this, FavoriteA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
 		finish();
 	}
