@@ -3,10 +3,16 @@ package cn.xxd.qr;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.xxd.qr.bean.QrCode;
+import cn.xxd.qr.bean.QrCodeDb;
+
+import q.util.QUI;
 import q.view.UnderlinePageIndicator;
 
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -17,6 +23,8 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -28,9 +36,12 @@ public class HistoryA extends FragmentActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.history);
+		//
+		QUI.baseHeaderBack(this, "历史记录");
+		//
 		
 		final ViewPager pager = (ViewPager)findViewById(R.id.history_pager);
-		pager.setAdapter(new HistoryPagerAdapter(getSupportFragmentManager()));
+		pager.setAdapter(new HistoryPagerAdapter(getSupportFragmentManager(), this));
 		
 		
 		UnderlinePageIndicator indicator = (UnderlinePageIndicator)findViewById(R.id.history_indicator);
@@ -78,14 +89,30 @@ public class HistoryA extends FragmentActivity {
 }
 
 class HistoryPagerAdapter extends FragmentPagerAdapter {
+	
+	private List<QrCode> datas1, datas2;
 
-	public HistoryPagerAdapter(FragmentManager fm) {
+	public HistoryPagerAdapter(FragmentManager fm, Context ctx) {
 		super(fm);
+		QrCodeDb db = new QrCodeDb(ctx);
+		db.open(false);
+		datas1 = db.queryAll();
+		datas2 = new ArrayList<QrCode>();
+		for(QrCode item : datas1){
+			if(item.isFavorite()){
+				datas2.add(item);
+			}
+		}
+		db.close();
 	}
 
 	@Override
 	public Fragment getItem(int position) {
-		return new HistoryPager(position);
+		if(position == 0){
+			return new HistoryPager(datas1);
+		}else{
+			return new HistoryPager(datas2);
+		}
 	}
 
 	@Override
@@ -97,36 +124,37 @@ class HistoryPagerAdapter extends FragmentPagerAdapter {
 
 class HistoryPager extends Fragment {
 	
-	private int mPosition;
+	private List<QrCode> mDatas;
 	
-	public HistoryPager(int position){
-		mPosition = position;
+	public HistoryPager(List<QrCode> datas){
+		mDatas = datas;
 	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(savedInstanceState != null){
-			mPosition = savedInstanceState.getInt("position");
-		}
 	}
 	
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-		outState.putInt("position", mPosition);
+		outState.putInt("a", 1);
 	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		Activity act = getActivity();
+		final Activity act = getActivity();
 		ListView lv = (ListView)inflater.inflate(R.layout.base_list, null);
-		List<String> datas = new ArrayList<String>();
-		datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");
-		datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");
-		datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");
-		datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");datas.add("a");
-		lv.setAdapter(new HistoryAdapter(act, datas));
+		lv.setAdapter(new HistoryAdapter(act, mDatas));
+		lv.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				startActivity(new Intent(act, QrCodeA.class)
+				.putExtra(QrCodeA.EXTRA_FROM_HISTORY, true)
+				.putExtra(QrCodeA.EXTRA_QRCODE, mDatas.get(position)));
+			}
+		});
 		return lv;
 	}
 }

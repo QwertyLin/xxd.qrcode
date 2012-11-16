@@ -16,6 +16,7 @@
 
 package com.google.zxing.client.android.result;
 
+import android.app.Activity;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.widget.Toast;
@@ -37,10 +38,10 @@ import com.google.zxing.client.result.WifiParsedResult;
  */
 public final class WifiResultHandler extends ResultHandler {
 
-  private final CaptureActivity parent;
+  private final Activity parent;
   private final AsyncTaskExecInterface taskExec;
 
-  public WifiResultHandler(CaptureActivity activity, ParsedResult result) {
+  public WifiResultHandler(Activity activity, ParsedResult result) {
     super(activity, result);
     parent = activity;
     taskExec = new AsyncTaskExecManager().build();
@@ -64,7 +65,7 @@ public final class WifiResultHandler extends ResultHandler {
       WifiManager wifiManager = (WifiManager) getActivity().getSystemService(Context.WIFI_SERVICE);
       Toast.makeText(getActivity(), R.string.wifi_changing_network, Toast.LENGTH_LONG).show();
       taskExec.execute(new WifiConfigManager(wifiManager), wifiResult);
-      parent.restartPreviewAfterDelay(0L);
+      //parent.restartPreviewAfterDelay(0L);//TODO
     }
   }
 

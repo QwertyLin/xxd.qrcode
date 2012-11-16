@@ -2,19 +2,22 @@ package cn.xxd.qr;
 
 import java.util.List;
 
+import cn.xxd.qr.bean.QrCode;
+
 import android.content.Context;
 import android.view.View;
+import android.widget.TextView;
 import q.util.AdapterBase;
 
-public class HistoryAdapter extends AdapterBase<String, HistoryAdapter.Holder> {
+public class HistoryAdapter extends AdapterBase<QrCode, HistoryAdapter.Holder> {
 
-	public HistoryAdapter(Context ctx, List<String> datas) {
+	public HistoryAdapter(Context ctx, List<QrCode> datas) {
 		super(ctx, datas);
-		// TODO Auto-generated constructor stub
 	}
 
 	class Holder {
-		
+		TextView tvText;
+		TextView tvTime;
 	}
 
 	@Override
@@ -24,13 +27,16 @@ public class HistoryAdapter extends AdapterBase<String, HistoryAdapter.Holder> {
 
 	@Override
 	protected Holder getHolder(View v) {
-		return new Holder();
+		Holder h = new Holder();
+		h.tvText = (TextView)v.findViewById(R.id.history_item_text);
+		h.tvTime = (TextView)v.findViewById(R.id.history_item_time);
+		return h;
 	}
 
 	@Override
-	protected void initItem(int position, String data, Holder holder) {
-		// TODO Auto-generated method stub
-		
+	protected void initItem(int position, QrCode data, Holder holder) {
+		holder.tvText.setText(data.getText());
+		holder.tvTime.setText(data.getTimeStr());
 	}
 	
 }

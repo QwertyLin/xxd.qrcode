@@ -210,7 +210,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   public void handleDecode(Result rawResult, Bitmap barcode) {
 	  QLog.log(this, "handleDecode");
     lastResult = rawResult;
-    ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, rawResult);
 
     if (barcode != null) {
       // Then not from history, so beep/vibrate and we have an image to draw on
@@ -218,7 +217,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
       drawResultPoints(barcode, rawResult);
     }
 
-    handleDecodeInternally(rawResult, resultHandler, barcode);
+    handleDecodeInternally(rawResult, barcode);
   }
 
   /**
@@ -244,10 +243,10 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   }
 
   // Put up our own UI for how to handle the decoded contents.
-  private void handleDecodeInternally(Result rawResult, ResultHandler resultHandler, Bitmap barcode) {
+  private void handleDecodeInternally(Result rawResult, Bitmap barcode) {
 	  QLog.log(this, "handleDecodeInternally");
 	  //TODO 
-	  homeA.handleDecode(rawResult, resultHandler, barcode);
+	  homeA.handleDecode(rawResult, barcode);
    /* TextView supplementTextView = (TextView) findViewById(R.id.contents_supplement_text_view);
     supplementTextView.setText("");
     supplementTextView.setOnClickListener(null);
@@ -305,7 +304,6 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private void resetStatusView() {
 	  QLog.log(this, "resetStatusView");
 	  //TODO
-	  homeA.reset();
 	  lastResult = null;
   }
 

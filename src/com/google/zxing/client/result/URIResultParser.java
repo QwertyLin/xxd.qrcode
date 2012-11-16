@@ -46,6 +46,17 @@ public final class URIResultParser extends ResultParser {
     rawText = rawText.trim();
     return isBasicallyValidURI(rawText) ? new URIParsedResult(rawText, null) : null;
   }
+  
+  public URIParsedResult parse(String text) {
+	    String rawText = getMassagedText(text);
+	    // We specifically handle the odd "URL" scheme here for simplicity and add "URI" for fun
+	    // Assume anything starting this way really means to be a URI
+	    if (rawText.startsWith("URL:") || rawText.startsWith("URI:")) {
+	      return new URIParsedResult(rawText.substring(4).trim(), null);
+	    }
+	    rawText = rawText.trim();
+	    return isBasicallyValidURI(rawText) ? new URIParsedResult(rawText, null) : null;
+	  }
 
   static boolean isBasicallyValidURI(CharSequence uri) {
     Matcher m = URL_WITH_PROTOCOL_PATTERN.matcher(uri);

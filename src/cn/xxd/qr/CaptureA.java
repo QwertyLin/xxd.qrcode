@@ -1,38 +1,30 @@
 package cn.xxd.qr;
 
-import java.text.DateFormat;
-import java.util.Date;
-import java.util.EnumSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.Calendar;
+
+import q.util.BitmapUtil;
+import q.util.FileMgr;
 
 import com.google.zxing.Result;
-import com.google.zxing.ResultMetadataType;
 import com.google.zxing.client.android.PreferencesActivity;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.google.zxing.client.android.result.ResultHandler;
-
 import cn.xxd.qr.R;
+import cn.xxd.qr.bean.QrCode;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.text.ClipboardManager;
+import android.graphics.Matrix;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 public class CaptureA implements OnClickListener {
 	
 	private Context mCtx;
 	private Activity mAct;
 	private CameraManager mCameraMgr;
-	private ImageView ivQrcode;
-	private View layoutQrcode;
-	private TextView tvQrcode;
 	
 	public CaptureA(Context ctx){
 		mCtx = ctx;
@@ -44,14 +36,11 @@ public class CaptureA implements OnClickListener {
 	}
 
 	public void onCreate(){
-		layoutQrcode = mAct.findViewById(R.id.home_qrcode_layout);
 		//
 		mAct.findViewById(R.id.home_setting).setOnClickListener(this);
 		btnFlash = (ImageButton)mAct.findViewById(R.id.home_flash);
 		btnFlash.setOnClickListener(this);
 		//
-		ivQrcode = (ImageView) mAct.findViewById(R.id.home_qrcode_img);
-		tvQrcode = (TextView)mAct.findViewById(R.id.home_qrcode_text);
 	}
 	
 	@Override
@@ -78,8 +67,30 @@ public class CaptureA implements OnClickListener {
 		mCameraMgr.setTorch(isFlashOn);
 	}
 	
-	public void handleDecode(Result rawResult, ResultHandler resultHandler, Bitmap barcode){
-		layoutQrcode.setVisibility(View.VISIBLE);
+	public void handleDecode(Result rawResult, final Bitmap barcode){
+		QrCodeA.SCAN_BITMAP = barcode;
+		final QrCode qrcode = new QrCode();
+		qrcode.setText(rawResult.getText());
+		qrcode.setTime(Calendar.getInstance().getTimeInMillis());
+		//save bitmap
+		new Thread(){
+			public void run() {
+				Matrix m = new Matrix();
+				m.setRotate(90);
+				Bitmap bm = Bitmap.createBitmap(barcode, 0, 0, barcode.getWidth(), barcode.getHeight(), m, false);
+				BitmapUtil.save(bm, FileMgr.getInstance(mAct).getScan(qrcode.getTime()));
+			};
+		}.start();
+		//
+		mAct.startActivity(new Intent(mAct, QrCodeA.class)
+			.putExtra(QrCodeA.EXTRA_FROM_SCAN, true)
+			.putExtra(QrCodeA.EXTRA_QRCODE, qrcode));
+		
+		if(true){
+			return;
+		}
+		
+		/*layoutQrcode.setVisibility(View.VISIBLE);
 		ivQrcode.setImageBitmap(barcode);
 		tvQrcode.setText(resultHandler.getDisplayContents());
 		//
@@ -88,7 +99,7 @@ public class CaptureA implements OnClickListener {
 	    //
 	    for (int x = 0; x < ResultHandler.MAX_BUTTON_COUNT; x++) {
 	        System.out.println(mCtx.getResources().getString(resultHandler.getButtonText(x)));
-	          //button.setOnClickListener(new ResultButtonListener(resultHandler, x));
+	        //button.setOnClickListener(new ResultButtonListener(resultHandler, x));
 	    }
 	    //
 	    if (!resultHandler.areContentsSecure()) {
@@ -96,7 +107,7 @@ public class CaptureA implements OnClickListener {
 	        if (resultHandler.getDisplayContents() != null) {
 	          clipboard.setText(resultHandler.getDisplayContents());
 	        }
-	      }
+	      }*/
 	    //
 	    /*private static final Set<ResultMetadataType> DISPLAYABLE_METADATA_TYPES =
 	    	      EnumSet.of(ResultMetadataType.ISSUE_NUMBER,
@@ -118,10 +129,6 @@ public class CaptureA implements OnClickListener {
 	        metaTextViewLabel.setVisibility(View.VISIBLE);
 	      }
 	    }*/
-	}
-	
-	public void reset(){
-		//layoutQrcode.setVisibility(View.GONE);
 	}
 
 	

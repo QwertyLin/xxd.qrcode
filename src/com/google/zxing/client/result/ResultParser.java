@@ -40,6 +40,8 @@ import java.util.regex.Pattern;
 public abstract class ResultParser {
 
   private static final ResultParser[] PARSERS = {
+	  new URIResultParser(),//优先
+	  new URLTOResultParser(),
       new BookmarkDoCoMoResultParser(),
       new AddressBookDoCoMoResultParser(),
       new EmailDoCoMoResultParser(),
@@ -54,8 +56,6 @@ public abstract class ResultParser {
       new SMSTOMMSTOResultParser(),
       new GeoResultParser(),
       new WifiResultParser(),
-      new URLTOResultParser(),
-      new URIResultParser(),
       //new ISBNResultParser(),
       //new ProductResultParser(),
       //new ExpandedProductResultParser(),
@@ -81,6 +81,13 @@ public abstract class ResultParser {
     }
     return text;
   }
+  
+  protected static String getMassagedText(String text) {
+	    if (text.startsWith(BYTE_ORDER_MARK)) {
+	      text = text.substring(1);
+	    }
+	    return text;
+	  }
 
   public static ParsedResult parseResult(Result theResult) {
     for (ResultParser parser : PARSERS) {
@@ -91,6 +98,14 @@ public abstract class ResultParser {
     }
     return new TextParsedResult(theResult.getText(), null);
   }
+  
+  public static ParsedResult parseResult(String text) {
+	    ParsedResult result = new URIResultParser().parse(text);
+	    if (result != null) {
+	        return result;
+	      }
+	    return new TextParsedResult(text, null);
+	  }
 
   protected static void maybeAppend(String value, StringBuilder result) {
     if (value != null) {
