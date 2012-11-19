@@ -46,7 +46,11 @@ public abstract class SqliteBase<T extends SqliteBase.ISqlite> extends SQLiteOpe
 		super.close();
 	}
 	
-	public void insert(T e) {
+	public void insert(T e){
+		db.insert(tableName, null, buildContentValues(e));
+	}
+	
+	public void insertOrUpdate(T e) {
 		if(queryOne(e.getId()) == null){
 			db.insert(tableName, null, buildContentValues(e));
 		}else{

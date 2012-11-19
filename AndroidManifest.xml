@@ -16,19 +16,25 @@
  -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionName="4.3.1"
-          android:versionCode="87"
+          android:versionName="12.11"
+          android:versionCode="1"
           android:installLocation="auto">
 
   <uses-permission android:name="android.permission.CAMERA"/>
-  <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.FLASHLIGHT"/>
   <!-- <uses-permission android:name="android.permission.READ_CONTACTS"/>
   <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/> -->
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  
+  	<!-- umeng -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>
+	<!-- umeng update -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
 
   <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="10"/>
 
@@ -42,17 +48,27 @@
   <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
 
   <!-- Donut-specific flags which allow us to run on any dpi screens. -->
-  <supports-screens android:xlargeScreens="true"
+  <!-- <supports-screens android:xlargeScreens="true"
                     android:largeScreens="true"
                     android:normalScreens="true"
                     android:smallScreens="true"
-                    android:anyDensity="true"/>
+                    android:anyDensity="true"/> -->
 
   <application android:icon="@drawable/launcher_icon"
                android:label="@string/app_name"
                android:theme="@android:style/Theme.Light.NoTitleBar"
                >
-               
+      
+      <!-- umeng -->
+       	<meta-data android:value="50a9a42d5270154729000006" android:name="UMENG_APPKEY"></meta-data>
+		<meta-data android:value="NONE" android:name="UMENG_CHANNEL"/>
+		<!-- umeng update -->
+		<service
+		    android:name="com.umeng.common.net.DownloadingService"
+		    android:exported="true"
+		    android:process=":DownloadingService" >
+		</service>
+      
       <activity android:name=".MainA">
           <intent-filter>
 	        <action android:name="android.intent.action.MAIN"/>
@@ -61,49 +77,19 @@
       </activity>
                
       <activity android:name=".QrCodeA" android:screenOrientation="portrait"  />
-      <activity android:name=".FavoriteA" android:screenOrientation="portrait"  />
+      <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
+      <activity android:name=".SettingA" android:screenOrientation="portrait"  />
+      <activity android:name=".GuideA" android:screenOrientation="portrait"  />
+      <activity android:name=".AboutA" android:screenOrientation="portrait"  />
             
-    <activity android:name="com.google.zxing.client.android.CaptureActivity"
+    <activity android:name=".CaptureActivity"
               android:screenOrientation="landscape"
               android:clearTaskOnLaunch="true"
               android:stateNotNeeded="true"
               android:configChanges="orientation|keyboardHidden"
               android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
               android:windowSoftInputMode="stateAlwaysHidden" />
-    <activity android:name="com.google.zxing.client.android.PreferencesActivity"
-              android:label="@string/preferences_name"
-              android:stateNotNeeded="true">
-    </activity>
-    <activity android:name="com.google.zxing.client.android.encode.EncodeActivity"
-              android:label="@string/share_name"
-              android:stateNotNeeded="true">
-      <intent-filter>
-        <action android:name="com.google.zxing.client.android.ENCODE"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-      </intent-filter>
-      <!-- This allows us to handle the Share button in Contacts. -->
-      <intent-filter>
-        <action android:name="android.intent.action.SEND"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-        <data android:mimeType="text/x-vcard"/>
-      </intent-filter>
-      <!-- This allows us to handle sharing any plain text . -->
-      <intent-filter>
-        <action android:name="android.intent.action.SEND"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-        <data android:mimeType="text/plain"/>
-      </intent-filter>
-    </activity>
-    <activity android:name="com.google.zxing.client.android.share.ShareActivity"
-              android:label="@string/share_name"
-              android:stateNotNeeded="true"
-              android:screenOrientation="user"
-              android:theme="@android:style/Theme.Light">
-      <intent-filter>
-        <action android:name="com.google.zxing.client.android.SHARE"/>
-        <category android:name="android.intent.category.DEFAULT"/>
-      </intent-filter>
-    </activity>
+    
   </application>
 
 </manifest>

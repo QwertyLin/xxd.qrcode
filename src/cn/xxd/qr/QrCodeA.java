@@ -4,18 +4,12 @@ import java.io.File;
 import java.util.EnumMap;
 import java.util.Map;
 
+import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
-import cn.xxd.qr.bean.FavoriteDb;
-
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
-import com.google.zxing.Result;
 import com.google.zxing.WriterException;
-import com.google.zxing.client.android.Contents;
-import com.google.zxing.client.android.Intents;
-import com.google.zxing.client.android.result.ResultHandler;
-import com.google.zxing.client.android.result.ResultHandlerFactory;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import com.google.zxing.common.BitMatrix;
@@ -23,11 +17,9 @@ import com.google.zxing.common.BitMatrix;
 import q.util.FileMgr;
 import q.util.QConfig;
 import q.util.QUI;
+import q.util.WindowMgr;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -35,13 +27,12 @@ import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.ClipboardManager;
-import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.View.OnClickListener;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,53 +43,33 @@ public class QrCodeA extends Activity implements OnClickListener {
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
-	private boolean isFromScan;
 	private ImageView ivImage;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.qrcode);
+		setContentView(R.layout.layout_qrcode);
+		QUI.baseHeaderBack(this, "");
+		int height = WindowMgr.getInstance(this).getHeight();
 		//ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, RESULT);
 		//
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
 		//
-		isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
-		QUI.baseHeaderBackSaveOrDelete(this, "", isFromScan, new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				if(!isFromScan){
-					new AlertDialog.Builder(QrCodeA.this)
-					.setMessage("确定删除？")
-					.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-						@Override
-						public void onClick(DialogInterface dialog, int which) {
-							if(FavoriteA.DATAS != null){
-								FavoriteA.DATAS.remove(qrcode);
-							}
-							finish();
-						}
-					})
-					.setNegativeButton("取消", null)
-					.show();
-				}else{
-					v.setVisibility(View.GONE);
-					Toast.makeText(QrCodeA.this, "已添加到收藏", Toast.LENGTH_SHORT).show();
-					FavoriteDb db = new FavoriteDb(QrCodeA.this);
-					db.open(true);
-					db.insert(qrcode);
-					db.close();
-				}
-			}
-		});
-		//
+		boolean isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
 		initImage(isFromScan);
+		if(isFromScan){// save only from scan activity
+			save(qrcode);
+		}
 		//
 		ParsedResult result = ResultParser.parseResult(qrcode.getText());
 		System.out.println(result.getType());
-		//((ImageView) findViewById(R.id.qrcode_img));
+		//
 		ivImage = (ImageView)findViewById(R.id.qrcode_img);
+		LinearLayout.LayoutParams ivlp = (LinearLayout.LayoutParams)ivImage.getLayoutParams();
+		ivlp.width = height / 3;
+		ivlp.height = height / 3;
+		ivImage.setLayoutParams(ivlp);
 		((TextView)findViewById(R.id.qrcode_text)).setText(qrcode.getText());
 		
 		findViewById(R.id.qrcode_copy).setOnClickListener(this);
@@ -110,6 +81,13 @@ public class QrCodeA extends Activity implements OnClickListener {
 			break;
 		}
 		//
+	}
+	
+	private void save(QrCode qrcode){
+		HistoryDb db = new HistoryDb(this);
+		db.open(true);
+		db.insert(qrcode);
+		db.close();
 	}
 	
 	private void initImage(final boolean isFromScan){
@@ -147,7 +125,6 @@ public class QrCodeA extends Activity implements OnClickListener {
 								}
 							});
 						} catch (WriterException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}

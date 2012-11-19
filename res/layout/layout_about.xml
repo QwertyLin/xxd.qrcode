@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/base_white"
+    android:orientation="vertical"
+    >
+    
+    <include layout="@layout/base_header"/>
+    
+    <LinearLayout 
+         android:layout_width="wrap_content"
+         android:layout_height="70dip"
+         android:orientation="horizontal"
+         android:layout_gravity="center_horizontal"
+         android:layout_marginTop="50dip"
+         >
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/launcher_icon"
+            />
+        <LinearLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+			<TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="0dip"
+			    android:layout_weight="1"
+			    android:gravity="center_vertical"
+			    android:textSize="@dimen/base_text_large"
+			    android:textColor="@color/base_gray_dark"
+			    android:text="小小二维码"
+			    />            
+			 <TextView 
+			    android:layout_width="wrap_content"
+			    android:layout_height="0dip"
+			    android:layout_weight="1"
+			    android:gravity="center_vertical"
+			    android:textSize="@dimen/base_text_large"
+			    android:textColor="@color/base_gray_dark"
+			    android:text="V12.11"
+			    />   
+        </LinearLayout>
+    </LinearLayout>
+    
+    <FrameLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/base_blue_light"
+        android:padding="1dip"
+        android:layout_marginTop="30dip"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/base_white"
+            android:textColor="@color/base_blue_light"
+            android:padding="3dip"
+            android:text="http://www.xxd.cn"
+            />
+    </FrameLayout>
+    
+    <View 
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        />
+    
+	<TextView 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:layout_marginBottom="10dip"
+	    android:textSize="@dimen/base_text_small"
+	    android:textColor="@color/base_gray_dark"
+	    android:text="Copyright © 2012 小小的安卓 版权所有"
+	    />
+    
+</LinearLayout>

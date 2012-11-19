@@ -164,7 +164,7 @@ public final class LocaleManager {
 
   private static String doGetTLD(Map<String,String> map, Context context) {
     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-    String countryOverride = prefs.getString(PreferencesActivity.KEY_SEARCH_COUNTRY, null);
+    String countryOverride = null;
     if (countryOverride != null && countryOverride.length() > 0 && !"-".equals(countryOverride)) {
       String tld = map.get(countryOverride);
       if (tld != null) {

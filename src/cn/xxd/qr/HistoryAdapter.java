@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 import q.util.AdapterBase;
 
-public class FavoriteAdapter extends AdapterBase<QrCode, FavoriteAdapter.Holder> {
+public class HistoryAdapter extends AdapterBase<QrCode, HistoryAdapter.Holder> {
 
-	public FavoriteAdapter(Context ctx, List<QrCode> datas) {
+	public HistoryAdapter(Context ctx, List<QrCode> datas) {
 		super(ctx, datas);
 	}
 

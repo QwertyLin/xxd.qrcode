@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-package com.google.zxing.client.android;
+package cn.xxd.qr;
 
-import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
 
 import com.google.zxing.Result;
 import com.google.zxing.ResultPoint;
+import com.google.zxing.client.android.BeepManager;
+import com.google.zxing.client.android.CaptureActivityHandler;
+import com.google.zxing.client.android.FinishListener;
+import com.google.zxing.client.android.ViewfinderView;
 import com.google.zxing.client.android.camera.CameraManager;
 import com.google.zxing.client.android.result.ResultHandler;
 import com.google.zxing.client.android.result.ResultHandlerFactory;
@@ -63,7 +66,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
   private BeepManager beepManager;
   private CaptureA homeA;//TODO add HomeA
 
-  ViewfinderView getViewfinderView() {
+  public ViewfinderView getViewfinderView() {
 	  QLog.log(this, "getViewfinderView");
     return viewfinderView;
   }
@@ -73,7 +76,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     return handler;
   }
 
-  CameraManager getCameraManager() {
+  public CameraManager getCameraManager() {
 	  QLog.log(this, "getCameraManager");
     return cameraManager;
   }

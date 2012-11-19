@@ -17,6 +17,7 @@
 package com.google.zxing.client.android;
 
 import android.graphics.Bitmap;
+import cn.xxd.qr.CaptureActivity;
 import cn.xxd.qr.R;
 
 import com.google.zxing.BinaryBitmap;

@@ -25,26 +25,5 @@ public class QUI {
 			}
 		});
 	}
-	
-	public static final void baseHeaderBackSaveOrDelete(final Activity act, String text, boolean isShowSave, OnClickListener onClickSaveOrDelete){
-		baseHeaderText(act, text);
-		ImageButton btn = (ImageButton)act.findViewById(R.id.base_header_btn_left);
-		btn.setVisibility(View.VISIBLE);
-		btn.setImageResource(R.drawable.a_navigation_back);
-		btn.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				act.finish();
-			}
-		});
-		btn = (ImageButton)act.findViewById(R.id.base_header_btn_right);
-		btn.setVisibility(View.VISIBLE);
-		if(isShowSave){
-			btn.setImageResource(R.drawable.a_content_save);
-		}else{
-			btn.setImageResource(R.drawable.a_content_discard);
-		}
-		btn.setOnClickListener(onClickSaveOrDelete);
-	}
 
 }

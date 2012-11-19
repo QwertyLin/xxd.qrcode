@@ -3,7 +3,7 @@ package cn.xxd.qr;
 import java.util.List;
 
 import cn.xxd.qr.bean.QrCode;
-import cn.xxd.qr.bean.FavoriteDb;
+import cn.xxd.qr.bean.HistoryDb;
 
 import q.util.QUI;
 import android.app.Activity;
@@ -14,26 +14,26 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class FavoriteA extends Activity implements OnItemClickListener {
+public class HistoryA extends Activity implements OnItemClickListener {
 
 	public static List<QrCode> DATAS;
-	private FavoriteAdapter adapter;
+	private HistoryAdapter adapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.favorite);
+		setContentView(R.layout.layout_history);
 		//
-		QUI.baseHeaderBack(this, "收藏夹");
+		QUI.baseHeaderBack(this, "扫描历史");
 		//
-		FavoriteDb db = new FavoriteDb(this);
+		HistoryDb db = new HistoryDb(this);
 		db.open(false);
 		DATAS = db.queryAll(1);
 		db.close();
 		//
         ListView lv = (ListView)findViewById(R.id.base_list);
-        adapter = new FavoriteAdapter(this, DATAS);
+        adapter = new HistoryAdapter(this, DATAS);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
 	}
@@ -47,7 +47,7 @@ public class FavoriteA extends Activity implements OnItemClickListener {
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		startActivity(new Intent(FavoriteA.this, QrCodeA.class)
+		startActivity(new Intent(HistoryA.this, QrCodeA.class)
 		.putExtra(QrCodeA.EXTRA_FROM_FAVORITE, true)
 		.putExtra(QrCodeA.EXTRA_QRCODE, DATAS.get(position)));
 	}

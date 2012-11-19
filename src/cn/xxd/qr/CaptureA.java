@@ -6,7 +6,6 @@ import q.util.BitmapUtil;
 import q.util.FileMgr;
 
 import com.google.zxing.Result;
-import com.google.zxing.client.android.PreferencesActivity;
 import com.google.zxing.client.android.camera.CameraManager;
 import cn.xxd.qr.R;
 import cn.xxd.qr.bean.QrCode;
@@ -48,10 +47,10 @@ public class CaptureA implements OnClickListener {
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.capture_favorite:
-			mAct.startActivity(new Intent(mAct, FavoriteA.class));
+			mAct.startActivity(new Intent(mAct, HistoryA.class));
 			break;
 		case R.id.capture_setting:
-			mAct.startActivity(new Intent(mAct, PreferencesActivity.class));
+			mAct.startActivity(new Intent(mAct, SettingA.class));
 			break;
 		case R.id.capture_flash:
 			onClickFlash();

@@ -51,9 +51,7 @@ public final class ViewfinderView extends View {
 
   private CameraManager cameraManager;
   private final Paint paint;
-  private Bitmap resultBitmap;
   private final int maskColor;
-  private final int resultColor;
   private final int laserColor;
   private final int resultPointColor;
   private int scannerAlpha;
@@ -68,9 +66,9 @@ public final class ViewfinderView extends View {
     paint = new Paint(Paint.ANTI_ALIAS_FLAG);
     Resources resources = getResources();
     maskColor = QConfig.VIEW_FINDER_MASK_COLOR;//maskColor = resources.getColor(R.color.viewfinder_mask);
-    resultColor = resources.getColor(R.color.result_view);
+    //resultColor = resources.getColor(R.color.result_view);
     laserColor = QConfig.VIEW_FINDER_LASER_COLOR;//laserColor = resources.getColor(R.color.viewfinder_laser);
-    resultPointColor = resources.getColor(R.color.possible_result_points);
+    resultPointColor = 0xc0ffbd21;
     scannerAlpha = 0;
     possibleResultPoints = new ArrayList<ResultPoint>(5);
     lastPossibleResultPoints = null;
@@ -93,17 +91,24 @@ public final class ViewfinderView extends View {
     int height = canvas.getHeight();
 
     // Draw the exterior (i.e. outside the framing rect) darkened
-    paint.setColor(resultBitmap != null ? resultColor : maskColor);
+    paint.setColor(maskColor);
     canvas.drawRect(0, 0, width, frame.top, paint);
-    canvas.drawRect(0, frame.top, frame.left, frame.bottom + 1, paint);
-    canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1, paint);
-    canvas.drawRect(0, frame.bottom + 1, width, height, paint);
-
-    if (resultBitmap != null) {
-      // Draw the opaque result bitmap over the scanning rectangle
-      paint.setAlpha(CURRENT_POINT_OPACITY);
-      canvas.drawBitmap(resultBitmap, null, frame, paint);
-    } else {
+    canvas.drawRect(0, frame.top, frame.left, frame.bottom, paint);
+    canvas.drawRect(frame.right, frame.top, width, frame.bottom, paint);
+    canvas.drawRect(0, frame.bottom, width, height, paint);
+    
+    //Draw frame
+    paint.setColor(QConfig.VIEW_FINDER_FRAME_COLOR);
+    int third = (frame.right - frame.left) / 3;
+    int weight = 5;
+    canvas.drawRect(frame.left, frame.top, frame.left + third, frame.top + weight, paint);
+    canvas.drawRect(frame.right - third, frame.top, frame.right, frame.top + weight, paint);
+    canvas.drawRect(frame.left, frame.bottom - weight, frame.left + third, frame.bottom, paint);
+    canvas.drawRect(frame.right - third, frame.bottom - weight, frame.right, frame.bottom, paint);
+    canvas.drawRect(frame.left, frame.top, frame.left + weight, frame.top + third, paint);
+    canvas.drawRect(frame.left, frame.bottom - third, frame.left + weight, frame.bottom, paint);
+    canvas.drawRect(frame.right - weight, frame.top, frame.right, frame.top + third, paint);
+    canvas.drawRect(frame.right - weight, frame.bottom - third, frame.right, frame.bottom, paint);
 
       // Draw a red "laser scanner" line through the middle to show decoding is active
       paint.setColor(laserColor);
@@ -111,8 +116,8 @@ public final class ViewfinderView extends View {
       scannerAlpha = (scannerAlpha + 1) % SCANNER_ALPHA.length;
       
       //TODO draw激光 
-      int middle = frame.width() / 2 + frame.left;//int middle = frame.height() / 2 + frame.top;
-      canvas.drawRect(middle - 1, frame.top + 2, middle + 2, frame.bottom - 2, paint);//canvas.drawRect(frame.left + 2, middle - 1, frame.right - 1, middle + 2, paint);
+      //int middle = frame.width() / 2 + frame.left;//int middle = frame.height() / 2 + frame.top;
+      //canvas.drawRect(middle - 1, frame.top + 2, middle + 2, frame.bottom - 2, paint);//canvas.drawRect(frame.left + 2, middle - 1, frame.right - 1, middle + 2, paint);
       
       Rect previewFrame = cameraManager.getFramingRectInPreview();
       float scaleX = frame.width() / (float) previewFrame.width();
@@ -157,25 +162,9 @@ public final class ViewfinderView extends View {
                             frame.top - POINT_SIZE,
                             frame.right + POINT_SIZE,
                             frame.bottom + POINT_SIZE);
-    }
   }
 
   public void drawViewfinder() {
-    Bitmap resultBitmap = this.resultBitmap;
-    this.resultBitmap = null;
-    if (resultBitmap != null) {
-      resultBitmap.recycle();
-    }
-    invalidate();
-  }
-
-  /**
-   * Draw a bitmap with the result points highlighted instead of the live scanning display.
-   *
-   * @param barcode An image of the decoded barcode.
-   */
-  public void drawResultBitmap(Bitmap barcode) {
-    resultBitmap = barcode;
     invalidate();
   }
 

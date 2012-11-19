@@ -16,6 +16,8 @@
 
 package com.google.zxing.client.android;
 
+import cn.xxd.qr.CaptureActivity;
+
 import com.google.zxing.DecodeHintType;
 import com.google.zxing.ResultPointCallback;
 

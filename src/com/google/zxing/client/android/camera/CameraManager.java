@@ -163,7 +163,7 @@ public final class CameraManager {
   }
 
   /**
-   * Convenience method for {@link com.google.zxing.client.android.CaptureActivity}
+   * Convenience method for {@link cn.xxd.qr.CaptureActivity}
    */
   public synchronized void setTorch(boolean newSetting) {
     if (camera != null) {
@@ -210,7 +210,7 @@ public final class CameraManager {
         // Called early, before init even finished
         return null;
       }
-      int height = screenResolution.y * 3 / 4;
+      int height = screenResolution.y * 7 / 8;
       if (height < MIN_FRAME_HEIGHT) {
         height = MIN_FRAME_HEIGHT;
       } else if (height > MAX_FRAME_HEIGHT) {

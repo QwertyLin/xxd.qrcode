@@ -16,6 +16,7 @@
 
 package com.google.zxing.client.android;
 
+import cn.xxd.qr.CaptureActivity;
 import cn.xxd.qr.R;
 
 import com.google.zxing.Result;
@@ -47,7 +48,7 @@ public final class CaptureActivityHandler extends Handler {
     DONE
   }
 
-  CaptureActivityHandler(CaptureActivity activity,
+  public CaptureActivityHandler(CaptureActivity activity,
                          CameraManager cameraManager) {
     this.activity = activity;
     decodeThread = new DecodeThread(activity, 

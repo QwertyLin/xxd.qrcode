@@ -8,17 +8,17 @@ import android.content.Context;
 import android.database.Cursor;
 import q.util.SqliteBase;
 
-public class FavoriteDb extends SqliteBase<QrCode> {
+public class HistoryDb extends SqliteBase<QrCode> {
 	
 	private static final int PAGE_COUNT = 10;
 
-	public FavoriteDb(Context context) {
-		super(context, "favorite", "favorite");
+	public HistoryDb(Context context) {
+		super(context, "history", "history");
 	}
 
 	@Override
 	protected String getSqlCreateTable() {
-		StringBuffer sb = new StringBuffer("CREATE TABLE favorite ("); 
+		StringBuffer sb = new StringBuffer("CREATE TABLE " + tableName + " ("); 
 		sb.append("id INTEGER PRIMARY KEY,"); 
 		sb.append("text TEXT,"); 
 		sb.append("time INTEGER)");

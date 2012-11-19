@@ -10,6 +10,4 @@
     <dimen name="base_header_btn_width">58dip</dimen>
     <dimen name="base_footer_height">53dip</dimen>
     
-  <dimen name="standard_padding">8dip</dimen>
-  <dimen name="half_padding">4dip</dimen>
 </resources>
