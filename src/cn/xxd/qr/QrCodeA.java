@@ -1,6 +1,8 @@
 package cn.xxd.qr;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.EnumMap;
 import java.util.Map;
 
@@ -39,11 +41,18 @@ import android.widget.Toast;
 public class QrCodeA extends Activity implements OnClickListener {
 	
 	public static final String EXTRA_QRCODE = "qrcode";
-	public static final String EXTRA_FROM_SCAN = "scan", EXTRA_FROM_FAVORITE = "favorite";
+	public static final String EXTRA_FROM_SCAN = "scan", EXTRA_FROM_HISTORY = "history";
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
 	private ImageView ivImage;
+	private State state;
+	private Bitmap buildBitmap;
+	private FileMgr fileMgr;
+	
+	private enum State {
+		IMAGE_SCAN, IMAGE_SRC, IMAGE_BUILD
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,28 +60,26 @@ public class QrCodeA extends Activity implements OnClickListener {
 		setContentView(R.layout.layout_qrcode);
 		QUI.baseHeaderBack(this, "");
 		int height = WindowMgr.getInstance(this).getHeight();
-		//ResultHandler resultHandler = ResultHandlerFactory.makeResultHandler(this, RESULT);
+		//
+		fileMgr = FileMgr.getInstance(QrCodeA.this);
 		//
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
+		initState(intent);
 		//
-		boolean isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
-		initImage(isFromScan);
-		if(isFromScan){// save only from scan activity
-			save(qrcode);
-		}
-		//
-		ParsedResult result = ResultParser.parseResult(qrcode.getText());
-		System.out.println(result.getType());
 		//
 		ivImage = (ImageView)findViewById(R.id.qrcode_img);
 		LinearLayout.LayoutParams ivlp = (LinearLayout.LayoutParams)ivImage.getLayoutParams();
-		ivlp.width = height / 3;
-		ivlp.height = height / 3;
+		ivlp.width = height / 2;
+		ivlp.height = height / 2;
 		ivImage.setLayoutParams(ivlp);
 		((TextView)findViewById(R.id.qrcode_text)).setText(qrcode.getText());
-		
+		//
 		findViewById(R.id.qrcode_copy).setOnClickListener(this);
+		findViewById(R.id.qrcode_share).setOnClickListener(this);
+		//
+		ParsedResult result = ResultParser.parseResult(qrcode.getText());
+		System.out.println(result.getType());
 		switch(result.getType()){
 		case URI:
 			View vWebsie = findViewById(R.id.qrcode_website);
@@ -83,53 +90,75 @@ public class QrCodeA extends Activity implements OnClickListener {
 		//
 	}
 	
-	private void save(QrCode qrcode){
-		HistoryDb db = new HistoryDb(this);
-		db.open(true);
-		db.insert(qrcode);
-		db.close();
+	private void initState(Intent intent){
+		boolean isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
+		if(isFromScan){
+			state = State.IMAGE_SCAN;
+			initImageScan();
+		}else{
+			File imageFile = new File(fileMgr.getScan(qrcode.getTime()));
+			if(imageFile.exists() && imageFile.length() > 0){
+				state = State.IMAGE_SRC;
+				initImageSrc(imageFile);
+			}else{
+				state = State.IMAGE_BUILD;
+				initImageBuild();
+			}
+		}
 	}
 	
-	private void initImage(final boolean isFromScan){
+	private void initImageScan(){
 		new Thread(){
 			public void run() {
-				if(isFromScan){
-					Matrix m = new Matrix();
-					m.setRotate(90);
-					final Bitmap bm = Bitmap.createBitmap(SCAN_BITMAP, 0, 0, SCAN_BITMAP.getWidth(), SCAN_BITMAP.getHeight(), m, false);
-					SCAN_BITMAP = null;
+				// save only from scan activity
+				HistoryDb db = new HistoryDb(QrCodeA.this);
+				db.open(true);
+				db.insert(qrcode);
+				db.close();
+				//
+				Matrix m = new Matrix();
+				m.setRotate(90);
+				final Bitmap bm = Bitmap.createBitmap(SCAN_BITMAP, 0, 0, SCAN_BITMAP.getWidth(), SCAN_BITMAP.getHeight(), m, false);
+				SCAN_BITMAP = null;
+				runOnUiThread(new Runnable() {
+					@Override	
+					public void run() {
+						ivImage.setImageBitmap(bm);
+					}
+				});
+			}
+		}.start();
+	}
+	
+	private void initImageSrc(final File imageFile){
+		new Thread(){
+			public void run() {
+				final Bitmap bm = BitmapFactory.decodeFile(imageFile.getPath());
+				runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						ivImage.setImageBitmap(bm);
+					}
+				});
+			}
+		}.start();
+	}
+	
+	private void initImageBuild(){
+		new Thread(){
+			public void run() {
+				try {
+					buildBitmap = initImageEncode();
 					runOnUiThread(new Runnable() {
-						@Override	
+						@Override
 						public void run() {
-							ivImage.setImageBitmap(bm);
+							ivImage.setImageBitmap(buildBitmap);
 						}
 					});
-				}else{
-					File file = new File(FileMgr.getInstance(QrCodeA.this).getScan(qrcode.getTime()));
-					System.out.println(file.getPath());
-					if(file.exists() && file.length() > 0){
-						final Bitmap bm = BitmapFactory.decodeFile(file.getPath());
-						runOnUiThread(new Runnable() {
-							@Override
-							public void run() {
-								ivImage.setImageBitmap(bm);
-							}
-						});
-					}else{
-						try {
-							final Bitmap bm = initImageEncode();
-							runOnUiThread(new Runnable() {
-								@Override
-								public void run() {
-									ivImage.setImageBitmap(bm);
-								}
-							});
-						} catch (WriterException e) {
-							e.printStackTrace();
-						}
-					}
+				} catch (WriterException e) {
+					e.printStackTrace();
 				}
-			};
+			}
 		}.start();
 	}
 	
@@ -175,7 +204,6 @@ public class QrCodeA extends Activity implements OnClickListener {
 	}
 	
 	private static String guessAppropriateEncoding(CharSequence contents) {
-	    // Very crude at the moment
 	    for (int i = 0; i < contents.length(); i++) {
 	      if (contents.charAt(i) > 0xFF) {
 	        return "UTF-8";
@@ -190,6 +218,9 @@ public class QrCodeA extends Activity implements OnClickListener {
 		case R.id.qrcode_copy:
 			copy(qrcode.getText());
 			break;
+		case R.id.qrcode_share:
+			share();
+			break;
 		case R.id.qrcode_website:
 			openURL(qrcode.getText());
 			break;
@@ -202,6 +233,25 @@ public class QrCodeA extends Activity implements OnClickListener {
 		Toast.makeText(this, "已复制到剪贴板", Toast.LENGTH_SHORT).show();
 		ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
 		clipboard.setText(text);
+	}
+	
+	private void share(){
+		Intent intent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).setType("image/*")//.setType("text/plain")
+				.putExtra(Intent.EXTRA_TEXT, "二维码分享: " + qrcode.getText() + "。by 小小二维码");
+		//
+		if(state == State.IMAGE_BUILD){
+			File temp = new File(fileMgr.getScan(0));
+			try {
+				buildBitmap.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(temp));
+				intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(temp));
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}else{
+			intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(fileMgr.getScan(qrcode.getTime()))));
+		}
+		//
+		startActivity(Intent.createChooser(intent, "分享"));
 	}
 	
 	private void openURL(String url) {

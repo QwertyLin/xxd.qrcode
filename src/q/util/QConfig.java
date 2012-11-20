@@ -3,11 +3,13 @@ package q.util;
 public class QConfig {
 	
 	public static final String BASE_PACKAGE_NAME = "cn.xxd.qr";
+	public static final String BASE_WEBSITE_URL = "http://www.xxd.cn";
 	
 	public static final int VIEW_FINDER_MASK_COLOR = 0x60000000; //扫描界面蒙板颜色
 	public static final int VIEW_FINDER_LASER_COLOR = 0xFF33B5E5; //扫描界面激光颜色
 	public static final int VIEW_FINDER_FRAME_COLOR = 0xFF33B5E5; //扫描界面外框颜色
 	
+	public static final boolean QR_SCAN_RESULT_POINT_DRAW = false; //是否在扫描结果图上画点
 	public static final int QR_SCAN_RESULT_POINT_COLOR = 0xFFFF0000; //扫描结果画在QR图上的寻象点
 	
 	public static final int QR_IMAGE_FRONT_COLOR = 0xFF33B5E5; //QR图颜色

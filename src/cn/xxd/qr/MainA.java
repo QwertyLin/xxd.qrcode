@@ -1,6 +1,11 @@
 package cn.xxd.qr;
 
+import java.util.Date;
+
 import q.util.QConfig;
+
+import cn.xxd.qr.bean.HistoryDb;
+import cn.xxd.qr.bean.QrCode;
 
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
@@ -23,11 +28,12 @@ public class MainA extends Activity {
 		//
 		initVersion();
 		//
-		startActivity(new Intent(this, CaptureActivity.class));
+		//tempInitHistoryData();
+		//startActivity(new Intent(this, CaptureActivity.class));
 		//startActivity(new Intent(this, GuideA.class));
-		//startActivity(new Intent(this, AboutA.class));
+		startActivity(new Intent(this, AboutA.class));
 		//startActivity(new Intent(this, SettingA.class));
-		//startActivity(new Intent(this, FavoriteA.class));
+		//startActivity(new Intent(this, HistoryA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
 		finish();
 	}
@@ -36,7 +42,7 @@ public class MainA extends Activity {
 		SharedPreferences sp = getSharedPreferences(QConfig.SP_NAME, Context.MODE_PRIVATE);
 		int version = sp.getInt(QConfig.SP_KEY_VERSION, 0);
 		try {
-			PackageInfo info = getPackageManager().getPackageInfo(QConfig.BASE_PACKAGE_NAME, 0);
+			PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), 0);
 			 int currentVersion = info.versionCode;
 			 if(currentVersion > version){
 				 sp.edit().putInt(QConfig.SP_KEY_VERSION, currentVersion).commit();
@@ -48,6 +54,18 @@ public class MainA extends Activity {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	private void tempInitHistoryData(){
+		HistoryDb db = new HistoryDb(this);
+		db.open(true);
+		for(int i = 1; i < 100; i++){
+			QrCode item = new QrCode();
+			item.setText(String.valueOf(i));
+			item.setTime(new Date().getTime());
+			db.insert(item);
+		}
+		db.close();
 	}
 	
 }

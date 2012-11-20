@@ -21,12 +21,10 @@ import android.widget.ImageButton;
 
 public class CaptureA implements OnClickListener {
 	
-	private Context mCtx;
 	private Activity mAct;
 	private CameraManager mCameraMgr;
 	
 	public CaptureA(Context ctx){
-		mCtx = ctx;
 		mAct = (Activity)ctx;
 	}
 	
@@ -78,6 +76,7 @@ public class CaptureA implements OnClickListener {
 		//save bitmap
 		new Thread(){
 			public void run() {
+				System.out.println(barcode.getWidth());
 				Matrix m = new Matrix();
 				m.setRotate(90);
 				Bitmap bm = Bitmap.createBitmap(barcode, 0, 0, barcode.getWidth(), barcode.getHeight(), m, false);

@@ -8,61 +8,45 @@
     
     <include layout="@layout/base_header"/>
     
-    <LinearLayout 
-         android:layout_width="wrap_content"
-         android:layout_height="70dip"
-         android:orientation="horizontal"
+    <ImageView 
+         android:layout_width="60dip"
+         android:layout_height="60dip"
+         android:background="@drawable/icon"
+         android:layout_marginTop="30dip"
          android:layout_gravity="center_horizontal"
-         android:layout_marginTop="50dip"
-         >
-        <ImageView 
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:background="@drawable/launcher_icon"
-            />
-        <LinearLayout 
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:orientation="vertical"
-            >
-			<TextView 
-			    android:layout_width="wrap_content"
-			    android:layout_height="0dip"
-			    android:layout_weight="1"
-			    android:gravity="center_vertical"
-			    android:textSize="@dimen/base_text_large"
-			    android:textColor="@color/base_gray_dark"
-			    android:text="小小二维码"
-			    />            
-			 <TextView 
-			    android:layout_width="wrap_content"
-			    android:layout_height="0dip"
-			    android:layout_weight="1"
-			    android:gravity="center_vertical"
-			    android:textSize="@dimen/base_text_large"
-			    android:textColor="@color/base_gray_dark"
-			    android:text="V12.11"
-			    />   
-        </LinearLayout>
-    </LinearLayout>
+         />
     
-    <FrameLayout 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/base_blue_light"
-        android:padding="1dip"
-        android:layout_marginTop="30dip"
-        >
-        <TextView 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/base_white"
-            android:textColor="@color/base_blue_light"
-            android:padding="3dip"
-            android:text="http://www.xxd.cn"
-            />
-    </FrameLayout>
+    <TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:textSize="@dimen/base_text_large"
+	    android:textColor="@color/base_blue_dark"
+	    android:layout_marginTop="10dip"
+	    android:text="@string/app_name"
+	    />   
+	    
+	 <TextView 
+	     android:id="@+id/about_version"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:gravity="center_vertical"
+	    android:textSize="@dimen/base_text_medium"
+	    android:textColor="@color/base_gray_dark"
+	    android:layout_marginTop="10dip"
+	    />   
+    
+    <TextView 
+        android:id="@+id/about_website"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center_horizontal"
+         android:background="@color/base_blue_light"
+         android:textColor="@color/base_white"
+         android:padding="3dip"
+         android:layout_marginTop="20dip"
+         />
     
     <View 
         android:layout_width="fill_parent"

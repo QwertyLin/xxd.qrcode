@@ -231,18 +231,20 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
    * @param rawResult The decoded results which contains the points to draw.
    */
   private void drawResultPoints(Bitmap barcode, Result rawResult) {
-	  QLog.log(this, "drawResultPoints");
-    ResultPoint[] points = rawResult.getResultPoints();
-    if (points != null && points.length > 0) {
-      Canvas canvas = new Canvas(barcode);
-      Paint paint = new Paint();
-      paint.setColor(QConfig.QR_SCAN_RESULT_POINT_COLOR);
-      //
-      paint.setStrokeWidth(10.0f);
-      for (ResultPoint point : points) {
-        canvas.drawPoint(point.getX(), point.getY(), paint);
-      }
-    }
+	  if(QConfig.QR_SCAN_RESULT_POINT_DRAW){
+		  QLog.log(this, "drawResultPoints");
+		    ResultPoint[] points = rawResult.getResultPoints();
+		    if (points != null && points.length > 0) {
+		      Canvas canvas = new Canvas(barcode);
+		      Paint paint = new Paint();
+		      paint.setColor(QConfig.QR_SCAN_RESULT_POINT_COLOR);
+		      //
+		      paint.setStrokeWidth(10.0f);
+		      for (ResultPoint point : points) {
+		        canvas.drawPoint(point.getX(), point.getY(), paint);
+		      }
+		    }
+	  }
   }
 
   // Put up our own UI for how to handle the decoded contents.

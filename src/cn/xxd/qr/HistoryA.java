@@ -6,6 +6,8 @@ import cn.xxd.qr.bean.QrCode;
 import cn.xxd.qr.bean.HistoryDb;
 
 import q.util.QUI;
+import q.view.EndlessListViewHelper;
+import q.view.EndlessListViewHelper.OnEndlessListViewListener;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,14 +16,14 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-public class HistoryA extends Activity implements OnItemClickListener {
+public class HistoryA extends Activity implements OnItemClickListener, OnEndlessListViewListener {
 
-	public static List<QrCode> DATAS;
+	private List<QrCode> datas;
 	private HistoryAdapter adapter;
+	private int page = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_history);
 		//
@@ -29,26 +31,42 @@ public class HistoryA extends Activity implements OnItemClickListener {
 		//
 		HistoryDb db = new HistoryDb(this);
 		db.open(false);
-		DATAS = db.queryAll(1);
+		datas = db.queryAll(page);
 		db.close();
 		//
         ListView lv = (ListView)findViewById(R.id.base_list);
-        adapter = new HistoryAdapter(this, DATAS);
+        new EndlessListViewHelper(lv, getLayoutInflater().inflate(R.layout.layout_history_footer, null), this).setEnable(true);
+        adapter = new HistoryAdapter(this, datas);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
-	}
-	
-	@Override
-	protected void onResume() {
-		super.onResume();
-		adapter.notifyDataSetChanged();
+		//
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		startActivity(new Intent(HistoryA.this, QrCodeA.class)
-		.putExtra(QrCodeA.EXTRA_FROM_FAVORITE, true)
-		.putExtra(QrCodeA.EXTRA_QRCODE, DATAS.get(position)));
+		.putExtra(QrCodeA.EXTRA_FROM_HISTORY, true)
+		.putExtra(QrCodeA.EXTRA_QRCODE, datas.get(position)));
+	}
+
+	@Override
+	public boolean onEndlessListViewBackground() {
+		page++;
+		HistoryDb db = new HistoryDb(this);
+		db.open(false);
+		List<QrCode> temp = db.queryAll(page);
+		db.close();
+		if(temp != null && !temp.isEmpty()){
+			datas.addAll(temp);
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	@Override
+	public void onEndlessListViewSuccess() {
+		adapter.notifyDataSetChanged();
 	}
 }

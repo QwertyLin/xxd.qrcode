@@ -22,7 +22,7 @@ public class HistoryAdapter extends AdapterBase<QrCode, HistoryAdapter.Holder> {
 
 	@Override
 	protected int getLayoutId() {
-		return R.layout.history_item;
+		return R.layout.layout_history_item;
 	}
 
 	@Override
