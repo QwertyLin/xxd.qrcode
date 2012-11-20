@@ -34,7 +34,8 @@ public class CaptureA implements OnClickListener {
 
 	public void onCreate(){
 		//
-		mAct.findViewById(R.id.capture_favorite).setOnClickListener(this);
+		mAct.findViewById(R.id.capture_history).setOnClickListener(this);
+		mAct.findViewById(R.id.capture_new).setOnClickListener(this);
 		mAct.findViewById(R.id.capture_setting).setOnClickListener(this);
 		btnFlash = (ImageButton)mAct.findViewById(R.id.capture_flash);
 		btnFlash.setOnClickListener(this);
@@ -44,8 +45,11 @@ public class CaptureA implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
-		case R.id.capture_favorite:
+		case R.id.capture_history:
 			mAct.startActivity(new Intent(mAct, HistoryA.class));
+			break;
+		case R.id.capture_new:
+			mAct.startActivity(new Intent(mAct, NewA.class));
 			break;
 		case R.id.capture_setting:
 			mAct.startActivity(new Intent(mAct, SettingA.class));
@@ -61,9 +65,9 @@ public class CaptureA implements OnClickListener {
 	private void onClickFlash(){
 		isFlashOn = !isFlashOn;
 		if(isFlashOn){
-			btnFlash.setImageResource(R.drawable.a_device_access_flash_on_x);
-		}else{
 			btnFlash.setImageResource(R.drawable.a_device_access_flash_off_x);
+		}else{
+			btnFlash.setImageResource(R.drawable.a_device_access_flash_on_x);
 		}
 		mCameraMgr.setTorch(isFlashOn);
 	}
@@ -85,7 +89,6 @@ public class CaptureA implements OnClickListener {
 		}.start();
 		//
 		mAct.startActivity(new Intent(mAct, QrCodeA.class)
-			.putExtra(QrCodeA.EXTRA_FROM_SCAN, true)
 			.putExtra(QrCodeA.EXTRA_QRCODE, qrcode));
 		
 		if(true){

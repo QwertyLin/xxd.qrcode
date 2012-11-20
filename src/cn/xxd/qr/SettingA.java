@@ -1,12 +1,12 @@
 package cn.xxd.qr;
 
+import q.util.ActivityBase;
 import q.util.QUI;
 
 import com.umeng.update.UmengUpdateAgent;
 import com.umeng.update.UmengUpdateListener;
 import com.umeng.update.UpdateResponse;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Toast;
 
-public class SettingA extends Activity implements OnClickListener {
+public class SettingA extends ActivityBase implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

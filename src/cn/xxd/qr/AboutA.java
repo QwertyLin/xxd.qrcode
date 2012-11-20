@@ -1,8 +1,8 @@
 package cn.xxd.qr;
 
+import q.util.ActivityBase;
 import q.util.QConfig;
 import q.util.QUI;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class AboutA extends Activity implements OnClickListener {
+public class AboutA extends ActivityBase implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

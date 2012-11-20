@@ -25,9 +25,6 @@ import com.google.zxing.client.android.CaptureActivityHandler;
 import com.google.zxing.client.android.FinishListener;
 import com.google.zxing.client.android.ViewfinderView;
 import com.google.zxing.client.android.camera.CameraManager;
-import com.google.zxing.client.android.result.ResultHandler;
-import com.google.zxing.client.android.result.ResultHandlerFactory;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -40,9 +37,9 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
-
 import java.io.IOException;
+
+import q.util.ActivityBase;
 import q.util.QConfig;
 import q.util.QLog;
 
@@ -54,7 +51,7 @@ import q.util.QLog;
  * @author dswitkin@google.com (Daniel Switkin)
  * @author Sean Owen
  */
-public final class CaptureActivity extends Activity implements SurfaceHolder.Callback {
+public final class CaptureActivity extends ActivityBase implements SurfaceHolder.Callback {
 
   private static final String TAG = CaptureActivity.class.getSimpleName();
 

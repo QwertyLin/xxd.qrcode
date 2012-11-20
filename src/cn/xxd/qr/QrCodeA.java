@@ -16,11 +16,12 @@ import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import com.google.zxing.common.BitMatrix;
 
+import q.util.ActivityBase;
 import q.util.FileMgr;
 import q.util.QConfig;
+import q.util.QLog;
 import q.util.QUI;
 import q.util.WindowMgr;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -38,10 +39,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class QrCodeA extends Activity implements OnClickListener {
+public class QrCodeA extends ActivityBase implements OnClickListener {
 	
 	public static final String EXTRA_QRCODE = "qrcode";
-	public static final String EXTRA_FROM_SCAN = "scan", EXTRA_FROM_HISTORY = "history";
+	public static final String EXTRA_BUILD_COLOR = "color", EXTRA_BUILD_COLOR_BG = "color_bg";
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
@@ -49,6 +50,7 @@ public class QrCodeA extends Activity implements OnClickListener {
 	private State state;
 	private Bitmap buildBitmap;
 	private FileMgr fileMgr;
+	private int buildColor, buildColorBg;
 	
 	private enum State {
 		IMAGE_SCAN, IMAGE_SRC, IMAGE_BUILD
@@ -57,6 +59,7 @@ public class QrCodeA extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		//
 		setContentView(R.layout.layout_qrcode);
 		QUI.baseHeaderBack(this, "");
 		int height = WindowMgr.getInstance(this).getHeight();
@@ -65,6 +68,8 @@ public class QrCodeA extends Activity implements OnClickListener {
 		//
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
+		buildColor = intent.getIntExtra(EXTRA_BUILD_COLOR, 0xff0099CC);
+		buildColorBg = intent.getIntExtra(EXTRA_BUILD_COLOR_BG, 0xffffffff);
 		initState(intent);
 		//
 		//
@@ -91,10 +96,13 @@ public class QrCodeA extends Activity implements OnClickListener {
 	}
 	
 	private void initState(Intent intent){
-		boolean isFromScan = intent.getBooleanExtra(EXTRA_FROM_SCAN, false);
-		if(isFromScan){
+		if(qrcode.getTime() == 0){
+			state = State.IMAGE_BUILD;
+			initImageBuild();
+		}else if(qrcode.getId() == 0){
 			state = State.IMAGE_SCAN;
 			initImageScan();
+			QLog.event(this, QLog.EVENT_QRCODE, qrcode.getText());
 		}else{
 			File imageFile = new File(fileMgr.getScan(qrcode.getTime()));
 			if(imageFile.exists() && imageFile.length() > 0){
@@ -195,7 +203,7 @@ public class QrCodeA extends Activity implements OnClickListener {
 	      int offset = y * width;
 	      for (int x = 0; x < width; x++) {
 	    	  //TODO QR图颜色
-	    	  pixels[offset + x] = result.get(x, y) ? QConfig.QR_IMAGE_FRONT_COLOR : QConfig.QR_IMAGE_BACK_COLOR; //pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
+	    	  pixels[offset + x] = result.get(x, y) ? buildColor :buildColorBg; //pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
 	      }
 	    }
 	    Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);

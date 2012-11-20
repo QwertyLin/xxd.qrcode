@@ -28,4 +28,6 @@ public class QConfig {
 	
 	public static final String SP_NAME = "setting";
 	public static final String SP_KEY_VERSION = "version";
+	public static final String SP_KEY_NEW_COLOR = "new_color";
+	public static final String SP_KEY_NEW_COLOR_BG = "new_color_bg";
 }

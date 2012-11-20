@@ -8,6 +8,8 @@ import android.util.Log;
 
 public class QLog {
 	
+	public static final int EVENT_QRCODE = 1; 
+	
 	private static boolean available = true;
 	
 	public static void error(Context ctx, String error){
@@ -15,8 +17,12 @@ public class QLog {
 		MobclickAgent.reportError(ctx, error);
 	}
 	
-	public static void event(Context ctx, long id){
+	public static void event(Context ctx, int id){
 		MobclickAgent.onEvent(ctx, String.valueOf(id));
+	}
+	
+	public static void event(Context ctx, int id, String label){
+		MobclickAgent.onEvent(ctx, String.valueOf(id), label);
 	}
 	
 	public static final void kv(String clazz, String method, String key, String value){

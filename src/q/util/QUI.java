@@ -25,5 +25,13 @@ public class QUI {
 			}
 		});
 	}
+	
+	public static final void baseHeaderBackOk(final Activity act, String text, OnClickListener onClickOk){
+		baseHeaderBack(act, text);
+		ImageButton btn = (ImageButton)act.findViewById(R.id.base_header_btn_right);
+		btn.setVisibility(View.VISIBLE);
+		btn.setImageResource(R.drawable.a_navigation_accept);
+		btn.setOnClickListener(onClickOk);
+	}
 
 }

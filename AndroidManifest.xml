@@ -77,6 +77,7 @@
       </activity>
                
       <activity android:name=".QrCodeA" android:screenOrientation="portrait"  />
+      <activity android:name=".NewA" android:screenOrientation="portrait"  />
       <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
       <activity android:name=".SettingA" android:screenOrientation="portrait"  />
       <activity android:name=".GuideA" android:screenOrientation="portrait"  />
