@@ -3,10 +3,6 @@ package cn.xxd.qr;
 import q.util.ActivityBase;
 import q.util.QUI;
 
-import com.umeng.update.UmengUpdateAgent;
-import com.umeng.update.UmengUpdateListener;
-import com.umeng.update.UpdateResponse;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -23,7 +19,6 @@ public class SettingA extends ActivityBase implements OnClickListener {
 		setContentView(R.layout.layout_setting);
 		QUI.baseHeaderBack(this, "设置");
 		//
-		findViewById(R.id.setting_guide).setOnClickListener(this);
 		findViewById(R.id.setting_market).setOnClickListener(this);
 		findViewById(R.id.setting_share).setOnClickListener(this);
 		findViewById(R.id.setting_update).setOnClickListener(this);
@@ -33,9 +28,6 @@ public class SettingA extends ActivityBase implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
-		case R.id.setting_guide:
-			onClickGuide();
-			break;
 		case R.id.setting_market:
 			onClickMarket();
 			break;
@@ -49,10 +41,6 @@ public class SettingA extends ActivityBase implements OnClickListener {
 			onClickAbout();
 			break;
 		}
-	}
-	
-	private void onClickGuide(){
-		startActivity(new Intent(this, GuideA.class));
 	}
 	
 	private void onClickMarket(){
@@ -77,9 +65,7 @@ public class SettingA extends ActivityBase implements OnClickListener {
 	
 	private void onClickUpdate(){
 		final ProgressDialog pd = ProgressDialog.show(this, "", "正在检查更新...");
-		UmengUpdateAgent.update(this);
-		UmengUpdateAgent.setUpdateAutoPopup(false);
-		UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+		/*UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
 		        @Override
 		        public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
 		        	pd.cancel();
@@ -102,6 +88,8 @@ public class SettingA extends ActivityBase implements OnClickListener {
 		            }
 		        }
 		});
+		UmengUpdateAgent.update(this);
+		UmengUpdateAgent.setUpdateAutoPopup(false);*/
 	}
 	
 	private void onClickAbout(){

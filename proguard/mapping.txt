@@ -1,0 +1,2556 @@
+cn.xxd.qr.AboutA -> cn.xxd.qr.AboutA:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+cn.xxd.qr.CaptureA -> cn.xxd.qr.a:
+    android.app.Activity mAct -> a
+    com.google.zxing.client.android.camera.CameraManager mCameraMgr -> b
+    android.widget.ImageButton btnFlash -> c
+    boolean isFlashOn -> d
+    void setCameraManager(com.google.zxing.client.android.camera.CameraManager) -> a
+    void onCreate() -> a
+    void onClick(android.view.View) -> onClick
+    void handleDecode(com.google.zxing.Result,android.graphics.Bitmap) -> a
+    android.app.Activity access$0(cn.xxd.qr.CaptureA) -> a
+cn.xxd.qr.CaptureA$1 -> cn.xxd.qr.b:
+    cn.xxd.qr.CaptureA this$0 -> a
+    android.graphics.Bitmap val$barcode -> b
+    cn.xxd.qr.bean.QrCode val$qrcode -> c
+    void run() -> run
+cn.xxd.qr.CaptureActivity -> cn.xxd.qr.CaptureActivity:
+    java.lang.String TAG -> a
+    com.google.zxing.client.android.camera.CameraManager cameraManager -> b
+    com.google.zxing.client.android.CaptureActivityHandler handler -> c
+    com.google.zxing.client.android.ViewfinderView viewfinderView -> d
+    com.google.zxing.Result lastResult -> e
+    boolean hasSurface -> f
+    com.google.zxing.client.android.BeepManager beepManager -> g
+    cn.xxd.qr.CaptureA homeA -> h
+    com.google.zxing.client.android.ViewfinderView getViewfinderView() -> a
+    android.os.Handler getHandler() -> b
+    com.google.zxing.client.android.camera.CameraManager getCameraManager() -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+    void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    void handleDecode(com.google.zxing.Result,android.graphics.Bitmap) -> a
+    void initCamera(android.view.SurfaceHolder) -> a
+    void displayFrameworkBugMessageAndExit() -> e
+    void resetStatusView() -> f
+    void drawViewfinder() -> d
+cn.xxd.qr.HistoryA -> cn.xxd.qr.HistoryA:
+    java.util.List datas -> a
+    cn.xxd.qr.adapter.HistoryAdapter adapter -> b
+    int page -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+    boolean onEndlessListViewBackground() -> a
+    void onEndlessListViewSuccess() -> b
+cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
+    void onCreate(android.os.Bundle) -> onCreate
+cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
+    int mColor -> a
+    int mColorBg -> b
+    android.view.View vColor -> c
+    android.view.View vColorBg -> d
+    android.widget.EditText vText -> e
+    java.util.List colors -> f
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+    void access$0(cn.xxd.qr.NewA) -> a
+    java.util.List access$1(cn.xxd.qr.NewA) -> b
+    void access$2(cn.xxd.qr.NewA,int) -> a
+    android.view.View access$3(cn.xxd.qr.NewA) -> c
+    int access$4(cn.xxd.qr.NewA) -> d
+    void access$5(cn.xxd.qr.NewA,int) -> b
+    android.view.View access$6(cn.xxd.qr.NewA) -> e
+    int access$7(cn.xxd.qr.NewA) -> f
+cn.xxd.qr.NewA$1 -> cn.xxd.qr.c:
+    cn.xxd.qr.NewA this$0 -> a
+    void onClick(android.view.View) -> onClick
+cn.xxd.qr.NewA$2 -> cn.xxd.qr.d:
+    cn.xxd.qr.NewA this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.xxd.qr.NewA$3 -> cn.xxd.qr.e:
+    cn.xxd.qr.NewA this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.xxd.qr.QrCodeA -> cn.xxd.qr.QrCodeA:
+    android.graphics.Bitmap SCAN_BITMAP -> a
+    cn.xxd.qr.bean.QrCode qrcode -> b
+    android.widget.ImageView ivImage -> c
+    cn.xxd.qr.QrCodeA$State state -> d
+    android.graphics.Bitmap buildBitmap -> e
+    q.util.FileMgr fileMgr -> f
+    int buildColor -> g
+    int buildColorBg -> h
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> i
+    void onCreate(android.os.Bundle) -> onCreate
+    android.graphics.Bitmap initImageEncode() -> a
+    void onClick(android.view.View) -> onClick
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType() -> b
+    cn.xxd.qr.bean.QrCode access$1(cn.xxd.qr.QrCodeA) -> a
+    android.widget.ImageView access$2(cn.xxd.qr.QrCodeA) -> b
+    android.graphics.Bitmap access$3(cn.xxd.qr.QrCodeA) -> c
+    void access$4(cn.xxd.qr.QrCodeA,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap access$5(cn.xxd.qr.QrCodeA) -> d
+cn.xxd.qr.QrCodeA$1 -> cn.xxd.qr.f:
+    cn.xxd.qr.QrCodeA this$0 -> a
+    void run() -> run
+    cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$1) -> a
+cn.xxd.qr.QrCodeA$1$1 -> cn.xxd.qr.g:
+    cn.xxd.qr.QrCodeA$1 this$1 -> a
+    android.graphics.Bitmap val$bm -> b
+    void run() -> run
+cn.xxd.qr.QrCodeA$2 -> cn.xxd.qr.h:
+    cn.xxd.qr.QrCodeA this$0 -> a
+    java.io.File val$imageFile -> b
+    void run() -> run
+    cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$2) -> a
+cn.xxd.qr.QrCodeA$2$1 -> cn.xxd.qr.i:
+    cn.xxd.qr.QrCodeA$2 this$1 -> a
+    android.graphics.Bitmap val$bm -> b
+    void run() -> run
+cn.xxd.qr.QrCodeA$3 -> cn.xxd.qr.j:
+    cn.xxd.qr.QrCodeA this$0 -> a
+    void run() -> run
+    cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$3) -> a
+cn.xxd.qr.QrCodeA$3$1 -> cn.xxd.qr.k:
+    cn.xxd.qr.QrCodeA$3 this$1 -> a
+    void run() -> run
+cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.l:
+    cn.xxd.qr.QrCodeA$State IMAGE_SCAN -> a
+    cn.xxd.qr.QrCodeA$State IMAGE_SRC -> b
+    cn.xxd.qr.QrCodeA$State IMAGE_BUILD -> c
+    cn.xxd.qr.QrCodeA$State[] ENUM$VALUES -> d
+    cn.xxd.qr.QrCodeA$State[] values() -> values
+    cn.xxd.qr.QrCodeA$State valueOf(java.lang.String) -> valueOf
+cn.xxd.qr.R -> cn.xxd.qr.m:
+cn.xxd.qr.R$styleable -> cn.xxd.qr.n:
+    int[] qview -> a
+cn.xxd.qr.SettingA -> cn.xxd.qr.SettingA:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+cn.xxd.qr.adapter.ColorAdapter -> cn.xxd.qr.a.a:
+    int getLayoutId() -> a
+    java.lang.Object getHolder(android.view.View) -> a
+    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
+cn.xxd.qr.adapter.ColorAdapter$Holder -> cn.xxd.qr.a.b:
+    android.widget.TextView vName -> a
+    android.view.View vColor -> b
+    cn.xxd.qr.adapter.ColorAdapter this$0 -> c
+cn.xxd.qr.adapter.HistoryAdapter -> cn.xxd.qr.a.c:
+    int getLayoutId() -> a
+    java.lang.Object getHolder(android.view.View) -> a
+    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
+cn.xxd.qr.adapter.HistoryAdapter$Holder -> cn.xxd.qr.a.d:
+    android.widget.TextView tvText -> a
+    android.widget.TextView tvTime -> b
+    cn.xxd.qr.adapter.HistoryAdapter this$0 -> c
+cn.xxd.qr.bean.Color -> cn.xxd.qr.b.a:
+    java.lang.String name -> a
+    int color -> b
+    java.lang.String getName() -> a
+    int getColor() -> b
+cn.xxd.qr.bean.HistoryDb -> cn.xxd.qr.b.b:
+    java.lang.String getSqlCreateTable() -> a
+    java.util.List queryAll(int) -> a
+    android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
+cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.c:
+    long id -> a
+    java.lang.String text -> b
+    long time -> c
+    java.lang.String timeStr -> d
+    long getId() -> a
+    void setId(long) -> a
+    java.lang.String getText() -> b
+    void setText(java.lang.String) -> a
+    long getTime() -> c
+    void setTime(long) -> b
+    java.lang.String getTimeStr() -> d
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+com.cnzz.mobile.zhuamob.Constants$EventType -> com.a.a.a.a:
+    com.cnzz.mobile.zhuamob.Constants$EventType SESSION_START -> a
+    com.cnzz.mobile.zhuamob.Constants$EventType ACT_RESUME -> b
+    com.cnzz.mobile.zhuamob.Constants$EventType ACT_PAUSE -> c
+    com.cnzz.mobile.zhuamob.Constants$EventType SESSION_END -> d
+    com.cnzz.mobile.zhuamob.Constants$EventType ACT_CREATE -> e
+    com.cnzz.mobile.zhuamob.Constants$EventType SENT_DATA -> f
+    com.cnzz.mobile.zhuamob.Constants$EventType USER_ACC_LONG -> g
+    com.cnzz.mobile.zhuamob.Constants$EventType USER_BEGIN_LONG -> h
+    com.cnzz.mobile.zhuamob.Constants$EventType USER_END_LONG -> i
+    com.cnzz.mobile.zhuamob.Constants$EventType ERROR_EVENT -> j
+    java.lang.String a -> k
+    int b -> l
+    com.cnzz.mobile.zhuamob.Constants$EventType[] c -> m
+    com.cnzz.mobile.zhuamob.Constants$EventType[] values() -> values
+    com.cnzz.mobile.zhuamob.Constants$EventType valueOf(java.lang.String) -> valueOf
+    java.lang.String toString() -> toString
+    int getID() -> a
+com.cnzz.mobile.zhuamob.DeviceAgent -> com.a.a.a.b:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String getPhoneInfo(android.content.Context) -> a
+    java.lang.String getPhoneNumber(android.content.Context) -> b
+    java.lang.String encryptByPublicKey$5b1592bd(java.lang.String) -> c
+    java.lang.String getResolution(android.content.Context) -> f
+    java.lang.String getOrientation(android.content.Context) -> c
+    java.lang.String getConnectedNetwork(android.content.Context) -> d
+    java.lang.String getTrafficStats() -> a
+    java.lang.String getLocation() -> b
+    java.lang.String getAppKey() -> c
+    void setAppKey(java.lang.String) -> a
+    java.lang.String getAppVerion() -> d
+    java.lang.String getChannelID() -> e
+    void setChannelID(java.lang.String) -> b
+    java.lang.String getMacAddress(android.content.Context) -> g
+    java.lang.Integer getTimezone(android.content.Context) -> e
+com.cnzz.mobile.zhuamob.MobileProbe -> com.a.a.a.c:
+    void onCreate(android.app.Activity) -> a
+    void onResume(android.app.Activity) -> b
+    void onPause(android.app.Activity) -> c
+    boolean onExit(android.content.Context) -> a
+    boolean a$1a552345(android.content.Context) -> b
+    void onEvent(android.content.Context,java.lang.String,long) -> a
+    void onEventBegin(android.content.Context,java.lang.String) -> a
+    void onEventEnd(android.content.Context,java.lang.String) -> b
+    void onError(android.content.Context,java.lang.String) -> c
+    void a(android.content.Context) -> c
+com.cnzz.mobile.zhuamob.a -> com.a.a.a.d:
+    org.json.JSONArray a -> a
+    void a(java.lang.String) -> a
+    java.lang.String c() -> c
+    org.json.JSONArray a() -> a
+    org.json.JSONArray a(java.lang.String,java.lang.String) -> a
+    void b() -> b
+com.cnzz.mobile.zhuamob.b -> com.a.a.a.e:
+    java.lang.String a -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+com.cnzz.mobile.zhuamob.c -> com.a.a.a.f:
+    java.lang.String a -> a
+    boolean accept(java.io.File,java.lang.String) -> accept
+com.cnzz.mobile.zhuamob.d -> com.a.a.a.g:
+    int a -> a
+    long b -> b
+    long c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    void a() -> a
+    int b() -> b
+    void a(int) -> a
+    void c() -> c
+    boolean d() -> d
+    void e() -> e
+    boolean f() -> f
+    long g() -> g
+    void h() -> h
+    long i() -> i
+    void j() -> j
+    void a(android.app.Activity,com.cnzz.mobile.zhuamob.Constants$EventType) -> a
+    void a(android.app.Activity) -> a
+    void b(android.app.Activity) -> b
+    void c(android.app.Activity) -> c
+    void a(android.content.Context,com.cnzz.mobile.zhuamob.Constants$EventType,java.lang.String,long) -> a
+com.cnzz.mobile.zhuamob.e -> com.a.a.a.h:
+    boolean a -> a
+    void run() -> run
+com.cnzz.mobile.zhuamob.f -> com.a.a.a.i:
+    int[] a -> a
+com.cnzz.mobile.zhuamob.g -> com.a.a.a.j:
+    com.cnzz.mobile.zhuamob.g a -> a
+    android.os.Handler b -> b
+    boolean c -> c
+    com.cnzz.mobile.zhuamob.g a() -> a
+    void a(int,int,int,java.lang.Object) -> a
+    boolean a$134632() -> b
+    void b() -> c
+    void a(boolean) -> a
+    void a(com.cnzz.mobile.zhuamob.g,boolean) -> a
+    void a(com.cnzz.mobile.zhuamob.g) -> a
+com.cnzz.mobile.zhuamob.h -> com.a.a.a.k:
+    com.cnzz.mobile.zhuamob.g a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.cnzz.mobile.zhuamob.i -> com.a.a.a.l:
+    void run() -> run
+com.cnzz.mobile.zhuamob.j -> com.a.a.a.m:
+    boolean a -> a
+    android.content.Context b -> b
+    long c -> c
+    long d -> d
+    boolean e -> e
+    boolean f -> f
+com.cnzz.mobile.zhuamob.k -> com.a.a.a.n:
+    int a -> a
+    com.cnzz.mobile.zhuamob.d b -> b
+    android.content.Context c -> c
+    javax.net.ssl.X509TrustManager d -> d
+    javax.net.ssl.HostnameVerifier e -> e
+    boolean a(boolean) -> a
+    boolean b(boolean) -> b
+    java.lang.String c(boolean) -> c
+    java.lang.String a(java.lang.String,boolean) -> a
+    boolean a(java.lang.String) -> a
+com.cnzz.mobile.zhuamob.l -> com.a.a.a.o:
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+com.cnzz.mobile.zhuamob.m -> com.a.a.a.p:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.google.zxing.BarcodeFormat -> com.google.zxing.a:
+    com.google.zxing.BarcodeFormat QR_CODE -> a
+    com.google.zxing.BarcodeFormat[] ENUM$VALUES -> b
+    com.google.zxing.BarcodeFormat[] values() -> values
+    com.google.zxing.BarcodeFormat valueOf(java.lang.String) -> valueOf
+com.google.zxing.Binarizer -> com.google.zxing.b:
+    com.google.zxing.LuminanceSource source -> a
+    com.google.zxing.LuminanceSource getLuminanceSource() -> a
+    com.google.zxing.common.BitMatrix getBlackMatrix() -> b
+com.google.zxing.BinaryBitmap -> com.google.zxing.c:
+    com.google.zxing.Binarizer binarizer -> a
+    com.google.zxing.common.BitMatrix matrix -> b
+    com.google.zxing.common.BitMatrix getBlackMatrix() -> a
+com.google.zxing.ChecksumException -> com.google.zxing.d:
+    com.google.zxing.ChecksumException instance -> a
+    com.google.zxing.ChecksumException getChecksumInstance() -> a
+com.google.zxing.DecodeHintType -> com.google.zxing.e:
+    com.google.zxing.DecodeHintType OTHER -> a
+    com.google.zxing.DecodeHintType PURE_BARCODE -> b
+    com.google.zxing.DecodeHintType TRY_HARDER -> c
+    com.google.zxing.DecodeHintType ALLOWED_LENGTHS -> d
+    com.google.zxing.DecodeHintType ASSUME_CODE_39_CHECK_DIGIT -> e
+    com.google.zxing.DecodeHintType NEED_RESULT_POINT_CALLBACK -> f
+    com.google.zxing.DecodeHintType[] ENUM$VALUES -> g
+    com.google.zxing.DecodeHintType[] values() -> values
+    com.google.zxing.DecodeHintType valueOf(java.lang.String) -> valueOf
+com.google.zxing.EncodeHintType -> com.google.zxing.f:
+    com.google.zxing.EncodeHintType ERROR_CORRECTION -> a
+    com.google.zxing.EncodeHintType CHARACTER_SET -> b
+    com.google.zxing.EncodeHintType MARGIN -> c
+    com.google.zxing.EncodeHintType PDF417_COMPACT -> d
+    com.google.zxing.EncodeHintType PDF417_COMPACTION -> e
+    com.google.zxing.EncodeHintType PDF417_DIMENSIONS -> f
+    com.google.zxing.EncodeHintType[] ENUM$VALUES -> g
+    com.google.zxing.EncodeHintType[] values() -> values
+    com.google.zxing.EncodeHintType valueOf(java.lang.String) -> valueOf
+com.google.zxing.FormatException -> com.google.zxing.g:
+    com.google.zxing.FormatException instance -> a
+    com.google.zxing.FormatException getFormatInstance() -> a
+com.google.zxing.LuminanceSource -> com.google.zxing.h:
+    int width -> a
+    int height -> b
+    byte[] getRow(int,byte[]) -> a
+    byte[] getMatrix() -> a
+    int getWidth() -> b
+    int getHeight() -> c
+    java.lang.String toString() -> toString
+com.google.zxing.MultiFormatReader -> com.google.zxing.i:
+    java.util.Map hints -> a
+    com.google.zxing.Reader readers -> b
+    com.google.zxing.Result decode(com.google.zxing.BinaryBitmap,java.util.Map) -> a
+    com.google.zxing.Result decodeWithState(com.google.zxing.BinaryBitmap) -> a
+    void setHints(java.util.Map) -> a
+    void reset() -> a
+    com.google.zxing.Result decodeInternal(com.google.zxing.BinaryBitmap) -> b
+com.google.zxing.MultiFormatWriter -> com.google.zxing.j:
+    int[] $SWITCH_TABLE$com$google$zxing$BarcodeFormat -> a
+    com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int,java.util.Map) -> a
+    int[] $SWITCH_TABLE$com$google$zxing$BarcodeFormat() -> a
+com.google.zxing.NotFoundException -> com.google.zxing.k:
+    com.google.zxing.NotFoundException instance -> a
+    com.google.zxing.NotFoundException getNotFoundInstance() -> a
+com.google.zxing.PlanarYUVLuminanceSource -> com.google.zxing.l:
+    byte[] yuvData -> a
+    int dataWidth -> b
+    int dataHeight -> c
+    int left -> d
+    int top -> e
+    byte[] getRow(int,byte[]) -> a
+    byte[] getMatrix() -> a
+    int[] renderCroppedGreyscaleBitmap() -> d
+com.google.zxing.Reader -> com.google.zxing.m:
+    com.google.zxing.Result decode(com.google.zxing.BinaryBitmap,java.util.Map) -> a
+    void reset() -> a
+com.google.zxing.ReaderException -> com.google.zxing.n:
+    java.lang.Throwable fillInStackTrace() -> fillInStackTrace
+com.google.zxing.Result -> com.google.zxing.o:
+    java.lang.String text -> a
+    byte[] rawBytes -> b
+    com.google.zxing.ResultPoint[] resultPoints -> c
+    com.google.zxing.BarcodeFormat format -> d
+    java.util.Map resultMetadata -> e
+    long timestamp -> f
+    java.lang.String getText() -> a
+    void putMetadata(com.google.zxing.ResultMetadataType,java.lang.Object) -> a
+    java.lang.String toString() -> toString
+com.google.zxing.ResultMetadataType -> com.google.zxing.p:
+    com.google.zxing.ResultMetadataType OTHER -> a
+    com.google.zxing.ResultMetadataType ORIENTATION -> b
+    com.google.zxing.ResultMetadataType BYTE_SEGMENTS -> c
+    com.google.zxing.ResultMetadataType ERROR_CORRECTION_LEVEL -> d
+    com.google.zxing.ResultMetadataType ISSUE_NUMBER -> e
+    com.google.zxing.ResultMetadataType SUGGESTED_PRICE -> f
+    com.google.zxing.ResultMetadataType POSSIBLE_COUNTRY -> g
+    com.google.zxing.ResultMetadataType UPC_EAN_EXTENSION -> h
+    com.google.zxing.ResultMetadataType[] ENUM$VALUES -> i
+    com.google.zxing.ResultMetadataType[] values() -> values
+    com.google.zxing.ResultMetadataType valueOf(java.lang.String) -> valueOf
+com.google.zxing.ResultPoint -> com.google.zxing.q:
+    float x -> a
+    float y -> b
+    float getX() -> a
+    float getY() -> b
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+    void orderBestPatterns(com.google.zxing.ResultPoint[]) -> a
+    float distance(com.google.zxing.ResultPoint,com.google.zxing.ResultPoint) -> a
+com.google.zxing.ResultPointCallback -> com.google.zxing.r:
+    void foundPossibleResultPoint(com.google.zxing.ResultPoint) -> a
+com.google.zxing.Writer -> com.google.zxing.s:
+    com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int,java.util.Map) -> a
+com.google.zxing.WriterException -> com.google.zxing.t:
+com.google.zxing.client.android.BeepManager -> com.google.zxing.client.android.a:
+    java.lang.String TAG -> a
+    android.app.Activity activity -> b
+    android.media.MediaPlayer mediaPlayer -> c
+    boolean playBeep -> d
+    boolean vibrate -> e
+    void updatePrefs() -> a
+    void playBeepSoundAndVibrate() -> b
+    android.media.MediaPlayer buildMediaPlayer(android.content.Context) -> a
+com.google.zxing.client.android.BeepManager$1 -> com.google.zxing.client.android.b:
+    void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.google.zxing.client.android.CaptureActivityHandler -> com.google.zxing.client.android.c:
+    java.lang.String TAG -> a
+    cn.xxd.qr.CaptureActivity activity -> b
+    com.google.zxing.client.android.DecodeThread decodeThread -> c
+    com.google.zxing.client.android.CaptureActivityHandler$State state -> d
+    com.google.zxing.client.android.camera.CameraManager cameraManager -> e
+    void handleMessage(android.os.Message) -> handleMessage
+    void quitSynchronously() -> a
+    void restartPreviewAndDecode() -> b
+com.google.zxing.client.android.CaptureActivityHandler$State -> com.google.zxing.client.android.d:
+    com.google.zxing.client.android.CaptureActivityHandler$State PREVIEW -> a
+    com.google.zxing.client.android.CaptureActivityHandler$State SUCCESS -> b
+    com.google.zxing.client.android.CaptureActivityHandler$State DONE -> c
+    com.google.zxing.client.android.CaptureActivityHandler$State[] ENUM$VALUES -> d
+    com.google.zxing.client.android.CaptureActivityHandler$State[] values() -> values
+    com.google.zxing.client.android.CaptureActivityHandler$State valueOf(java.lang.String) -> valueOf
+com.google.zxing.client.android.DecodeHandler -> com.google.zxing.client.android.e:
+    java.lang.String TAG -> a
+    cn.xxd.qr.CaptureActivity activity -> b
+    com.google.zxing.MultiFormatReader multiFormatReader -> c
+    boolean running -> d
+    void handleMessage(android.os.Message) -> handleMessage
+com.google.zxing.client.android.DecodeThread -> com.google.zxing.client.android.f:
+    cn.xxd.qr.CaptureActivity activity -> a
+    java.util.Map hints -> b
+    android.os.Handler handler -> c
+    java.util.concurrent.CountDownLatch handlerInitLatch -> d
+    android.os.Handler getHandler() -> a
+    void run() -> run
+com.google.zxing.client.android.FinishListener -> com.google.zxing.client.android.g:
+    android.app.Activity activityToFinish -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.google.zxing.client.android.ViewfinderResultPointCallback -> com.google.zxing.client.android.h:
+    com.google.zxing.client.android.ViewfinderView viewfinderView -> a
+    void foundPossibleResultPoint(com.google.zxing.ResultPoint) -> a
+com.google.zxing.client.android.ViewfinderView -> com.google.zxing.client.android.ViewfinderView:
+    int[] SCANNER_ALPHA -> a
+    com.google.zxing.client.android.camera.CameraManager cameraManager -> b
+    android.graphics.Paint paint -> c
+    int maskColor -> d
+    int laserColor -> e
+    int resultPointColor -> f
+    int scannerAlpha -> g
+    java.util.List possibleResultPoints -> h
+    java.util.List lastPossibleResultPoints -> i
+    void setCameraManager(com.google.zxing.client.android.camera.CameraManager) -> a
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void drawViewfinder() -> a
+    void addPossibleResultPoint(com.google.zxing.ResultPoint) -> a
+com.google.zxing.client.android.camera.AutoFocusManager -> com.google.zxing.client.android.a.a:
+    java.lang.String TAG -> a
+    java.util.Collection FOCUS_MODES_CALLING_AF -> b
+    boolean active -> c
+    boolean useAutoFocus -> d
+    android.hardware.Camera camera -> e
+    com.google.zxing.client.android.camera.AutoFocusManager$AutoFocusTask outstandingTask -> f
+    com.google.zxing.client.android.common.executor.AsyncTaskExecInterface taskExec -> g
+    void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+    void start() -> a
+    void stop() -> b
+    boolean access$0(com.google.zxing.client.android.camera.AutoFocusManager) -> a
+com.google.zxing.client.android.camera.AutoFocusManager$AutoFocusTask -> com.google.zxing.client.android.a.b:
+    com.google.zxing.client.android.camera.AutoFocusManager this$0 -> a
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+com.google.zxing.client.android.camera.CameraConfigurationManager -> com.google.zxing.client.android.a.c:
+    android.content.Context context -> a
+    android.graphics.Point screenResolution -> b
+    android.graphics.Point cameraResolution -> c
+    void initFromCameraParameters(android.hardware.Camera) -> a
+    void setDesiredCameraParameters(android.hardware.Camera,boolean) -> a
+    android.graphics.Point getCameraResolution() -> a
+    android.graphics.Point getScreenResolution() -> b
+    void setTorch(android.hardware.Camera,boolean) -> b
+    void doSetTorch(android.hardware.Camera$Parameters,boolean) -> a
+    android.graphics.Point findBestPreviewSizeValue(android.hardware.Camera$Parameters,android.graphics.Point) -> a
+    java.lang.String findSettableValue(java.util.Collection,java.lang.String[]) -> a
+com.google.zxing.client.android.camera.CameraConfigurationManager$1 -> com.google.zxing.client.android.a.d:
+    com.google.zxing.client.android.camera.CameraConfigurationManager this$0 -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.google.zxing.client.android.camera.CameraManager -> com.google.zxing.client.android.a.e:
+    java.lang.String TAG -> a
+    android.content.Context context -> b
+    com.google.zxing.client.android.camera.CameraConfigurationManager configManager -> c
+    android.hardware.Camera camera -> d
+    com.google.zxing.client.android.camera.AutoFocusManager autoFocusManager -> e
+    android.graphics.Rect framingRect -> f
+    android.graphics.Rect framingRectInPreview -> g
+    boolean initialized -> h
+    boolean previewing -> i
+    int requestedFramingRectWidth -> j
+    int requestedFramingRectHeight -> k
+    com.google.zxing.client.android.camera.PreviewCallback previewCallback -> l
+    void openDriver(android.view.SurfaceHolder) -> a
+    boolean isOpen() -> a
+    void closeDriver() -> b
+    void startPreview() -> c
+    void stopPreview() -> d
+    void setTorch(boolean) -> a
+    void requestPreviewFrame$2a8797e(android.os.Handler) -> a
+    android.graphics.Rect getFramingRect() -> e
+    android.graphics.Rect getFramingRectInPreview() -> f
+    void setManualFramingRect(int,int) -> a
+    com.google.zxing.PlanarYUVLuminanceSource buildLuminanceSource(byte[],int,int) -> a
+com.google.zxing.client.android.camera.PreviewCallback -> com.google.zxing.client.android.a.f:
+    java.lang.String TAG -> a
+    com.google.zxing.client.android.camera.CameraConfigurationManager configManager -> b
+    android.os.Handler previewHandler -> c
+    int previewMessage -> d
+    void setHandler(android.os.Handler,int) -> a
+    void onPreviewFrame(byte[],android.hardware.Camera) -> onPreviewFrame
+com.google.zxing.client.android.camera.open.DefaultOpenCameraInterface -> com.google.zxing.client.android.a.a.a:
+    android.hardware.Camera open() -> a
+com.google.zxing.client.android.camera.open.OpenCameraInterface -> com.google.zxing.client.android.a.a.b:
+    android.hardware.Camera open() -> a
+com.google.zxing.client.android.camera.open.OpenCameraManager -> com.google.zxing.client.android.a.a.c:
+com.google.zxing.client.android.common.PlatformSupportManager -> com.google.zxing.client.android.b.a:
+    java.lang.String TAG -> a
+    java.lang.Class managedInterface -> b
+    java.lang.Object defaultImplementation -> c
+    java.util.SortedMap implementations -> d
+    void addImplementationClass(int,java.lang.String) -> a
+    java.lang.Object build() -> a
+com.google.zxing.client.android.common.executor.AsyncTaskExecInterface -> com.google.zxing.client.android.b.a.a:
+    void execute(android.os.AsyncTask,java.lang.Object[]) -> a
+com.google.zxing.client.android.common.executor.AsyncTaskExecManager -> com.google.zxing.client.android.b.a.b:
+com.google.zxing.client.android.common.executor.DefaultAsyncTaskExecInterface -> com.google.zxing.client.android.b.a.c:
+    void execute(android.os.AsyncTask,java.lang.Object[]) -> a
+com.google.zxing.client.android.pref.BSPlusPreference -> com.google.zxing.client.android.pref.BSPlusPreference:
+    void configureClickListener() -> a
+com.google.zxing.client.android.pref.BSPlusPreference$1 -> com.google.zxing.client.android.pref.a:
+    com.google.zxing.client.android.pref.BSPlusPreference this$0 -> a
+    boolean onPreferenceClick(android.preference.Preference) -> onPreferenceClick
+com.google.zxing.client.result.AbstractDoCoMoResultParser -> com.google.zxing.client.a.a:
+com.google.zxing.client.result.AddressBookAUResultParser -> com.google.zxing.client.a.b:
+com.google.zxing.client.result.AddressBookDoCoMoResultParser -> com.google.zxing.client.a.c:
+com.google.zxing.client.result.BizcardResultParser -> com.google.zxing.client.a.d:
+com.google.zxing.client.result.BookmarkDoCoMoResultParser -> com.google.zxing.client.a.e:
+com.google.zxing.client.result.EmailAddressResultParser -> com.google.zxing.client.a.f:
+com.google.zxing.client.result.EmailDoCoMoResultParser -> com.google.zxing.client.a.g:
+    java.util.regex.Pattern ATEXT_ALPHANUMERIC -> a
+com.google.zxing.client.result.GeoResultParser -> com.google.zxing.client.a.h:
+    java.util.regex.Pattern GEO_URL_PATTERN -> a
+com.google.zxing.client.result.ParsedResult -> com.google.zxing.client.a.i:
+    com.google.zxing.client.result.ParsedResultType type -> a
+    com.google.zxing.client.result.ParsedResultType getType() -> a
+    java.lang.String getDisplayResult() -> b
+    java.lang.String toString() -> toString
+    void maybeAppend(java.lang.String,java.lang.StringBuilder) -> a
+com.google.zxing.client.result.ParsedResultType -> com.google.zxing.client.a.j:
+    com.google.zxing.client.result.ParsedResultType ADDRESSBOOK -> a
+    com.google.zxing.client.result.ParsedResultType EMAIL_ADDRESS -> b
+    com.google.zxing.client.result.ParsedResultType PRODUCT -> c
+    com.google.zxing.client.result.ParsedResultType URI -> d
+    com.google.zxing.client.result.ParsedResultType TEXT -> e
+    com.google.zxing.client.result.ParsedResultType GEO -> f
+    com.google.zxing.client.result.ParsedResultType TEL -> g
+    com.google.zxing.client.result.ParsedResultType SMS -> h
+    com.google.zxing.client.result.ParsedResultType CALENDAR -> i
+    com.google.zxing.client.result.ParsedResultType WIFI -> j
+    com.google.zxing.client.result.ParsedResultType ISBN -> k
+    com.google.zxing.client.result.ParsedResultType[] ENUM$VALUES -> l
+    com.google.zxing.client.result.ParsedResultType[] values() -> values
+    com.google.zxing.client.result.ParsedResultType valueOf(java.lang.String) -> valueOf
+com.google.zxing.client.result.ResultParser -> com.google.zxing.client.a.k:
+    com.google.zxing.client.result.ResultParser[] PARSERS -> a
+    java.util.regex.Pattern DIGITS -> b
+    java.util.regex.Pattern ALPHANUM -> c
+    java.util.regex.Pattern AMPERSAND -> d
+    java.util.regex.Pattern EQUALS -> e
+    com.google.zxing.client.result.ParsedResult parseResult(java.lang.String) -> a
+com.google.zxing.client.result.SMSMMSResultParser -> com.google.zxing.client.a.l:
+com.google.zxing.client.result.SMSTOMMSTOResultParser -> com.google.zxing.client.a.m:
+com.google.zxing.client.result.SMTPResultParser -> com.google.zxing.client.a.n:
+com.google.zxing.client.result.TelResultParser -> com.google.zxing.client.a.o:
+com.google.zxing.client.result.TextParsedResult -> com.google.zxing.client.a.p:
+    java.lang.String text -> a
+    java.lang.String language -> b
+    java.lang.String getDisplayResult() -> b
+com.google.zxing.client.result.URIParsedResult -> com.google.zxing.client.a.q:
+    java.util.regex.Pattern USER_IN_HOST -> a
+    java.lang.String uri -> b
+    java.lang.String title -> c
+    java.lang.String getDisplayResult() -> b
+    boolean isColonFollowedByPortNumber(java.lang.String,int) -> a
+com.google.zxing.client.result.URIResultParser -> com.google.zxing.client.a.r:
+    java.util.regex.Pattern URL_WITH_PROTOCOL_PATTERN -> a
+    java.util.regex.Pattern URL_WITHOUT_PROTOCOL_PATTERN -> b
+    com.google.zxing.client.result.URIParsedResult parse(java.lang.String) -> b
+com.google.zxing.client.result.URLTOResultParser -> com.google.zxing.client.a.s:
+com.google.zxing.client.result.VCardResultParser -> com.google.zxing.client.a.t:
+    java.util.regex.Pattern BEGIN_VCARD -> a
+    java.util.regex.Pattern VCARD_LIKE_DATE -> b
+    java.util.regex.Pattern CR_LF_SPACE_TAB -> c
+    java.util.regex.Pattern NEWLINE_ESCAPE -> d
+    java.util.regex.Pattern VCARD_ESCAPES -> e
+    java.util.regex.Pattern EQUALS -> f
+    java.util.regex.Pattern SEMICOLON -> g
+    java.util.regex.Pattern UNESCAPED_SEMICOLONS -> h
+com.google.zxing.client.result.VEventResultParser -> com.google.zxing.client.a.u:
+com.google.zxing.client.result.WifiResultParser -> com.google.zxing.client.a.v:
+com.google.zxing.common.BitArray -> com.google.zxing.a.a:
+    int[] bits -> a
+    int size -> b
+    int getSize() -> a
+    int getSizeInBytes() -> b
+    void ensureCapacity(int) -> b
+    boolean get(int) -> a
+    void appendBit(boolean) -> a
+    void appendBits(int,int) -> a
+    void appendBitArray(com.google.zxing.common.BitArray) -> a
+    void xor(com.google.zxing.common.BitArray) -> b
+    void toBytes$101cc16b(int,byte[],int) -> a
+    java.lang.String toString() -> toString
+com.google.zxing.common.BitMatrix -> com.google.zxing.a.b:
+    int width -> a
+    int height -> b
+    int rowSize -> c
+    int[] bits -> d
+    boolean get(int,int) -> a
+    void set(int,int) -> b
+    void flip(int,int) -> c
+    void setRegion(int,int,int,int) -> a
+    int[] getTopLeftOnBit() -> a
+    int[] getBottomRightOnBit() -> b
+    int getWidth() -> c
+    int getHeight() -> d
+    boolean equals(java.lang.Object) -> equals
+    int hashCode() -> hashCode
+    java.lang.String toString() -> toString
+com.google.zxing.common.BitSource -> com.google.zxing.a.c:
+    byte[] bytes -> a
+    int byteOffset -> b
+    int bitOffset -> c
+    int readBits(int) -> a
+    int available() -> a
+com.google.zxing.common.CharacterSetECI -> com.google.zxing.a.d:
+    com.google.zxing.common.CharacterSetECI Cp437 -> a
+    com.google.zxing.common.CharacterSetECI ISO8859_1 -> b
+    com.google.zxing.common.CharacterSetECI ISO8859_2 -> c
+    com.google.zxing.common.CharacterSetECI ISO8859_3 -> d
+    com.google.zxing.common.CharacterSetECI ISO8859_4 -> e
+    com.google.zxing.common.CharacterSetECI ISO8859_5 -> f
+    com.google.zxing.common.CharacterSetECI ISO8859_6 -> g
+    com.google.zxing.common.CharacterSetECI ISO8859_7 -> h
+    com.google.zxing.common.CharacterSetECI ISO8859_8 -> i
+    com.google.zxing.common.CharacterSetECI ISO8859_9 -> j
+    com.google.zxing.common.CharacterSetECI ISO8859_10 -> k
+    com.google.zxing.common.CharacterSetECI ISO8859_11 -> l
+    com.google.zxing.common.CharacterSetECI ISO8859_13 -> m
+    com.google.zxing.common.CharacterSetECI ISO8859_14 -> n
+    com.google.zxing.common.CharacterSetECI ISO8859_15 -> o
+    com.google.zxing.common.CharacterSetECI ISO8859_16 -> p
+    com.google.zxing.common.CharacterSetECI SJIS -> q
+    com.google.zxing.common.CharacterSetECI Cp1250 -> r
+    com.google.zxing.common.CharacterSetECI Cp1251 -> s
+    com.google.zxing.common.CharacterSetECI Cp1252 -> t
+    com.google.zxing.common.CharacterSetECI Cp1256 -> u
+    com.google.zxing.common.CharacterSetECI UnicodeBigUnmarked -> v
+    com.google.zxing.common.CharacterSetECI UTF8 -> w
+    com.google.zxing.common.CharacterSetECI ASCII -> x
+    com.google.zxing.common.CharacterSetECI Big5 -> y
+    com.google.zxing.common.CharacterSetECI GB18030 -> z
+    com.google.zxing.common.CharacterSetECI EUC_KR -> A
+    java.util.Map VALUE_TO_ECI -> B
+    java.util.Map NAME_TO_ECI -> C
+    int[] values -> D
+    java.lang.String[] otherEncodingNames -> E
+    com.google.zxing.common.CharacterSetECI[] ENUM$VALUES -> F
+    int getValue() -> a
+    com.google.zxing.common.CharacterSetECI getCharacterSetECIByValue(int) -> a
+    com.google.zxing.common.CharacterSetECI getCharacterSetECIByName(java.lang.String) -> a
+    com.google.zxing.common.CharacterSetECI[] values() -> values
+    com.google.zxing.common.CharacterSetECI valueOf(java.lang.String) -> valueOf
+com.google.zxing.common.DecoderResult -> com.google.zxing.a.e:
+    byte[] rawBytes -> a
+    java.lang.String text -> b
+    java.util.List byteSegments -> c
+    java.lang.String ecLevel -> d
+    byte[] getRawBytes() -> a
+    java.lang.String getText() -> b
+    java.util.List getByteSegments() -> c
+    java.lang.String getECLevel() -> d
+com.google.zxing.common.DefaultGridSampler -> com.google.zxing.a.f:
+    com.google.zxing.common.BitMatrix sampleGrid(com.google.zxing.common.BitMatrix,int,int,com.google.zxing.common.PerspectiveTransform) -> a
+com.google.zxing.common.DetectorResult -> com.google.zxing.a.g:
+    com.google.zxing.common.BitMatrix bits -> a
+    com.google.zxing.ResultPoint[] points -> b
+    com.google.zxing.common.BitMatrix getBits() -> a
+    com.google.zxing.ResultPoint[] getPoints() -> b
+com.google.zxing.common.GlobalHistogramBinarizer -> com.google.zxing.a.h:
+    byte[] EMPTY -> a
+    byte[] luminances -> b
+    int[] buckets -> c
+    com.google.zxing.common.BitMatrix getBlackMatrix() -> b
+com.google.zxing.common.GridSampler -> com.google.zxing.a.i:
+    com.google.zxing.common.GridSampler gridSampler -> a
+    com.google.zxing.common.GridSampler getInstance() -> a
+    com.google.zxing.common.BitMatrix sampleGrid(com.google.zxing.common.BitMatrix,int,int,com.google.zxing.common.PerspectiveTransform) -> a
+com.google.zxing.common.HybridBinarizer -> com.google.zxing.a.j:
+    com.google.zxing.common.BitMatrix matrix -> a
+    com.google.zxing.common.BitMatrix getBlackMatrix() -> b
+    int cap$4868d301(int,int) -> a
+com.google.zxing.common.PerspectiveTransform -> com.google.zxing.a.k:
+    float a11 -> a
+    float a12 -> b
+    float a13 -> c
+    float a21 -> d
+    float a22 -> e
+    float a23 -> f
+    float a31 -> g
+    float a32 -> h
+    float a33 -> i
+    com.google.zxing.common.PerspectiveTransform quadrilateralToQuadrilateral$627f73af(float,float,float,float,float,float,float,float,float,float,float,float) -> a
+    void transformPoints(float[]) -> a
+    com.google.zxing.common.PerspectiveTransform squareToQuadrilateral(float,float,float,float,float,float,float,float) -> a
+com.google.zxing.common.StringUtils -> com.google.zxing.a.l:
+    java.lang.String PLATFORM_DEFAULT_ENCODING -> a
+    boolean ASSUME_SHIFT_JIS -> b
+    java.lang.String guessEncoding$7d98f549(byte[]) -> a
+com.google.zxing.common.detector.MathUtils -> com.google.zxing.a.a.a:
+    float distance(int,int,int,int) -> a
+com.google.zxing.common.reedsolomon.GenericGF -> com.google.zxing.a.b.a:
+    com.google.zxing.common.reedsolomon.GenericGF AZTEC_DATA_12 -> a
+    com.google.zxing.common.reedsolomon.GenericGF AZTEC_DATA_10 -> b
+    com.google.zxing.common.reedsolomon.GenericGF AZTEC_DATA_6 -> c
+    com.google.zxing.common.reedsolomon.GenericGF AZTEC_PARAM -> d
+    com.google.zxing.common.reedsolomon.GenericGF QR_CODE_FIELD_256 -> e
+    com.google.zxing.common.reedsolomon.GenericGF DATA_MATRIX_FIELD_256 -> f
+    com.google.zxing.common.reedsolomon.GenericGF AZTEC_DATA_8 -> g
+    com.google.zxing.common.reedsolomon.GenericGF MAXICODE_FIELD_64 -> h
+    int[] expTable -> i
+    int[] logTable -> j
+    com.google.zxing.common.reedsolomon.GenericGFPoly zero -> k
+    com.google.zxing.common.reedsolomon.GenericGFPoly one -> l
+    int size -> m
+    int primitive -> n
+    boolean initialized -> o
+    void initialize() -> d
+    void checkInit() -> e
+    com.google.zxing.common.reedsolomon.GenericGFPoly getZero() -> a
+    com.google.zxing.common.reedsolomon.GenericGFPoly getOne() -> b
+    com.google.zxing.common.reedsolomon.GenericGFPoly buildMonomial(int,int) -> a
+    int addOrSubtract(int,int) -> b
+    int exp(int) -> a
+    int log(int) -> b
+    int inverse(int) -> c
+    int multiply(int,int) -> c
+    int getSize() -> c
+com.google.zxing.common.reedsolomon.GenericGFPoly -> com.google.zxing.a.b.b:
+    com.google.zxing.common.reedsolomon.GenericGF field -> a
+    int[] coefficients -> b
+    int[] getCoefficients() -> a
+    int getDegree() -> b
+    boolean isZero() -> c
+    int getCoefficient(int) -> a
+    int evaluateAt(int) -> b
+    com.google.zxing.common.reedsolomon.GenericGFPoly addOrSubtract(com.google.zxing.common.reedsolomon.GenericGFPoly) -> a
+    com.google.zxing.common.reedsolomon.GenericGFPoly multiply(com.google.zxing.common.reedsolomon.GenericGFPoly) -> b
+    com.google.zxing.common.reedsolomon.GenericGFPoly multiply(int) -> c
+    com.google.zxing.common.reedsolomon.GenericGFPoly multiplyByMonomial(int,int) -> a
+    com.google.zxing.common.reedsolomon.GenericGFPoly[] divide(com.google.zxing.common.reedsolomon.GenericGFPoly) -> c
+    java.lang.String toString() -> toString
+com.google.zxing.common.reedsolomon.ReedSolomonDecoder -> com.google.zxing.a.b.c:
+    com.google.zxing.common.reedsolomon.GenericGF field -> a
+    void decode(int[],int) -> a
+com.google.zxing.common.reedsolomon.ReedSolomonEncoder -> com.google.zxing.a.b.d:
+    com.google.zxing.common.reedsolomon.GenericGF field -> a
+    java.util.List cachedGenerators -> b
+    com.google.zxing.common.reedsolomon.GenericGFPoly buildGenerator(int) -> a
+    void encode(int[],int) -> a
+com.google.zxing.common.reedsolomon.ReedSolomonException -> com.google.zxing.a.b.e:
+com.google.zxing.qrcode.QRCodeReader -> com.google.zxing.b.a:
+    com.google.zxing.ResultPoint[] NO_POINTS -> a
+    com.google.zxing.qrcode.decoder.Decoder decoder -> b
+    com.google.zxing.Result decode(com.google.zxing.BinaryBitmap,java.util.Map) -> a
+    void reset() -> a
+com.google.zxing.qrcode.QRCodeWriter -> com.google.zxing.b.b:
+    com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int,java.util.Map) -> a
+    com.google.zxing.common.BitMatrix renderResult(com.google.zxing.qrcode.encoder.QRCode,int,int,int) -> a
+com.google.zxing.qrcode.decoder.BitMatrixParser -> com.google.zxing.b.a.a:
+    com.google.zxing.common.BitMatrix bitMatrix -> a
+    com.google.zxing.qrcode.decoder.Version parsedVersion -> b
+    com.google.zxing.qrcode.decoder.FormatInformation parsedFormatInfo -> c
+    com.google.zxing.qrcode.decoder.FormatInformation readFormatInformation() -> a
+    com.google.zxing.qrcode.decoder.Version readVersion() -> b
+    int copyBit(int,int,int) -> a
+    byte[] readCodewords() -> c
+com.google.zxing.qrcode.decoder.DataBlock -> com.google.zxing.b.a.b:
+    int numDataCodewords -> a
+    byte[] codewords -> b
+    com.google.zxing.qrcode.decoder.DataBlock[] getDataBlocks(byte[],com.google.zxing.qrcode.decoder.Version,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel) -> a
+    int getNumDataCodewords() -> a
+    byte[] getCodewords() -> b
+com.google.zxing.qrcode.decoder.DataMask -> com.google.zxing.b.a.c:
+    com.google.zxing.qrcode.decoder.DataMask[] DATA_MASKS -> a
+    void unmaskBitMatrix(com.google.zxing.common.BitMatrix,int) -> a
+    boolean isMasked(int,int) -> a
+    com.google.zxing.qrcode.decoder.DataMask forReference(int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask000 -> com.google.zxing.b.a.d:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask001 -> com.google.zxing.b.a.e:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask010 -> com.google.zxing.b.a.f:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask011 -> com.google.zxing.b.a.g:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask100 -> com.google.zxing.b.a.h:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask101 -> com.google.zxing.b.a.i:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask110 -> com.google.zxing.b.a.j:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DataMask$DataMask111 -> com.google.zxing.b.a.k:
+    boolean isMasked(int,int) -> a
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser -> com.google.zxing.b.a.l:
+    char[] ALPHANUMERIC_CHARS -> a
+    com.google.zxing.common.DecoderResult decode$6fa0a788(byte[],com.google.zxing.qrcode.decoder.Version,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel) -> a
+    void decodeHanziSegment(com.google.zxing.common.BitSource,java.lang.StringBuilder,int) -> a
+    void decodeKanjiSegment(com.google.zxing.common.BitSource,java.lang.StringBuilder,int) -> b
+    void decodeByteSegment$6c70f3e1(com.google.zxing.common.BitSource,java.lang.StringBuilder,int,com.google.zxing.common.CharacterSetECI,java.util.Collection) -> a
+    char toAlphaNumericChar(int) -> a
+    void decodeAlphanumericSegment(com.google.zxing.common.BitSource,java.lang.StringBuilder,int,boolean) -> a
+    void decodeNumericSegment(com.google.zxing.common.BitSource,java.lang.StringBuilder,int) -> c
+com.google.zxing.qrcode.decoder.Decoder -> com.google.zxing.b.a.m:
+    com.google.zxing.common.reedsolomon.ReedSolomonDecoder rsDecoder -> a
+    com.google.zxing.common.DecoderResult decode$7a1b6c9(com.google.zxing.common.BitMatrix) -> a
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel -> com.google.zxing.b.a.n:
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel L -> a
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel M -> b
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel Q -> c
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel H -> d
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel[] FOR_BITS -> e
+    int bits -> f
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel[] ENUM$VALUES -> g
+    int getBits() -> a
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel forBits(int) -> a
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel[] values() -> values
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel valueOf(java.lang.String) -> valueOf
+com.google.zxing.qrcode.decoder.FormatInformation -> com.google.zxing.b.a.o:
+    int[][] FORMAT_INFO_DECODE_LOOKUP -> a
+    int[] BITS_SET_IN_HALF_BYTE -> b
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel errorCorrectionLevel -> c
+    byte dataMask -> d
+    int numBitsDiffering(int,int) -> a
+    com.google.zxing.qrcode.decoder.FormatInformation decodeFormatInformation(int,int) -> b
+    com.google.zxing.qrcode.decoder.FormatInformation doDecodeFormatInformation(int,int) -> c
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getErrorCorrectionLevel() -> a
+    byte getDataMask() -> b
+    int hashCode() -> hashCode
+    boolean equals(java.lang.Object) -> equals
+com.google.zxing.qrcode.decoder.Mode -> com.google.zxing.b.a.p:
+    com.google.zxing.qrcode.decoder.Mode TERMINATOR -> a
+    com.google.zxing.qrcode.decoder.Mode NUMERIC -> b
+    com.google.zxing.qrcode.decoder.Mode ALPHANUMERIC -> c
+    com.google.zxing.qrcode.decoder.Mode STRUCTURED_APPEND -> d
+    com.google.zxing.qrcode.decoder.Mode BYTE -> e
+    com.google.zxing.qrcode.decoder.Mode ECI -> f
+    com.google.zxing.qrcode.decoder.Mode KANJI -> g
+    com.google.zxing.qrcode.decoder.Mode FNC1_FIRST_POSITION -> h
+    com.google.zxing.qrcode.decoder.Mode FNC1_SECOND_POSITION -> i
+    com.google.zxing.qrcode.decoder.Mode HANZI -> j
+    int[] characterCountBitsForVersions -> k
+    int bits -> l
+    com.google.zxing.qrcode.decoder.Mode[] ENUM$VALUES -> m
+    com.google.zxing.qrcode.decoder.Mode forBits(int) -> a
+    int getCharacterCountBits(com.google.zxing.qrcode.decoder.Version) -> a
+    int getBits() -> a
+    com.google.zxing.qrcode.decoder.Mode[] values() -> values
+    com.google.zxing.qrcode.decoder.Mode valueOf(java.lang.String) -> valueOf
+com.google.zxing.qrcode.decoder.Version -> com.google.zxing.b.a.q:
+    int[] VERSION_DECODE_INFO -> a
+    com.google.zxing.qrcode.decoder.Version[] VERSIONS -> b
+    int versionNumber -> c
+    int[] alignmentPatternCenters -> d
+    com.google.zxing.qrcode.decoder.Version$ECBlocks[] ecBlocks -> e
+    int totalCodewords -> f
+    int getVersionNumber() -> a
+    int[] getAlignmentPatternCenters() -> b
+    int getTotalCodewords() -> c
+    int getDimensionForVersion() -> d
+    com.google.zxing.qrcode.decoder.Version$ECBlocks getECBlocksForLevel(com.google.zxing.qrcode.decoder.ErrorCorrectionLevel) -> a
+    com.google.zxing.qrcode.decoder.Version getProvisionalVersionForDimension(int) -> a
+    com.google.zxing.qrcode.decoder.Version getVersionForNumber(int) -> b
+    com.google.zxing.qrcode.decoder.Version decodeVersionInformation(int) -> c
+    com.google.zxing.common.BitMatrix buildFunctionPattern() -> e
+    java.lang.String toString() -> toString
+    com.google.zxing.qrcode.decoder.Version[] buildVersions() -> f
+com.google.zxing.qrcode.decoder.Version$ECB -> com.google.zxing.b.a.r:
+    int count -> a
+    int dataCodewords -> b
+    int getCount() -> a
+    int getDataCodewords() -> b
+com.google.zxing.qrcode.decoder.Version$ECBlocks -> com.google.zxing.b.a.s:
+    int ecCodewordsPerBlock -> a
+    com.google.zxing.qrcode.decoder.Version$ECB[] ecBlocks -> b
+    int getECCodewordsPerBlock() -> a
+    int getNumBlocks() -> b
+    int getTotalECCodewords() -> c
+    com.google.zxing.qrcode.decoder.Version$ECB[] getECBlocks() -> d
+com.google.zxing.qrcode.detector.AlignmentPattern -> com.google.zxing.b.b.a:
+    float estimatedModuleSize -> a
+    boolean aboutEquals(float,float,float) -> a
+    com.google.zxing.qrcode.detector.AlignmentPattern combineEstimate(float,float,float) -> b
+com.google.zxing.qrcode.detector.AlignmentPatternFinder -> com.google.zxing.b.b.b:
+    com.google.zxing.common.BitMatrix image -> a
+    java.util.List possibleCenters -> b
+    int startX -> c
+    int startY -> d
+    int width -> e
+    int height -> f
+    float moduleSize -> g
+    int[] crossCheckStateCount -> h
+    com.google.zxing.ResultPointCallback resultPointCallback -> i
+    com.google.zxing.qrcode.detector.AlignmentPattern find() -> a
+    float centerFromEnd(int[],int) -> a
+    boolean foundPatternCross(int[]) -> a
+    com.google.zxing.qrcode.detector.AlignmentPattern handlePossibleCenter(int[],int,int) -> a
+com.google.zxing.qrcode.detector.Detector -> com.google.zxing.b.b.c:
+    com.google.zxing.common.BitMatrix image -> a
+    com.google.zxing.ResultPointCallback resultPointCallback -> b
+    com.google.zxing.common.DetectorResult detect(java.util.Map) -> a
+    com.google.zxing.common.DetectorResult processFinderPatternInfo(com.google.zxing.qrcode.detector.FinderPatternInfo) -> a
+    float calculateModuleSizeOneWay(com.google.zxing.ResultPoint,com.google.zxing.ResultPoint) -> a
+    float sizeOfBlackWhiteBlackRunBothWays(int,int,int,int) -> a
+    float sizeOfBlackWhiteBlackRun(int,int,int,int) -> b
+com.google.zxing.qrcode.detector.FinderPattern -> com.google.zxing.b.b.d:
+    float estimatedModuleSize -> a
+    int count -> b
+    float getEstimatedModuleSize() -> c
+    int getCount() -> d
+    boolean aboutEquals(float,float,float) -> a
+    com.google.zxing.qrcode.detector.FinderPattern combineEstimate(float,float,float) -> b
+com.google.zxing.qrcode.detector.FinderPatternFinder -> com.google.zxing.b.b.e:
+    com.google.zxing.common.BitMatrix image -> a
+    java.util.List possibleCenters -> b
+    boolean hasSkipped -> c
+    int[] crossCheckStateCount -> d
+    com.google.zxing.ResultPointCallback resultPointCallback -> e
+    com.google.zxing.qrcode.detector.FinderPatternInfo find(java.util.Map) -> a
+    float centerFromEnd(int[],int) -> a
+    boolean foundPatternCross(int[]) -> a
+    int[] getCrossCheckStateCount() -> a
+    boolean handlePossibleCenter(int[],int,int) -> a
+    boolean haveMultiplyConfirmedCenters() -> b
+com.google.zxing.qrcode.detector.FinderPatternFinder$CenterComparator -> com.google.zxing.b.b.f:
+    float average -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.google.zxing.qrcode.detector.FinderPatternFinder$FurthestFromAverageComparator -> com.google.zxing.b.b.g:
+    float average -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare
+com.google.zxing.qrcode.detector.FinderPatternInfo -> com.google.zxing.b.b.h:
+    com.google.zxing.qrcode.detector.FinderPattern bottomLeft -> a
+    com.google.zxing.qrcode.detector.FinderPattern topLeft -> b
+    com.google.zxing.qrcode.detector.FinderPattern topRight -> c
+    com.google.zxing.qrcode.detector.FinderPattern getBottomLeft() -> a
+    com.google.zxing.qrcode.detector.FinderPattern getTopLeft() -> b
+    com.google.zxing.qrcode.detector.FinderPattern getTopRight() -> c
+com.google.zxing.qrcode.encoder.BlockPair -> com.google.zxing.b.c.a:
+    byte[] dataBytes -> a
+    byte[] errorCorrectionBytes -> b
+    byte[] getDataBytes() -> a
+    byte[] getErrorCorrectionBytes() -> b
+com.google.zxing.qrcode.encoder.ByteMatrix -> com.google.zxing.b.c.b:
+    byte[][] bytes -> a
+    int width -> b
+    int height -> c
+    int getHeight() -> a
+    int getWidth() -> b
+    byte get(int,int) -> a
+    byte[][] getArray() -> c
+    void set(int,int,int) -> a
+    void set(int,int,boolean) -> a
+    void clear$132be7() -> d
+    java.lang.String toString() -> toString
+com.google.zxing.qrcode.encoder.Encoder -> com.google.zxing.b.c.c:
+    int[] ALPHANUMERIC_TABLE -> a
+    int[] $SWITCH_TABLE$com$google$zxing$qrcode$decoder$Mode -> b
+    com.google.zxing.qrcode.encoder.QRCode encode(java.lang.String,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,java.util.Map) -> a
+    int getAlphanumericCode(int) -> a
+    boolean isOnlyDoubleByteKanji(java.lang.String) -> a
+    int chooseMaskPattern(com.google.zxing.common.BitArray,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,com.google.zxing.qrcode.decoder.Version,com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    com.google.zxing.qrcode.decoder.Version chooseVersion(int,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel) -> a
+    void terminateBits(int,com.google.zxing.common.BitArray) -> a
+    com.google.zxing.common.BitArray interleaveWithECBytes(com.google.zxing.common.BitArray,int,int,int) -> a
+    byte[] generateECBytes(byte[],int) -> a
+    int[] $SWITCH_TABLE$com$google$zxing$qrcode$decoder$Mode() -> a
+com.google.zxing.qrcode.encoder.MaskUtil -> com.google.zxing.b.c.d:
+    int applyMaskPenaltyRule1(com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    int applyMaskPenaltyRule1Internal(com.google.zxing.qrcode.encoder.ByteMatrix,boolean) -> a
+com.google.zxing.qrcode.encoder.MatrixUtil -> com.google.zxing.b.c.e:
+    int[][] POSITION_DETECTION_PATTERN -> a
+    int[][] POSITION_ADJUSTMENT_PATTERN -> b
+    int[][] POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE -> c
+    int[][] TYPE_INFO_COORDINATES -> d
+    void buildMatrix(com.google.zxing.common.BitArray,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,com.google.zxing.qrcode.decoder.Version,int,com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    void maybeEmbedVersionInfo(com.google.zxing.qrcode.decoder.Version,com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    void embedDataBits(com.google.zxing.common.BitArray,int,com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    int findMSBSet(int) -> a
+    int calculateBCHCode(int,int) -> a
+    boolean isEmpty(int) -> b
+    void embedHorizontalSeparationPattern(int,int,com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+    void embedVerticalSeparationPattern(int,int,com.google.zxing.qrcode.encoder.ByteMatrix) -> b
+    void embedPositionDetectionPattern(int,int,com.google.zxing.qrcode.encoder.ByteMatrix) -> c
+com.google.zxing.qrcode.encoder.QRCode -> com.google.zxing.b.c.f:
+    com.google.zxing.qrcode.decoder.Mode mode -> a
+    com.google.zxing.qrcode.decoder.ErrorCorrectionLevel ecLevel -> b
+    com.google.zxing.qrcode.decoder.Version version -> c
+    int maskPattern -> d
+    com.google.zxing.qrcode.encoder.ByteMatrix matrix -> e
+    com.google.zxing.qrcode.encoder.ByteMatrix getMatrix() -> a
+    java.lang.String toString() -> toString
+    void setMode(com.google.zxing.qrcode.decoder.Mode) -> a
+    void setECLevel(com.google.zxing.qrcode.decoder.ErrorCorrectionLevel) -> a
+    void setVersion(com.google.zxing.qrcode.decoder.Version) -> a
+    void setMaskPattern(int) -> a
+    void setMatrix(com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+com.mj.MjInterface -> com.mj.MjInterface:
+    void onRequestAd() -> onRequestAd
+    void onImpressionAd() -> onImpressionAd
+    void onClickAd() -> onClickAd
+    void onimpressioinFailed() -> onimpressioinFailed
+com.mj.MjLayout -> com.mj.MjLayout:
+    java.lang.ref.WeakReference a -> a
+    android.os.Handler b -> b
+    java.util.concurrent.ScheduledExecutorService c -> c
+    int r -> r
+    java.lang.String s -> s
+    com.mj.b d -> d
+    java.lang.String e -> e
+    int f -> f
+    java.lang.String t -> t
+    java.lang.String u -> u
+    java.lang.String v -> v
+    java.lang.String w -> w
+    java.lang.String x -> x
+    java.lang.String y -> y
+    java.lang.String z -> z
+    java.lang.String A -> A
+    java.lang.String B -> B
+    java.lang.String C -> C
+    android.location.Location g -> g
+    java.lang.String h -> h
+    com.mj.obj.b i -> i
+    java.util.List D -> D
+    java.lang.ref.WeakReference j -> j
+    com.mj.obj.Ration E -> E
+    com.mj.obj.Ration k -> k
+    com.mj.obj.Ration l -> l
+    com.mj.MjInterface F -> F
+    com.mj.v m -> m
+    int n -> n
+    java.lang.String G -> G
+    boolean H -> H
+    boolean I -> I
+    boolean J -> J
+    int K -> K
+    int L -> L
+    int o -> o
+    int p -> p
+    int M -> M
+    java.lang.ClassLoader N -> N
+    com.mj.f.e O -> O
+    java.lang.String P -> P
+    java.lang.String Q -> Q
+    java.lang.String R -> R
+    java.lang.String S -> S
+    java.lang.String T -> T
+    java.lang.String U -> U
+    java.lang.String V -> V
+    java.lang.String W -> W
+    java.lang.String Z -> Z
+    java.lang.String aa -> aa
+    int ab -> ab
+    int ac -> ac
+    long ad -> ad
+    int ae -> ae
+    int af -> af
+    com.mj.a ag -> ag
+    boolean ah -> ah
+    boolean ai -> ai
+    android.view.animation.Animation aj -> aj
+    double ak -> ak
+    java.util.Iterator q -> q
+    boolean al -> al
+    java.util.List am -> am
+    long an -> an
+    long ao -> ao
+    java.lang.String ap -> ap
+    java.util.Map aq -> aq
+    java.lang.String ar -> ar
+    int as -> as
+    android.widget.ImageView at -> at
+    long au -> au
+    boolean av -> av
+    long aw -> aw
+    boolean ax -> ax
+    boolean ay -> ay
+    void a(android.app.Activity,java.lang.String,android.widget.RelativeLayout) -> a
+    java.lang.String a(android.content.Context) -> a
+    java.lang.String b(android.content.Context) -> b
+    void onMeasure(int,int) -> onMeasure
+    void onWindowVisibilityChanged(int) -> onWindowVisibilityChanged
+    void a(long) -> a
+    void a() -> a
+    void a(boolean,long) -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void b() -> b
+    void a(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int) -> a
+    void a(java.lang.String,java.lang.String,int) -> a
+    void countClick() -> countClick
+    org.json.JSONObject e() -> e
+    org.json.JSONObject a(java.lang.String) -> a
+    org.json.JSONObject b(java.lang.String) -> b
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    void setMjInterface(com.mj.MjInterface) -> setMjInterface
+    void a(org.json.JSONObject,android.content.Context,int) -> a
+    void a(android.content.Context,int,com.mj.MjLayout) -> a
+    void b(android.content.Context,int,com.mj.MjLayout) -> b
+    java.lang.String c(android.content.Context) -> c
+    void b(java.lang.String,java.lang.String) -> b
+    void onCreate(android.app.Activity) -> onCreate
+    void onResume(android.app.Activity) -> onResume
+    void onPause(android.app.Activity) -> onPause
+    boolean onExit(android.content.Context) -> onExit
+    void onEvent(android.content.Context,java.lang.String,long) -> onEvent
+    void onEventBegin(android.content.Context,java.lang.String) -> onEventBegin
+    void onEventEnd(android.content.Context,java.lang.String) -> onEventEnd
+    void onError(android.content.Context,java.lang.String) -> onError
+    void onDestroy(android.content.Context) -> onDestroy
+    void clean() -> clean
+    boolean a(com.mj.MjLayout) -> a
+    boolean b(com.mj.MjLayout) -> b
+    boolean c(com.mj.MjLayout) -> c
+    boolean d(com.mj.MjLayout) -> d
+    boolean e(com.mj.MjLayout) -> e
+    void a(com.mj.MjLayout,boolean) -> a
+    void a(com.mj.MjLayout,boolean,long) -> a
+    java.util.List f(com.mj.MjLayout) -> f
+    android.view.animation.Animation c() -> c
+    void g(com.mj.MjLayout) -> g
+    java.lang.String h(com.mj.MjLayout) -> h
+    boolean i(com.mj.MjLayout) -> i
+    void b(com.mj.MjLayout,boolean) -> b
+    void a(com.mj.MjLayout,int) -> a
+    void b(com.mj.MjLayout,int) -> b
+    void a(com.mj.MjLayout,java.util.List) -> a
+    int j(com.mj.MjLayout) -> j
+    void a(com.mj.MjLayout,android.content.Context,int,com.mj.MjLayout) -> a
+    void k(com.mj.MjLayout) -> k
+    void b(com.mj.MjLayout,java.util.List) -> b
+    java.util.List l(com.mj.MjLayout) -> l
+    void a(com.mj.MjLayout,com.mj.MjLayout) -> a
+    long m(com.mj.MjLayout) -> m
+    void a(com.mj.MjLayout,long) -> a
+    int n(com.mj.MjLayout) -> n
+    void b(com.mj.MjLayout,android.content.Context,int,com.mj.MjLayout) -> b
+    void c(com.mj.MjLayout,int) -> c
+    int d() -> d
+    void a(int) -> a
+    void a(com.mj.MjLayout,android.view.ViewGroup,int) -> a
+    void b(com.mj.MjLayout,long) -> b
+    void c(com.mj.MjLayout,boolean) -> c
+com.mj.a -> com.mj.a:
+    com.mj.d.c a -> a
+    java.lang.ClassLoader b -> b
+    java.util.Map c -> c
+    com.mj.b a(com.mj.MjLayout,com.mj.obj.Ration) -> a
+    com.mj.b b(com.mj.MjLayout,com.mj.obj.Ration) -> b
+    com.mj.b a(java.lang.String,com.mj.MjLayout,com.mj.obj.Ration) -> a
+com.mj.a.a -> com.mj.a.a:
+    android.view.animation.Animation a -> a
+    android.view.animation.Animation a(int,double) -> a
+com.mj.ad.MjExchangeWebview -> com.mj.ad.MjExchangeWebview:
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String a -> a
+    java.lang.String b -> b
+    boolean f -> f
+    com.mj.ad.a g -> g
+    com.mj.ad.h h -> h
+    android.content.Context i -> i
+    int j -> j
+    com.mj.ad.g k -> k
+    android.view.ViewGroup l -> l
+    java.util.Timer m -> m
+    android.webkit.WebView n -> n
+    double o -> o
+    double p -> p
+    android.app.Activity c -> c
+    android.os.Handler q -> q
+    void c() -> c
+    void d() -> d
+    void a(com.mj.ad.g) -> a
+    void a() -> a
+    void b() -> b
+    com.mj.ad.g a(com.mj.ad.MjExchangeWebview) -> a
+    com.mj.ad.h b(com.mj.ad.MjExchangeWebview) -> b
+    android.view.ViewGroup c(com.mj.ad.MjExchangeWebview) -> c
+    void a(com.mj.ad.MjExchangeWebview,java.util.Timer) -> a
+    java.util.Timer d(com.mj.ad.MjExchangeWebview) -> d
+    android.content.Context e(com.mj.ad.MjExchangeWebview) -> e
+    void f(com.mj.ad.MjExchangeWebview) -> f
+    android.webkit.WebView g(com.mj.ad.MjExchangeWebview) -> g
+    void h(com.mj.ad.MjExchangeWebview) -> h
+com.mj.ad.a -> com.mj.ad.a:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    int c -> c
+    int a() -> a
+    void a(int) -> a
+    java.lang.String b() -> b
+    void a(java.lang.String) -> a
+    java.lang.String c() -> c
+    void b(java.lang.String) -> b
+com.mj.ad.b -> com.mj.ad.b:
+    com.mj.ad.MjExchangeWebview a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.mj.ad.c -> com.mj.ad.c:
+    com.mj.ad.MjExchangeWebview a -> a
+    void run() -> run
+com.mj.ad.d -> com.mj.ad.d:
+    com.mj.ad.MjExchangeWebview a -> a
+    com.mj.ad.MjExchangeWebview b -> b
+    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+com.mj.ad.e -> com.mj.ad.e:
+    com.mj.ad.MjExchangeWebview a -> a
+    void run() -> run
+com.mj.ad.f -> com.mj.ad.f:
+    com.mj.ad.MjExchangeWebview a -> a
+    void run() -> run
+com.mj.ad.g -> com.mj.ad.g:
+    void a(android.view.ViewGroup,java.lang.String,java.lang.String) -> a
+    void a(java.lang.String,java.lang.String) -> a
+com.mj.ad.h -> com.mj.ad.h:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String a() -> a
+    void a(java.lang.String) -> a
+    java.lang.String b() -> b
+    void b(java.lang.String) -> b
+    java.lang.String c() -> c
+    void c(java.lang.String) -> c
+    java.lang.String d() -> d
+    void d(java.lang.String) -> d
+    java.lang.String e() -> e
+    void e(java.lang.String) -> e
+com.mj.adapters.AdBaiduAdapter -> com.mj.adapters.AdBaiduAdapter:
+    com.baidu.mobads.AdView h -> h
+    com.baidu.mobads.AdService i -> i
+    void a() -> a
+    void onAdClick() -> onAdClick
+    void onAdFailed(java.lang.String) -> onAdFailed
+    void onAdReady() -> onAdReady
+    void onAdShow() -> onAdShow
+    void onAdSwitch() -> onAdSwitch
+com.mj.adapters.AdChinaAdapter -> com.mj.adapters.AdChinaAdapter:
+    com.adchina.android.ads.views.AdView h -> h
+    void a() -> a
+    void onFailedToReceiveAd(com.adchina.android.ads.views.AdView) -> onFailedToReceiveAd
+    void onReceiveAd(com.adchina.android.ads.views.AdView) -> onReceiveAd
+    boolean OnRecvSms(com.adchina.android.ads.views.AdView,java.lang.String) -> OnRecvSms
+    void onFailedToRefreshAd(com.adchina.android.ads.views.AdView) -> onFailedToRefreshAd
+    void onRefreshAd(com.adchina.android.ads.views.AdView) -> onRefreshAd
+    void onDisplayFullScreenAd() -> onDisplayFullScreenAd
+    void onFailedToPlayVideoAd() -> onFailedToPlayVideoAd
+    void onFailedToReceiveFullScreenAd() -> onFailedToReceiveFullScreenAd
+    void onFailedToReceiveVideoAd() -> onFailedToReceiveVideoAd
+    void onPlayVideoAd() -> onPlayVideoAd
+    void onReceiveFullScreenAd() -> onReceiveFullScreenAd
+    void onReceiveVideoAd() -> onReceiveVideoAd
+    void onEndFullScreenLandpage() -> onEndFullScreenLandpage
+    void onStartFullScreenLandPage() -> onStartFullScreenLandPage
+com.mj.adapters.AdMobAdapter -> com.mj.adapters.AdMobAdapter:
+    com.google.ads.AdView h -> h
+    void a() -> a
+    void onDismissScreen(com.google.ads.Ad) -> onDismissScreen
+    void onFailedToReceiveAd(com.google.ads.Ad,com.google.ads.AdRequest$ErrorCode) -> onFailedToReceiveAd
+    void onLeaveApplication(com.google.ads.Ad) -> onLeaveApplication
+    void onPresentScreen(com.google.ads.Ad) -> onPresentScreen
+    void onReceiveAd(com.google.ads.Ad) -> onReceiveAd
+com.mj.adapters.AdTouchAdapter -> com.mj.adapters.AdTouchAdapter:
+    com.energysource.szj.embeded.AdView h -> h
+    void a() -> a
+    void failedReceiveAd(com.energysource.szj.embeded.AdView) -> failedReceiveAd
+    void receiveAd(com.energysource.szj.embeded.AdView) -> receiveAd
+com.mj.adapters.AdwoAdapter -> com.mj.adapters.AdwoAdapter:
+    com.adwo.adsdk.AdwoAdView h -> h
+    void a() -> a
+    void onFailedToReceiveAd(com.adwo.adsdk.AdwoAdView) -> onFailedToReceiveAd
+    void onFailedToReceiveAd(com.adwo.adsdk.AdwoAdView,com.adwo.adsdk.ErrorCode) -> onFailedToReceiveAd
+    void onFailedToReceiveRefreshedAd(com.adwo.adsdk.AdwoAdView) -> onFailedToReceiveRefreshedAd
+    void onReceiveAd(com.adwo.adsdk.AdwoAdView) -> onReceiveAd
+com.mj.adapters.AirAdAdapter -> com.mj.adapters.AirAdAdapter:
+    com.mt.airad.AirAD h -> h
+    void a() -> a
+    void onAdReceived() -> onAdReceived
+    void onAdReceivedFailed(int) -> onAdReceivedFailed
+    void onAdContentLoadFinished() -> onAdContentLoadFinished
+    void onAdBannerShown() -> onAdBannerShown
+    void onAdContentClose() -> onAdContentClose
+    void onAdContentShow() -> onAdContentShow
+com.mj.adapters.AppMediaAdapter -> com.mj.adapters.AppMediaAdapter:
+    void a() -> a
+    void onReceiveAdFailure(cn.appmedia.ad.BannerAdView) -> onReceiveAdFailure
+    void onReceiveAdSuccess(cn.appmedia.ad.BannerAdView) -> onReceiveAdSuccess
+com.mj.adapters.CaseeAdapter -> com.mj.adapters.CaseeAdapter:
+    cn.casee.adsdk.CaseeAdView h -> h
+    void a() -> a
+    void onFailedToReceiveAd(cn.casee.adsdk.CaseeAdView) -> onFailedToReceiveAd
+    void onFailedToReceiveRefreshAd(cn.casee.adsdk.CaseeAdView) -> onFailedToReceiveRefreshAd
+    void onReceiveAd(cn.casee.adsdk.CaseeAdView) -> onReceiveAd
+    void onReceiveRefreshAd(cn.casee.adsdk.CaseeAdView) -> onReceiveRefreshAd
+com.mj.adapters.DiandongAdapter -> com.mj.adapters.DiandongAdapter:
+    com.nd.diandong.AdView h -> h
+    void a() -> a
+    void receiveFailed() -> receiveFailed
+    void receiveSucceed() -> receiveSucceed
+com.mj.adapters.DomobAdapter -> com.mj.adapters.DomobAdapter:
+    cn.domob.android.ads.DomobAdView h -> h
+    void a() -> a
+    void onFailedToReceiveFreshAd(cn.domob.android.ads.DomobAdView) -> onFailedToReceiveFreshAd
+    void onReceivedFreshAd(cn.domob.android.ads.DomobAdView) -> onReceivedFreshAd
+    void onLandingPageClose() -> onLandingPageClose
+    void onLandingPageOpening() -> onLandingPageOpening
+com.mj.adapters.FractalAdapter -> com.mj.adapters.FractalAdapter:
+    com.fractalist.sdk.ad.view.FtadBannerView h -> h
+    boolean i -> i
+    com.fractalist.sdk.ad.manager.FtadManager j -> j
+    void a() -> a
+    void onAdClosed(java.lang.String) -> onAdClosed
+    void onAdFullScreenClose(java.lang.String) -> onAdFullScreenClose
+    void onAdFullScreenShow(java.lang.String) -> onAdFullScreenShow
+    void onClick(java.lang.String) -> onClick
+    void onReceiveAdFailad(java.lang.String,com.fractalist.sdk.ad.data.FtadReceiveState) -> onReceiveAdFailad
+    void onReceiveAdSuccess(java.lang.String) -> onReceiveAdSuccess
+    void onShowAdFailed(java.lang.String,com.fractalist.sdk.ad.data.FtadShowState) -> onShowAdFailed
+    void onShowAdSuccess(java.lang.String) -> onShowAdSuccess
+com.mj.adapters.GreystripeAdapter -> com.mj.adapters.GreystripeAdapter:
+    void a() -> a
+    void onFailedToReceiveAd(com.greystripe.android.sdk.BannerView) -> onFailedToReceiveAd
+    void onReceivedAd(com.greystripe.android.sdk.BannerView) -> onReceivedAd
+com.mj.adapters.InmobiAdapter -> com.mj.adapters.InmobiAdapter:
+    com.inmobi.androidsdk.IMAdView h -> h
+    com.inmobi.androidsdk.IMAdRequest i -> i
+    void a() -> a
+    void onShowAdScreen(com.inmobi.androidsdk.IMAdView) -> onShowAdScreen
+    void onDismissAdScreen(com.inmobi.androidsdk.IMAdView) -> onDismissAdScreen
+    void onAdRequestFailed(com.inmobi.androidsdk.IMAdView,com.inmobi.androidsdk.IMAdRequest$ErrorCode) -> onAdRequestFailed
+    void onAdRequestCompleted(com.inmobi.androidsdk.IMAdView) -> onAdRequestCompleted
+com.mj.adapters.LmMobAdapter -> com.mj.adapters.LmMobAdapter:
+    cn.immob.sdk.ImmobView h -> h
+    void a() -> a
+    void onFailedToReceiveAd(cn.immob.sdk.ImmobView,int) -> onFailedToReceiveAd
+    void onAdReceived(cn.immob.sdk.ImmobView) -> onAdReceived
+    void onDismissScreen(cn.immob.sdk.ImmobView) -> onDismissScreen
+    void onLeaveApplication(cn.immob.sdk.ImmobView) -> onLeaveApplication
+    void onPresentScreen(cn.immob.sdk.ImmobView) -> onPresentScreen
+com.mj.adapters.LsenseAdapter -> com.mj.adapters.LsenseAdapter:
+    com.l.adlib_android.AdView h -> h
+    void a() -> a
+    void OnConnectFailed(java.lang.String) -> OnConnectFailed
+    void OnAcceptAd(int) -> OnAcceptAd
+com.mj.adapters.MdotMAdapter -> com.mj.adapters.MdotMAdapter:
+    void a() -> a
+    void adRequestCompletedSuccessfully(com.mdotm.android.ads.MdotMView) -> adRequestCompletedSuccessfully
+    void adRequestFailed(com.mdotm.android.ads.MdotMView) -> adRequestFailed
+com.mj.adapters.MillennialAdapter -> com.mj.adapters.MillennialAdapter:
+    void a() -> a
+    void MMAdReturned(com.millennialmedia.android.MMAdView) -> MMAdReturned
+    void MMAdFailed(com.millennialmedia.android.MMAdView) -> MMAdFailed
+    void MMAdClickedToNewBrowser(com.millennialmedia.android.MMAdView) -> MMAdClickedToNewBrowser
+    void MMAdClickedToOverlay(com.millennialmedia.android.MMAdView) -> MMAdClickedToOverlay
+    void MMAdOverlayLaunched(com.millennialmedia.android.MMAdView) -> MMAdOverlayLaunched
+    void MMAdRequestIsCaching(com.millennialmedia.android.MMAdView) -> MMAdRequestIsCaching
+    void MMAdCachingCompleted(com.millennialmedia.android.MMAdView,boolean) -> MMAdCachingCompleted
+com.mj.adapters.MjExchangeAdapter -> com.mj.adapters.MjExchangeAdapter:
+    com.mj.ad.MjExchangeWebview h -> h
+    void a() -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void a(android.view.ViewGroup,java.lang.String,java.lang.String) -> a
+com.mj.adapters.MobiSageAdapter -> com.mj.adapters.MobiSageAdapter:
+    com.mobisage.android.MobiSageAdBanner h -> h
+    void a() -> a
+    void onMobiSageAdViewError(java.lang.Object) -> onMobiSageAdViewError
+    void onMobiSageAdViewHide(java.lang.Object) -> onMobiSageAdViewHide
+    void onMobiSageAdViewShow(java.lang.Object) -> onMobiSageAdViewShow
+    void onMobiSageAdViewUpdate(java.lang.Object) -> onMobiSageAdViewUpdate
+com.mj.adapters.MobwinAdapter -> com.mj.adapters.MobwinAdapter:
+    com.tencent.exmobwin.banner.TAdView h -> h
+    boolean i -> i
+    void a() -> a
+    java.lang.ref.WeakReference b() -> b
+    boolean a(com.mj.adapters.MobwinAdapter) -> a
+    void a(com.mj.adapters.MobwinAdapter,boolean) -> a
+    com.mj.obj.Ration b(com.mj.adapters.MobwinAdapter) -> b
+com.mj.adapters.SmaatoAdapter -> com.mj.adapters.SmaatoAdapter:
+    com.smaato.SOMA.SOMABanner h -> h
+    boolean i -> i
+    void a() -> a
+    void onFailedToReceiveAd(com.smaato.SOMA.AdDownloader,com.smaato.SOMA.ErrorCode) -> onFailedToReceiveAd
+    void onReceiveAd(com.smaato.SOMA.AdDownloader,com.smaato.SOMA.SOMAReceivedBanner) -> onReceiveAd
+com.mj.adapters.SmartAdAdapter -> com.mj.adapters.SmartAdAdapter:
+    void a() -> a
+    void onAdEvent(com.madhouse.android.ads.AdView,int) -> onAdEvent
+    void onAdFullScreenStatus(boolean) -> onAdFullScreenStatus
+com.mj.adapters.TestViewAdapter -> com.mj.adapters.TestViewAdapter:
+    com.bpo.zhuamob.mj.thirdjar.TestAdView h -> h
+    void a() -> a
+com.mj.adapters.TinmooAdapter -> com.mj.adapters.TinmooAdapter:
+    void a() -> a
+    void onFailedToReceiveRefreshedAd(com.ignitevision.android.ads.AdView) -> onFailedToReceiveRefreshedAd
+    void onReceiveAd(com.ignitevision.android.ads.AdView) -> onReceiveAd
+    void onReceiveRefreshedAd(com.ignitevision.android.ads.AdView) -> onReceiveRefreshedAd
+    void onFailedToReceiveAd(com.ignitevision.android.ads.AdView) -> onFailedToReceiveAd
+com.mj.adapters.VponAdapter -> com.mj.adapters.VponAdapter:
+    com.vpon.adon.android.AdView h -> h
+    void a() -> a
+    void onFailedToRecevieAd(com.vpon.adon.android.AdView) -> onFailedToRecevieAd
+    void onRecevieAd(com.vpon.adon.android.AdView) -> onRecevieAd
+com.mj.adapters.WiyunAdapter -> com.mj.adapters.WiyunAdapter:
+    com.wiyun.ad.AdView h -> h
+    void a() -> a
+    void onAdLoadFailed() -> onAdLoadFailed
+    void onAdLoaded() -> onAdLoaded
+    void onAdClicked() -> onAdClicked
+    void onExitButtonClicked() -> onExitButtonClicked
+    void onAppDownloadFailed() -> onAppDownloadFailed
+    void onAppDownloaded() -> onAppDownloaded
+    void onMiniSiteClosed() -> onMiniSiteClosed
+com.mj.adapters.WoobooAdapter -> com.mj.adapters.WoobooAdapter:
+    void a() -> a
+    void onFailedToReceiveAd(java.lang.Object) -> onFailedToReceiveAd
+    void onReceiveAd(java.lang.Object) -> onReceiveAd
+    void onPlayFinish() -> onPlayFinish
+com.mj.adapters.WqAdapter -> com.mj.adapters.WqAdapter:
+    com.wqmobile.sdk.widget.ADView h -> h
+    void a() -> a
+    void didFailReceiveAd() -> didFailReceiveAd
+    void didReceiveAd() -> didReceiveAd
+com.mj.adapters.YoumiAdapter -> com.mj.adapters.YoumiAdapter:
+    net.youmi.android.AdView h -> h
+    void a() -> a
+    void onAdViewSwitchedAd(net.youmi.android.AdView) -> onAdViewSwitchedAd
+    void onConnectFailed(net.youmi.android.AdView) -> onConnectFailed
+com.mj.adapters.YouyuAdAdapter -> com.mj.adapters.YouyuAdAdapter:
+    void a() -> a
+    void onReceivedAd(com.youyuad.android.YYAdView) -> onReceivedAd
+    void onRequestAdFailed(com.youyuad.android.YYAdView) -> onRequestAdFailed
+com.mj.adapters.ZestADZAdapter -> com.mj.adapters.ZestADZAdapter:
+    void a() -> a
+    void AdFailed(com.zestadz.android.ZestADZAdView) -> AdFailed
+    void AdReturned(com.zestadz.android.ZestADZAdView) -> AdReturned
+com.mj.adapters.a -> com.mj.adapters.a:
+    com.mj.adapters.MobwinAdapter a -> a
+    void run() -> run
+    void onReceiveAd() -> onReceiveAd
+    void onReceiveFailed(int) -> onReceiveFailed
+com.mj.b -> com.mj.b:
+    java.lang.ref.WeakReference a -> a
+    com.mj.obj.Ration b -> b
+    boolean c -> c
+    com.mj.d.c d -> d
+    java.lang.ClassLoader e -> e
+    java.util.Map f -> f
+    com.mj.f.e g -> g
+    java.util.List h -> h
+    void a(com.mj.d.c) -> a
+    void a(com.mj.MjLayout,android.view.ViewGroup) -> a
+    void a(com.mj.MjLayout) -> a
+    void a(java.lang.ClassLoader) -> a
+    void a() -> a
+    void a(android.view.ViewGroup) -> a
+    boolean a(com.mj.d.b,android.view.ViewGroup) -> a
+    void a(boolean) -> a
+com.mj.b.a -> com.mj.b.a:
+    com.mj.b.a g -> g
+    int h -> h
+    boolean i -> i
+    boolean j -> j
+    boolean k -> k
+    int l -> l
+    java.lang.String m -> m
+    java.util.Map a -> a
+    java.util.Map b -> b
+    boolean c -> c
+    boolean d -> d
+    boolean e -> e
+    long f -> f
+    com.mj.b.a a() -> a
+    int b() -> b
+    int c() -> c
+    void a(int) -> a
+    void b(int) -> b
+    void a(boolean) -> a
+    boolean d() -> d
+    void b(boolean) -> b
+    java.lang.String e() -> e
+    void f() -> f
+    boolean g() -> g
+    void c(boolean) -> c
+    boolean h() -> h
+    void c(int) -> c
+    boolean i() -> i
+    void d(boolean) -> d
+    void d(int) -> d
+    void a(android.content.Context,int) -> a
+com.mj.b.b -> com.mj.b.b:
+    com.mj.b.b b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.util.Map e -> e
+    java.lang.String a -> a
+    com.mj.b.b a() -> a
+    java.lang.ClassLoader b() -> b
+    void a(android.content.Context) -> a
+    java.util.Map c() -> c
+    java.util.Map b(android.content.Context) -> b
+    int d() -> d
+    void a(int) -> a
+com.mj.b.c -> com.mj.b.c:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String a() -> a
+    void a(java.lang.String) -> a
+    java.lang.String b() -> b
+    void b(java.lang.String) -> b
+com.mj.c -> com.mj.c:
+    android.view.ViewGroup a -> a
+    com.mj.b b -> b
+    void run() -> run
+com.mj.c.a -> com.mj.c.a:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    java.lang.String h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    java.lang.String p -> p
+    java.lang.String q -> q
+    java.lang.String r -> r
+    java.lang.String s -> s
+    java.lang.String t -> t
+    java.lang.String u -> u
+    java.lang.String v -> v
+    java.lang.String w -> w
+    java.lang.String x -> x
+    java.lang.String y -> y
+    java.lang.String z -> z
+    java.lang.String A -> A
+    java.lang.String B -> B
+    java.lang.String C -> C
+    java.lang.String D -> D
+    java.lang.String E -> E
+    java.lang.String F -> F
+    java.lang.String G -> G
+    java.lang.String H -> H
+    java.lang.String I -> I
+    java.lang.String J -> J
+    java.lang.String K -> K
+    java.lang.String L -> L
+    java.lang.String M -> M
+    java.lang.String N -> N
+    java.lang.String O -> O
+    java.lang.String P -> P
+    java.lang.String Q -> Q
+    java.lang.String R -> R
+    java.lang.String S -> S
+    java.lang.String T -> T
+    java.lang.String U -> U
+    java.lang.String V -> V
+    java.lang.String W -> W
+com.mj.c.b -> com.mj.c.b:
+    java.util.regex.Pattern a -> a
+    int a(android.content.Context) -> a
+    org.json.JSONObject b(android.content.Context) -> b
+    boolean a(java.util.List,android.content.Context,com.mj.obj.b) -> a
+    int c(android.content.Context) -> c
+    boolean a(int,java.lang.String,java.lang.String) -> a
+    boolean b(int,java.lang.String,java.lang.String) -> b
+    java.lang.String a(int,java.lang.String) -> a
+    java.lang.String a(java.lang.String) -> a
+com.mj.d -> com.mj.d:
+    android.view.ViewGroup a -> a
+    com.mj.b b -> b
+    void run() -> run
+com.mj.d.a -> com.mj.d.a:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.util.List c -> c
+    void a(com.mj.d.d) -> a
+    java.util.List a() -> a
+    void a(java.util.List) -> a
+    java.lang.String b() -> b
+    void a(java.lang.String) -> a
+    java.lang.String c() -> c
+    void b(java.lang.String) -> b
+com.mj.d.b -> com.mj.d.b:
+    java.util.List a -> a
+    java.util.List a() -> a
+    void a(com.mj.d.a) -> a
+com.mj.d.c -> com.mj.d.c:
+    java.util.Map a -> a
+    java.util.Map b -> b
+    java.lang.String toString() -> toString
+    java.util.Map a() -> a
+    void a(java.util.Map) -> a
+    java.util.Map b() -> b
+    void b(java.util.Map) -> b
+com.mj.d.d -> com.mj.d.d:
+    java.lang.Class a -> a
+    java.lang.Integer b -> b
+    java.lang.Class a() -> a
+    void a(java.lang.Class) -> a
+    java.lang.Integer b() -> b
+    void a(java.lang.Integer) -> a
+com.mj.e -> com.mj.e:
+    com.mj.MjLayout a -> a
+    void onClick(android.view.View) -> onClick
+com.mj.e.a -> com.mj.e.a:
+    com.mj.e.a b -> b
+    com.mj.e.b c -> c
+    android.database.sqlite.SQLiteDatabase d -> d
+    java.lang.String e -> e
+    int a -> a
+    com.mj.e.a a() -> a
+    void a(android.content.Context) -> a
+    void b() -> b
+    long a(org.json.JSONObject) -> a
+    int c() -> c
+    org.json.JSONArray a(int) -> a
+    boolean b(int) -> b
+com.mj.e.b -> com.mj.e.b:
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.mj.f -> com.mj.f:
+    com.mj.MjLayout a -> a
+    void run() -> run
+com.mj.f.a -> com.mj.f.a:
+    boolean a -> a
+    byte[] a(java.lang.String,int) -> a
+    java.lang.String a(byte[],int) -> a
+com.mj.f.b -> com.mj.f.b:
+    byte[] a -> a
+    int b -> b
+com.mj.f.c -> com.mj.f.c:
+    int[] c -> c
+    int[] d -> d
+    int e -> e
+    int f -> f
+    int[] g -> g
+    boolean a(byte[],int,int,boolean) -> a
+com.mj.f.d -> com.mj.f.d:
+    byte[] f -> f
+    byte[] g -> g
+    byte[] h -> h
+    int i -> i
+    int j -> j
+    boolean c -> c
+    boolean d -> d
+    boolean e -> e
+    byte[] k -> k
+    boolean l -> l
+    boolean a(byte[],int,int,boolean) -> a
+com.mj.f.e -> com.mj.f.e:
+    void a(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.Object) -> a
+    java.lang.Object b(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.Object) -> b
+    java.lang.Object a(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.String) -> a
+    void a(java.lang.ClassLoader,com.mj.d.a,java.lang.Object,java.lang.Object,java.lang.String) -> a
+    void a(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.Object,java.lang.Object,java.lang.String) -> a
+    java.lang.Object b(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.String) -> b
+    java.lang.Object a(java.lang.ClassLoader,com.mj.d.a,java.util.Map,java.lang.Object,java.lang.String) -> a
+    void a(java.lang.ClassLoader,com.mj.d.a,java.util.Map) -> a
+    java.lang.Class a(com.mj.d.d) -> a
+com.mj.f.f -> com.mj.f.f:
+    byte[] a(java.lang.String) -> a
+    java.lang.String a(java.io.InputStream) -> a
+    java.lang.String b(java.lang.String) -> b
+    java.lang.String a() -> a
+    boolean a(java.util.Collection) -> a
+    java.lang.String a(java.lang.Throwable) -> a
+    boolean a(java.lang.String,java.lang.String) -> a
+    org.apache.http.client.HttpClient b() -> b
+    int a(int,double) -> a
+    java.lang.String b(java.io.InputStream) -> b
+    boolean c() -> c
+com.mj.f.g -> com.mj.f.g:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    void a(android.content.Context) -> a
+    void a(java.lang.String,java.lang.Throwable) -> a
+    java.lang.String a(java.lang.Throwable) -> a
+    java.lang.String a() -> a
+    java.lang.String b() -> b
+    android.content.Context c() -> c
+com.mj.f.h -> com.mj.f.h:
+    java.lang.String a -> a
+    java.lang.Throwable b -> b
+    void run() -> run
+com.mj.g -> com.mj.g:
+    com.mj.MjLayout a -> a
+    void run() -> run
+com.mj.h -> com.mj.h:
+    com.mj.MjLayout a -> a
+    com.mj.MjLayout b -> b
+    void run() -> run
+com.mj.i -> com.mj.i:
+    com.mj.MjLayout a -> a
+    void run() -> run
+com.mj.invoke.AdBaiduInvoke -> com.mj.invoke.AdBaiduInvoke:
+    android.view.ViewGroup h -> h
+    java.lang.Object i -> i
+    void a() -> a
+    boolean a(com.mj.invoke.AdBaiduInvoke) -> a
+    com.mj.d.c b(com.mj.invoke.AdBaiduInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.AdBaiduInvoke) -> c
+    java.util.Map d(com.mj.invoke.AdBaiduInvoke) -> d
+    java.lang.Object e(com.mj.invoke.AdBaiduInvoke) -> e
+    void a(com.mj.invoke.AdBaiduInvoke,android.view.ViewGroup) -> a
+    java.lang.ref.WeakReference c() -> c
+    android.view.ViewGroup f(com.mj.invoke.AdBaiduInvoke) -> f
+    void a(com.mj.invoke.AdBaiduInvoke,com.mj.MjLayout,android.view.ViewGroup) -> a
+    com.mj.obj.Ration g(com.mj.invoke.AdBaiduInvoke) -> g
+com.mj.invoke.AdChinaInvoke -> com.mj.invoke.AdChinaInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    boolean j -> j
+    java.lang.Object k -> k
+    android.view.ViewGroup l -> l
+    void a() -> a
+    boolean a(com.mj.invoke.AdChinaInvoke) -> a
+    void a(com.mj.invoke.AdChinaInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AdChinaInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.AdChinaInvoke) -> c
+    android.view.ViewGroup c() -> c
+com.mj.invoke.AdMobInvoke -> com.mj.invoke.AdMobInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.AdMobInvoke) -> a
+    void a(com.mj.invoke.AdMobInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AdMobInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.AdMobInvoke) -> c
+com.mj.invoke.AdTouchInvoke -> com.mj.invoke.AdTouchInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.AdTouchInvoke) -> a
+    void a(com.mj.invoke.AdTouchInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AdTouchInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.f.e c() -> c
+    java.lang.ClassLoader c(com.mj.invoke.AdTouchInvoke) -> c
+    java.util.Map d(com.mj.invoke.AdTouchInvoke) -> d
+    com.mj.obj.Ration e(com.mj.invoke.AdTouchInvoke) -> e
+com.mj.invoke.AdwoInvoke -> com.mj.invoke.AdwoInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.AdwoInvoke) -> a
+    void a(com.mj.invoke.AdwoInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AdwoInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.AdwoInvoke) -> c
+    android.view.ViewGroup c() -> c
+com.mj.invoke.AirADInvoke -> com.mj.invoke.AirADInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    java.util.Map j -> j
+    android.view.ViewGroup k -> k
+    void a() -> a
+    void b(com.mj.MjLayout) -> b
+    boolean a(com.mj.invoke.AirADInvoke) -> a
+    void a(com.mj.invoke.AirADInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AirADInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    java.util.Map c(com.mj.invoke.AirADInvoke) -> c
+    android.view.ViewGroup d(com.mj.invoke.AirADInvoke) -> d
+    void a(com.mj.invoke.AirADInvoke,com.mj.MjLayout,android.view.ViewGroup) -> a
+    com.mj.obj.Ration e(com.mj.invoke.AirADInvoke) -> e
+com.mj.invoke.AppMediaInvoke -> com.mj.invoke.AppMediaInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.AppMediaInvoke) -> a
+    void a(com.mj.invoke.AppMediaInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.AppMediaInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.AppMediaInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.AppMediaInvoke) -> d
+    android.view.ViewGroup c() -> c
+    com.mj.d.b e(com.mj.invoke.AppMediaInvoke) -> e
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration f(com.mj.invoke.AppMediaInvoke) -> f
+com.mj.invoke.CaseeInvoke -> com.mj.invoke.CaseeInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.CaseeInvoke) -> a
+    void a(com.mj.invoke.CaseeInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.CaseeInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.CaseeInvoke) -> c
+    android.view.ViewGroup c() -> c
+com.mj.invoke.CommonInvoke -> com.mj.invoke.CommonInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    java.util.Map j -> j
+    android.view.ViewGroup k -> k
+    void a() -> a
+    void b(com.mj.MjLayout) -> b
+    boolean a(com.mj.invoke.CommonInvoke) -> a
+    void a(com.mj.invoke.CommonInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.CommonInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    java.util.Map c(com.mj.invoke.CommonInvoke) -> c
+    android.view.ViewGroup d(com.mj.invoke.CommonInvoke) -> d
+    void a(com.mj.invoke.CommonInvoke,com.mj.MjLayout,android.view.ViewGroup) -> a
+    com.mj.obj.Ration e(com.mj.invoke.CommonInvoke) -> e
+com.mj.invoke.DomobInvoke -> com.mj.invoke.DomobInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.DomobInvoke) -> a
+    void a(com.mj.invoke.DomobInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.DomobInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.DomobInvoke) -> c
+    android.view.ViewGroup c() -> c
+com.mj.invoke.FractalInvoke -> com.mj.invoke.FractalInvoke:
+    android.view.ViewGroup h -> h
+    java.lang.Object i -> i
+    void a() -> a
+com.mj.invoke.GreyStripeInvoke -> com.mj.invoke.GreyStripeInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.GreyStripeInvoke) -> a
+    void a(com.mj.invoke.GreyStripeInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.GreyStripeInvoke) -> b
+    com.mj.d.b c(com.mj.invoke.GreyStripeInvoke) -> c
+    java.util.Map d(com.mj.invoke.GreyStripeInvoke) -> d
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader e(com.mj.invoke.GreyStripeInvoke) -> e
+    com.mj.d.b f(com.mj.invoke.GreyStripeInvoke) -> f
+    android.view.ViewGroup c() -> c
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration g(com.mj.invoke.GreyStripeInvoke) -> g
+com.mj.invoke.InmobiInvoke -> com.mj.invoke.InmobiInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.InmobiInvoke) -> a
+    void a(com.mj.invoke.InmobiInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.InmobiInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.InmobiInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.InmobiInvoke) -> d
+    android.view.ViewGroup c() -> c
+    com.mj.d.b e(com.mj.invoke.InmobiInvoke) -> e
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration f(com.mj.invoke.InmobiInvoke) -> f
+com.mj.invoke.LmMobInvoke -> com.mj.invoke.LmMobInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.LmMobInvoke) -> a
+    void a(com.mj.invoke.LmMobInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.LmMobInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.f.e c() -> c
+    java.lang.ClassLoader c(com.mj.invoke.LmMobInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.LmMobInvoke) -> d
+    android.view.ViewGroup d() -> d
+    com.mj.d.b e(com.mj.invoke.LmMobInvoke) -> e
+    com.mj.obj.Ration f(com.mj.invoke.LmMobInvoke) -> f
+    java.util.Map g(com.mj.invoke.LmMobInvoke) -> g
+com.mj.invoke.LsenseInvoke -> com.mj.invoke.LsenseInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.LsenseInvoke) -> a
+    void a(com.mj.invoke.LsenseInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.LsenseInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.LsenseInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.LsenseInvoke) -> d
+    android.view.ViewGroup c() -> c
+    com.mj.d.b e(com.mj.invoke.LsenseInvoke) -> e
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration f(com.mj.invoke.LsenseInvoke) -> f
+com.mj.invoke.MdotmInvoke -> com.mj.invoke.MdotmInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.MdotmInvoke) -> a
+    void a(com.mj.invoke.MdotmInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.MdotmInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.MdotmInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.MdotmInvoke) -> d
+    com.mj.d.b e(com.mj.invoke.MdotmInvoke) -> e
+    java.lang.ref.WeakReference c() -> c
+    com.mj.obj.Ration f(com.mj.invoke.MdotmInvoke) -> f
+    java.util.Map g(com.mj.invoke.MdotmInvoke) -> g
+com.mj.invoke.MillennialInvoke -> com.mj.invoke.MillennialInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.MillennialInvoke) -> a
+    void a(com.mj.invoke.MillennialInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.MillennialInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.MillennialInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.MillennialInvoke) -> d
+    android.view.ViewGroup c() -> c
+    com.mj.d.b e(com.mj.invoke.MillennialInvoke) -> e
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration f(com.mj.invoke.MillennialInvoke) -> f
+com.mj.invoke.SmartAdInvoke -> com.mj.invoke.SmartAdInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.SmartAdInvoke) -> a
+    void a(com.mj.invoke.SmartAdInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.SmartAdInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.SmartAdInvoke) -> c
+com.mj.invoke.VponInvoke -> com.mj.invoke.VponInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.VponInvoke) -> a
+    void a(com.mj.invoke.VponInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.VponInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.VponInvoke) -> c
+    com.mj.f.e c() -> c
+    java.lang.ClassLoader d(com.mj.invoke.VponInvoke) -> d
+    com.mj.d.b e(com.mj.invoke.VponInvoke) -> e
+    com.mj.d.b f(com.mj.invoke.VponInvoke) -> f
+    android.view.ViewGroup d() -> d
+com.mj.invoke.WiyunInvoke -> com.mj.invoke.WiyunInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.WiyunInvoke) -> a
+    void a(com.mj.invoke.WiyunInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.WiyunInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.f.e c() -> c
+    java.lang.ClassLoader c(com.mj.invoke.WiyunInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.WiyunInvoke) -> d
+    android.view.ViewGroup d() -> d
+    com.mj.d.b e(com.mj.invoke.WiyunInvoke) -> e
+    com.mj.obj.Ration f(com.mj.invoke.WiyunInvoke) -> f
+com.mj.invoke.WoobooInvoke -> com.mj.invoke.WoobooInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.WoobooInvoke) -> a
+    void a(com.mj.invoke.WoobooInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.WoobooInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.f.e c() -> c
+    java.lang.ClassLoader c(com.mj.invoke.WoobooInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.WoobooInvoke) -> d
+    com.mj.d.b e(com.mj.invoke.WoobooInvoke) -> e
+    com.mj.obj.Ration f(com.mj.invoke.WoobooInvoke) -> f
+    android.view.ViewGroup d() -> d
+com.mj.invoke.YoumiInvoke -> com.mj.invoke.YoumiInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.YoumiInvoke) -> a
+    void a(com.mj.invoke.YoumiInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.YoumiInvoke) -> b
+    java.lang.ref.WeakReference b() -> b
+    com.mj.obj.Ration c(com.mj.invoke.YoumiInvoke) -> c
+    android.view.ViewGroup c() -> c
+    void a(com.mj.invoke.YoumiInvoke,com.mj.MjLayout,android.view.ViewGroup) -> a
+com.mj.invoke.ZestADZInvoke -> com.mj.invoke.ZestADZInvoke:
+    com.mj.d.b h -> h
+    com.mj.d.b i -> i
+    android.view.ViewGroup j -> j
+    void a() -> a
+    boolean a(com.mj.invoke.ZestADZInvoke) -> a
+    void a(com.mj.invoke.ZestADZInvoke,boolean) -> a
+    com.mj.d.c b(com.mj.invoke.ZestADZInvoke) -> b
+    com.mj.f.e b() -> b
+    java.lang.ClassLoader c(com.mj.invoke.ZestADZInvoke) -> c
+    com.mj.d.b d(com.mj.invoke.ZestADZInvoke) -> d
+    android.view.ViewGroup c() -> c
+    com.mj.d.b e(com.mj.invoke.ZestADZInvoke) -> e
+    java.lang.ref.WeakReference d() -> d
+    com.mj.obj.Ration f(com.mj.invoke.ZestADZInvoke) -> f
+com.mj.invoke.a -> com.mj.invoke.a:
+    com.mj.invoke.AdBaiduInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.b -> com.mj.invoke.b:
+    com.mj.invoke.AdChinaInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.c -> com.mj.invoke.c:
+    com.mj.invoke.AdMobInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.d -> com.mj.invoke.d:
+    com.mj.invoke.AdTouchInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.e -> com.mj.invoke.e:
+    com.mj.invoke.AdwoInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.f -> com.mj.invoke.f:
+    com.mj.invoke.AirADInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+    void a() -> a
+com.mj.invoke.g -> com.mj.invoke.g:
+    com.mj.invoke.AppMediaInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.h -> com.mj.invoke.h:
+    com.mj.invoke.CaseeInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.i -> com.mj.invoke.i:
+    com.mj.invoke.CommonInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+    void a() -> a
+com.mj.invoke.j -> com.mj.invoke.j:
+    com.mj.invoke.DomobInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.k -> com.mj.invoke.k:
+    com.mj.invoke.GreyStripeInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.l -> com.mj.invoke.l:
+    com.mj.invoke.InmobiInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.m -> com.mj.invoke.m:
+    com.mj.invoke.LmMobInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.n -> com.mj.invoke.n:
+    com.mj.invoke.LsenseInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.o -> com.mj.invoke.o:
+    com.mj.invoke.MdotmInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.p -> com.mj.invoke.p:
+    com.mj.invoke.MillennialInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.q -> com.mj.invoke.q:
+    com.mj.invoke.SmartAdInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.r -> com.mj.invoke.r:
+    com.mj.invoke.VponInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.s -> com.mj.invoke.s:
+    com.mj.invoke.WiyunInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.t -> com.mj.invoke.t:
+    com.mj.invoke.WoobooInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.u -> com.mj.invoke.u:
+    com.mj.invoke.YoumiInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.invoke.v -> com.mj.invoke.v:
+    com.mj.invoke.ZestADZInvoke a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.mj.j -> com.mj.j:
+    java.lang.ref.WeakReference a -> a
+    void run() -> run
+com.mj.k -> com.mj.k:
+    java.lang.ref.WeakReference a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    com.mj.MjLayout d -> d
+    void run() -> run
+com.mj.l -> com.mj.l:
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.mj.m -> com.mj.m:
+    com.mj.MjLayout a -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+    com.mj.MjLayout a(com.mj.m) -> a
+com.mj.n -> com.mj.n:
+    com.mj.m a -> a
+    void run() -> run
+com.mj.o -> com.mj.o:
+    org.json.JSONObject a -> a
+    android.content.Context b -> b
+    java.lang.String c -> c
+    java.lang.ref.WeakReference d -> d
+    com.mj.MjLayout e -> e
+    void run() -> run
+com.mj.obj.Ration -> com.mj.obj.Ration:
+    java.lang.String a -> a
+    int b -> b
+    double c -> c
+    java.lang.String d -> d
+    java.lang.String e -> e
+    int f -> f
+    boolean g -> g
+    int h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    int p -> p
+    int compareTo(java.lang.Object) -> compareTo
+com.mj.obj.a -> com.mj.obj.a:
+    java.lang.String a -> a
+    double b -> b
+com.mj.obj.b -> com.mj.obj.b:
+    int a -> a
+    int b -> b
+    int c -> c
+    int d -> d
+    int e -> e
+    int f -> f
+    int g -> g
+    int h -> h
+    int i -> i
+    boolean j -> j
+    double k -> k
+    double l -> l
+    int m -> m
+    java.lang.String n -> n
+    int o -> o
+    java.lang.String p -> p
+    java.lang.String q -> q
+    java.lang.String r -> r
+    int s -> s
+    int t -> t
+    int u -> u
+    int v -> v
+com.mj.p -> com.mj.p:
+    com.mj.MjLayout a -> a
+    void run() -> run
+com.mj.q -> com.mj.q:
+    java.lang.ref.WeakReference a -> a
+    void run() -> run
+com.mj.r -> com.mj.r:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    void run() -> run
+com.mj.s -> com.mj.s:
+    java.lang.ref.WeakReference a -> a
+    android.view.ViewGroup b -> b
+    void run() -> run
+com.mj.t -> com.mj.t:
+    android.view.ViewGroup a -> a
+    android.widget.RelativeLayout$LayoutParams b -> b
+    com.mj.MjLayout c -> c
+    void run() -> run
+com.mj.u -> com.mj.u:
+    java.lang.ref.WeakReference a -> a
+    java.util.List b -> b
+    com.mj.obj.b c -> c
+    com.mj.MjLayout d -> d
+    void run() -> run
+com.mj.v -> com.mj.v:
+    java.lang.String f -> f
+    com.mj.obj.b g -> g
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.util.List h -> h
+    java.util.List i -> i
+    java.util.List c -> c
+    java.util.List d -> d
+    java.util.List j -> j
+    double k -> k
+    double l -> l
+    java.lang.ref.WeakReference m -> m
+    java.util.Iterator e -> e
+    boolean n -> n
+    void a(boolean) -> a
+    boolean a() -> a
+    com.mj.obj.b b() -> b
+    java.util.List c() -> c
+    com.mj.obj.Ration a(com.mj.obj.Ration,boolean) -> a
+    void a(java.lang.String,int) -> a
+    java.lang.String a(android.content.Context,java.lang.String,int) -> a
+    void a(android.content.Context,java.lang.String) -> a
+    void a(org.json.JSONArray) -> a
+    void b(org.json.JSONArray) -> b
+    java.lang.String a(java.lang.String) -> a
+    java.lang.String b(java.lang.String) -> b
+    com.mj.d.c a(java.io.InputStream) -> a
+com.zhuamob.android.ZhuamobLayout -> com.zhuamob.android.ZhuamobLayout:
+    java.lang.Object a -> a
+    void clean() -> clean
+    void a(android.content.Context,android.util.AttributeSet,java.lang.String) -> a
+    void setZhuamobListener(com.zhuamob.android.ZhuamobListener) -> setZhuamobListener
+    boolean a(android.content.Context,java.lang.String) -> a
+com.zhuamob.android.ZhuamobListener -> com.zhuamob.android.ZhuamobListener:
+    void onRequestAd() -> onRequestAd
+    void onImpressionAd() -> onImpressionAd
+    void onimpressioinFailed() -> onimpressioinFailed
+    void onClickAd() -> onClickAd
+com.zhuamob.android.ZhuamobRouter -> com.zhuamob.android.ZhuamobRouter:
+    long b -> b
+    boolean shutDown -> shutDown
+    java.lang.String c -> c
+    java.lang.Object d -> d
+    com.zhuamob.android.ZhuamobListener a -> a
+    java.lang.String e -> e
+    android.content.Context f -> f
+    com.zhuamob.android.a.g g -> g
+    com.zhuamob.android.a.f h -> h
+    java.lang.ref.WeakReference i -> i
+    int j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    void setListener(com.zhuamob.android.ZhuamobListener) -> setListener
+    void onStart(android.content.Context,android.util.AttributeSet,java.lang.String,android.widget.RelativeLayout,java.lang.ClassLoader) -> onStart
+    java.lang.String a() -> a
+    java.lang.String guzipCompress(java.io.InputStream) -> guzipCompress
+    void a(android.util.AttributeSet,android.widget.RelativeLayout) -> a
+    boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    void onWindowVisibilityChanged(int) -> onWindowVisibilityChanged
+    void onMeasure(int,int) -> onMeasure
+    void clean() -> clean
+    java.lang.Object a(com.zhuamob.android.ZhuamobRouter) -> a
+com.zhuamob.android.ZhuamobTargeting -> com.zhuamob.android.ZhuamobTargeting:
+    com.zhuamob.android.ZhuamobTargeting$RunMode runMode -> runMode
+    com.zhuamob.android.ZhuamobTargeting$AdAlign adAlign -> adAlign
+    com.zhuamob.android.ZhuamobTargeting$Gender gender -> gender
+    java.util.GregorianCalendar birthDate -> birthDate
+    java.lang.String postalCode -> postalCode
+    java.lang.String keywords -> keywords
+    java.util.Set keywordSet -> keywordSet
+    com.zhuamob.android.ZhuamobTargeting$Channel channel -> channel
+    java.lang.String appName -> appName
+    java.lang.String companyName -> companyName
+    java.lang.String telephoneNumber -> telephoneNumber
+    void resetData() -> resetData
+    com.zhuamob.android.ZhuamobTargeting$Channel getChannel() -> getChannel
+    void setChannel(com.zhuamob.android.ZhuamobTargeting$Channel) -> setChannel
+    com.zhuamob.android.ZhuamobTargeting$RunMode getRunMode() -> getRunMode
+    void setRunMode(com.zhuamob.android.ZhuamobTargeting$RunMode) -> setRunMode
+    boolean getTestMode(boolean) -> getTestMode
+    com.zhuamob.android.ZhuamobTargeting$AdAlign getAdAlign() -> getAdAlign
+    void setAdAlign(com.zhuamob.android.ZhuamobTargeting$AdAlign) -> setAdAlign
+    com.zhuamob.android.ZhuamobTargeting$Gender getGender() -> getGender
+    void setGender(com.zhuamob.android.ZhuamobTargeting$Gender) -> setGender
+    int getAge() -> getAge
+    void setAge(int) -> setAge
+    java.util.GregorianCalendar getBirthDate() -> getBirthDate
+    void setBirthDate(java.util.GregorianCalendar) -> setBirthDate
+    java.lang.String getPostalCode() -> getPostalCode
+    void setPostalCode(java.lang.String) -> setPostalCode
+    java.lang.String getKeywords() -> getKeywords
+    void setKeywords(java.lang.String) -> setKeywords
+    java.util.Set getKeywordSet() -> getKeywordSet
+    void setKeywordSet(java.util.Set) -> setKeywordSet
+    void addKeyword(java.lang.String) -> addKeyword
+    java.lang.String getAppName() -> getAppName
+    void setAppName(java.lang.String) -> setAppName
+    java.lang.String getCompanyName() -> getCompanyName
+    void setCompanyName(java.lang.String) -> setCompanyName
+    java.lang.String getTelephoneNumber() -> getTelephoneNumber
+    void setTelephoneNumber(java.lang.String) -> setTelephoneNumber
+com.zhuamob.android.ZhuamobTargeting$AdAlign -> com.zhuamob.android.ZhuamobTargeting$AdAlign:
+    com.zhuamob.android.ZhuamobTargeting$AdAlign TOP -> TOP
+    com.zhuamob.android.ZhuamobTargeting$AdAlign BOTTOM -> BOTTOM
+    com.zhuamob.android.ZhuamobTargeting$AdAlign[] ENUM$VALUES -> ENUM$VALUES
+    com.zhuamob.android.ZhuamobTargeting$AdAlign[] values() -> values
+    com.zhuamob.android.ZhuamobTargeting$AdAlign valueOf(java.lang.String) -> valueOf
+com.zhuamob.android.ZhuamobTargeting$Channel -> com.zhuamob.android.ZhuamobTargeting$Channel:
+    com.zhuamob.android.ZhuamobTargeting$Channel ADVIEW -> ADVIEW
+    com.zhuamob.android.ZhuamobTargeting$Channel EOE -> EOE
+    com.zhuamob.android.ZhuamobTargeting$Channel GOOGLEMARKET -> GOOGLEMARKET
+    com.zhuamob.android.ZhuamobTargeting$Channel APPCHINA -> APPCHINA
+    com.zhuamob.android.ZhuamobTargeting$Channel HIAPK -> HIAPK
+    com.zhuamob.android.ZhuamobTargeting$Channel GFAN -> GFAN
+    com.zhuamob.android.ZhuamobTargeting$Channel GOAPK -> GOAPK
+    com.zhuamob.android.ZhuamobTargeting$Channel NDUOA -> NDUOA
+    com.zhuamob.android.ZhuamobTargeting$Channel OTHER -> OTHER
+    com.zhuamob.android.ZhuamobTargeting$Channel[] ENUM$VALUES -> ENUM$VALUES
+    com.zhuamob.android.ZhuamobTargeting$Channel[] values() -> values
+    com.zhuamob.android.ZhuamobTargeting$Channel valueOf(java.lang.String) -> valueOf
+com.zhuamob.android.ZhuamobTargeting$Gender -> com.zhuamob.android.ZhuamobTargeting$Gender:
+    com.zhuamob.android.ZhuamobTargeting$Gender UNKNOWN -> UNKNOWN
+    com.zhuamob.android.ZhuamobTargeting$Gender MALE -> MALE
+    com.zhuamob.android.ZhuamobTargeting$Gender FEMALE -> FEMALE
+    com.zhuamob.android.ZhuamobTargeting$Gender[] ENUM$VALUES -> ENUM$VALUES
+    com.zhuamob.android.ZhuamobTargeting$Gender[] values() -> values
+    com.zhuamob.android.ZhuamobTargeting$Gender valueOf(java.lang.String) -> valueOf
+com.zhuamob.android.ZhuamobTargeting$RunMode -> com.zhuamob.android.ZhuamobTargeting$RunMode:
+    com.zhuamob.android.ZhuamobTargeting$RunMode NORMAL -> NORMAL
+    com.zhuamob.android.ZhuamobTargeting$RunMode TEST -> TEST
+    com.zhuamob.android.ZhuamobTargeting$RunMode[] ENUM$VALUES -> ENUM$VALUES
+    com.zhuamob.android.ZhuamobTargeting$RunMode[] values() -> values
+    com.zhuamob.android.ZhuamobTargeting$RunMode valueOf(java.lang.String) -> valueOf
+com.zhuamob.android.ZhuamobTracking -> com.zhuamob.android.ZhuamobTracking:
+    java.lang.Object a -> a
+    void setMjInstance(java.lang.Object) -> setMjInstance
+    void onResume(android.app.Activity) -> onResume
+    void onPause(android.app.Activity) -> onPause
+    void onEvent(android.app.Activity,java.lang.String,long) -> onEvent
+    void onEventBegin(android.content.Context,java.lang.String) -> onEventBegin
+    void onEventEnd(android.content.Context,java.lang.String) -> onEventEnd
+    void onError(android.content.Context,java.lang.String) -> onError
+com.zhuamob.android.a -> com.zhuamob.android.a:
+    com.zhuamob.android.ZhuamobRouter a -> a
+    java.lang.Object invoke(java.lang.Object,java.lang.reflect.Method,java.lang.Object[]) -> invoke
+com.zhuamob.android.a.a -> com.zhuamob.android.a.a:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.util.List c -> c
+    java.util.List a() -> a
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    com.zhuamob.android.a.g a(java.io.InputStream) -> a
+com.zhuamob.android.a.b -> com.zhuamob.android.a.b:
+    java.util.List a -> a
+    java.util.List a() -> a
+    void a(com.zhuamob.android.a.a) -> a
+com.zhuamob.android.a.c -> com.zhuamob.android.a.c:
+    byte[] a(java.lang.String,int) -> a
+com.zhuamob.android.a.d -> com.zhuamob.android.a.d:
+    byte[] a -> a
+    int b -> b
+com.zhuamob.android.a.e -> com.zhuamob.android.a.e:
+    int[] c -> c
+    int[] d -> d
+    int e -> e
+    int f -> f
+    int[] g -> g
+    boolean a(byte[],int,int,boolean) -> a
+com.zhuamob.android.a.f -> com.zhuamob.android.a.f:
+    java.lang.Object a(java.lang.ClassLoader,com.zhuamob.android.a.a,java.util.Map,java.lang.String) -> a
+    java.lang.Class a(com.zhuamob.android.a.h) -> a
+com.zhuamob.android.a.g -> com.zhuamob.android.a.g:
+    java.util.Map a -> a
+    java.util.Map b -> b
+    java.lang.String toString() -> toString
+    void a(java.util.Map) -> a
+    java.util.Map a() -> a
+    void b(java.util.Map) -> b
+com.zhuamob.android.a.h -> com.zhuamob.android.a.h:
+    java.lang.Class a -> a
+    java.lang.Integer b -> b
+    java.lang.Class a() -> a
+    void a(java.lang.Class) -> a
+    java.lang.Integer b() -> b
+    void a(java.lang.Integer) -> a
+com.zhuamob.android.a.i -> com.zhuamob.android.a.i:
+    com.zhuamob.android.a.i a -> a
+    java.lang.String b -> b
+    boolean c -> c
+    boolean d -> d
+    java.util.Map e -> e
+    java.lang.String f -> f
+    java.lang.String g -> g
+    dalvik.system.DexFile[] h -> h
+    java.io.File[] i -> i
+    java.util.zip.ZipFile[] j -> j
+    java.lang.String[] k -> k
+    java.lang.ClassLoader l -> l
+    java.lang.ClassLoader m -> m
+    com.zhuamob.android.a.i a() -> a
+    java.lang.ClassLoader b() -> b
+    java.util.Map c() -> c
+    void a(android.content.Context) -> a
+    void d() -> d
+    void e() -> e
+    java.util.Map c(android.content.Context) -> c
+    void a(java.lang.ClassLoader) -> a
+    java.util.Map b(android.content.Context) -> b
+com.zhuamob.android.a.j -> com.zhuamob.android.a.j:
+    int a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    int a() -> a
+    void a(int) -> a
+    java.lang.String b() -> b
+    void a(java.lang.String) -> a
+    java.lang.String c() -> c
+    void b(java.lang.String) -> b
+    java.lang.String d() -> d
+    void c(java.lang.String) -> c
+com.zhuamob.android.a.k -> com.zhuamob.android.a.k:
+    android.content.Context a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    void a(android.content.Context) -> a
+    void a(java.lang.String,java.lang.Throwable) -> a
+    java.lang.String a(java.lang.Throwable) -> a
+    java.lang.String a() -> a
+    java.lang.String b() -> b
+    android.content.Context c() -> c
+com.zhuamob.android.a.l -> com.zhuamob.android.a.l:
+    java.lang.String a -> a
+    java.lang.Throwable b -> b
+    void run() -> run
+q.util.ActivityBase -> q.util.ActivityBase:
+    void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onDestroy() -> onDestroy
+q.util.AdapterBase -> q.util.a:
+    java.util.List mDatas -> a
+    android.content.Context mCtx -> b
+    android.view.LayoutInflater mInflater -> c
+    int getCount() -> getCount
+    java.lang.Object getItem(int) -> getItem
+    long getItemId(int) -> getItemId
+    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    int getLayoutId() -> a
+    java.lang.Object getHolder(android.view.View) -> a
+    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
+q.util.BitmapUtil -> q.util.b:
+    boolean save(android.graphics.Bitmap,java.lang.String) -> a
+q.util.FileMgr -> q.util.c:
+    q.util.FileMgr nInstance -> a
+    java.lang.String nRoot -> b
+    q.util.FileMgr getInstance(android.content.Context) -> a
+    java.lang.String getScan(long) -> a
+q.util.QLog -> q.util.d:
+    boolean available -> a
+    void event$3f52113a() -> a
+    void kv(java.lang.Object,java.lang.String,java.lang.String,java.lang.String) -> a
+    void kv(java.lang.Object,java.lang.String,java.lang.String,int) -> a
+    void kv(java.lang.Object,java.lang.String,java.lang.String,float) -> a
+    void log(java.lang.Object,java.lang.String) -> a
+q.util.QUI -> q.util.e:
+    void baseHeaderBack(android.app.Activity,java.lang.String) -> a
+q.util.QUI$1 -> q.util.f:
+    android.app.Activity val$act -> a
+    void onClick(android.view.View) -> onClick
+q.util.SqliteBase -> q.util.g:
+    android.database.sqlite.SQLiteDatabase db -> a
+    java.lang.String tableName -> b
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+    void open(boolean) -> a
+    void close() -> close
+    void insert(q.util.SqliteBase$ISqlite) -> b
+    java.lang.String getSqlCreateTable() -> a
+    android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
+q.util.SqliteBase$ISqlite -> q.util.h:
+q.util.WindowMgr -> q.util.i:
+    q.util.WindowMgr nInstance -> a
+    int nWidth -> b
+    int nHeight -> c
+    int nDpi -> d
+    float nScale -> e
+    float nScaleRes -> f
+    float nScaleText -> g
+    q.util.WindowMgr getInstance(android.content.Context) -> a
+    int getHeight() -> a
+q.view.EndlessListViewHelper -> q.view.a:
+    q.view.EndlessListViewHelper$OnEndlessListViewListener mListener -> a
+    android.widget.ListView mListView -> b
+    android.view.View mViewFooter -> c
+    boolean mIsEnable -> d
+    boolean mIsDoing -> e
+    android.os.Handler mHandler -> f
+    void setEnable(boolean) -> a
+    q.view.EndlessListViewHelper$OnEndlessListViewListener access$0(q.view.EndlessListViewHelper) -> a
+    android.widget.ListView access$1(q.view.EndlessListViewHelper) -> b
+    android.view.View access$2(q.view.EndlessListViewHelper) -> c
+    void access$3(q.view.EndlessListViewHelper,boolean) -> a
+    boolean access$4(q.view.EndlessListViewHelper) -> d
+    boolean access$5(q.view.EndlessListViewHelper) -> e
+    android.os.Handler access$6(q.view.EndlessListViewHelper) -> f
+q.view.EndlessListViewHelper$1 -> q.view.b:
+    q.view.EndlessListViewHelper this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+q.view.EndlessListViewHelper$2 -> q.view.c:
+    q.view.EndlessListViewHelper this$0 -> a
+    q.view.EndlessListViewHelper$OnEndlessListViewListener val$listener -> b
+    void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+    void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    q.view.EndlessListViewHelper access$0(q.view.EndlessListViewHelper$2) -> a
+q.view.EndlessListViewHelper$2$1 -> q.view.d:
+    q.view.EndlessListViewHelper$2 this$1 -> a
+    q.view.EndlessListViewHelper$OnEndlessListViewListener val$listener -> b
+    void run() -> run
+q.view.EndlessListViewHelper$OnEndlessListViewListener -> q.view.e:
+    boolean onEndlessListViewBackground() -> a
+    void onEndlessListViewSuccess() -> b
+q.view.RotateImageButton -> q.view.RotateImageButton:
+    float rotation -> a
+    float width -> b
+    float height -> c
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onLayout(boolean,int,int,int,int) -> onLayout
+q.view.RotateTextView -> q.view.RotateTextView:
+    float rotation -> a
+    float width -> b
+    float height -> c
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onLayout(boolean,int,int,int,int) -> onLayout

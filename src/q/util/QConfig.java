@@ -26,8 +26,4 @@ public class QConfig {
 	public static final String SETTING_CUSTOM_PRODUCT_SEARCH = null; //自定义搜索网址（%s=内容，%f=格式，%t=类型），暂无用
 	public static final boolean SETTING_DISABLE_CONTINUOUS_FOCUS = true;//没有持续关注，只使用标准对焦模式
 	
-	public static final String SP_NAME = "setting";
-	public static final String SP_KEY_VERSION = "version";
-	public static final String SP_KEY_NEW_COLOR = "new_color";
-	public static final String SP_KEY_NEW_COLOR_BG = "new_color_bg";
 }

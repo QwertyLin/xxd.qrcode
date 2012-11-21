@@ -13,40 +13,52 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 import android.widget.TextView;
 import q.util.ActivityBase;
 import q.util.QConfig;
+import q.util.QSp;
 import q.util.QUI;
 
 public class NewA extends ActivityBase implements OnClickListener {
 	
 	private int mColor, mColorBg;
 	private View vColor, vColorBg;
+	private EditText vText;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_new);
 		QUI.baseHeaderBackOk(this, "生成二维码", new OnClickListener() {
-			
 			@Override
 			public void onClick(View v) {
-				QrCode item = new QrCode();
-				item.setText("aaa");
-				startActivity(new Intent(NewA.this, QrCodeA.class)
-				.putExtra(QrCodeA.EXTRA_QRCODE, item)
-				.putExtra(QrCodeA.EXTRA_BUILD_COLOR, mColor)
-				.putExtra(QrCodeA.EXTRA_BUILD_COLOR_BG, mColorBg));
+				onClickSave();
 			}
 		});
 		//
+		vText = (EditText)findViewById(R.id.new_text);
 		initColorValue();
 		initColor();
 		initColorBg();
 	}
 	
+	private void onClickSave(){
+		String text = vText.getText().toString().trim();
+		if(text.equals("")){
+			new AlertDialog.Builder(this).setMessage("内容不能为空！").setNeutralButton("我知道了", null).show();
+			return;
+		}
+		QrCode item = new QrCode();
+		item.setText(text);
+		startActivity(new Intent(this, QrCodeA.class)
+		.putExtra(QrCodeA.EXTRA_QRCODE, item)
+		.putExtra(QrCodeA.EXTRA_BUILD_COLOR, mColor)
+		.putExtra(QrCodeA.EXTRA_BUILD_COLOR_BG, mColorBg));
+	}
+	
 	private void initColor(){
-		mColor = getSharedPreferences(QConfig.SP_NAME, Context.MODE_PRIVATE).getInt(QConfig.SP_KEY_NEW_COLOR, 0xff000000);
+		mColor = QSp.getNewColor(this);
 		View vNewColor = findViewById(R.id.new_color);
 		vNewColor.setOnClickListener(this);
 		((TextView)vNewColor.findViewById(R.id.color_kv_k)).setText("图案颜色");
@@ -55,7 +67,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 	}
 	
 	private void initColorBg(){
-		mColorBg = getSharedPreferences(QConfig.SP_NAME, Context.MODE_PRIVATE).getInt(QConfig.SP_KEY_NEW_COLOR_BG, 0xff000000);
+		mColorBg = QSp.getNewColorBg(this);
 		View vNewColorBg = findViewById(R.id.new_color_bg);
 		vNewColorBg.setOnClickListener(this);
 		((TextView)vNewColorBg.findViewById(R.id.color_kv_k)).setText("背景颜色");
@@ -82,8 +94,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 			public void onClick(DialogInterface dialog, int which) {
 				mColor = colors.get(which).getColor();
 				vColor.setBackgroundColor(mColor);
-				getSharedPreferences(QConfig.SP_NAME, Context.MODE_PRIVATE)
-				.edit().putInt(QConfig.SP_KEY_NEW_COLOR, mColor).commit();
+				QSp.setNewColor(NewA.this, mColor);
 				dialog.dismiss();
 			}
 		})
@@ -97,8 +108,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 			public void onClick(DialogInterface dialog, int which) {
 				mColorBg = colors.get(which).getColor();
 				vColorBg.setBackgroundColor(mColorBg);
-				getSharedPreferences(QConfig.SP_NAME, Context.MODE_PRIVATE)
-				.edit().putInt(QConfig.SP_KEY_NEW_COLOR_BG, mColorBg).commit();
+				QSp.setNewColorBg(NewA.this, mColorBg);
 				dialog.dismiss();
 			}
 		})

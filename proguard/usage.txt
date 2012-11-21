@@ -1,0 +1,405 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+cn.xxd.qr.BuildConfig
+cn.xxd.qr.MainA:
+    36:50:private void initVersion()
+    53:62:private void tempInitHistoryData()
+cn.xxd.qr.QrCodeA:
+    public static final java.lang.String EXTRA_QRCODE
+    public static final java.lang.String EXTRA_BUILD_COLOR
+    public static final java.lang.String EXTRA_BUILD_COLOR_BG
+cn.xxd.qr.R:
+    10:10:public R()
+cn.xxd.qr.R$attr
+cn.xxd.qr.R$color
+cn.xxd.qr.R$dimen
+cn.xxd.qr.R$drawable
+cn.xxd.qr.R$id
+cn.xxd.qr.R$layout
+cn.xxd.qr.R$raw
+cn.xxd.qr.R$string
+cn.xxd.qr.R$styleable:
+    public static final int qview_arg_float
+    218:218:public R$styleable()
+cn.xxd.qr.bean.Color:
+    17:18:public void setName(java.lang.String)
+    23:24:public void setColor(int)
+cn.xxd.qr.bean.HistoryDb:
+    private static final int PAGE_COUNT
+    46:46:public java.util.List queryAll()
+    1:1:protected bridge synthetic q.util.SqliteBase$ISqlite buildEntity(android.database.Cursor)
+cn.xxd.qr.bean.QrCode:
+    private static final long serialVersionUID
+com.cnzz.mobile.zhuamob.DeviceAgent:
+    public DeviceAgent()
+    public static java.lang.String getPublicKey(android.content.Context)
+com.cnzz.mobile.zhuamob.MobileProbe:
+    public MobileProbe()
+com.google.zxing.Binarizer:
+    public abstract com.google.zxing.common.BitArray getBlackRow(int,com.google.zxing.common.BitArray)
+    public abstract com.google.zxing.Binarizer createBinarizer(com.google.zxing.LuminanceSource)
+    78:78:public final int getWidth()
+    82:82:public final int getHeight()
+com.google.zxing.BinaryBitmap:
+    44:44:public int getWidth()
+    51:51:public int getHeight()
+    65:65:public com.google.zxing.common.BitArray getBlackRow(int,com.google.zxing.common.BitArray)
+    92:92:public boolean isCropSupported()
+    106:107:public com.google.zxing.BinaryBitmap crop(int,int,int,int)
+    114:114:public boolean isRotateSupported()
+    124:125:public com.google.zxing.BinaryBitmap rotateCounterClockwise()
+    135:136:public com.google.zxing.BinaryBitmap rotateCounterClockwise45()
+com.google.zxing.LuminanceSource:
+    80:80:public boolean isCropSupported()
+    94:94:public com.google.zxing.LuminanceSource crop(int,int,int,int)
+    101:101:public boolean isRotateSupported()
+    111:111:public com.google.zxing.LuminanceSource rotateCounterClockwise()
+    121:121:public com.google.zxing.LuminanceSource rotateCounterClockwise45()
+com.google.zxing.MultiFormatReader:
+    47:48:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.MultiFormatWriter:
+    37:37:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.PlanarYUVLuminanceSource:
+    108:108:public boolean isCropSupported()
+    113:113:public com.google.zxing.LuminanceSource crop(int,int,int,int)
+com.google.zxing.RGBLuminanceSource
+com.google.zxing.Reader:
+    public abstract com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.Result:
+    67:67:public byte[] getRawBytes()
+    76:76:public com.google.zxing.ResultPoint[] getResultPoints()
+    83:83:public com.google.zxing.BarcodeFormat getBarcodeFormat()
+    92:92:public java.util.Map getResultMetadata()
+    103:110:public void putAllMetadata(java.util.Map)
+    113:122:public void addResultPoints(com.google.zxing.ResultPoint[])
+    125:125:public long getTimestamp()
+com.google.zxing.Writer:
+    public abstract com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.client.android.BeepManager:
+    private static final float BEEP_VOLUME
+    private static final long VIBRATE_DURATION
+com.google.zxing.client.android.Contents
+com.google.zxing.client.android.Contents$Type
+com.google.zxing.client.android.DecodeFormatManager
+com.google.zxing.client.android.DecodeThread:
+    public static final java.lang.String BARCODE_BITMAP
+com.google.zxing.client.android.Intents
+com.google.zxing.client.android.Intents$Encode
+com.google.zxing.client.android.Intents$History
+com.google.zxing.client.android.Intents$Scan
+com.google.zxing.client.android.Intents$SearchBookContents
+com.google.zxing.client.android.Intents$Share
+com.google.zxing.client.android.Intents$WifiConnect
+com.google.zxing.client.android.LocaleManager
+com.google.zxing.client.android.ViewfinderView:
+    private static final long ANIMATION_DELAY
+    private static final int CURRENT_POINT_OPACITY
+    private static final int MAX_RESULT_POINTS
+    private static final int POINT_SIZE
+com.google.zxing.client.android.camera.AutoFocusManager:
+    private static final long AUTO_FOCUS_INTERVAL_MS
+com.google.zxing.client.android.camera.CameraConfigurationManager:
+    private static final java.lang.String TAG
+    private static final int MIN_PREVIEW_PIXELS
+    private static final int MAX_PREVIEW_PIXELS
+com.google.zxing.client.android.camera.CameraManager:
+    private static final int MIN_FRAME_WIDTH
+    private static final int MIN_FRAME_HEIGHT
+    private static final int MAX_FRAME_WIDTH
+    private static final int MAX_FRAME_HEIGHT
+com.google.zxing.client.android.camera.exposure.DefaultExposureInterface
+com.google.zxing.client.android.camera.exposure.ExposureInterface
+com.google.zxing.client.android.camera.exposure.ExposureManager
+com.google.zxing.client.android.camera.exposure.FroyoExposureInterface
+com.google.zxing.client.android.encode.ContactEncoder
+com.google.zxing.client.android.encode.Formatter
+com.google.zxing.client.android.encode.MECARDContactEncoder
+com.google.zxing.client.android.encode.MECARDContactEncoder$1
+com.google.zxing.client.android.encode.MECARDContactEncoder$2
+com.google.zxing.client.android.encode.MECARDContactEncoder$3
+com.google.zxing.client.android.encode.QRCodeEncoder
+com.google.zxing.client.android.encode.VCardContactEncoder
+com.google.zxing.client.android.encode.VCardContactEncoder$1
+com.google.zxing.client.android.encode.VCardContactEncoder$2
+com.google.zxing.client.android.pref.BSPlusPreference:
+    private static final java.lang.String MARKET_URL
+    45:47:public BSPlusPreference(android.content.Context)
+com.google.zxing.client.android.result.AddressBookResultHandler
+com.google.zxing.client.android.result.CalendarResultHandler
+com.google.zxing.client.android.result.EmailAddressResultHandler
+com.google.zxing.client.android.result.GeoResultHandler
+com.google.zxing.client.android.result.ResultButtonListener
+com.google.zxing.client.android.result.ResultHandler
+com.google.zxing.client.android.result.ResultHandlerFactory
+com.google.zxing.client.android.result.SMSResultHandler
+com.google.zxing.client.android.result.TelResultHandler
+com.google.zxing.client.android.result.TextResultHandler
+com.google.zxing.client.android.result.URIResultHandler
+com.google.zxing.client.android.result.WifiResultHandler
+com.google.zxing.client.android.wifi.NetworkType
+com.google.zxing.client.android.wifi.WifiConfigManager
+com.google.zxing.client.result.AbstractDoCoMoResultParser:
+    32:32:static java.lang.String[] matchDoCoMoPrefixedField(java.lang.String,java.lang.String,boolean)
+    36:36:static java.lang.String matchSingleDoCoMoPrefixedField(java.lang.String,java.lang.String,boolean)
+com.google.zxing.client.result.AddressBookAUResultParser:
+    36:52:public com.google.zxing.client.result.AddressBookParsedResult parse(com.google.zxing.Result)
+    72:86:private static java.lang.String[] matchMultipleValuePrefix(java.lang.String,int,java.lang.String,boolean)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.AddressBookDoCoMoResultParser:
+    40:65:public com.google.zxing.client.result.AddressBookParsedResult parse(com.google.zxing.Result)
+    82:87:private static java.lang.String parseName(java.lang.String)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.AddressBookParsedResult
+com.google.zxing.client.result.BizcardResultParser:
+    39:54:public com.google.zxing.client.result.AddressBookParsedResult parse(com.google.zxing.Result)
+    73:87:private static java.lang.String[] buildPhoneNumbers(java.lang.String,java.lang.String,java.lang.String)
+    91:94:private static java.lang.String buildName(java.lang.String,java.lang.String)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.BookmarkDoCoMoResultParser:
+    28:38:public com.google.zxing.client.result.URIParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.CalendarParsedResult
+com.google.zxing.client.result.EmailAddressParsedResult
+com.google.zxing.client.result.EmailAddressResultParser:
+    33:58:public com.google.zxing.client.result.EmailAddressParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.EmailDoCoMoResultParser:
+    36:50:public com.google.zxing.client.result.EmailAddressParsedResult parse(com.google.zxing.Result)
+    60:60:static boolean isBasicallyValidEmailAddress(java.lang.String)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.GeoParsedResult
+com.google.zxing.client.result.GeoResultParser:
+    39:70:public com.google.zxing.client.result.GeoParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.ParsedResult:
+    62:72:public static void maybeAppend(java.lang.String[],java.lang.StringBuilder)
+com.google.zxing.client.result.ResultParser:
+    private static final java.lang.String BYTE_ORDER_MARK
+    public abstract com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+    78:82:protected static java.lang.String getMassagedText(com.google.zxing.Result)
+    93:99:public static com.google.zxing.client.result.ParsedResult parseResult(com.google.zxing.Result)
+    111:115:protected static void maybeAppend(java.lang.String,java.lang.StringBuilder)
+    118:124:protected static void maybeAppend(java.lang.String[],java.lang.StringBuilder)
+    127:127:protected static java.lang.String[] maybeWrap(java.lang.String)
+    131:148:protected static java.lang.String unescapeBackslash(java.lang.String)
+    152:161:protected static int parseHexDigit(char)
+    165:165:protected static boolean isStringOfDigits(java.lang.CharSequence,int)
+    169:173:protected static boolean isSubstringOfDigits(java.lang.CharSequence,int,int)
+    177:181:protected static boolean isSubstringOfAlphaNumeric(java.lang.CharSequence,int,int)
+    185:193:static java.util.Map parseNameValuePairs(java.lang.String)
+    197:210:private static void appendKeyValue(java.lang.CharSequence,java.util.Map)
+    213:251:static java.lang.String[] matchPrefixedField(java.lang.String,java.lang.String,char,boolean)
+    255:256:static java.lang.String matchSinglePrefixedField(java.lang.String,java.lang.String,char,boolean)
+com.google.zxing.client.result.SMSMMSResultParser:
+    45:83:public com.google.zxing.client.result.SMSParsedResult parse(com.google.zxing.Result)
+    92:107:private static void addNumberVia(java.util.Collection,java.util.Collection,java.lang.String)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.SMSParsedResult
+com.google.zxing.client.result.SMSTOMMSTOResultParser:
+    35:49:public com.google.zxing.client.result.SMSParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.SMTPResultParser:
+    33:51:public com.google.zxing.client.result.EmailAddressParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.TelParsedResult
+com.google.zxing.client.result.TelResultParser:
+    30:39:public com.google.zxing.client.result.TelParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.TextParsedResult:
+    37:37:public java.lang.String getText()
+    41:41:public java.lang.String getLanguage()
+com.google.zxing.client.result.URIParsedResult:
+    38:38:public java.lang.String getURI()
+    42:42:public java.lang.String getTitle()
+    54:54:public boolean isPossiblyMaliciousURI()
+com.google.zxing.client.result.URIResultParser:
+    private static final java.lang.String ALPHANUM_PART
+    40:47:public com.google.zxing.client.result.URIParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.URLTOResultParser:
+    32:42:public com.google.zxing.client.result.URIParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.VCardResultParser:
+    51:74:public com.google.zxing.client.result.AddressBookParsedResult parse(com.google.zxing.Result)
+    94:194:static java.util.List matchVCardPrefixedField(java.lang.CharSequence,java.lang.String,boolean,boolean)
+    198:227:private static java.lang.String decodeQuotedPrintable(java.lang.CharSequence,java.lang.String)
+    233:249:private static void maybeAppendFragment(java.io.ByteArrayOutputStream,java.lang.String,java.lang.StringBuilder)
+    255:256:static java.util.List matchSingleVCardPrefixedField(java.lang.CharSequence,java.lang.String,boolean,boolean)
+    260:260:private static java.lang.String toPrimaryValue(java.util.List)
+    264:271:private static java.lang.String[] toPrimaryValues(java.util.Collection)
+    275:296:private static java.lang.String[] toTypes(java.util.Collection)
+    300:300:private static boolean isLikeVCardDate(java.lang.CharSequence)
+    310:332:private static void formatNames(java.lang.Iterable)
+    335:339:private static void maybeAppendComponent(java.lang.String[],int,java.lang.StringBuilder)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.VEventResultParser:
+    33:83:public com.google.zxing.client.result.CalendarParsedResult parse(com.google.zxing.Result)
+    90:91:private static java.lang.String matchSingleVCardPrefixedField(java.lang.CharSequence,java.lang.String,boolean)
+    95:104:private static java.lang.String[] matchVCardPrefixedField(java.lang.CharSequence,java.lang.String,boolean)
+    108:111:private static java.lang.String stripMailto(java.lang.String)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.client.result.WifiParsedResult
+com.google.zxing.client.result.WifiResultParser:
+    35:49:public com.google.zxing.client.result.WifiParsedResult parse(com.google.zxing.Result)
+    1:1:public bridge synthetic com.google.zxing.client.result.ParsedResult parse(com.google.zxing.Result)
+com.google.zxing.common.BitArray:
+    34:37:public BitArray(int)
+    69:70:public void set(int)
+    78:79:public void flip(int)
+    88:102:public int getNextSet(int)
+    109:123:public int getNextUnset(int)
+    134:135:public void setBulk(int,int)
+    144:167:public void setRange(int,int)
+    173:177:public void clear()
+    189:217:public boolean isRange(int,int,boolean)
+    288:288:public int[] getBitArray()
+    295:303:public void reverse()
+com.google.zxing.common.BitMatrix:
+    94:98:public void clear()
+    137:144:public com.google.zxing.common.BitArray getRow(int,com.google.zxing.common.BitArray)
+    152:153:public void setRow(int,com.google.zxing.common.BitArray)
+    161:205:public int[] getEnclosingRectangle()
+com.google.zxing.common.BitSource:
+    46:46:public int getBitOffset()
+    53:53:public int getByteOffset()
+com.google.zxing.common.DefaultGridSampler:
+    40:43:public com.google.zxing.common.BitMatrix sampleGrid(com.google.zxing.common.BitMatrix,int,int,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)
+com.google.zxing.common.GlobalHistogramBinarizer:
+    private static final int LUMINANCE_BITS
+    private static final int LUMINANCE_SHIFT
+    private static final int LUMINANCE_BUCKETS
+    53:82:public com.google.zxing.common.BitArray getBlackRow(int,com.google.zxing.common.BitArray)
+    127:127:public com.google.zxing.Binarizer createBinarizer(com.google.zxing.LuminanceSource)
+com.google.zxing.common.GridSampler:
+    48:49:public static void setGridSampler(com.google.zxing.common.GridSampler)
+    public abstract com.google.zxing.common.BitMatrix sampleGrid(com.google.zxing.common.BitMatrix,int,int,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float,float)
+com.google.zxing.common.HybridBinarizer:
+    private static final int BLOCK_SIZE_POWER
+    private static final int BLOCK_SIZE
+    private static final int BLOCK_SIZE_MASK
+    private static final int MINIMUM_DIMENSION
+    private static final int MIN_DYNAMIC_RANGE
+    93:93:public com.google.zxing.Binarizer createBinarizer(com.google.zxing.LuminanceSource)
+com.google.zxing.common.PerspectiveTransform:
+    88:96:public void transformPoints(float[],float[])
+com.google.zxing.common.StringUtils:
+    public static final java.lang.String SHIFT_JIS
+    public static final java.lang.String GB2312
+    private static final java.lang.String EUC_JP
+    private static final java.lang.String UTF8
+    private static final java.lang.String ISO88591
+    42:42:private StringUtils()
+com.google.zxing.common.detector.MathUtils:
+    21:22:private MathUtils()
+com.google.zxing.common.detector.MonochromeRectangleDetector
+com.google.zxing.common.detector.WhiteRectangleDetector
+com.google.zxing.common.reedsolomon.GenericGF:
+    private static final int INITIALIZATION_THRESHOLD
+com.google.zxing.qrcode.QRCodeReader:
+    50:50:protected com.google.zxing.qrcode.decoder.Decoder getDecoder()
+    63:63:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+com.google.zxing.qrcode.QRCodeWriter:
+    private static final int QUIET_ZONE_SIZE
+    44:44:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser:
+    private static final int GB2312_SUBSET
+    53:54:private DecodedBitStreamParser()
+com.google.zxing.qrcode.decoder.Decoder:
+    45:45:public com.google.zxing.common.DecoderResult decode(boolean[][])
+    59:68:public com.google.zxing.common.DecoderResult decode(boolean[][],java.util.Map)
+    72:72:public com.google.zxing.common.DecoderResult decode(com.google.zxing.common.BitMatrix)
+com.google.zxing.qrcode.decoder.FormatInformation:
+    private static final int FORMAT_INFO_MASK_QR
+com.google.zxing.qrcode.detector.Detector:
+    49:49:protected final com.google.zxing.common.BitMatrix getImage()
+    53:53:protected final com.google.zxing.ResultPointCallback getResultPointCallback()
+    63:63:public com.google.zxing.common.DetectorResult detect()
+com.google.zxing.qrcode.detector.FinderPattern:
+    52:53:void incrementCount()
+com.google.zxing.qrcode.detector.FinderPatternFinder:
+    private static final int CENTER_QUORUM
+    protected static final int MIN_SKIP
+    protected static final int MAX_MODULES
+    private static final int INTEGER_MATH_SHIFT
+    59:60:public FinderPatternFinder(com.google.zxing.common.BitMatrix)
+    70:70:protected final com.google.zxing.common.BitMatrix getImage()
+    74:74:protected final java.util.List getPossibleCenters()
+com.google.zxing.qrcode.encoder.ByteMatrix:
+    57:58:public void set(int,int,byte)
+com.google.zxing.qrcode.encoder.Encoder:
+    static final java.lang.String DEFAULT_BYTE_MODE_ENCODING
+    52:53:private Encoder()
+    76:76:public static com.google.zxing.qrcode.encoder.QRCode encode(java.lang.String,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel)
+    180:180:public static com.google.zxing.qrcode.decoder.Mode chooseMode(java.lang.String)
+com.google.zxing.qrcode.encoder.MaskUtil:
+    private static final int N1
+    private static final int N2
+    private static final int N3
+    private static final int N4
+    32:34:private MaskUtil()
+com.google.zxing.qrcode.encoder.MatrixUtil:
+    private static final int VERSION_INFO_POLY
+    private static final int TYPE_INFO_POLY
+    private static final int TYPE_INFO_MASK_PATTERN
+    30:32:private MatrixUtil()
+com.google.zxing.qrcode.encoder.QRCode:
+    public static final int NUM_MASK_PATTERNS
+    42:42:public com.google.zxing.qrcode.decoder.Mode getMode()
+    46:46:public com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getECLevel()
+    50:50:public com.google.zxing.qrcode.decoder.Version getVersion()
+    54:54:public int getMaskPattern()
+q.util.BitmapUtil:
+    14:14:public BitmapUtil()
+    17:23:public static final java.lang.String toString(android.graphics.Bitmap)
+    31:36:public static final android.graphics.Bitmap decode(android.graphics.drawable.Drawable)
+    43:45:public static final byte[] toByte(android.graphics.Bitmap)
+    52:52:public static final android.graphics.Bitmap copy(android.graphics.Bitmap)
+    59:66:public static final void recycle(android.graphics.Bitmap)
+    74:77:public static final android.graphics.Bitmap compressJPEG(android.graphics.Bitmap,int)
+    84:87:public static final android.graphics.Bitmap compressPNG(android.graphics.Bitmap)
+q.util.ListViewUtil
+q.util.QConfig
+q.util.QLog:
+    public static final int EVENT_QRCODE
+    9:9:public QLog()
+    16:19:public static void error(android.content.Context,java.lang.String)
+    22:25:public static void error(android.content.Context,java.lang.Exception)
+    29:29:public static void event(android.content.Context,int)
+    48:51:public static final void kv(java.lang.Object,java.lang.String,java.lang.String,boolean)
+    66:69:public static final void log(java.lang.String,java.lang.String)
+q.util.QSp:
+    private static final java.lang.String SP_NAME_SETTING
+    private static final java.lang.String SP_KEY_VERSION
+    private static final java.lang.String SP_KEY_NEW_COLOR
+    private static final java.lang.String SP_KEY_NEW_COLOR_BG
+    5:5:public QSp()
+    11:11:public static final int getVersion(android.content.Context)
+    14:15:public static final void setVersion(android.content.Context,int)
+q.util.QUI:
+    10:10:public QUI()
+q.util.SqliteBase:
+    54:60:public void insertOrUpdate(q.util.SqliteBase$ISqlite)
+    64:64:public boolean update(q.util.SqliteBase$ISqlite)
+    69:69:public boolean delete(q.util.SqliteBase$ISqlite)
+    74:74:public boolean deleteById(long)
+    80:85:public java.util.List queryAll()
+    91:95:public q.util.SqliteBase$ISqlite queryOne(long)
+    100:102:public void empty()
+    protected abstract q.util.SqliteBase$ISqlite buildEntity(android.database.Cursor)
+q.util.SqliteBase$ISqlite:
+    public abstract long getId()
+    public abstract void setId(long)
+q.util.WindowMgr:
+    71:71:public int getWidth()
+    79:79:public int getDpi()
+    83:83:public float getScale()
+    87:87:public float getScaleRes()
+    91:91:public float getScaleText()
+q.view.EndlessListViewHelper:
+    private static final int MSG_SUCCESS
+    private static final int MSG_ENABLE
+    private static final int MSG_DISABLE
+q.view.RotateImageButton:
+    32:33:public void setRotate(float)
+q.view.RotateTextView:
+    31:32:public void setRotate(float)

@@ -1,9 +1,10 @@
 package q.util;
 
+import com.zhuamob.android.ZhuamobLayout;
+import com.zhuamob.android.ZhuamobTracking;
+
 import android.app.Activity;
 import android.os.Bundle;
-
-import com.umeng.analytics.MobclickAgent;
 
 public abstract class ActivityBase extends Activity {
 	
@@ -15,13 +16,18 @@ public abstract class ActivityBase extends Activity {
 	@Override
     protected void onResume() {
     	super.onResume();
-    	MobclickAgent.onResume(this);
+    	ZhuamobTracking.onResume(this);
     }
     
     @Override
     protected void onPause() {
     	super.onPause();
-    	MobclickAgent.onPause(this);
+    	ZhuamobTracking.onPause(this); 
     }
 
+    @Override
+    protected void onDestroy() {
+    	super.onDestroy();
+    	ZhuamobLayout.clean();
+    }
 }

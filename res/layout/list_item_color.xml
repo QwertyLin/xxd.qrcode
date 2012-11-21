@@ -6,12 +6,20 @@
     android:orientation="horizontal"
     >
     
-    <View 
-        android:id="@+id/color_color"
+    <FrameLayout 
         android:layout_width="30dip"
         android:layout_height="30dip"
+        android:padding="1dip"
         android:layout_gravity="center"
-        />
+        android:background="@color/base_gray_light"
+        >
+        <View 
+	        android:id="@+id/color_color"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        />
+    </FrameLayout>
+    
     
     <TextView 
         android:id="@+id/color_name"
