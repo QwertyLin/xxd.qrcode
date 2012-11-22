@@ -64,17 +64,17 @@ public final class CaptureActivity extends ActivityBase implements SurfaceHolder
   private CaptureA homeA;//TODO add HomeA
 
   public ViewfinderView getViewfinderView() {
-	  QLog.log(this, "getViewfinderView");
+	  //QLog.log(this, "getViewfinderView");
     return viewfinderView;
   }
 
   public Handler getHandler() {
-	  QLog.log(this, "getHandler");
+	  //QLog.log(this, "getHandler");
     return handler;
   }
 
   public CameraManager getCameraManager() {
-	  QLog.log(this, "getCameraManager");
+	  //QLog.log(this, "getCameraManager");
     return cameraManager;
   }
 

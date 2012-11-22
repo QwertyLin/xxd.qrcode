@@ -8,6 +8,8 @@ import java.util.Map;
 
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
+import cn.xxd.qr.service.UpdateService;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
@@ -59,6 +61,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		UpdateService.check(this, false);
 		//
 		setContentView(R.layout.layout_qrcode);
 		QUI.baseHeaderBack(this, "");
@@ -92,7 +95,8 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 			vWebsie.setOnClickListener(this);
 			break;
 		}
-		//
+		//统计
+		QLog.event(this, QLog.EVENT_QRCODE, qrcode.getText());
 	}
 	
 	private void initState(Intent intent){
@@ -102,7 +106,6 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		}else if(qrcode.getId() == 0){
 			state = State.IMAGE_SCAN;
 			initImageScan();
-			QLog.event(this, QLog.EVENT_QRCODE, qrcode.getText());
 		}else{
 			File imageFile = new File(fileMgr.getScan(qrcode.getTime()));
 			if(imageFile.exists() && imageFile.length() > 0){

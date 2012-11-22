@@ -172,6 +172,276 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.c:
     java.lang.String getTimeStr() -> d
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
+cn.xxd.qr.service.UpdateService -> cn.xxd.qr.service.UpdateService:
+    android.app.NotificationManager nm -> a
+    android.app.Notification notification -> b
+    java.io.File tempFile -> c
+    boolean cancelUpdate -> d
+    cn.xxd.qr.service.UpdateService$MyHandler myHandler -> e
+    int download_precent -> f
+    android.widget.RemoteViews views -> g
+    int notificationId -> h
+    void check(android.content.Context,boolean) -> a
+    android.os.IBinder onBind(android.content.Intent) -> onBind
+    void onStart(android.content.Intent,int) -> onStart
+    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
+    void onDestroy() -> onDestroy
+    void access$0(cn.xxd.qr.service.UpdateService,int) -> a
+    android.app.NotificationManager access$1(cn.xxd.qr.service.UpdateService) -> a
+    int access$2(cn.xxd.qr.service.UpdateService) -> b
+    void access$3$4b9b41b8(java.io.File,android.content.Context) -> a
+    android.widget.RemoteViews access$4(cn.xxd.qr.service.UpdateService) -> c
+    int access$5(cn.xxd.qr.service.UpdateService) -> d
+    android.app.Notification access$6(cn.xxd.qr.service.UpdateService) -> e
+    void access$7(cn.xxd.qr.service.UpdateService,java.io.File) -> a
+    java.io.File access$8(cn.xxd.qr.service.UpdateService) -> f
+    boolean access$9(cn.xxd.qr.service.UpdateService) -> g
+    cn.xxd.qr.service.UpdateService$MyHandler access$10(cn.xxd.qr.service.UpdateService) -> h
+cn.xxd.qr.service.UpdateService$1 -> cn.xxd.qr.service.a:
+    android.content.Context val$ctx -> a
+    boolean val$visible -> b
+    android.app.ProgressDialog val$pd -> c
+    void run() -> run
+cn.xxd.qr.service.UpdateService$1$1 -> cn.xxd.qr.service.b:
+    cn.xxd.qr.service.UpdateService$1 this$1 -> a
+    java.lang.String val$result -> b
+    android.content.Context val$ctx -> c
+    void run() -> run
+cn.xxd.qr.service.UpdateService$1$1$1 -> cn.xxd.qr.service.c:
+    cn.xxd.qr.service.UpdateService$1$1 this$2 -> a
+    android.content.Context val$ctx -> b
+    java.lang.String[] val$rs -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.xxd.qr.service.UpdateService$1$2 -> cn.xxd.qr.service.d:
+    cn.xxd.qr.service.UpdateService$1 this$1 -> a
+    android.content.Context val$ctx -> b
+    void run() -> run
+cn.xxd.qr.service.UpdateService$2 -> cn.xxd.qr.service.e:
+    cn.xxd.qr.service.UpdateService this$0 -> a
+    java.lang.String val$url -> b
+    void run() -> run
+cn.xxd.qr.service.UpdateService$MyHandler -> cn.xxd.qr.service.f:
+    android.content.Context context -> b
+    cn.xxd.qr.service.UpdateService this$0 -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.baidu.mobstat.SendStrategyEnum -> com.baidu.mobstat.a:
+    com.baidu.mobstat.SendStrategyEnum APP_START -> a
+    com.baidu.mobstat.SendStrategyEnum ONCE_A_DAY -> b
+    com.baidu.mobstat.SendStrategyEnum SET_TIME_INTERVAL -> c
+    com.baidu.mobstat.SendStrategyEnum[] a -> d
+    com.baidu.mobstat.SendStrategyEnum[] values() -> values
+    com.baidu.mobstat.SendStrategyEnum valueOf(java.lang.String) -> valueOf
+com.baidu.mobstat.StatActivity -> com.baidu.mobstat.StatActivity:
+    void onResume() -> onResume
+    void onPause() -> onPause
+com.baidu.mobstat.StatService -> com.baidu.mobstat.b:
+    boolean a -> a
+    boolean a(java.lang.Class,java.lang.String) -> a
+    void onResume(android.content.Context) -> a
+    void onPause(android.content.Context) -> b
+    void onEvent(android.content.Context,java.lang.String,java.lang.String) -> a
+    boolean a(android.content.Context,java.lang.String) -> a
+com.baidu.mobstat.a -> com.baidu.mobstat.c:
+    com.baidu.mobstat.a a -> a
+    java.lang.Thread$UncaughtExceptionHandler b -> b
+    android.content.Context c -> c
+    com.baidu.mobstat.a a() -> a
+    void a(android.content.Context) -> a
+    void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
+    org.json.JSONArray b(android.content.Context) -> b
+com.baidu.mobstat.a.a -> com.baidu.mobstat.a.a:
+    java.net.Proxy a -> a
+    java.net.Proxy b -> b
+    java.lang.String a$9e52333(android.content.Context,java.lang.String) -> a
+    void a$31d7acc9(android.content.Context,java.lang.String,java.lang.String) -> a
+    java.lang.String a(android.content.Context,java.lang.String) -> f
+    byte[] b(android.content.Context,java.lang.String) -> g
+    boolean c(android.content.Context,java.lang.String) -> b
+    boolean a(java.lang.String) -> a
+    java.net.HttpURLConnection a$16486542(android.content.Context,java.lang.String) -> c
+    void d(android.content.Context,java.lang.String) -> d
+    boolean e(android.content.Context,java.lang.String) -> e
+com.baidu.mobstat.a.b -> com.baidu.mobstat.a.b:
+    java.text.SimpleDateFormat a -> a
+    void b$16da05f7() -> a
+    boolean a(int) -> a
+    int a(java.lang.String) -> a
+    int a(java.lang.Throwable) -> a
+    int a(java.lang.Object[]) -> a
+    int a(java.lang.String,java.lang.String) -> a
+    int a(java.lang.String,java.lang.Throwable) -> a
+    java.lang.String c(java.lang.Object[]) -> c
+    int b(java.lang.Object[]) -> b
+    int b(java.lang.String) -> b
+com.baidu.mobstat.b -> com.baidu.mobstat.d:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    int d -> d
+    java.lang.String e -> e
+    java.lang.String f -> f
+    int g -> g
+    int h -> h
+    java.lang.String i -> i
+    java.lang.String j -> j
+    java.lang.String k -> k
+    java.lang.String l -> l
+    java.lang.String m -> m
+    java.lang.String n -> n
+    java.lang.String o -> o
+    int p -> p
+    org.json.JSONObject q -> q
+    org.json.JSONArray r -> r
+    org.json.JSONArray s -> s
+    org.json.JSONArray t -> t
+    org.json.JSONArray u -> u
+    boolean v -> v
+    com.baidu.mobstat.b w -> w
+    com.baidu.mobstat.b a() -> a
+    void a(org.json.JSONObject,boolean) -> a
+    void c(java.lang.String) -> a
+    void b(org.json.JSONObject,boolean) -> b
+    void a(java.lang.String,java.lang.String,int,long) -> a
+    void c(org.json.JSONObject,boolean) -> c
+    void a(long,java.lang.String) -> a
+    void a(android.content.Context) -> a
+    void b() -> b
+    void b(android.content.Context) -> b
+    void c(android.content.Context) -> c
+    void d(android.content.Context) -> d
+    void a(android.content.Context,boolean) -> a
+    boolean c() -> c
+com.baidu.mobstat.c -> com.baidu.mobstat.e:
+    android.os.HandlerThread a -> a
+    android.os.Handler b -> b
+    com.baidu.mobstat.c c -> c
+    com.baidu.mobstat.c a() -> a
+    void a$7555e5c(android.content.Context,java.lang.String,java.lang.String) -> a
+com.baidu.mobstat.d -> com.baidu.mobstat.f:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    int c -> c
+    android.content.Context d -> d
+    com.baidu.mobstat.c e -> e
+    void run() -> run
+com.baidu.mobstat.e -> com.baidu.mobstat.g:
+    com.baidu.mobstat.e a -> a
+    boolean b -> b
+    com.baidu.mobstat.e a() -> a
+    void a(android.content.Context) -> a
+    void b(android.content.Context) -> b
+com.baidu.mobstat.f -> com.baidu.mobstat.h:
+    com.baidu.mobstat.f a -> a
+    android.content.Context b -> b
+    boolean c -> c
+    boolean d -> d
+    com.baidu.mobstat.f a() -> a
+    void a(android.content.Context) -> a
+    boolean b() -> b
+    void e() -> d
+    boolean c() -> c
+    void run() -> run
+com.baidu.mobstat.g -> com.baidu.mobstat.i:
+    android.os.HandlerThread a -> a
+    boolean b -> b
+    com.baidu.mobstat.SendStrategyEnum c -> c
+    int d -> d
+    java.util.Timer e -> e
+    int f -> f
+    boolean g -> g
+    android.os.Handler h -> h
+    com.baidu.mobstat.g i -> i
+    android.content.SharedPreferences a(android.content.Context) -> a
+    com.baidu.mobstat.g a() -> a
+    void b(android.content.Context) -> b
+    void c(android.content.Context) -> c
+    void d(android.content.Context) -> d
+    void e(android.content.Context) -> e
+    boolean a(com.baidu.mobstat.g,boolean) -> a
+    boolean a(com.baidu.mobstat.g) -> a
+    java.util.Timer b(com.baidu.mobstat.g) -> b
+    java.util.Timer a$484a62da(com.baidu.mobstat.g) -> c
+    com.baidu.mobstat.SendStrategyEnum a(com.baidu.mobstat.g,com.baidu.mobstat.SendStrategyEnum) -> a
+    int a(com.baidu.mobstat.g,int) -> a
+    boolean b(com.baidu.mobstat.g,boolean) -> b
+    com.baidu.mobstat.SendStrategyEnum c(com.baidu.mobstat.g) -> d
+    boolean d(com.baidu.mobstat.g) -> e
+    int e(com.baidu.mobstat.g) -> f
+    android.os.Handler b() -> b
+com.baidu.mobstat.h -> com.baidu.mobstat.j:
+    android.content.Context a -> a
+    com.baidu.mobstat.g b -> b
+    void run() -> run
+com.baidu.mobstat.i -> com.baidu.mobstat.k:
+    com.baidu.mobstat.h a -> a
+    void run() -> run
+com.baidu.mobstat.j -> com.baidu.mobstat.l:
+    android.content.Context a -> a
+    com.baidu.mobstat.g b -> b
+    void run() -> run
+com.baidu.mobstat.k -> com.baidu.mobstat.m:
+    long b -> b
+    long c -> c
+    int d -> d
+    java.util.List a -> a
+    long a() -> a
+    void b(long) -> a
+    void b() -> b
+    org.json.JSONObject c() -> c
+    void a(int) -> a
+    int d() -> d
+com.baidu.mobstat.l -> com.baidu.mobstat.n:
+    java.lang.String b -> b
+    long c -> c
+    com.baidu.mobstat.k a -> a
+    java.lang.String a() -> a
+    long b() -> b
+com.baidu.mobstat.m -> com.baidu.mobstat.o:
+    android.os.HandlerThread a -> a
+    android.os.Handler b -> b
+    long c -> c
+    long d -> d
+    java.lang.ref.WeakReference e -> e
+    com.baidu.mobstat.k f -> f
+    com.baidu.mobstat.m g -> g
+    boolean h -> h
+    boolean i -> i
+    com.baidu.mobstat.m a() -> a
+    void a(android.content.Context,long) -> a
+    void b(android.content.Context,long) -> b
+    void b() -> b
+    long c() -> c
+    com.baidu.mobstat.k a(com.baidu.mobstat.m) -> a
+    void a$35d3b8b4(android.content.Context) -> a
+    void a(com.baidu.mobstat.m,android.content.Context,long) -> a
+com.baidu.mobstat.n -> com.baidu.mobstat.p:
+    com.baidu.mobstat.m a -> a
+    void run() -> run
+com.baidu.mobstat.o -> com.baidu.mobstat.q:
+    long b -> b
+    java.lang.ref.WeakReference c -> c
+    long d -> d
+    java.lang.ref.WeakReference e -> e
+    com.baidu.mobstat.m a -> a
+    void run() -> run
+com.baidu.mobstat.p -> com.baidu.mobstat.r:
+    long b -> b
+    long c -> c
+    java.lang.ref.WeakReference d -> d
+    com.baidu.mobstat.m a -> a
+    void run() -> run
+com.baidu.mobstat.q -> com.baidu.mobstat.s:
+    java.lang.String a(android.content.Context,java.lang.String) -> a
+    int a(android.content.Context) -> a
+    int b(android.content.Context) -> b
+    int c(android.content.Context) -> c
+    java.lang.String d(android.content.Context) -> d
+    java.lang.String a$54b88759(android.content.Context,java.lang.String,java.lang.String) -> a
+    java.lang.String e(android.content.Context) -> e
+    java.lang.String f(android.content.Context) -> f
+    java.lang.String g(android.content.Context) -> g
+    java.lang.String h(android.content.Context) -> h
+    android.util.DisplayMetrics j(android.content.Context) -> i
 com.cnzz.mobile.zhuamob.Constants$EventType -> com.a.a.a.a:
     com.cnzz.mobile.zhuamob.Constants$EventType SESSION_START -> a
     com.cnzz.mobile.zhuamob.Constants$EventType ACT_RESUME -> b
@@ -2478,19 +2748,29 @@ q.util.FileMgr -> q.util.c:
     java.lang.String nRoot -> b
     q.util.FileMgr getInstance(android.content.Context) -> a
     java.lang.String getScan(long) -> a
-q.util.QLog -> q.util.d:
+q.util.QHttpUtil -> q.util.d:
+    java.lang.String get(java.lang.String) -> a
+    java.lang.String get(java.lang.String,java.lang.String) -> a
+    javax.net.ssl.HttpsURLConnection initHttpsConn(java.net.URL) -> a
+q.util.QHttpUtil$1 -> q.util.e:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+q.util.QHttpUtil$2 -> q.util.f:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+q.util.QLog -> q.util.g:
     boolean available -> a
-    void event$3f52113a() -> a
+    void event$3f52113a(android.content.Context,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,int) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,float) -> a
     void log(java.lang.Object,java.lang.String) -> a
-q.util.QUI -> q.util.e:
+q.util.QUI -> q.util.h:
     void baseHeaderBack(android.app.Activity,java.lang.String) -> a
-q.util.QUI$1 -> q.util.f:
+q.util.QUI$1 -> q.util.i:
     android.app.Activity val$act -> a
     void onClick(android.view.View) -> onClick
-q.util.SqliteBase -> q.util.g:
+q.util.SqliteBase -> q.util.j:
     android.database.sqlite.SQLiteDatabase db -> a
     java.lang.String tableName -> b
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
@@ -2500,8 +2780,8 @@ q.util.SqliteBase -> q.util.g:
     void insert(q.util.SqliteBase$ISqlite) -> b
     java.lang.String getSqlCreateTable() -> a
     android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
-q.util.SqliteBase$ISqlite -> q.util.h:
-q.util.WindowMgr -> q.util.i:
+q.util.SqliteBase$ISqlite -> q.util.k:
+q.util.WindowMgr -> q.util.l:
     q.util.WindowMgr nInstance -> a
     int nWidth -> b
     int nHeight -> c

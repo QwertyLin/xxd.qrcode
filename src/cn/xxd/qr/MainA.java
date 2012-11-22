@@ -2,11 +2,12 @@ package cn.xxd.qr;
 
 import java.util.Date;
 
+import com.zhuamob.android.ZhuamobTracking;
+
 import q.util.QSp;
 
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -21,10 +22,13 @@ public class MainA extends Activity {
 		//
 		//initVersion();
 		//
+		//startService(new Intent(this, UpdateService.class).putExtra(UpdateService.EXTRA_URL, "http://www.xxd.cn/test.apk"));
+		//intent
+
 		//tempInitHistoryData();
 		//startActivity(new Intent(this, NewA.class));
-		//startActivity(new Intent(this, CaptureActivity.class));
-		startActivity(new Intent(this, UpdateA.class));
+		startActivity(new Intent(this, CaptureActivity.class));
+		//startActivity(new Intent(this, UpdateA.class));
 		//startActivity(new Intent(this, GuideA.class));
 		//startActivity(new Intent(this, AboutA.class));
 		//startActivity(new Intent(this, SettingA.class));
@@ -32,24 +36,7 @@ public class MainA extends Activity {
 		//startActivity(new Intent(this, QrCodeA.class));
 		finish();
 	}
-	
-	private void initVersion(){
-		int version = QSp.getVersion(this);
-		try {
-			PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), 0);
-			 int currentVersion = info.versionCode;
-			 if(currentVersion > version){
-				 /*sp.edit().putInt(QConfig.SP_KEY_VERSION, currentVersion).commit();
-				 startActivity(new Intent(this, GuideA.class));
-				 finish();
-				 return;*/
-			 }
-		} catch (NameNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
+		
 	private void tempInitHistoryData(){
 		HistoryDb db = new HistoryDb(this);
 		db.open(true);

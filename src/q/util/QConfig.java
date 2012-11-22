@@ -4,7 +4,7 @@ public class QConfig {
 	
 	public static final String BASE_PACKAGE_NAME = "cn.xxd.qr";
 	public static final String BASE_WEBSITE_URL = "http://www.xxd.cn";
-	
+		
 	public static final int VIEW_FINDER_MASK_COLOR = 0x60000000; //扫描界面蒙板颜色
 	public static final int VIEW_FINDER_LASER_COLOR = 0xFF33B5E5; //扫描界面激光颜色
 	public static final int VIEW_FINDER_FRAME_COLOR = 0xFF33B5E5; //扫描界面外框颜色

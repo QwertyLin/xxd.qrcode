@@ -1,8 +1,6 @@
 package q.util;
 
-import com.zhuamob.android.ZhuamobLayout;
-import com.zhuamob.android.ZhuamobTracking;
-
+import com.baidu.mobstat.StatService;
 import android.app.Activity;
 import android.os.Bundle;
 
@@ -16,18 +14,13 @@ public abstract class ActivityBase extends Activity {
 	@Override
     protected void onResume() {
     	super.onResume();
-    	ZhuamobTracking.onResume(this);
+    	StatService.onResume(this);
     }
     
     @Override
     protected void onPause() {
     	super.onPause();
-    	ZhuamobTracking.onPause(this); 
+    	StatService.onPause(this); 
     }
 
-    @Override
-    protected void onDestroy() {
-    	super.onDestroy();
-    	ZhuamobLayout.clean();
-    }
 }

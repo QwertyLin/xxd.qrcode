@@ -1,5 +1,6 @@
 package cn.xxd.qr;
 
+import cn.xxd.qr.service.UpdateService;
 import q.util.ActivityBase;
 import q.util.QUI;
 
@@ -64,32 +65,7 @@ public class SettingA extends ActivityBase implements OnClickListener {
 	}
 	
 	private void onClickUpdate(){
-		final ProgressDialog pd = ProgressDialog.show(this, "", "正在检查更新...");
-		/*UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
-		        @Override
-		        public void onUpdateReturned(int updateStatus,UpdateResponse updateInfo) {
-		        	pd.cancel();
-		            switch (updateStatus) {
-		            case 0: // has update
-		                UmengUpdateAgent.showUpdateDialog(SettingA.this, updateInfo);
-		                break;
-		            case 1: // has no update
-		                Toast.makeText(SettingA.this, "没有更新", Toast.LENGTH_SHORT)
-		                        .show();
-		                break;
-		            case 2: // none wifi
-		                Toast.makeText(SettingA.this, "没有wifi连接， 只在wifi下更新", Toast.LENGTH_SHORT)
-		                        .show();
-		                break;
-		            case 3: // time out
-		                Toast.makeText(SettingA.this, "超时", Toast.LENGTH_SHORT)
-		                        .show();
-		                break;
-		            }
-		        }
-		});
-		UmengUpdateAgent.update(this);
-		UmengUpdateAgent.setUpdateAutoPopup(false);*/
+		UpdateService.check(this, true);
 	}
 	
 	private void onClickAbout(){

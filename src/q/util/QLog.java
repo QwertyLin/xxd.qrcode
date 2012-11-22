@@ -1,8 +1,7 @@
 package q.util;
 
 
-import com.zhuamob.android.ZhuamobTracking;
-
+import com.baidu.mobstat.StatService;
 import android.content.Context;
 import android.util.Log;
 
@@ -11,24 +10,9 @@ public class QLog {
 	public static final int EVENT_QRCODE = 1; 
 	
 	private static boolean available = true;
-	
-	public static void error(Context ctx, String error){
-		log(ctx, error);
-		ZhuamobTracking.onError(ctx, error);
-		//MobclickAgent.reportError(ctx, error);
-	}
-	
-	public static void error(Context ctx, Exception e){
-		log(ctx, e.getMessage());
-		ZhuamobTracking.onError(ctx, e.getMessage());
-		//MobclickAgent.reportError(ctx, error);
-	}
-	
-	public static void event(Context ctx, int id){
-		//MobclickAgent.onEvent(ctx, String.valueOf(id));
-	}
-	
+		
 	public static void event(Context ctx, int id, String label){
+		StatService.onEvent(ctx, String.valueOf(id), label);
 		//MobclickAgent.onEvent(ctx, String.valueOf(id), label);
 	}
 	

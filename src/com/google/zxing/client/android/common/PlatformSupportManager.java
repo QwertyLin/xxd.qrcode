@@ -67,7 +67,8 @@ public abstract class PlatformSupportManager<T> {
   }
 
   public T build() {
-    for (Integer minVersion : implementations.keySet()) {
+	  //TODO 不区分不同平台
+    /*for (Integer minVersion : implementations.keySet()) {
       if (Build.VERSION.SDK_INT >= minVersion) {
         String className = implementations.get(minVersion);
         try {
@@ -86,7 +87,7 @@ public abstract class PlatformSupportManager<T> {
           Log.w(TAG, ite);
         }
       }
-    }
+    }*/
     Log.i(TAG, "Using default implementation " + defaultImplementation.getClass() + " of " + managedInterface);
     return defaultImplementation;
   }

@@ -2,8 +2,7 @@ android.annotation.SuppressLint
 android.annotation.TargetApi
 cn.xxd.qr.BuildConfig
 cn.xxd.qr.MainA:
-    36:50:private void initVersion()
-    53:62:private void tempInitHistoryData()
+    41:50:private void tempInitHistoryData()
 cn.xxd.qr.QrCodeA:
     public static final java.lang.String EXTRA_QRCODE
     public static final java.lang.String EXTRA_BUILD_COLOR
@@ -20,7 +19,8 @@ cn.xxd.qr.R$raw
 cn.xxd.qr.R$string
 cn.xxd.qr.R$styleable:
     public static final int qview_arg_float
-    218:218:public R$styleable()
+    223:223:public R$styleable()
+cn.xxd.qr.R$update_id
 cn.xxd.qr.bean.Color:
     17:18:public void setName(java.lang.String)
     23:24:public void setColor(int)
@@ -30,6 +30,28 @@ cn.xxd.qr.bean.HistoryDb:
     1:1:protected bridge synthetic q.util.SqliteBase$ISqlite buildEntity(android.database.Cursor)
 cn.xxd.qr.bean.QrCode:
     private static final long serialVersionUID
+cn.xxd.qr.service.UpdateService:
+    private static final java.lang.String UPDATE_URL
+    public static final java.lang.String EXTRA_URL
+com.baidu.mobstat.StatService:
+    public static final int EXCEPTION_LOG
+    public StatService()
+    private static boolean a()
+    private static void b()
+    public static void setOn(android.content.Context,int)
+    public static void setSendLogStrategy(android.content.Context,com.baidu.mobstat.SendStrategyEnum,int,boolean)
+    public static void setSendLogStrategy(android.content.Context,com.baidu.mobstat.SendStrategyEnum,int)
+    private static void a(android.content.Context)
+    public static void setAppKey(java.lang.String)
+    public static void setAppChannel(java.lang.String)
+    public static void setLogSenderDelayed(int)
+com.baidu.mobstat.b:
+    public void a(java.lang.String)
+    public void b(java.lang.String)
+com.baidu.mobstat.g:
+    public void a(int)
+    public void a(android.content.Context,com.baidu.mobstat.SendStrategyEnum,int,boolean)
+    public void a(boolean,android.content.Context)
 com.cnzz.mobile.zhuamob.DeviceAgent:
     public DeviceAgent()
     public static java.lang.String getPublicKey(android.content.Context)
@@ -357,16 +379,21 @@ q.util.BitmapUtil:
     59:66:public static final void recycle(android.graphics.Bitmap)
     74:77:public static final android.graphics.Bitmap compressJPEG(android.graphics.Bitmap,int)
     84:87:public static final android.graphics.Bitmap compressPNG(android.graphics.Bitmap)
+q.util.IntentUtil
+q.util.IntentUtil$Open
 q.util.ListViewUtil
 q.util.QConfig
+q.util.QHttpUtil:
+    112:113:public static void getFile(java.lang.String,java.lang.String)
+    122:170:public static void getFile(java.lang.String,java.io.File,boolean)
+    173:173:public static java.lang.String post(java.lang.String,java.lang.String)
+    177:177:public static java.lang.String post(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    189:275:public static java.lang.String post(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
 q.util.QLog:
     public static final int EVENT_QRCODE
-    9:9:public QLog()
-    16:19:public static void error(android.content.Context,java.lang.String)
-    22:25:public static void error(android.content.Context,java.lang.Exception)
-    29:29:public static void event(android.content.Context,int)
-    48:51:public static final void kv(java.lang.Object,java.lang.String,java.lang.String,boolean)
-    66:69:public static final void log(java.lang.String,java.lang.String)
+    8:8:public QLog()
+    32:35:public static final void kv(java.lang.Object,java.lang.String,java.lang.String,boolean)
+    50:53:public static final void log(java.lang.String,java.lang.String)
 q.util.QSp:
     private static final java.lang.String SP_NAME_SETTING
     private static final java.lang.String SP_KEY_VERSION
