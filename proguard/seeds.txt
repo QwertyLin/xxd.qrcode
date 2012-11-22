@@ -59,13 +59,11 @@ com.mj.MjLayout
 com.mj.MjLayout: java.lang.ref.WeakReference a
 com.mj.MjLayout: android.os.Handler b
 com.mj.MjLayout: java.util.concurrent.ScheduledExecutorService c
-com.mj.MjLayout: int r
-com.mj.MjLayout: java.lang.String s
+com.mj.MjLayout: int t
+com.mj.MjLayout: java.lang.String u
 com.mj.MjLayout: com.mj.b d
 com.mj.MjLayout: java.lang.String e
 com.mj.MjLayout: int f
-com.mj.MjLayout: java.lang.String t
-com.mj.MjLayout: java.lang.String u
 com.mj.MjLayout: java.lang.String v
 com.mj.MjLayout: java.lang.String w
 com.mj.MjLayout: java.lang.String x
@@ -74,30 +72,30 @@ com.mj.MjLayout: java.lang.String z
 com.mj.MjLayout: java.lang.String A
 com.mj.MjLayout: java.lang.String B
 com.mj.MjLayout: java.lang.String C
+com.mj.MjLayout: java.lang.String D
+com.mj.MjLayout: java.lang.String E
 com.mj.MjLayout: android.location.Location g
 com.mj.MjLayout: java.lang.String h
 com.mj.MjLayout: com.mj.obj.b i
-com.mj.MjLayout: java.util.List D
+com.mj.MjLayout: java.util.List F
 com.mj.MjLayout: java.lang.ref.WeakReference j
-com.mj.MjLayout: com.mj.obj.Ration E
+com.mj.MjLayout: com.mj.obj.Ration G
 com.mj.MjLayout: com.mj.obj.Ration k
 com.mj.MjLayout: com.mj.obj.Ration l
-com.mj.MjLayout: com.mj.MjInterface F
-com.mj.MjLayout: com.mj.v m
+com.mj.MjLayout: com.mj.MjInterface H
+com.mj.MjLayout: com.mj.w m
 com.mj.MjLayout: int n
-com.mj.MjLayout: java.lang.String G
-com.mj.MjLayout: boolean H
-com.mj.MjLayout: boolean I
+com.mj.MjLayout: java.lang.String I
 com.mj.MjLayout: boolean J
-com.mj.MjLayout: int K
-com.mj.MjLayout: int L
+com.mj.MjLayout: boolean K
+com.mj.MjLayout: boolean L
+com.mj.MjLayout: int M
+com.mj.MjLayout: int N
 com.mj.MjLayout: int o
 com.mj.MjLayout: int p
-com.mj.MjLayout: int M
-com.mj.MjLayout: java.lang.ClassLoader N
-com.mj.MjLayout: com.mj.f.e O
-com.mj.MjLayout: java.lang.String P
-com.mj.MjLayout: java.lang.String Q
+com.mj.MjLayout: int O
+com.mj.MjLayout: java.lang.ClassLoader P
+com.mj.MjLayout: com.mj.f.e Q
 com.mj.MjLayout: java.lang.String R
 com.mj.MjLayout: java.lang.String S
 com.mj.MjLayout: java.lang.String T
@@ -106,31 +104,34 @@ com.mj.MjLayout: java.lang.String V
 com.mj.MjLayout: java.lang.String W
 com.mj.MjLayout: java.lang.String Z
 com.mj.MjLayout: java.lang.String aa
-com.mj.MjLayout: int ab
-com.mj.MjLayout: int ac
-com.mj.MjLayout: long ad
+com.mj.MjLayout: java.lang.String ab
+com.mj.MjLayout: java.lang.String ac
+com.mj.MjLayout: int ad
 com.mj.MjLayout: int ae
-com.mj.MjLayout: int af
-com.mj.MjLayout: com.mj.a ag
-com.mj.MjLayout: boolean ah
-com.mj.MjLayout: boolean ai
-com.mj.MjLayout: android.view.animation.Animation aj
-com.mj.MjLayout: double ak
+com.mj.MjLayout: long af
+com.mj.MjLayout: int ag
+com.mj.MjLayout: int ah
+com.mj.MjLayout: com.mj.a ai
+com.mj.MjLayout: boolean aj
+com.mj.MjLayout: boolean ak
+com.mj.MjLayout: android.view.animation.Animation al
+com.mj.MjLayout: double am
 com.mj.MjLayout: java.util.Iterator q
-com.mj.MjLayout: boolean al
-com.mj.MjLayout: java.util.List am
-com.mj.MjLayout: long an
-com.mj.MjLayout: long ao
-com.mj.MjLayout: java.lang.String ap
-com.mj.MjLayout: java.util.Map aq
+com.mj.MjLayout: boolean an
+com.mj.MjLayout: java.util.List ao
+com.mj.MjLayout: long ap
+com.mj.MjLayout: long aq
 com.mj.MjLayout: java.lang.String ar
-com.mj.MjLayout: int as
-com.mj.MjLayout: android.widget.ImageView at
-com.mj.MjLayout: long au
-com.mj.MjLayout: boolean av
-com.mj.MjLayout: long aw
-com.mj.MjLayout: boolean ax
+com.mj.MjLayout: java.util.Map as
+com.mj.MjLayout: java.lang.String r
+com.mj.MjLayout: int at
+com.mj.MjLayout: android.widget.ImageView au
+com.mj.MjLayout: long av
+com.mj.MjLayout: boolean aw
+com.mj.MjLayout: long ax
 com.mj.MjLayout: boolean ay
+com.mj.MjLayout: boolean az
+com.mj.MjLayout: int s
 com.mj.MjLayout: void <clinit>()
 com.mj.MjLayout: MjLayout(android.app.Activity,java.lang.String,android.widget.RelativeLayout)
 com.mj.MjLayout: MjLayout(android.content.Context,android.util.AttributeSet,android.widget.RelativeLayout)
@@ -185,6 +186,9 @@ com.mj.MjLayout: void b(com.mj.MjLayout,int)
 com.mj.MjLayout: void a(com.mj.MjLayout,java.util.List)
 com.mj.MjLayout: int j(com.mj.MjLayout)
 com.mj.MjLayout: void a(com.mj.MjLayout,android.content.Context,int,com.mj.MjLayout)
+com.mj.MjLayout: void a(com.mj.MjLayout,java.lang.String)
+com.mj.MjLayout: void b(com.mj.MjLayout,java.lang.String)
+com.mj.MjLayout: org.json.JSONObject c(com.mj.MjLayout,java.lang.String)
 com.mj.MjLayout: void k(com.mj.MjLayout)
 com.mj.MjLayout: void b(com.mj.MjLayout,java.util.List)
 com.mj.MjLayout: java.util.List l(com.mj.MjLayout)
@@ -197,6 +201,7 @@ com.mj.MjLayout: void c(com.mj.MjLayout,int)
 com.mj.MjLayout: int d()
 com.mj.MjLayout: void a(int)
 com.mj.MjLayout: void a(com.mj.MjLayout,android.view.ViewGroup,int)
+com.mj.MjLayout: int o(com.mj.MjLayout)
 com.mj.MjLayout: void b(com.mj.MjLayout,long)
 com.mj.MjLayout: void c(com.mj.MjLayout,boolean)
 com.mj.a
@@ -346,9 +351,7 @@ com.mj.adapters.AdwoAdapter
 com.mj.adapters.AdwoAdapter: com.adwo.adsdk.AdwoAdView h
 com.mj.adapters.AdwoAdapter: AdwoAdapter(com.mj.MjLayout,com.mj.obj.Ration)
 com.mj.adapters.AdwoAdapter: void a()
-com.mj.adapters.AdwoAdapter: void onFailedToReceiveAd(com.adwo.adsdk.AdwoAdView)
 com.mj.adapters.AdwoAdapter: void onFailedToReceiveAd(com.adwo.adsdk.AdwoAdView,com.adwo.adsdk.ErrorCode)
-com.mj.adapters.AdwoAdapter: void onFailedToReceiveRefreshedAd(com.adwo.adsdk.AdwoAdView)
 com.mj.adapters.AdwoAdapter: void onReceiveAd(com.adwo.adsdk.AdwoAdView)
 com.mj.adapters.AirAdAdapter
 com.mj.adapters.AirAdAdapter: com.mt.airad.AirAD h
@@ -564,19 +567,22 @@ com.mj.b: void a(android.view.ViewGroup)
 com.mj.b: boolean a(com.mj.d.b,android.view.ViewGroup)
 com.mj.b: void a(boolean)
 com.mj.b.a
-com.mj.b.a: com.mj.b.a g
-com.mj.b.a: int h
-com.mj.b.a: boolean i
-com.mj.b.a: boolean j
-com.mj.b.a: boolean k
-com.mj.b.a: int l
-com.mj.b.a: java.lang.String m
-com.mj.b.a: java.util.Map a
+com.mj.b.a: com.mj.b.a j
+com.mj.b.a: int k
+com.mj.b.a: boolean l
+com.mj.b.a: boolean m
+com.mj.b.a: boolean n
+com.mj.b.a: boolean a
+com.mj.b.a: int o
+com.mj.b.a: java.lang.String p
 com.mj.b.a: java.util.Map b
-com.mj.b.a: boolean c
+com.mj.b.a: java.util.Map c
 com.mj.b.a: boolean d
 com.mj.b.a: boolean e
-com.mj.b.a: long f
+com.mj.b.a: boolean f
+com.mj.b.a: long g
+com.mj.b.a: long h
+com.mj.b.a: long i
 com.mj.b.a: void <clinit>()
 com.mj.b.a: a()
 com.mj.b.a: com.mj.b.a a()
@@ -675,14 +681,18 @@ com.mj.c.a: java.lang.String T
 com.mj.c.a: java.lang.String U
 com.mj.c.a: java.lang.String V
 com.mj.c.a: java.lang.String W
+com.mj.c.a: java.lang.String X
+com.mj.c.a: java.lang.String Y
+com.mj.c.a: java.lang.String Z
 com.mj.c.a: void <clinit>()
 com.mj.c.b
 com.mj.c.b: java.util.regex.Pattern a
 com.mj.c.b: void <clinit>()
 com.mj.c.b: int a(android.content.Context)
 com.mj.c.b: org.json.JSONObject b(android.content.Context)
+com.mj.c.b: org.json.JSONObject c(android.content.Context)
 com.mj.c.b: boolean a(java.util.List,android.content.Context,com.mj.obj.b)
-com.mj.c.b: int c(android.content.Context)
+com.mj.c.b: int d(android.content.Context)
 com.mj.c.b: boolean a(int,java.lang.String,java.lang.String)
 com.mj.c.b: boolean b(int,java.lang.String,java.lang.String)
 com.mj.c.b: java.lang.String a(int,java.lang.String)
@@ -802,14 +812,14 @@ com.mj.f.f: void <clinit>()
 com.mj.f.f: byte[] a(java.lang.String)
 com.mj.f.f: java.lang.String a(java.io.InputStream)
 com.mj.f.f: java.lang.String b(java.lang.String)
-com.mj.f.f: java.lang.String a()
+com.mj.f.f: java.lang.String a(int)
 com.mj.f.f: boolean a(java.util.Collection)
 com.mj.f.f: java.lang.String a(java.lang.Throwable)
 com.mj.f.f: boolean a(java.lang.String,java.lang.String)
-com.mj.f.f: org.apache.http.client.HttpClient b()
+com.mj.f.f: org.apache.http.client.HttpClient a()
 com.mj.f.f: int a(int,double)
 com.mj.f.f: java.lang.String b(java.io.InputStream)
-com.mj.f.f: boolean c()
+com.mj.f.f: boolean b()
 com.mj.f.g
 com.mj.f.g: android.content.Context a
 com.mj.f.g: java.lang.String b
@@ -1337,6 +1347,8 @@ com.mj.obj.Ration: java.lang.String n
 com.mj.obj.Ration: java.lang.String o
 com.mj.obj.Ration: int p
 com.mj.obj.Ration: Ration()
+com.mj.obj.Ration: int hashCode()
+com.mj.obj.Ration: boolean equals(java.lang.Object)
 com.mj.obj.Ration: int compareTo(java.lang.Object)
 com.mj.obj.a
 com.mj.obj.a: java.lang.String a
@@ -1375,57 +1387,66 @@ com.mj.q: java.lang.ref.WeakReference a
 com.mj.q: q(com.mj.MjLayout,com.mj.MjLayout)
 com.mj.q: void run()
 com.mj.r
-com.mj.r: android.content.Context a
-com.mj.r: java.lang.String b
-com.mj.r: r(com.mj.MjLayout,android.content.Context,java.lang.String)
+com.mj.r: com.mj.MjLayout a
+com.mj.r: r(com.mj.MjLayout)
 com.mj.r: void run()
+com.mj.r: r(com.mj.MjLayout,byte)
 com.mj.s
-com.mj.s: java.lang.ref.WeakReference a
-com.mj.s: android.view.ViewGroup b
-com.mj.s: s(com.mj.MjLayout,android.view.ViewGroup,int)
+com.mj.s: android.content.Context a
+com.mj.s: java.lang.String b
+com.mj.s: s(com.mj.MjLayout,android.content.Context,java.lang.String)
 com.mj.s: void run()
 com.mj.t
-com.mj.t: android.view.ViewGroup a
-com.mj.t: android.widget.RelativeLayout$LayoutParams b
-com.mj.t: com.mj.MjLayout c
-com.mj.t: t(com.mj.MjLayout,android.view.ViewGroup,android.widget.RelativeLayout$LayoutParams)
+com.mj.t: java.lang.ref.WeakReference a
+com.mj.t: android.view.ViewGroup b
+com.mj.t: t(com.mj.MjLayout,android.view.ViewGroup,int)
 com.mj.t: void run()
 com.mj.u
-com.mj.u: java.lang.ref.WeakReference a
-com.mj.u: java.util.List b
-com.mj.u: com.mj.obj.b c
-com.mj.u: com.mj.MjLayout d
-com.mj.u: u(com.mj.MjLayout,com.mj.MjLayout)
+com.mj.u: android.view.ViewGroup a
+com.mj.u: android.widget.RelativeLayout$LayoutParams b
+com.mj.u: com.mj.MjLayout c
+com.mj.u: u(com.mj.MjLayout,android.view.ViewGroup,android.widget.RelativeLayout$LayoutParams)
 com.mj.u: void run()
 com.mj.v
-com.mj.v: java.lang.String f
-com.mj.v: com.mj.obj.b g
-com.mj.v: java.lang.String a
-com.mj.v: java.lang.String b
-com.mj.v: java.util.List h
-com.mj.v: java.util.List i
-com.mj.v: java.util.List c
-com.mj.v: java.util.List d
-com.mj.v: java.util.List j
-com.mj.v: double k
-com.mj.v: double l
-com.mj.v: java.lang.ref.WeakReference m
-com.mj.v: java.util.Iterator e
-com.mj.v: boolean n
-com.mj.v: v(java.lang.ref.WeakReference,java.lang.String)
-com.mj.v: void a(boolean)
-com.mj.v: boolean a()
-com.mj.v: com.mj.obj.b b()
-com.mj.v: java.util.List c()
-com.mj.v: com.mj.obj.Ration a(com.mj.obj.Ration,boolean)
-com.mj.v: void a(java.lang.String,int)
-com.mj.v: java.lang.String a(android.content.Context,java.lang.String,int)
-com.mj.v: void a(android.content.Context,java.lang.String)
-com.mj.v: void a(org.json.JSONArray)
-com.mj.v: void b(org.json.JSONArray)
-com.mj.v: java.lang.String a(java.lang.String)
-com.mj.v: java.lang.String b(java.lang.String)
-com.mj.v: com.mj.d.c a(java.io.InputStream)
+com.mj.v: java.lang.ref.WeakReference a
+com.mj.v: java.util.List b
+com.mj.v: com.mj.obj.b c
+com.mj.v: com.mj.MjLayout d
+com.mj.v: v(com.mj.MjLayout,com.mj.MjLayout)
+com.mj.v: void run()
+com.mj.w
+com.mj.w: java.lang.String h
+com.mj.w: com.mj.obj.b i
+com.mj.w: java.lang.String a
+com.mj.w: java.lang.String b
+com.mj.w: java.util.List j
+com.mj.w: java.util.List k
+com.mj.w: java.util.List c
+com.mj.w: java.util.List d
+com.mj.w: java.util.List l
+com.mj.w: double m
+com.mj.w: double n
+com.mj.w: java.lang.ref.WeakReference o
+com.mj.w: java.util.Iterator e
+com.mj.w: boolean p
+com.mj.w: java.util.List q
+com.mj.w: java.util.List r
+com.mj.w: java.lang.String f
+com.mj.w: java.lang.String g
+com.mj.w: w(java.lang.ref.WeakReference,java.lang.String)
+com.mj.w: void a(boolean)
+com.mj.w: boolean a()
+com.mj.w: com.mj.obj.b b()
+com.mj.w: java.util.List c()
+com.mj.w: com.mj.obj.Ration a(com.mj.obj.Ration,boolean)
+com.mj.w: void a(java.lang.String,int)
+com.mj.w: java.lang.String a(android.content.Context,java.lang.String,int)
+com.mj.w: void a(android.content.Context,java.lang.String)
+com.mj.w: void a(org.json.JSONArray)
+com.mj.w: void b(org.json.JSONArray)
+com.mj.w: java.lang.String a(java.lang.String)
+com.mj.w: java.lang.String b(java.lang.String)
+com.mj.w: com.mj.d.c a(java.io.InputStream)
 com.zhuamob.android.ZhuamobLayout
 com.zhuamob.android.ZhuamobLayout: java.lang.Object a
 com.zhuamob.android.ZhuamobLayout: void <clinit>()
@@ -1479,6 +1500,7 @@ com.zhuamob.android.ZhuamobTargeting: com.zhuamob.android.ZhuamobTargeting$Chann
 com.zhuamob.android.ZhuamobTargeting: java.lang.String appName
 com.zhuamob.android.ZhuamobTargeting: java.lang.String companyName
 com.zhuamob.android.ZhuamobTargeting: java.lang.String telephoneNumber
+com.zhuamob.android.ZhuamobTargeting: int DEX_LOAD_STATUS
 com.zhuamob.android.ZhuamobTargeting: void <clinit>()
 com.zhuamob.android.ZhuamobTargeting: ZhuamobTargeting()
 com.zhuamob.android.ZhuamobTargeting: void resetData()
