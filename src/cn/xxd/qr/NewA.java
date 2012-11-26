@@ -1,14 +1,7 @@
 package cn.xxd.qr;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import cn.xxd.qr.adapter.ColorAdapter;
-import cn.xxd.qr.bean.Color;
 import cn.xxd.qr.bean.QrCode;
 import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +9,6 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import q.util.ActivityBase;
-import q.util.QConfig;
 import q.util.QSp;
 import q.util.QUI;
 
@@ -25,7 +17,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 	private int mColor, mColorBg;
 	private View vColor, vColorBg;
 	private EditText vText;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,7 +30,6 @@ public class NewA extends ActivityBase implements OnClickListener {
 		});
 		//
 		vText = (EditText)findViewById(R.id.new_text);
-		initColorValue();
 		initColor();
 		initColorBg();
 	}
@@ -88,49 +79,42 @@ public class NewA extends ActivityBase implements OnClickListener {
 	}
 	
 	private void onClickColor(){
-		final AlertDialog dialog = new AlertDialog.Builder(this)
-		.setSingleChoiceItems(new ColorAdapter(this, colors), 0, new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				mColor = colors.get(which).getColor();
-				vColor.setBackgroundColor(mColor);
-				QSp.setNewColor(NewA.this, mColor);
-				dialog.dismiss();
-			}
-		})
-		.show();
+		startActivityForResult(new Intent(this, ColorDialog.class).putExtra(ColorDialog.EXTRA_COLOR, mColor), R.id.new_color);
 	}
 	
 	private void onClickColorBg(){
-		final AlertDialog dialog = new AlertDialog.Builder(this)
-		.setSingleChoiceItems(new ColorAdapter(this, colors), 0, new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				mColorBg = colors.get(which).getColor();
-				vColorBg.setBackgroundColor(mColorBg);
-				QSp.setNewColorBg(NewA.this, mColorBg);
-				dialog.dismiss();
-			}
-		})
-		.show();
+		startActivityForResult(new Intent(this, ColorDialog.class).putExtra(ColorDialog.EXTRA_COLOR, mColorBg), R.id.new_color_bg);
 	}
 	
-	private List<Color> colors;
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		switch(requestCode){
+		case R.id.new_color:
+			onResultColor(data);
+			break;
+		case R.id.new_color_bg:
+			onResultColorBg(data);
+			break;
+		}
+	}
 	
-	private void initColorValue(){
-		colors = new ArrayList<Color>();
-		colors.add(new Color("黑色", 0xff000000));
-		colors.add(new Color("白色", 0xffffffff));
-		colors.add(new Color("暗蓝", 0xff0099CC));
-		colors.add(new Color("亮蓝", 0xff33B5E5));
-		colors.add(new Color("暗绿", 0xff669900));
-		colors.add(new Color("亮绿", 0xff99CC00));
-		colors.add(new Color("暗黄", 0xffFF8800));
-		colors.add(new Color("亮黄", 0xffFFBB33));
-		colors.add(new Color("暗红", 0xffCC0000));
-		colors.add(new Color("亮红", 0xffFF4444));
-		colors.add(new Color("暗紫", 0xff9933CC));
-		colors.add(new Color("亮紫", 0xffAA66CC));
+	private void onResultColor(Intent data){
+		if(data == null){
+			return;
+		}
+		mColor = data.getIntExtra(ColorDialog.EXTRA_COLOR, 0);
+		vColor.setBackgroundColor(mColor);
+		QSp.setNewColor(NewA.this, mColor);
+	}
+	
+	private void onResultColorBg(Intent data){
+		if(data == null){
+			return;
+		}
+		mColorBg = data.getIntExtra(ColorDialog.EXTRA_COLOR, 0);
+		vColorBg.setBackgroundColor(mColorBg);
+		QSp.setNewColorBg(NewA.this, mColorBg);
 	}
 }
 

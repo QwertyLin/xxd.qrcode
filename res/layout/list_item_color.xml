@@ -12,6 +12,7 @@
         android:padding="1dip"
         android:layout_gravity="center"
         android:background="@color/base_gray_light"
+        android:layout_marginLeft="5dip"
         >
         <View 
 	        android:id="@+id/color_color"
@@ -34,11 +35,16 @@
         android:layout_marginLeft="10dip"
         />
     
-    <ImageView 
+    <RadioButton 
+        android:id="@+id/color_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/base_list_item_arrow_icon"
         android:layout_gravity="center"
+        android:layout_marginRight="5dip"
+        android:clickable="false"
+        android:focusable="false"
+       	style="@style/QCheckBox"
         />
+    
 </LinearLayout>
 

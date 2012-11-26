@@ -17,11 +17,8 @@ import com.google.zxing.WriterException;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import com.google.zxing.common.BitMatrix;
-import com.zhuamob.android.ZhuamobLayout;
-
 import q.util.ActivityBase;
 import q.util.FileMgr;
-import q.util.QConfig;
 import q.util.QLog;
 import q.util.QUI;
 import q.util.WindowMgr;
@@ -99,13 +96,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		//统计
 		QLog.event(this, QLog.EVENT_QRCODE, qrcode.getText());
 	}
-	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		ZhuamobLayout.clean();
-	}
-	
+		
 	private void initState(Intent intent){
 		if(qrcode.getTime() == 0){
 			state = State.IMAGE_BUILD;

@@ -3,6 +3,8 @@ cn.xxd.qr.AboutA: AboutA()
 cn.xxd.qr.AboutA: void onClick(android.view.View)
 cn.xxd.qr.CaptureActivity
 cn.xxd.qr.CaptureActivity: CaptureActivity()
+cn.xxd.qr.ColorDialog
+cn.xxd.qr.ColorDialog: ColorDialog()
 cn.xxd.qr.HistoryA
 cn.xxd.qr.HistoryA: HistoryA()
 cn.xxd.qr.MainA
@@ -1691,8 +1693,17 @@ com.zhuamob.android.a.l: java.lang.String a
 com.zhuamob.android.a.l: java.lang.Throwable b
 com.zhuamob.android.a.l: l(java.lang.String,java.lang.Throwable)
 com.zhuamob.android.a.l: void run()
+net.youmi.android.AdActivity
+net.youmi.android.AdActivity: AdActivity()
+net.youmi.android.AdView
+net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeSet)
+net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
+net.youmi.android.YoumiReceiver
+net.youmi.android.YoumiReceiver: YoumiReceiver()
 q.util.ActivityBase
 q.util.ActivityBase: ActivityBase()
+q.util.ActivityDialogBase
+q.util.ActivityDialogBase: ActivityDialogBase()
 q.view.RotateImageButton
 q.view.RotateImageButton: RotateImageButton(android.content.Context,android.util.AttributeSet)
 q.view.RotateTextView

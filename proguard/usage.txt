@@ -1,8 +1,10 @@
 android.annotation.SuppressLint
 android.annotation.TargetApi
 cn.xxd.qr.BuildConfig
+cn.xxd.qr.ColorDialog:
+    public static final java.lang.String EXTRA_COLOR
 cn.xxd.qr.MainA:
-    41:50:private void tempInitHistoryData()
+    42:51:private void tempInitHistoryData()
 cn.xxd.qr.QrCodeA:
     public static final java.lang.String EXTRA_QRCODE
     public static final java.lang.String EXTRA_BUILD_COLOR
@@ -19,11 +21,13 @@ cn.xxd.qr.R$raw
 cn.xxd.qr.R$string
 cn.xxd.qr.R$styleable:
     public static final int qview_arg_float
-    223:223:public R$styleable()
+    232:232:public R$styleable()
 cn.xxd.qr.R$update_id
+cn.xxd.qr.adapter.ColorAdapter:
+    19:20:public ColorAdapter(android.content.Context,java.util.List)
 cn.xxd.qr.bean.Color:
-    17:18:public void setName(java.lang.String)
-    23:24:public void setColor(int)
+    19:20:public void setName(java.lang.String)
+    25:26:public void setColor(int)
 cn.xxd.qr.bean.HistoryDb:
     private static final int PAGE_COUNT
     46:46:public java.util.List queryAll()
@@ -370,6 +374,81 @@ com.google.zxing.qrcode.encoder.QRCode:
     46:46:public com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getECLevel()
     50:50:public com.google.zxing.qrcode.decoder.Version getVersion()
     54:54:public int getMaskPattern()
+net.youmi.android.AdManager:
+    public AdManager()
+    public static void disableUpdateApp()
+    public static void setDonotClearWebViewCache()
+net.youmi.android.AdView:
+    public AdView(android.app.Activity)
+    void a(android.app.Activity)
+    public void refreshAd()
+    void e()
+    void f()
+net.youmi.android.ae
+net.youmi.android.af
+net.youmi.android.ag:
+    static void f()
+    static void g()
+net.youmi.android.an
+net.youmi.android.bi
+net.youmi.android.bn
+net.youmi.android.bv
+net.youmi.android.eu:
+    public abstract android.content.Context a()
+    public abstract boolean a(java.lang.Runnable)
+    public abstract boolean b()
+net.youmi.android.ev
+net.youmi.android.ff
+net.youmi.android.fg
+net.youmi.android.fh
+net.youmi.android.fi
+net.youmi.android.fj
+net.youmi.android.fk
+net.youmi.android.fl
+net.youmi.android.fm:
+    public boolean d(java.lang.String)
+    public boolean i(java.lang.String)
+    public boolean e(java.lang.String)
+    public boolean w(java.lang.String)
+    public boolean dd(java.lang.String)
+    public boolean di(java.lang.String)
+    public boolean de(java.lang.String)
+    public boolean dw(java.lang.String)
+    public java.lang.String a(int,int,java.lang.String)
+    abstract net.youmi.android.ev a(int)
+    abstract net.youmi.android.ev b(int)
+    abstract net.youmi.android.ev c(int)
+    abstract net.youmi.android.ev d(int)
+    abstract net.youmi.android.ev e(int)
+    abstract net.youmi.android.ev f(int)
+    abstract net.youmi.android.ev g(int)
+net.youmi.android.fn:
+    net.youmi.android.ev a(int)
+    net.youmi.android.ev c(int)
+    net.youmi.android.ev b(int)
+    net.youmi.android.ev d(int)
+    net.youmi.android.ev e(int)
+    net.youmi.android.ev f(int)
+    net.youmi.android.ev g(int)
+net.youmi.android.fv:
+    public void b(int)
+net.youmi.android.fw:
+    private java.lang.String d
+    public void a(java.lang.String)
+net.youmi.android.fz:
+    public boolean a()
+    public boolean b()
+net.youmi.android.gb:
+    public void a(java.lang.String,int,java.lang.String)
+net.youmi.android.gz:
+    public static void d(java.lang.String)
+    private static void c(java.lang.String,java.lang.String)
+    public static void e(java.lang.String)
+    private static void d(java.lang.String,java.lang.String)
+net.youmi.android.ih:
+    public android.content.Context a()
+    public boolean a(java.lang.Runnable)
+    public boolean b()
 q.util.BitmapUtil:
     14:14:public BitmapUtil()
     17:23:public static final java.lang.String toString(android.graphics.Bitmap)

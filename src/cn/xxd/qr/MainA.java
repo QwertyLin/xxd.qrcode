@@ -28,13 +28,14 @@ public class MainA extends Activity {
 		//tempInitHistoryData();
 		//startActivity(new Intent(this, NewA.class));
 		startActivity(new Intent(this, CaptureActivity.class));
+		//startActivity(new Intent(this, ColorDialog.class));
 		//startActivity(new Intent(this, UpdateA.class));
 		//startActivity(new Intent(this, GuideA.class));
 		//startActivity(new Intent(this, AboutA.class));
 		//startActivity(new Intent(this, SettingA.class));
 		//startActivity(new Intent(this, HistoryA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
-		finish();
+		//finish();
 	}
 		
 	private void tempInitHistoryData(){

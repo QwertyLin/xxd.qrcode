@@ -8,6 +8,10 @@
     
 	<include layout="@layout/base_header" />
 	
+	<com.zhuamob.android.ZhuamobLayout
+		    	android:layout_width="fill_parent"
+		    	android:layout_height="wrap_content"/>
+	
 	<include layout="@layout/base_list"/>
     
 </LinearLayout>

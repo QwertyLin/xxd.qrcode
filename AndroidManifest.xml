@@ -25,8 +25,8 @@
   <uses-permission android:name="android.permission.CAMERA"/>
   <uses-permission android:name="android.permission.VIBRATE"/>
   <uses-permission android:name="android.permission.FLASHLIGHT"/>
-  <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <!-- <uses-permission android:name="android.permission.READ_CONTACTS"/>
   <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/> -->
   <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
@@ -65,7 +65,7 @@
 
   <application android:icon="@drawable/icon"
                android:label="@string/app_name"
-               android:theme="@android:style/Theme.Light.NoTitleBar"
+               android:theme="@style/QTheme"
                >
                
       <!-- ZM -->
@@ -101,6 +101,7 @@
       <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
       <activity android:name=".SettingA" android:screenOrientation="portrait"  />
       <activity android:name=".AboutA" android:screenOrientation="portrait"  />
+      <activity android:name=".ColorDialog" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog" />
       
       <service android:name=".service.UpdateService"></service>
             

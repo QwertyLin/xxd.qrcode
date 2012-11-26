@@ -1,7 +1,9 @@
 package cn.xxd.qr.bean;
 
-public class Color {
+import java.io.Serializable;
 
+public class Color {
+	
 	private String name;
 	private int color;
 	
