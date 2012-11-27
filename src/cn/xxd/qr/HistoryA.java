@@ -26,7 +26,7 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_history);
+		setContentView(R.layout.base_layout);
 		//
 		QUI.baseHeaderBack(this, "扫描历史");
 		//
@@ -35,12 +35,12 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 		datas = db.queryAll(page);
 		db.close();
 		//
-        ListView lv = (ListView)findViewById(R.id.base_list);
+        ListView lv = (ListView)getLayoutInflater().inflate(R.layout.base_list, null);
+        addToBaseLayout(lv);
         new EndlessListViewHelper(lv, getLayoutInflater().inflate(R.layout.layout_history_footer, null), this).setEnable(true);
         adapter = new HistoryAdapter(this, datas);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
-		//
 	}
 
 	@Override

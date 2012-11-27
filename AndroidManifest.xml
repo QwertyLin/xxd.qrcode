@@ -102,9 +102,7 @@
       <activity android:name=".SettingA" android:screenOrientation="portrait"  />
       <activity android:name=".AboutA" android:screenOrientation="portrait"  />
       <activity android:name=".ColorDialog" android:screenOrientation="portrait" android:theme="@android:style/Theme.Dialog" />
-      
-      <service android:name=".service.UpdateService"></service>
-            
+                  
     <activity android:name=".CaptureActivity"
               android:screenOrientation="landscape"
               android:clearTaskOnLaunch="true"

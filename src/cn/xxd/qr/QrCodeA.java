@@ -8,7 +8,7 @@ import java.util.Map;
 
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
-import cn.xxd.qr.service.UpdateService;
+import cn.xxd.qr.service.UpdateUtil;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -19,6 +19,7 @@ import com.google.zxing.client.result.ResultParser;
 import com.google.zxing.common.BitMatrix;
 import q.util.ActivityBase;
 import q.util.FileMgr;
+import q.util.QConfig;
 import q.util.QLog;
 import q.util.QUI;
 import q.util.WindowMgr;
@@ -42,7 +43,7 @@ import android.widget.Toast;
 public class QrCodeA extends ActivityBase implements OnClickListener {
 	
 	public static final String EXTRA_QRCODE = "qrcode";
-	public static final String EXTRA_BUILD_COLOR = "color", EXTRA_BUILD_COLOR_BG = "color_bg";
+	public static final String EXTRA_BUILD_COLOR = "color";
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
@@ -50,7 +51,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	private State state;
 	private Bitmap buildBitmap;
 	private FileMgr fileMgr;
-	private int buildColor, buildColorBg;
+	private int buildColor;
 	
 	private enum State {
 		IMAGE_SCAN, IMAGE_SRC, IMAGE_BUILD
@@ -59,7 +60,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		UpdateService.check(this, false);
+		UpdateUtil.check(this, false);
 		//
 		setContentView(R.layout.layout_qrcode);
 		QUI.baseHeaderBack(this, "");
@@ -70,7 +71,6 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
 		buildColor = intent.getIntExtra(EXTRA_BUILD_COLOR, 0xff0099CC);
-		buildColorBg = intent.getIntExtra(EXTRA_BUILD_COLOR_BG, 0xffffffff);
 		initState(intent);
 		//
 		//
@@ -204,7 +204,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	      int offset = y * width;
 	      for (int x = 0; x < width; x++) {
 	    	  //TODO QR图颜色
-	    	  pixels[offset + x] = result.get(x, y) ? buildColor :buildColorBg; //pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
+	    	  pixels[offset + x] = result.get(x, y) ? buildColor : QConfig.QR_IMAGE_BACK_COLOR; //pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
 	      }
 	    }
 	    Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
@@ -246,12 +246,12 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	
 	private void share(){
 		Intent intent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).setType("image/*")//.setType("text/plain")
-				.putExtra(Intent.EXTRA_TEXT, "二维码分享: " + qrcode.getText() + "。by 小小二维码");
+				.putExtra(Intent.EXTRA_TEXT, "二维码分享: " + qrcode.getText() + "。来自www.xxd.cn");
 		//
 		if(state == State.IMAGE_BUILD){
 			File temp = new File(fileMgr.getScan(0));
 			try {
-				buildBitmap.compress(Bitmap.CompressFormat.JPEG, 100, new FileOutputStream(temp));
+				buildBitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(temp));
 				intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(temp));
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();

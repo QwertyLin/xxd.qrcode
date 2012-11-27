@@ -9,19 +9,23 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 import q.util.ActivityBase;
+import q.util.InputMethodUtil;
 import q.util.QSp;
 import q.util.QUI;
 
 public class NewA extends ActivityBase implements OnClickListener {
 	
-	private int mColor, mColorBg;
-	private View vColor, vColorBg;
+	private int mColor;
+	private View vColor;
 	private EditText vText;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_new);
+		setContentView(R.layout.base_layout);
+		//
+		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_new, null));
+		//
 		QUI.baseHeaderBackOk(this, "生成二维码", new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -31,7 +35,12 @@ public class NewA extends ActivityBase implements OnClickListener {
 		//
 		vText = (EditText)findViewById(R.id.new_text);
 		initColor();
-		initColorBg();
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		InputMethodUtil.hide(this, vText);
 	}
 	
 	private void onClickSave(){
@@ -44,8 +53,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 		item.setText(text);
 		startActivity(new Intent(this, QrCodeA.class)
 		.putExtra(QrCodeA.EXTRA_QRCODE, item)
-		.putExtra(QrCodeA.EXTRA_BUILD_COLOR, mColor)
-		.putExtra(QrCodeA.EXTRA_BUILD_COLOR_BG, mColorBg));
+		.putExtra(QrCodeA.EXTRA_BUILD_COLOR, mColor));
 	}
 	
 	private void initColor(){
@@ -56,24 +64,12 @@ public class NewA extends ActivityBase implements OnClickListener {
 		vColor = vNewColor.findViewById(R.id.color_kv_v);
 		vColor.setBackgroundColor(mColor);
 	}
-	
-	private void initColorBg(){
-		mColorBg = QSp.getNewColorBg(this);
-		View vNewColorBg = findViewById(R.id.new_color_bg);
-		vNewColorBg.setOnClickListener(this);
-		((TextView)vNewColorBg.findViewById(R.id.color_kv_k)).setText("背景颜色");
-		vColorBg = vNewColorBg.findViewById(R.id.color_kv_v);
-		vColorBg.setBackgroundColor(mColorBg);
-	}
 
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.new_color:
 			onClickColor();
-			break;
-		case R.id.new_color_bg:
-			onClickColorBg();
 			break;
 		}
 	}
@@ -82,19 +78,12 @@ public class NewA extends ActivityBase implements OnClickListener {
 		startActivityForResult(new Intent(this, ColorDialog.class).putExtra(ColorDialog.EXTRA_COLOR, mColor), R.id.new_color);
 	}
 	
-	private void onClickColorBg(){
-		startActivityForResult(new Intent(this, ColorDialog.class).putExtra(ColorDialog.EXTRA_COLOR, mColorBg), R.id.new_color_bg);
-	}
-	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		switch(requestCode){
 		case R.id.new_color:
 			onResultColor(data);
-			break;
-		case R.id.new_color_bg:
-			onResultColorBg(data);
 			break;
 		}
 	}
@@ -108,13 +97,5 @@ public class NewA extends ActivityBase implements OnClickListener {
 		QSp.setNewColor(NewA.this, mColor);
 	}
 	
-	private void onResultColorBg(Intent data){
-		if(data == null){
-			return;
-		}
-		mColorBg = data.getIntExtra(ColorDialog.EXTRA_COLOR, 0);
-		vColorBg.setBackgroundColor(mColorBg);
-		QSp.setNewColorBg(NewA.this, mColorBg);
-	}
 }
 

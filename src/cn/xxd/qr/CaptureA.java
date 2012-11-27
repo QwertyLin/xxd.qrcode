@@ -52,7 +52,7 @@ public class CaptureA implements OnClickListener {
 			mAct.startActivity(new Intent(mAct, NewA.class));
 			break;
 		case R.id.capture_setting:
-			mAct.startActivity(new Intent(mAct, SettingA.class));
+			mAct.startActivity(new Intent(mAct, AboutA.class));
 			break;
 		case R.id.capture_flash:
 			onClickFlash();

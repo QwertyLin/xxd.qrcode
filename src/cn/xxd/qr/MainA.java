@@ -2,16 +2,10 @@ package cn.xxd.qr;
 
 import java.util.Date;
 
-import com.zhuamob.android.ZhuamobTracking;
-
-import q.util.QSp;
-
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 
 public class MainA extends Activity {
@@ -35,7 +29,7 @@ public class MainA extends Activity {
 		//startActivity(new Intent(this, SettingA.class));
 		//startActivity(new Intent(this, HistoryA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
-		//finish();
+		finish();
 	}
 		
 	private void tempInitHistoryData(){

@@ -23,17 +23,11 @@ public class ColorDialog extends ActivityDialogBase implements OnItemClickListen
 	private void initColorValue(){
 		colors = new ArrayList<Color>();
 		colors.add(new Color("黑色", 0xff000000));
-		colors.add(new Color("白色", 0xffffffff));
-		colors.add(new Color("暗蓝", 0xff0099CC));
-		colors.add(new Color("亮蓝", 0xff33B5E5));
-		colors.add(new Color("暗绿", 0xff669900));
-		colors.add(new Color("亮绿", 0xff99CC00));
-		colors.add(new Color("暗黄", 0xffFF8800));
-		colors.add(new Color("亮黄", 0xffFFBB33));
-		colors.add(new Color("暗红", 0xffCC0000));
-		colors.add(new Color("亮红", 0xffFF4444));
-		colors.add(new Color("暗紫", 0xff9933CC));
-		colors.add(new Color("亮紫", 0xffAA66CC));
+		colors.add(new Color("蓝色", 0xff0099CC));
+		colors.add(new Color("绿色", 0xff669900));
+		colors.add(new Color("黄色", 0xffFF8800));
+		colors.add(new Color("红色", 0xffCC0000));
+		colors.add(new Color("紫色", 0xff9933CC));
 	}
 
 	@Override

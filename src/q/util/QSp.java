@@ -22,12 +22,4 @@ public class QSp {
 		ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).edit().putInt(SP_KEY_NEW_COLOR, color).commit();
 	}
 	
-	private static final String SP_KEY_NEW_COLOR_BG = "new_color_bg";
-	public static final int getNewColorBg(Context ctx){
-		return ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).getInt(SP_KEY_NEW_COLOR_BG, 0xffffffff);
-	}
-	public static final void setNewColorBg(Context ctx, int color){
-		ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).edit().putInt(SP_KEY_NEW_COLOR_BG, color).commit();
-	}
-	
 }

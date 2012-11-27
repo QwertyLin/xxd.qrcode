@@ -43,7 +43,7 @@
            android:layout_width="@dimen/base_footer_height"
            android:layout_height="@dimen/base_footer_height"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_action_settings_x"
+           android:src="@drawable/a_action_about_x"
            qview:arg_float="-90"
            />
        <View 
