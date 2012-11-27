@@ -4,11 +4,10 @@ cn.xxd.qr.BuildConfig
 cn.xxd.qr.ColorDialog:
     public static final java.lang.String EXTRA_COLOR
 cn.xxd.qr.MainA:
-    42:51:private void tempInitHistoryData()
+    36:45:private void tempInitHistoryData()
 cn.xxd.qr.QrCodeA:
     public static final java.lang.String EXTRA_QRCODE
     public static final java.lang.String EXTRA_BUILD_COLOR
-    public static final java.lang.String EXTRA_BUILD_COLOR_BG
 cn.xxd.qr.R:
     10:10:public R()
 cn.xxd.qr.R$attr
@@ -19,12 +18,12 @@ cn.xxd.qr.R$id
 cn.xxd.qr.R$layout
 cn.xxd.qr.R$raw
 cn.xxd.qr.R$string
+cn.xxd.qr.R$style
 cn.xxd.qr.R$styleable:
     public static final int qview_arg_float
-    232:232:public R$styleable()
-cn.xxd.qr.R$update_id
+    235:235:public R$styleable()
 cn.xxd.qr.adapter.ColorAdapter:
-    19:20:public ColorAdapter(android.content.Context,java.util.List)
+    20:21:public ColorAdapter(android.content.Context,java.util.List)
 cn.xxd.qr.bean.Color:
     19:20:public void setName(java.lang.String)
     25:26:public void setColor(int)
@@ -34,9 +33,9 @@ cn.xxd.qr.bean.HistoryDb:
     1:1:protected bridge synthetic q.util.SqliteBase$ISqlite buildEntity(android.database.Cursor)
 cn.xxd.qr.bean.QrCode:
     private static final long serialVersionUID
-cn.xxd.qr.service.UpdateService:
+cn.xxd.qr.service.UpdateUtil:
     private static final java.lang.String UPDATE_URL
-    public static final java.lang.String EXTRA_URL
+    16:16:public UpdateUtil()
 com.baidu.mobstat.StatService:
     public static final int EXCEPTION_LOG
     public StatService()
@@ -458,6 +457,9 @@ q.util.BitmapUtil:
     59:66:public static final void recycle(android.graphics.Bitmap)
     74:77:public static final android.graphics.Bitmap compressJPEG(android.graphics.Bitmap,int)
     84:87:public static final android.graphics.Bitmap compressPNG(android.graphics.Bitmap)
+q.util.InputMethodUtil:
+    10:10:public InputMethodUtil()
+    16:19:public static final void show(android.content.Context,android.view.View)
 q.util.IntentUtil
 q.util.IntentUtil$Open
 q.util.ListViewUtil
@@ -477,7 +479,6 @@ q.util.QSp:
     private static final java.lang.String SP_NAME_SETTING
     private static final java.lang.String SP_KEY_VERSION
     private static final java.lang.String SP_KEY_NEW_COLOR
-    private static final java.lang.String SP_KEY_NEW_COLOR_BG
     5:5:public QSp()
     11:11:public static final int getVersion(android.content.Context)
     14:15:public static final void setVersion(android.content.Context,int)

@@ -17,11 +17,6 @@ cn.xxd.qr.QrCodeA: QrCodeA()
 cn.xxd.qr.QrCodeA: void onClick(android.view.View)
 cn.xxd.qr.QrCodeA$State: cn.xxd.qr.QrCodeA$State[] values()
 cn.xxd.qr.QrCodeA$State: cn.xxd.qr.QrCodeA$State valueOf(java.lang.String)
-cn.xxd.qr.SettingA
-cn.xxd.qr.SettingA: SettingA()
-cn.xxd.qr.SettingA: void onClick(android.view.View)
-cn.xxd.qr.service.UpdateService
-cn.xxd.qr.service.UpdateService: UpdateService()
 com.baidu.mobstat.SendStrategyEnum: com.baidu.mobstat.SendStrategyEnum[] values()
 com.baidu.mobstat.SendStrategyEnum: com.baidu.mobstat.SendStrategyEnum valueOf(java.lang.String)
 com.baidu.mobstat.StatActivity

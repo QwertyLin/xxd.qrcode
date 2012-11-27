@@ -61,11 +61,10 @@ cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
     void onCreate(android.os.Bundle) -> onCreate
 cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
     int mColor -> a
-    int mColorBg -> b
-    android.view.View vColor -> c
-    android.view.View vColorBg -> d
-    android.widget.EditText vText -> e
+    android.view.View vColor -> b
+    android.widget.EditText vText -> c
     void onCreate(android.os.Bundle) -> onCreate
+    void onPause() -> onPause
     void onClick(android.view.View) -> onClick
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void access$0(cn.xxd.qr.NewA) -> a
@@ -80,8 +79,7 @@ cn.xxd.qr.QrCodeA -> cn.xxd.qr.QrCodeA:
     android.graphics.Bitmap buildBitmap -> e
     q.util.FileMgr fileMgr -> f
     int buildColor -> g
-    int buildColorBg -> h
-    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> i
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> h
     void onCreate(android.os.Bundle) -> onCreate
     android.graphics.Bitmap initImageEncode() -> a
     void onClick(android.view.View) -> onClick
@@ -125,9 +123,6 @@ cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.k:
 cn.xxd.qr.R -> cn.xxd.qr.l:
 cn.xxd.qr.R$styleable -> cn.xxd.qr.m:
     int[] qview -> a
-cn.xxd.qr.SettingA -> cn.xxd.qr.SettingA:
-    void onCreate(android.os.Bundle) -> onCreate
-    void onClick(android.view.View) -> onClick
 cn.xxd.qr.adapter.ColorAdapter -> cn.xxd.qr.a.a:
     int mCurColor -> d
     int getLayoutId() -> a
@@ -136,7 +131,7 @@ cn.xxd.qr.adapter.ColorAdapter -> cn.xxd.qr.a.a:
 cn.xxd.qr.adapter.ColorAdapter$Holder -> cn.xxd.qr.a.b:
     android.widget.TextView vName -> a
     android.view.View vColor -> b
-    android.view.View vCheck -> c
+    android.widget.RadioButton vCheck -> c
     cn.xxd.qr.adapter.ColorAdapter this$0 -> d
 cn.xxd.qr.adapter.HistoryAdapter -> cn.xxd.qr.a.c:
     int getLayoutId() -> a
@@ -169,58 +164,27 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.c:
     java.lang.String getTimeStr() -> d
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-cn.xxd.qr.service.UpdateService -> cn.xxd.qr.service.UpdateService:
-    android.app.NotificationManager nm -> a
-    android.app.Notification notification -> b
-    java.io.File tempFile -> c
-    boolean cancelUpdate -> d
-    cn.xxd.qr.service.UpdateService$MyHandler myHandler -> e
-    int download_precent -> f
-    android.widget.RemoteViews views -> g
-    int notificationId -> h
+cn.xxd.qr.service.UpdateUtil -> cn.xxd.qr.c.a:
     void check(android.content.Context,boolean) -> a
-    android.os.IBinder onBind(android.content.Intent) -> onBind
-    void onStart(android.content.Intent,int) -> onStart
-    int onStartCommand(android.content.Intent,int,int) -> onStartCommand
-    void onDestroy() -> onDestroy
-    void access$0(cn.xxd.qr.service.UpdateService,int) -> a
-    android.app.NotificationManager access$1(cn.xxd.qr.service.UpdateService) -> a
-    int access$2(cn.xxd.qr.service.UpdateService) -> b
-    void access$3$4b9b41b8(java.io.File,android.content.Context) -> a
-    android.widget.RemoteViews access$4(cn.xxd.qr.service.UpdateService) -> c
-    int access$5(cn.xxd.qr.service.UpdateService) -> d
-    android.app.Notification access$6(cn.xxd.qr.service.UpdateService) -> e
-    void access$7(cn.xxd.qr.service.UpdateService,java.io.File) -> a
-    java.io.File access$8(cn.xxd.qr.service.UpdateService) -> f
-    boolean access$9(cn.xxd.qr.service.UpdateService) -> g
-    cn.xxd.qr.service.UpdateService$MyHandler access$10(cn.xxd.qr.service.UpdateService) -> h
-cn.xxd.qr.service.UpdateService$1 -> cn.xxd.qr.service.a:
+cn.xxd.qr.service.UpdateUtil$1 -> cn.xxd.qr.c.b:
     android.content.Context val$ctx -> a
     boolean val$visible -> b
     android.app.ProgressDialog val$pd -> c
     void run() -> run
-cn.xxd.qr.service.UpdateService$1$1 -> cn.xxd.qr.service.b:
-    cn.xxd.qr.service.UpdateService$1 this$1 -> a
+cn.xxd.qr.service.UpdateUtil$1$1 -> cn.xxd.qr.c.c:
+    cn.xxd.qr.service.UpdateUtil$1 this$1 -> a
     java.lang.String val$result -> b
     android.content.Context val$ctx -> c
     void run() -> run
-cn.xxd.qr.service.UpdateService$1$1$1 -> cn.xxd.qr.service.c:
-    cn.xxd.qr.service.UpdateService$1$1 this$2 -> a
+cn.xxd.qr.service.UpdateUtil$1$1$1 -> cn.xxd.qr.c.d:
+    cn.xxd.qr.service.UpdateUtil$1$1 this$2 -> a
     android.content.Context val$ctx -> b
     java.lang.String[] val$rs -> c
     void onClick(android.content.DialogInterface,int) -> onClick
-cn.xxd.qr.service.UpdateService$1$2 -> cn.xxd.qr.service.d:
-    cn.xxd.qr.service.UpdateService$1 this$1 -> a
+cn.xxd.qr.service.UpdateUtil$1$2 -> cn.xxd.qr.c.e:
+    cn.xxd.qr.service.UpdateUtil$1 this$1 -> a
     android.content.Context val$ctx -> b
     void run() -> run
-cn.xxd.qr.service.UpdateService$2 -> cn.xxd.qr.service.e:
-    cn.xxd.qr.service.UpdateService this$0 -> a
-    java.lang.String val$url -> b
-    void run() -> run
-cn.xxd.qr.service.UpdateService$MyHandler -> cn.xxd.qr.service.f:
-    android.content.Context context -> b
-    cn.xxd.qr.service.UpdateService this$0 -> a
-    void handleMessage(android.os.Message) -> handleMessage
 com.baidu.mobstat.SendStrategyEnum -> com.baidu.mobstat.a:
     com.baidu.mobstat.SendStrategyEnum APP_START -> a
     com.baidu.mobstat.SendStrategyEnum ONCE_A_DAY -> b
@@ -4811,6 +4775,7 @@ q.util.ActivityBase -> q.util.ActivityBase:
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     void onPause() -> onPause
+    void addToBaseLayout(android.view.View) -> a
 q.util.ActivityDialogBase -> q.util.ActivityDialogBase:
     android.view.View vOk -> a
     android.view.View vClose -> b
