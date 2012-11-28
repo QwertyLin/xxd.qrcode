@@ -1,24 +1,38 @@
 qqqqqqQ1
-
+linhq
 none
 
 XXDcn工作室
 
 独立
-dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020"></meta-data>
+dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
 dev.app.360.cn q@xxd.cn
 crossmo.com linhq q@xxd.cn
 dev.apk.hiapk.com  q@xxd.cn
+developer.xiaomi.com q@xxd.cn
+dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
+dev.appchina.com linhqapp q@xxd.cn
+dev.hicloud.com q@xxd.cn
+
+developer.baidu.com linhqbd 123816@qq.com
+eoemarket.com linhqeoe q@xxd.cn
 
 统一
 market.sj.91.com q@xxd.cn 
+www.eomarket.com linhq q@xxd.cn
+imobile.com.cn linhqi q@xxd.cn
 
-eoemarket.com linhqeoe q@xxd.cn
+m.163.com/dev linhq q@xxd.cn
+
+
+
 starandroid.com linhq q@xxd.cn
 anzhi.com linhq 123816@qq.com
 iandroid.cn linhq q@xxd.cn
-imobile.com.cn linhqi q@xxd.cn
 
+dev.hicloud.com
+
+http://wiki.youmi.net/Wiki/PromotionChannelIDs
 
 简洁轻巧的二维码扫描利器。
 
