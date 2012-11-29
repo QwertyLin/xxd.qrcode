@@ -5,32 +5,31 @@ none
 XXDcn工作室
 
 独立
-dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
-dev.app.360.cn q@xxd.cn
-crossmo.com linhq q@xxd.cn
 dev.apk.hiapk.com  q@xxd.cn
-developer.xiaomi.com q@xxd.cn
-dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
+eoemarket.com linhqeoe q@xxd.cn
 dev.appchina.com linhqapp q@xxd.cn
+dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
+dev.anzhi.com linhqa q@xxd.cn
+crossmo.com linhq q@xxd.cn
+imobile.com.cn linhqi q@xxd.cn
+dev.app.360.cn q@xxd.cn
+www.eomarket.com linhq q@xxd.cn
+dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
 dev.hicloud.com q@xxd.cn
+developer.xiaomi.com q@xxd.cn
 
 developer.baidu.com linhqbd 123816@qq.com
-eoemarket.com linhqeoe q@xxd.cn
+developer.lenovomm.com linhq
 
 统一
 market.sj.91.com q@xxd.cn 
-www.eomarket.com linhq q@xxd.cn
-imobile.com.cn linhqi q@xxd.cn
-
 m.163.com/dev linhq q@xxd.cn
+download.sohu.com/developer linhqs@sohu.com 
 
-
-
+暂不
+dev.wo.com.cn linhq q@xxd.cn
 starandroid.com linhq q@xxd.cn
-anzhi.com linhq 123816@qq.com
-iandroid.cn linhq q@xxd.cn
-
-dev.hicloud.com
+iandroid.cn linhqq
 
 http://wiki.youmi.net/Wiki/PromotionChannelIDs
 
@@ -41,8 +40,7 @@ http://wiki.youmi.net/Wiki/PromotionChannelIDs
 2.二维码生成，可自定义图案颜色。
 3.扫描结果自动保存至历史记录，方便回顾。
 
-
-
+林海强
 
 
 
