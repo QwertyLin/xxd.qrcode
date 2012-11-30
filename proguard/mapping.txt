@@ -165,7 +165,7 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.c:
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
 cn.xxd.qr.service.UpdateUtil -> cn.xxd.qr.c.a:
-    void check(android.content.Context,boolean) -> a
+    void check$1a552341(android.content.Context) -> a
 cn.xxd.qr.service.UpdateUtil$1 -> cn.xxd.qr.c.b:
     android.content.Context val$ctx -> a
     boolean val$visible -> b

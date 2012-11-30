@@ -5,26 +5,31 @@ none
 XXDcn工作室
 
 独立
-dev.apk.hiapk.com  q@xxd.cn
+Y dev.apk.hiapk.com  q@xxd.cn
 eoemarket.com linhqeoe q@xxd.cn
-dev.appchina.com linhqapp q@xxd.cn
-dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
+Y dev.appchina.com linhqapp q@xxd.cn
+Y dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
 dev.anzhi.com linhqa q@xxd.cn
-crossmo.com linhq q@xxd.cn
+Y crossmo.com linhq q@xxd.cn
 imobile.com.cn linhqi q@xxd.cn
 dev.app.360.cn q@xxd.cn
+Y developer.lenovomm.com linhq
+m.163.com/dev linhq q@xxd.cn
 www.eomarket.com linhq q@xxd.cn
-dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
-dev.hicloud.com q@xxd.cn
-developer.xiaomi.com q@xxd.cn
-
 developer.baidu.com linhqbd 123816@qq.com
-developer.lenovomm.com linhq
+Y dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
+Y dev.hicloud.com q@xxd.cn
+developer.xiaomi.com q@xxd.cn 需先去掉有米SDK
+
+
 
 统一
 market.sj.91.com q@xxd.cn 
-m.163.com/dev linhq q@xxd.cn
+
 download.sohu.com/developer linhqs@sohu.com 
+
+待注册
+http://open.myapp.com/ qq
 
 暂不
 dev.wo.com.cn linhq q@xxd.cn
@@ -40,11 +45,16 @@ http://wiki.youmi.net/Wiki/PromotionChannelIDs
 2.二维码生成，可自定义图案颜色。
 3.扫描结果自动保存至历史记录，方便回顾。
 
+该app的包命为cn.xxd.qr，对应的官网地址为www.xxd.cn，本人帐号的邮箱为q@xxd.cn，与官网www.xxd.cn底部的邮箱地址一致。
+
 林海强
 
 
 
 首页：顶级联赛 次级联赛、杯赛
 
+http://www.eoeandroid.com/forum.php?mod=viewthread&tid=170776
 
 
+12.12更新
+优化了版本升级机制。

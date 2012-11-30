@@ -35,7 +35,7 @@ cn.xxd.qr.bean.QrCode:
     private static final long serialVersionUID
 cn.xxd.qr.service.UpdateUtil:
     private static final java.lang.String UPDATE_URL
-    16:16:public UpdateUtil()
+    18:18:public UpdateUtil()
 com.baidu.mobstat.StatService:
     public static final int EXCEPTION_LOG
     public StatService()

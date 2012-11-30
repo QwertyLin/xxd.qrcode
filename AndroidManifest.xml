@@ -1,53 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- Copyright (C) 2008 ZXing authors
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionName="12.11"
           android:versionCode="1"
+          android:versionName="12.11"
           android:installLocation="auto">
-          
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8"/>
 
-  <uses-permission android:name="android.permission.CAMERA"/>
-  <uses-permission android:name="android.permission.VIBRATE"/>
-  <uses-permission android:name="android.permission.FLASHLIGHT"/>
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <!-- <uses-permission android:name="android.permission.READ_CONTACTS"/>
-  <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/> -->
-  <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
-  
-  <!-- ZM -->
-  <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-  
-  <!-- youmi -->
-  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-  
-  <!-- Baidu -->
-  <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
-  <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
- <!--  <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
-  <uses-permission android:name="android.permission.READ_LOGS"/><!-- 错误日志统计 -->
-  
-  <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
   <uses-feature android:name="android.hardware.camera" android:required="false"/>
   <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
   <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
@@ -55,39 +15,48 @@
   <uses-feature android:name="android.hardware.screen.landscape"/>
   <uses-feature android:name="android.hardware.wifi" android:required="false"/>
   <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
-
-  <!-- Donut-specific flags which allow us to run on any dpi screens. -->
-  <!-- <supports-screens android:xlargeScreens="true"
-                    android:largeScreens="true"
-                    android:normalScreens="true"
-                    android:smallScreens="true"
-                    android:anyDensity="true"/> -->
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- Baidu -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 错误日志统计 -->
+    <!-- ZM -->
+    <!-- <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
+    <!-- youmi -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
   <application android:icon="@drawable/icon"
                android:label="@string/app_name"
                android:theme="@style/QTheme"
                >
 
-      <!-- baidu -->
-     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="91" />
+     <!-- baidu -->
+     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="163" />
      <meta-data android:name="BaiduMobAd_STAT_ID" android:value="49cc811488" />
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
       
       <!-- ZM -->
-        <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
-        <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" />
-        <!-- 声明Youmi的Activity -->
-        <activity
-            android:name="net.youmi.android.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation" />
-        <!-- 有米广告条SDK3.08必须以下配置 -->
-        <receiver android:name="net.youmi.android.YoumiReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_ADDED"/>
-                <action android:name="android.intent.action.PACKAGE_INSTALL"/>
-                <data android:scheme="package"/>
-            </intent-filter>
-        </receiver>
+      <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
+      <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" />
+     <!-- 声明Youmi的Activity -->
+     <activity
+         android:name="net.youmi.android.AdActivity"
+         android:configChanges="keyboard|keyboardHidden|orientation" />
+     <receiver android:name="net.youmi.android.YoumiReceiver">
+         <intent-filter>
+             <action android:name="android.intent.action.PACKAGE_ADDED"/>
+             <action android:name="android.intent.action.PACKAGE_INSTALL"/>
+             <data android:scheme="package"/>
+         </intent-filter>
+     </receiver>
         
       <activity android:name=".MainA">
           <intent-filter>

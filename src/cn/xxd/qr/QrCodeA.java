@@ -60,7 +60,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		UpdateUtil.check(this, false);
+		//UpdateUtil.check(this, false);
 		//
 		setContentView(R.layout.layout_qrcode);
 		QUI.baseHeaderBack(this, "");

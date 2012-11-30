@@ -9,6 +9,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.widget.Toast;
@@ -25,7 +27,13 @@ public class UpdateUtil {
 		new Thread(){
 			public void run() {
 				try {
-					final String result = QHttpUtil.get(UPDATE_URL + ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionCode);
+					ApplicationInfo info = ctx.getPackageManager().getApplicationInfo(ctx.getPackageName(),  PackageManager.GET_META_DATA);
+					String channel = String.valueOf(info.metaData.get("BaiduMobAd_CHANNEL"));
+					//
+					String url = UPDATE_URL + ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionCode + "&c=" + channel;
+					final String result = QHttpUtil.get(url);
+					//System.out.println(url);
+					//System.out.println(result);
 					if(visible){
 						pd.cancel();
 					}

@@ -9,7 +9,7 @@ public class QLog {
 	
 	public static final int EVENT_QRCODE = 1; 
 	
-	private static boolean available = true;
+	private static boolean available = false;
 		
 	public static void event(Context ctx, int id, String label){
 		StatService.onEvent(ctx, String.valueOf(id), label);
