@@ -6,8 +6,8 @@ import cn.xxd.qr.adapter.HistoryAdapter;
 import cn.xxd.qr.bean.QrCode;
 import cn.xxd.qr.bean.HistoryDb;
 
-import q.util.ActivityBase;
-import q.util.QUI;
+import q.base.ActivityBase;
+import q.base.UiBaseHeader;
 import q.view.EndlessListViewHelper;
 import q.view.EndlessListViewHelper.OnEndlessListViewListener;
 import android.content.Intent;
@@ -28,7 +28,7 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
 		//
-		QUI.baseHeaderBack(this, "扫描历史");
+		UiBaseHeader.btnBack(this, "扫描历史");
 		//
 		HistoryDb db = new HistoryDb(this);
 		db.open(false);

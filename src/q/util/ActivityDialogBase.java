@@ -1,5 +1,6 @@
 package q.util;
 
+import q.base.ActivityBase;
 import cn.xxd.qr.R;
 import android.os.Bundle;
 import android.view.Gravity;

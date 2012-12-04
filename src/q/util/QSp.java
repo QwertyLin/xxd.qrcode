@@ -14,12 +14,12 @@ public class QSp {
 		ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).edit().putInt(SP_KEY_VERSION, version).commit();
 	}
 	
-	private static final String SP_KEY_NEW_COLOR = "new_color";
+	/*private static final String SP_KEY_NEW_COLOR = "new_color";
 	public static final int getNewColor(Context ctx){
 		return ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).getInt(SP_KEY_NEW_COLOR, 0xff000000);
 	}
 	public static final void setNewColor(Context ctx, int color){
 		ctx.getSharedPreferences(SP_NAME_SETTING, Context.MODE_PRIVATE).edit().putInt(SP_KEY_NEW_COLOR, color).commit();
-	}
+	}*/
 	
 }

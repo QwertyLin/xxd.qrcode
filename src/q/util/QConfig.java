@@ -2,7 +2,6 @@ package q.util;
 
 public class QConfig {
 	
-	public static final String BASE_PACKAGE_NAME = "cn.xxd.qr";
 	public static final String BASE_WEBSITE_URL = "http://www.xxd.cn";
 		
 	public static final int VIEW_FINDER_MASK_COLOR = 0x60000000; //扫描界面蒙板颜色

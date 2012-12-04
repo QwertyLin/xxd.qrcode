@@ -3,7 +3,7 @@
      android:layout_width="fill_parent"
      android:layout_height="fill_parent"
      >
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="vertical"
@@ -48,64 +48,19 @@
 	         android:padding="3dip"
 	         android:layout_marginTop="10dip"
 	         />
-	    
-	    <View 
-	        android:layout_width="fill_parent"
-	        android:layout_height="10dip"
-	        />
-	    
-	    
-	    
-		<!-- <TextView 
-		    android:layout_width="fill_parent"
-		    android:layout_height="wrap_content"
-		    android:gravity="center"
-		    android:layout_marginBottom="10dip"
-		    android:textSize="@dimen/base_text_small"
-		    android:textColor="@color/base_gray_dark"
-		    android:text="Copyright © 2012 小小的安卓 版权所有"
-		    /> -->
+
+
 	    <LinearLayout 
 	         android:layout_width="fill_parent"
 	         android:layout_height="wrap_content"
 	         android:orientation="vertical"
 	         android:padding="10dip"
+	         android:layout_marginTop="20dip"
 	         >	
-	        <TextView android:text="升级" style="@style/QSettingHeader"/>
-			
-			   <View style="@style/QLineBlue" />
-			   
-			   <TextView
-			       android:id="@+id/setting_update"
-			          android:layout_width="fill_parent"
-			          android:layout_height="50dip"
-			          android:gravity="center_vertical"
-			          android:background="@drawable/base_btn_bg"
-			          android:clickable="true"
-			          android:textColor="@color/base_setting_text"
-			          android:textSize="@dimen/base_text_medium" 
-			          android:paddingLeft="5dip"
-			          android:text="检查更新"
-			          /> 
-	        
-			   <TextView android:text="分享" style="@style/QSettingHeader"/>
+
+			   <TextView android:text="@string/about_more" style="@style/QSettingHeader"/>
 	
 			   <View style="@style/QLineBlue" />
-			   
-			   <TextView
-			       android:id="@+id/setting_market"
-			          android:layout_width="fill_parent"
-			          android:layout_height="50dip"
-			          android:gravity="center_vertical"
-			          android:background="@drawable/base_btn_bg"
-			          android:clickable="true"
-			          android:textColor="@color/base_setting_text"
-			          android:textSize="@dimen/base_text_medium" 
-			          android:paddingLeft="5dip"
-			          android:text="给应用打分"
-			          />
-			   
-			   <View style="@style/QLineGray" />
 			   
 			   <TextView
 			       android:id="@+id/setting_share"
@@ -117,7 +72,22 @@
 			          android:textColor="@color/base_setting_text"
 			          android:textSize="@dimen/base_text_medium" 
 			          android:paddingLeft="5dip"
-			          android:text="分享应用"
+			          android:text="@string/about_share"
+			          />
+			   
+			   <View style="@style/QLineGray" />
+			   
+			   <TextView
+			       android:id="@+id/setting_market"
+			          android:layout_width="fill_parent"
+			          android:layout_height="50dip"
+			          android:gravity="center_vertical"
+			          android:background="@drawable/base_btn_bg"
+			          android:clickable="true"
+			          android:textColor="@color/base_setting_text"
+			          android:textSize="@dimen/base_text_medium" 
+			          android:paddingLeft="5dip"
+			          android:text="@string/about_market"
 			          />
 			   
 	     </LinearLayout>

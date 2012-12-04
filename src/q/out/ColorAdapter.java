@@ -1,6 +1,9 @@
-package cn.xxd.qr.adapter;
+package q.out;
 
 import java.util.List;
+
+import q.base.AdapterBase;
+
 
 import cn.xxd.qr.R;
 import cn.xxd.qr.bean.Color;
@@ -9,7 +12,6 @@ import android.content.Context;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import q.util.AdapterBase;
 
 
 public class ColorAdapter extends AdapterBase<Color, ColorAdapter.Holder> {

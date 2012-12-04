@@ -1,9 +1,11 @@
 package cn.xxd.qr;
 
-import cn.xxd.qr.service.UpdateUtil;
-import q.util.ActivityBase;
+import q.base.ActivityBase;
+import q.base.UiBaseHeader;
+import q.util.AppUtil;
+import q.util.IntentUtil;
 import q.util.QConfig;
-import q.util.QUI;
+import q.util.QLog;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -19,8 +21,7 @@ public class AboutA extends ActivityBase implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
-		QUI.baseHeaderBack(this, "关于");
-		//
+		UiBaseHeader.btnBack(this, getString(R.string.about));
 		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_about, null));
 		//
 		initVersion();
@@ -31,7 +32,6 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		//
 		findViewById(R.id.setting_market).setOnClickListener(this);
 		findViewById(R.id.setting_share).setOnClickListener(this);
-		findViewById(R.id.setting_update).setOnClickListener(this);
 	}
 	
 	private void initVersion(){
@@ -55,14 +55,11 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		case R.id.setting_share:
 			onClickShare();
 			break;
-		case R.id.setting_update:
-			onClickUpdate();
-			break;
 		}
 	}
 	
 	private void onClickWebsite(){
-		startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(QConfig.BASE_WEBSITE_URL)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+		IntentUtil.openBrowser(this, QConfig.BASE_WEBSITE_URL);
 	}
 	
 	private void onClickMarket(){
@@ -71,6 +68,8 @@ public class AboutA extends ActivityBase implements OnClickListener {
 				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 				.setData(Uri.parse("market://details?id=" + getPackageName()))
 				);
+		//
+		QLog.event(this, QLog.EVENT_ABOUT_MARKET, AppUtil.getChannel(this));
 	}
 	
 	private void onClickShare(){
@@ -79,14 +78,13 @@ public class AboutA extends ActivityBase implements OnClickListener {
 						new Intent(Intent.ACTION_SEND)
 						.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 						.setType("text/plain")
-						.putExtra(Intent.EXTRA_TEXT, "推荐一款安卓手机很好用的二维码扫描器，小小二维码: http://www.xxd.cn")
+						.putExtra(Intent.EXTRA_TEXT, "分享APP<小小二维码>，下载：http://www.xxd.cn")
 						, "分享")
 						
 				);
+		//
+		QLog.event(this, QLog.EVENT_ABOUT_SHARE, "");
 	}
 	
-	private void onClickUpdate(){
-		UpdateUtil.check(this, true);
-	}
 	
 }

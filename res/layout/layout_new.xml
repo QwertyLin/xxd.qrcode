@@ -1,32 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
     <LinearLayout 
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
         >
-        
-        <EditText 
-            android:id="@+id/new_text"
+		<ScrollView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dip"
+		    android:layout_weight="1"
+		    >
+		    <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        >
+		        
+		        <TextView 
+		            android:id="@+id/new_text"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="top"
+		            android:minLines="2"
+		            android:textSize="@dimen/base_text_medium"
+		            android:padding="5dip"
+		            android:lineSpacingExtra="5dip"
+		            android:layout_margin="5dip"
+		            style="@style/QEditText"
+		            />
+		        
+		        <include layout="@layout/layout_new_color"  />
+		        
+		        <ImageView 
+			        android:id="@+id/new_img"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_horizontal"
+			        />
+		        
+		    </LinearLayout>
+		</ScrollView>
+		<View style="@style/QLineGray"/>
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="@dimen/base_footer_height"
+		    android:orientation="horizontal"
+		    >
+		    <ImageButton 
+		        android:id="@+id/new_save"
+		        android:layout_width="0dip"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:background="@drawable/base_btn_bg"
+		        android:src="@drawable/a_content_save_dark"
+		        />
+		    <ImageButton 
+		        android:id="@+id/new_share"
+		        android:layout_width="0dip"
+		        android:layout_height="fill_parent"
+		        android:layout_weight="1"
+		        android:background="@drawable/base_btn_bg"
+		        android:src="@drawable/a_social_share"
+		        />
+		</LinearLayout>
+	</LinearLayout>
+	
+	<LinearLayout 
+	    android:id="@+id/new_input_layout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:clickable="true"
+	    android:background="#BB333333"
+	    android:visibility="gone"
+	    >
+	    <EditText 
+	        android:id="@+id/new_input_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="top"
-            android:minLines="3"
-            android:background="@color/base_gray_light"
+            android:minLines="2"
             android:textSize="@dimen/base_text_medium"
             android:textColor="@color/base_blue_dark"
             android:padding="5dip"
             android:lineSpacingExtra="5dip"
-            android:hint="输入文本"
-            />
-        
-       
-        <include  android:id="@+id/new_color" layout="@layout/list_item_color_kv"  />
-        
-        <View style="@style/QLineGray"/>
-        
-    </LinearLayout>
-</ScrollView>
+            android:layout_margin="5dip"
+            style="@style/QEditText"
+	            />
+	    <include layout="@layout/base_dialog_footer"/>
+	</LinearLayout>
+</FrameLayout>

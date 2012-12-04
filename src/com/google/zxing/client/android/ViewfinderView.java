@@ -31,6 +31,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import q.util.QConfig;
@@ -42,7 +43,7 @@ import q.util.QConfig;
  * @author dswitkin@google.com (Daniel Switkin)
  */
 public final class ViewfinderView extends View {
-
+	
   private static final int[] SCANNER_ALPHA = {0, 64, 128, 192, 255, 192, 128, 64};
   private static final long ANIMATION_DELAY = 80L;
   private static final int CURRENT_POINT_OPACITY = 0xA0;
@@ -53,6 +54,7 @@ public final class ViewfinderView extends View {
   private final Paint paint;
   private final int maskColor;
   private final int laserColor;
+  private final int frameColor;
   private final int resultPointColor;
   private int scannerAlpha;
   private List<ResultPoint> possibleResultPoints;
@@ -68,6 +70,7 @@ public final class ViewfinderView extends View {
     maskColor = QConfig.VIEW_FINDER_MASK_COLOR;//maskColor = resources.getColor(R.color.viewfinder_mask);
     //resultColor = resources.getColor(R.color.result_view);
     laserColor = QConfig.VIEW_FINDER_LASER_COLOR;//laserColor = resources.getColor(R.color.viewfinder_laser);
+    frameColor = QConfig.VIEW_FINDER_FRAME_COLOR;
     resultPointColor = 0xc0ffbd21;
     scannerAlpha = 0;
     possibleResultPoints = new ArrayList<ResultPoint>(5);
@@ -80,6 +83,7 @@ public final class ViewfinderView extends View {
 
   @Override
   public void onDraw(Canvas canvas) {
+	  //System.out.println("onDraw" + Calendar.getInstance().getTimeInMillis());
     if (cameraManager == null) {
       return; // not ready yet, early draw before done configuring
     }
@@ -87,18 +91,19 @@ public final class ViewfinderView extends View {
     if (frame == null) {
       return;
     }
+    
+    // Draw the exterior (i.e. outside the framing rect) darkened
+    /*
     int width = canvas.getWidth();
     int height = canvas.getHeight();
-
-    // Draw the exterior (i.e. outside the framing rect) darkened
     paint.setColor(maskColor);
     canvas.drawRect(0, 0, width, frame.top, paint);
     canvas.drawRect(0, frame.top, frame.left, frame.bottom, paint);
     canvas.drawRect(frame.right, frame.top, width, frame.bottom, paint);
-    canvas.drawRect(0, frame.bottom, width, height, paint);
+    canvas.drawRect(0, frame.bottom, width, height, paint);*/
     
     //Draw frame
-    paint.setColor(QConfig.VIEW_FINDER_FRAME_COLOR);
+    paint.setColor(frameColor);
     int third = (frame.right - frame.left) / 3;
     int weight = 5;
     canvas.drawRect(frame.left, frame.top, frame.left + third, frame.top + weight, paint);

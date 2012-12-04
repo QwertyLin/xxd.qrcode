@@ -3,37 +3,27 @@ package cn.xxd.qr;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.util.EnumMap;
-import java.util.Map;
-
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
-import cn.xxd.qr.service.UpdateUtil;
+import cn.xxd.qr.service.QrCodeEncodeService;
 
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
-import com.google.zxing.common.BitMatrix;
-import q.util.ActivityBase;
+import q.base.ActivityBase;
+import q.base.UiBaseHeader;
 import q.util.FileMgr;
-import q.util.QConfig;
+import q.util.IntentUtil;
 import q.util.QLog;
-import q.util.QUI;
 import q.util.WindowMgr;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.ClipboardManager;
-import android.view.Display;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -43,15 +33,14 @@ import android.widget.Toast;
 public class QrCodeA extends ActivityBase implements OnClickListener {
 	
 	public static final String EXTRA_QRCODE = "qrcode";
-	public static final String EXTRA_BUILD_COLOR = "color";
 	public static Bitmap SCAN_BITMAP;
 	
 	private QrCode qrcode;
-	private ImageView ivImage;
+	
 	private State state;
 	private Bitmap buildBitmap;
 	private FileMgr fileMgr;
-	private int buildColor;
+	private ImageView ivImage;
 	
 	private enum State {
 		IMAGE_SCAN, IMAGE_SRC, IMAGE_BUILD
@@ -63,14 +52,13 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		//UpdateUtil.check(this, false);
 		//
 		setContentView(R.layout.layout_qrcode);
-		QUI.baseHeaderBack(this, "");
+		UiBaseHeader.btnBack(this, "");
 		int height = WindowMgr.getInstance(this).getHeight();
 		//
 		fileMgr = FileMgr.getInstance(QrCodeA.this);
 		//
 		Intent intent = getIntent();
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
-		buildColor = intent.getIntExtra(EXTRA_BUILD_COLOR, 0xff0099CC);
 		initState(intent);
 		//
 		//
@@ -94,14 +82,11 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 			break;
 		}
 		//统计
-		QLog.event(this, QLog.EVENT_QRCODE, qrcode.getText());
+		QLog.event(this, QLog.EVENT_SCAN, qrcode.getText());
 	}
 		
 	private void initState(Intent intent){
-		if(qrcode.getTime() == 0){
-			state = State.IMAGE_BUILD;
-			initImageBuild();
-		}else if(qrcode.getId() == 0){
+		if(qrcode.getId() == 0){
 			state = State.IMAGE_SCAN;
 			initImageScan();
 		}else{
@@ -157,7 +142,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		new Thread(){
 			public void run() {
 				try {
-					buildBitmap = initImageEncode();
+					buildBitmap = QrCodeEncodeService.encode(QrCodeA.this, qrcode.getText(), 0xFF000000);
 					runOnUiThread(new Runnable() {
 						@Override
 						public void run() {
@@ -171,108 +156,53 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		}.start();
 	}
 	
-	private Bitmap initImageEncode() throws WriterException{
-		 WindowManager manager = (WindowManager) getSystemService(WINDOW_SERVICE);
-	    Display display = manager.getDefaultDisplay();
-	    int widthS = display.getWidth();
-	    int heightS = display.getHeight();
-	    int smallerDimension = widthS < heightS ? widthS : heightS;
-	    smallerDimension = smallerDimension * 7 / 8;
-	    //
-	    String contentsToEncode = qrcode.getText();
-	    if (contentsToEncode == null) {
-	      return null;
-	    }
-	    Map<EncodeHintType,Object> hints = null;
-	    String encoding = guessAppropriateEncoding(contentsToEncode);
-	    if (encoding != null) {
-	      hints = new EnumMap<EncodeHintType,Object>(EncodeHintType.class);
-	      hints.put(EncodeHintType.CHARACTER_SET, encoding);
-	    }
-	    MultiFormatWriter writer = new MultiFormatWriter();
-	    BitMatrix result = null;
-	    try {
-	      result = writer.encode(contentsToEncode, BarcodeFormat.QR_CODE, smallerDimension, smallerDimension, hints);
-	    } catch (IllegalArgumentException iae) {
-	      // Unsupported format
-	    	return null;
-	    }
-	    int width = result.getWidth();
-	    int height = result.getHeight();
-	    int[] pixels = new int[width * height];
-	    for (int y = 0; y < height; y++) {
-	      int offset = y * width;
-	      for (int x = 0; x < width; x++) {
-	    	  //TODO QR图颜色
-	    	  pixels[offset + x] = result.get(x, y) ? buildColor : QConfig.QR_IMAGE_BACK_COLOR; //pixels[offset + x] = result.get(x, y) ? BLACK : WHITE;
-	      }
-	    }
-	    Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
-	    bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
-	    return bitmap;
-	}
-	
-	private static String guessAppropriateEncoding(CharSequence contents) {
-	    for (int i = 0; i < contents.length(); i++) {
-	      if (contents.charAt(i) > 0xFF) {
-	        return "UTF-8";
-	      }
-	    }
-	    return null;
-	  }
-
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.qrcode_copy:
-			copy(qrcode.getText());
+			onClickCopy();
 			break;
 		case R.id.qrcode_share:
-			share();
+			onClickShare();
 			break;
 		case R.id.qrcode_website:
-			openURL(qrcode.getText());
-			break;
-		case R.id.qrcode_download:
+			onClickWebsite();
 			break;
 		}
 	}
 	
-	private void copy(String text){
+	private void onClickCopy(){
 		Toast.makeText(this, "已复制到剪贴板", Toast.LENGTH_SHORT).show();
 		ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-		clipboard.setText(text);
+		clipboard.setText(qrcode.getText());
+		//
+		QLog.event(this, QLog.EVENT_SCAN_COPY, "");
 	}
 	
-	private void share(){
-		Intent intent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).setType("image/*")//.setType("text/plain")
-				.putExtra(Intent.EXTRA_TEXT, "二维码分享: " + qrcode.getText() + "。来自www.xxd.cn");
+	private void onClickShare(){
+		String imagePath = null;
 		//
 		if(state == State.IMAGE_BUILD){
 			File temp = new File(fileMgr.getScan(0));
 			try {
 				buildBitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(temp));
-				intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(temp));
+				imagePath = temp.getAbsolutePath();
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
 		}else{
-			intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(fileMgr.getScan(qrcode.getTime()))));
+			imagePath = fileMgr.getScan(qrcode.getTime());
 		}
 		//
-		startActivity(Intent.createChooser(intent, "分享"));
+		IntentUtil.sendImage(this, "小小二维码分享：" + qrcode.getText(), imagePath);
+		//
+		QLog.event(this, QLog.EVENT_SCAN_SHARE, "");
 	}
 	
-	private void openURL(String url) {
-	    // Strangely, some Android browsers don't seem to register to handle HTTP:// or HTTPS://.
-	    // Lower-case these as it should always be OK to lower-case these schemes.
-	    if (url.startsWith("HTTP://")) {
-	      url = "http" + url.substring(4);
-	    } else if (url.startsWith("HTTPS://")) {
-	      url = "https" + url.substring(5);
-	    }
-	    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+	private void onClickWebsite(){
+		IntentUtil.openBrowser(this, qrcode.getText());
+		//
+		QLog.event(this, QLog.EVENT_SCAN_BROWSER, qrcode.getText());
 	}
-	
 	
 }

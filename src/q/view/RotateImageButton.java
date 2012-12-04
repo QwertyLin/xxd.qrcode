@@ -1,11 +1,8 @@
 package q.view;
 
-import cn.xxd.qr.R;
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 /**
@@ -19,9 +16,7 @@ public class RotateImageButton extends ImageButton {
 	
 	public RotateImageButton(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.qview);   
-		this.rotation = array.getFloat(R.styleable.qview_arg_float, 0);
-        array.recycle(); 	
+		this.rotation = -90;
 	}
 
 	/**

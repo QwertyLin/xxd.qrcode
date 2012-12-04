@@ -52,6 +52,10 @@ public class FileMgr {
 	}
 	
 	public String getScan(long time){
-		return get("scan") + time + ".jpg";
+		return get("scan") + time + ".png";
+	}
+	
+	public String getNew(long time){
+		return get("new") + time + ".png";
 	}
 }

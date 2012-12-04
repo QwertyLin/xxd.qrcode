@@ -2,6 +2,8 @@ package cn.xxd.qr.adapter;
 
 import java.util.List;
 
+import q.base.AdapterBase;
+
 import cn.xxd.qr.R;
 import cn.xxd.qr.R.id;
 import cn.xxd.qr.R.layout;
@@ -10,7 +12,6 @@ import cn.xxd.qr.bean.QrCode;
 import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
-import q.util.AdapterBase;
 
 public class HistoryAdapter extends AdapterBase<QrCode, HistoryAdapter.Holder> {
 

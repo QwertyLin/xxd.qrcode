@@ -39,7 +39,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import java.io.IOException;
 
-import q.util.ActivityBase;
+import q.base.ActivityBase;
 import q.util.QConfig;
 import q.util.QLog;
 
