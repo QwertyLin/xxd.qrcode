@@ -3,8 +3,6 @@ cn.xxd.qr.AboutA: AboutA()
 cn.xxd.qr.AboutA: void onClick(android.view.View)
 cn.xxd.qr.CaptureActivity
 cn.xxd.qr.CaptureActivity: CaptureActivity()
-cn.xxd.qr.ColorDialog
-cn.xxd.qr.ColorDialog: ColorDialog()
 cn.xxd.qr.HistoryA
 cn.xxd.qr.HistoryA: HistoryA()
 cn.xxd.qr.MainA
@@ -1695,11 +1693,9 @@ net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeS
 net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
 net.youmi.android.YoumiReceiver
 net.youmi.android.YoumiReceiver: YoumiReceiver()
-q.util.ActivityBase
-q.util.ActivityBase: ActivityBase()
+q.base.ActivityBase
+q.base.ActivityBase: ActivityBase()
+q.out.ColorDialog
 q.util.ActivityDialogBase
-q.util.ActivityDialogBase: ActivityDialogBase()
 q.view.RotateImageButton
 q.view.RotateImageButton: RotateImageButton(android.content.Context,android.util.AttributeSet)
-q.view.RotateTextView
-q.view.RotateTextView: RotateTextView(android.content.Context,android.util.AttributeSet)

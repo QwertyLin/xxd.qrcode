@@ -6,7 +6,6 @@ import q.base.AdapterBase;
 
 
 import cn.xxd.qr.R;
-import cn.xxd.qr.bean.Color;
 
 import android.content.Context;
 import android.view.View;

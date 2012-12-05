@@ -77,14 +77,5 @@
 	        android:src="@drawable/a_location_web_site_dark"
 	        android:visibility="gone"
 	        />
-	    <ImageButton 
-	        android:id="@+id/qrcode_download"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_av_download_dark"
-	        android:visibility="gone"
-	        />
 	</LinearLayout>
 </LinearLayout>

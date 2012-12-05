@@ -41,14 +41,6 @@ cn.xxd.qr.CaptureActivity -> cn.xxd.qr.CaptureActivity:
     void displayFrameworkBugMessageAndExit() -> e
     void resetStatusView() -> f
     void drawViewfinder() -> d
-cn.xxd.qr.ColorDialog -> cn.xxd.qr.ColorDialog:
-    java.util.List colors -> d
-    void onCreate(android.os.Bundle) -> onCreate
-    android.view.View initView() -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-cn.xxd.qr.ColorDialog$1 -> cn.xxd.qr.c:
-    cn.xxd.qr.ColorDialog this$0 -> a
-    void onClick(android.view.View) -> onClick
 cn.xxd.qr.HistoryA -> cn.xxd.qr.HistoryA:
     java.util.List datas -> a
     cn.xxd.qr.adapter.HistoryAdapter adapter -> b
@@ -61,83 +53,88 @@ cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
     void onCreate(android.os.Bundle) -> onCreate
 cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
     int mColor -> a
-    android.view.View vColor -> b
-    android.widget.EditText vText -> c
+    java.lang.String mText -> b
+    long time -> c
+    android.graphics.Bitmap qrBitmap -> d
+    android.widget.RadioGroup vColor -> e
+    android.widget.TextView vText -> f
+    android.widget.ImageView vImg -> g
+    android.view.View vInputLayout -> h
+    android.widget.EditText vInputText -> i
     void onCreate(android.os.Bundle) -> onCreate
     void onPause() -> onPause
     void onClick(android.view.View) -> onClick
-    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
-    void access$0(cn.xxd.qr.NewA) -> a
-cn.xxd.qr.NewA$1 -> cn.xxd.qr.d:
+    void onClickInputCancel() -> a
+    void onEncode() -> b
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void access$0(cn.xxd.qr.NewA,int) -> a
+    void access$1(cn.xxd.qr.NewA) -> a
+    java.lang.String access$2(cn.xxd.qr.NewA) -> b
+    int access$3(cn.xxd.qr.NewA) -> c
+    void access$4(cn.xxd.qr.NewA,android.graphics.Bitmap) -> a
+    android.widget.ImageView access$5(cn.xxd.qr.NewA) -> d
+    android.graphics.Bitmap access$6(cn.xxd.qr.NewA) -> e
+cn.xxd.qr.NewA$1 -> cn.xxd.qr.c:
     cn.xxd.qr.NewA this$0 -> a
-    void onClick(android.view.View) -> onClick
+    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+cn.xxd.qr.NewA$2 -> cn.xxd.qr.d:
+    cn.xxd.qr.NewA this$0 -> a
+    void run() -> run
+    cn.xxd.qr.NewA access$0(cn.xxd.qr.NewA$2) -> a
+cn.xxd.qr.NewA$2$1 -> cn.xxd.qr.e:
+    cn.xxd.qr.NewA$2 this$1 -> a
+    void run() -> run
 cn.xxd.qr.QrCodeA -> cn.xxd.qr.QrCodeA:
     android.graphics.Bitmap SCAN_BITMAP -> a
     cn.xxd.qr.bean.QrCode qrcode -> b
-    android.widget.ImageView ivImage -> c
-    cn.xxd.qr.QrCodeA$State state -> d
-    android.graphics.Bitmap buildBitmap -> e
-    q.util.FileMgr fileMgr -> f
-    int buildColor -> g
-    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> h
+    cn.xxd.qr.QrCodeA$State state -> c
+    android.graphics.Bitmap buildBitmap -> d
+    q.util.FileMgr fileMgr -> e
+    android.widget.ImageView ivImage -> f
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> g
     void onCreate(android.os.Bundle) -> onCreate
-    android.graphics.Bitmap initImageEncode() -> a
     void onClick(android.view.View) -> onClick
-    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType() -> b
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType() -> a
     cn.xxd.qr.bean.QrCode access$1(cn.xxd.qr.QrCodeA) -> a
     android.widget.ImageView access$2(cn.xxd.qr.QrCodeA) -> b
-    android.graphics.Bitmap access$3(cn.xxd.qr.QrCodeA) -> c
-    void access$4(cn.xxd.qr.QrCodeA,android.graphics.Bitmap) -> a
-    android.graphics.Bitmap access$5(cn.xxd.qr.QrCodeA) -> d
-cn.xxd.qr.QrCodeA$1 -> cn.xxd.qr.e:
+    void access$3(cn.xxd.qr.QrCodeA,android.graphics.Bitmap) -> a
+    android.graphics.Bitmap access$4(cn.xxd.qr.QrCodeA) -> c
+cn.xxd.qr.QrCodeA$1 -> cn.xxd.qr.f:
     cn.xxd.qr.QrCodeA this$0 -> a
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$1) -> a
-cn.xxd.qr.QrCodeA$1$1 -> cn.xxd.qr.f:
+cn.xxd.qr.QrCodeA$1$1 -> cn.xxd.qr.g:
     cn.xxd.qr.QrCodeA$1 this$1 -> a
     android.graphics.Bitmap val$bm -> b
     void run() -> run
-cn.xxd.qr.QrCodeA$2 -> cn.xxd.qr.g:
+cn.xxd.qr.QrCodeA$2 -> cn.xxd.qr.h:
     cn.xxd.qr.QrCodeA this$0 -> a
     java.io.File val$imageFile -> b
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$2) -> a
-cn.xxd.qr.QrCodeA$2$1 -> cn.xxd.qr.h:
+cn.xxd.qr.QrCodeA$2$1 -> cn.xxd.qr.i:
     cn.xxd.qr.QrCodeA$2 this$1 -> a
     android.graphics.Bitmap val$bm -> b
     void run() -> run
-cn.xxd.qr.QrCodeA$3 -> cn.xxd.qr.i:
+cn.xxd.qr.QrCodeA$3 -> cn.xxd.qr.j:
     cn.xxd.qr.QrCodeA this$0 -> a
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$3) -> a
-cn.xxd.qr.QrCodeA$3$1 -> cn.xxd.qr.j:
+cn.xxd.qr.QrCodeA$3$1 -> cn.xxd.qr.k:
     cn.xxd.qr.QrCodeA$3 this$1 -> a
     void run() -> run
-cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.k:
+cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.l:
     cn.xxd.qr.QrCodeA$State IMAGE_SCAN -> a
     cn.xxd.qr.QrCodeA$State IMAGE_SRC -> b
     cn.xxd.qr.QrCodeA$State IMAGE_BUILD -> c
     cn.xxd.qr.QrCodeA$State[] ENUM$VALUES -> d
     cn.xxd.qr.QrCodeA$State[] values() -> values
     cn.xxd.qr.QrCodeA$State valueOf(java.lang.String) -> valueOf
-cn.xxd.qr.R -> cn.xxd.qr.l:
-cn.xxd.qr.R$styleable -> cn.xxd.qr.m:
-    int[] qview -> a
-cn.xxd.qr.adapter.ColorAdapter -> cn.xxd.qr.a.a:
-    int mCurColor -> d
+cn.xxd.qr.adapter.HistoryAdapter -> cn.xxd.qr.a.a:
     int getLayoutId() -> a
     java.lang.Object getHolder(android.view.View) -> a
     void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
-cn.xxd.qr.adapter.ColorAdapter$Holder -> cn.xxd.qr.a.b:
-    android.widget.TextView vName -> a
-    android.view.View vColor -> b
-    android.widget.RadioButton vCheck -> c
-    cn.xxd.qr.adapter.ColorAdapter this$0 -> d
-cn.xxd.qr.adapter.HistoryAdapter -> cn.xxd.qr.a.c:
-    int getLayoutId() -> a
-    java.lang.Object getHolder(android.view.View) -> a
-    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
-cn.xxd.qr.adapter.HistoryAdapter$Holder -> cn.xxd.qr.a.d:
+cn.xxd.qr.adapter.HistoryAdapter$Holder -> cn.xxd.qr.a.b:
     android.widget.TextView tvText -> a
     android.widget.TextView tvTime -> b
     cn.xxd.qr.adapter.HistoryAdapter this$0 -> c
@@ -164,27 +161,8 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.c:
     java.lang.String getTimeStr() -> d
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-cn.xxd.qr.service.UpdateUtil -> cn.xxd.qr.c.a:
-    void check$1a552341(android.content.Context) -> a
-cn.xxd.qr.service.UpdateUtil$1 -> cn.xxd.qr.c.b:
-    android.content.Context val$ctx -> a
-    boolean val$visible -> b
-    android.app.ProgressDialog val$pd -> c
-    void run() -> run
-cn.xxd.qr.service.UpdateUtil$1$1 -> cn.xxd.qr.c.c:
-    cn.xxd.qr.service.UpdateUtil$1 this$1 -> a
-    java.lang.String val$result -> b
-    android.content.Context val$ctx -> c
-    void run() -> run
-cn.xxd.qr.service.UpdateUtil$1$1$1 -> cn.xxd.qr.c.d:
-    cn.xxd.qr.service.UpdateUtil$1$1 this$2 -> a
-    android.content.Context val$ctx -> b
-    java.lang.String[] val$rs -> c
-    void onClick(android.content.DialogInterface,int) -> onClick
-cn.xxd.qr.service.UpdateUtil$1$2 -> cn.xxd.qr.c.e:
-    cn.xxd.qr.service.UpdateUtil$1 this$1 -> a
-    android.content.Context val$ctx -> b
-    void run() -> run
+cn.xxd.qr.service.QrCodeEncodeService -> cn.xxd.qr.c.a:
+    android.graphics.Bitmap encode(android.content.Context,java.lang.String,int) -> a
 com.baidu.mobstat.SendStrategyEnum -> com.baidu.mobstat.a:
     com.baidu.mobstat.SendStrategyEnum APP_START -> a
     com.baidu.mobstat.SendStrategyEnum ONCE_A_DAY -> b
@@ -696,10 +674,11 @@ com.google.zxing.client.android.ViewfinderView -> com.google.zxing.client.androi
     android.graphics.Paint paint -> c
     int maskColor -> d
     int laserColor -> e
-    int resultPointColor -> f
-    int scannerAlpha -> g
-    java.util.List possibleResultPoints -> h
-    java.util.List lastPossibleResultPoints -> i
+    int frameColor -> f
+    int resultPointColor -> g
+    int scannerAlpha -> h
+    java.util.List possibleResultPoints -> i
+    java.util.List lastPossibleResultPoints -> j
     void setCameraManager(com.google.zxing.client.android.camera.CameraManager) -> a
     void onDraw(android.graphics.Canvas) -> onDraw
     void drawViewfinder() -> a
@@ -4771,18 +4750,12 @@ net.youmi.android.z -> net.youmi.android.hp:
     void a() -> a
     void d() -> d
     android.view.View b() -> b
-q.util.ActivityBase -> q.util.ActivityBase:
+q.base.ActivityBase -> q.base.ActivityBase:
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     void onPause() -> onPause
     void addToBaseLayout(android.view.View) -> a
-q.util.ActivityDialogBase -> q.util.ActivityDialogBase:
-    android.view.View vOk -> a
-    android.view.View vClose -> b
-    android.view.View vCancel -> c
-    void onCreate(android.os.Bundle) -> onCreate
-    android.view.View initView() -> a
-q.util.AdapterBase -> q.util.a:
+q.base.AdapterBase -> q.base.a:
     java.util.List mDatas -> a
     android.content.Context mCtx -> b
     android.view.LayoutInflater mInflater -> c
@@ -4793,36 +4766,66 @@ q.util.AdapterBase -> q.util.a:
     int getLayoutId() -> a
     java.lang.Object getHolder(android.view.View) -> a
     void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
+q.base.R -> q.base.b:
+q.base.R$drawable -> q.base.c:
+    int a_navigation_back -> a
+q.base.R$id -> q.base.d:
+    int base_header_btn_left -> a
+    int base_header_text -> b
+    int base_layout -> c
+q.base.UiBaseHeader -> q.base.e:
+    void btnBack(android.app.Activity,java.lang.String) -> a
+q.base.UiBaseHeader$1 -> q.base.f:
+    android.app.Activity val$act -> a
+    void onClick(android.view.View) -> onClick
+q.out.ColorAdapter -> q.out.a:
+    int mCurColor -> d
+    int getLayoutId() -> a
+    java.lang.Object getHolder(android.view.View) -> a
+    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
+q.out.ColorAdapter$Holder -> q.out.b:
+    android.widget.TextView vName -> a
+    android.view.View vColor -> b
+    android.widget.RadioButton vCheck -> c
+    q.out.ColorAdapter this$0 -> d
+q.out.ColorDialog -> q.out.ColorDialog:
+    java.util.List colors -> d
+    void onCreate(android.os.Bundle) -> onCreate
+    android.view.View initView() -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+q.out.ColorDialog$1 -> q.out.c:
+    q.out.ColorDialog this$0 -> a
+    void onClick(android.view.View) -> onClick
+q.util.ActivityDialogBase -> q.util.ActivityDialogBase:
+    android.view.View vOk -> a
+    android.view.View vClose -> b
+    android.view.View vCancel -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    android.view.View initView() -> a
+q.util.AppUtil -> q.util.a:
+    java.lang.String getChannel(android.content.Context) -> a
 q.util.BitmapUtil -> q.util.b:
     boolean save(android.graphics.Bitmap,java.lang.String) -> a
 q.util.FileMgr -> q.util.c:
     q.util.FileMgr nInstance -> a
     java.lang.String nRoot -> b
     q.util.FileMgr getInstance(android.content.Context) -> a
-    java.lang.String getScan(long) -> a
-q.util.QHttpUtil -> q.util.d:
     java.lang.String get(java.lang.String) -> a
-    java.lang.String get(java.lang.String,java.lang.String) -> a
-    javax.net.ssl.HttpsURLConnection initHttpsConn(java.net.URL) -> a
-q.util.QHttpUtil$1 -> q.util.e:
-    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
-    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
-    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
-q.util.QHttpUtil$2 -> q.util.f:
-    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
-q.util.QLog -> q.util.g:
+    java.lang.String getScan(long) -> a
+    java.lang.String getNew(long) -> b
+q.util.InputMethodUtil -> q.util.d:
+    void hide(android.content.Context,android.view.View) -> a
+q.util.IntentUtil -> q.util.e:
+    void openBrowser(android.content.Context,java.lang.String) -> a
+    void sendImage(android.content.Context,java.lang.String,java.lang.String) -> a
+q.util.QLog -> q.util.f:
     boolean available -> a
-    void event$3f52113a(android.content.Context,java.lang.String) -> a
+    void event(android.content.Context,int,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,int) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,float) -> a
     void log(java.lang.Object,java.lang.String) -> a
-q.util.QUI -> q.util.h:
-    void baseHeaderBack(android.app.Activity,java.lang.String) -> a
-q.util.QUI$1 -> q.util.i:
-    android.app.Activity val$act -> a
-    void onClick(android.view.View) -> onClick
-q.util.SqliteBase -> q.util.j:
+q.util.SqliteBase -> q.util.g:
     android.database.sqlite.SQLiteDatabase db -> a
     java.lang.String tableName -> b
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
@@ -4832,8 +4835,8 @@ q.util.SqliteBase -> q.util.j:
     void insert(q.util.SqliteBase$ISqlite) -> b
     java.lang.String getSqlCreateTable() -> a
     android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
-q.util.SqliteBase$ISqlite -> q.util.k:
-q.util.WindowMgr -> q.util.l:
+q.util.SqliteBase$ISqlite -> q.util.h:
+q.util.WindowMgr -> q.util.i:
     q.util.WindowMgr nInstance -> a
     int nWidth -> b
     int nHeight -> c
@@ -4875,12 +4878,6 @@ q.view.EndlessListViewHelper$OnEndlessListViewListener -> q.view.e:
     boolean onEndlessListViewBackground() -> a
     void onEndlessListViewSuccess() -> b
 q.view.RotateImageButton -> q.view.RotateImageButton:
-    float rotation -> a
-    float width -> b
-    float height -> c
-    void onDraw(android.graphics.Canvas) -> onDraw
-    void onLayout(boolean,int,int,int,int) -> onLayout
-q.view.RotateTextView -> q.view.RotateTextView:
     float rotation -> a
     float width -> b
     float height -> c

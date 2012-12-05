@@ -37,7 +37,7 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 		//
         ListView lv = (ListView)getLayoutInflater().inflate(R.layout.base_list, null);
         addToBaseLayout(lv);
-        new EndlessListViewHelper(lv, getLayoutInflater().inflate(R.layout.layout_history_footer, null), this).setEnable(true);
+        new EndlessListViewHelper(lv, getLayoutInflater().inflate(R.layout.base_more, null), this).setEnable(true);
         adapter = new HistoryAdapter(this, datas);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);

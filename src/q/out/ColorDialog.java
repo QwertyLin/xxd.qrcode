@@ -5,7 +5,6 @@ import java.util.List;
 
 import cn.xxd.qr.R;
 import cn.xxd.qr.R.layout;
-import cn.xxd.qr.bean.Color;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,6 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import q.util.ActivityDialogBase;
 
 public class ColorDialog extends ActivityDialogBase implements OnItemClickListener {
 	

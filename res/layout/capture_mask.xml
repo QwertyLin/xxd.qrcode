@@ -21,7 +21,7 @@
            android:layout_height="0dip"
            android:layout_weight="1"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_device_access_flash_on_x"
+           android:src="@drawable/capture_flash_on"
            />
        <View 
            android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
            android:layout_height="0dip"
            android:layout_weight="1"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_action_about_x"
+           android:src="@drawable/capture_about"
            />
        <ImageButton 
            android:id="@+id/capture_history"
@@ -51,7 +51,7 @@
            android:layout_height="0dip"
            android:layout_weight="1"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_collections_view_as_list_x"
+           android:src="@drawable/capture_history"
            />
        <ImageButton 
            android:id="@+id/capture_new"
@@ -59,7 +59,7 @@
            android:layout_height="0dip"
            android:layout_weight="1"
            android:background="@drawable/base_btn_bg"
-           android:src="@drawable/a_content_picture_x"
+           android:src="@drawable/capture_new"
            />
    </LinearLayout>
 </FrameLayout>

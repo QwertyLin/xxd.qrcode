@@ -19,7 +19,7 @@ public class MainA extends Activity {
 		//startService(new Intent(this, UpdateService.class).putExtra(UpdateService.EXTRA_URL, "http://www.xxd.cn/test.apk"));
 		//intent
 
-		//tempInitHistoryData();
+		tempInitHistoryData();
 		//startActivity(new Intent(this, NewA.class));
 		startActivity(new Intent(this, CaptureActivity.class));
 		//startActivity(new Intent(this, ColorDialog.class));
@@ -35,7 +35,7 @@ public class MainA extends Activity {
 	private void tempInitHistoryData(){
 		HistoryDb db = new HistoryDb(this);
 		db.open(true);
-		for(int i = 1; i < 10; i++){
+		for(int i = 1; i < 50; i++){
 			QrCode item = new QrCode();
 			item.setText(String.valueOf(i));
 			item.setTime(new Date().getTime());

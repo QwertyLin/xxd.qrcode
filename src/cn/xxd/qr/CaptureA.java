@@ -65,9 +65,9 @@ public class CaptureA implements OnClickListener {
 	private void onClickFlash(){
 		isFlashOn = !isFlashOn;
 		if(isFlashOn){
-			btnFlash.setImageResource(R.drawable.a_device_access_flash_off_x);
+			btnFlash.setImageResource(R.drawable.capture_flash_off);
 		}else{
-			btnFlash.setImageResource(R.drawable.a_device_access_flash_on_x);
+			btnFlash.setImageResource(R.drawable.capture_flash_on);
 		}
 		mCameraMgr.setTorch(isFlashOn);
 	}
