@@ -21,7 +21,7 @@ import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.widget.Toast;
 
-import cn.xxd.qr.CaptureActivity;
+import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
 
 import com.google.zxing.client.android.common.executor.AsyncTaskExecInterface;

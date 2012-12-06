@@ -19,9 +19,9 @@ public class MainA extends Activity {
 		//startService(new Intent(this, UpdateService.class).putExtra(UpdateService.EXTRA_URL, "http://www.xxd.cn/test.apk"));
 		//intent
 
-		tempInitHistoryData();
+		//tempInitHistoryData();
 		//startActivity(new Intent(this, NewA.class));
-		startActivity(new Intent(this, CaptureActivity.class));
+		startActivity(new Intent(this, HomeA.class));
 		//startActivity(new Intent(this, ColorDialog.class));
 		//startActivity(new Intent(this, UpdateA.class));
 		//startActivity(new Intent(this, GuideA.class));

@@ -21,7 +21,7 @@ public class AboutA extends ActivityBase implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
-		UiBaseHeader.btnBack(this, getString(R.string.about));
+		UiBaseHeader.text(this, getString(R.string.about));
 		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_about, null));
 		//
 		initVersion();

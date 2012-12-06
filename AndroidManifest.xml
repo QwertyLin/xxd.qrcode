@@ -66,14 +66,14 @@
       </activity>
       
       <activity android:name=".HomeA" android:screenOrientation="portrait"  />
-               
+      <activity android:name=".ScanA" android:screenOrientation="portrait"  />
       <activity android:name=".QrCodeA" android:screenOrientation="portrait"  />
       <activity android:name=".NewA" android:screenOrientation="portrait"  />
       <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
       <activity android:name=".SettingA" android:screenOrientation="portrait"  />
       <activity android:name=".AboutA" android:screenOrientation="portrait"  />
                   
-    <activity android:name=".CaptureActivity"
+    <activity android:name=".CaptureA"
               android:screenOrientation="landscape"
               android:clearTaskOnLaunch="true"
               android:stateNotNeeded="true"

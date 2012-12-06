@@ -28,7 +28,7 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
 		//
-		UiBaseHeader.btnBack(this, "扫描历史");
+		UiBaseHeader.text(this, getString(R.string.history_title));
 		//
 		HistoryDb db = new HistoryDb(this);
 		db.open(false);

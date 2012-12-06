@@ -16,7 +16,7 @@
 
 package com.google.zxing.client.android;
 
-import cn.xxd.qr.CaptureActivity;
+import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
 
 import com.google.zxing.Result;
@@ -37,7 +37,7 @@ public final class CaptureActivityHandler extends Handler {
 
   private static final String TAG = CaptureActivityHandler.class.getSimpleName();
 
-  private final CaptureActivity activity;
+  private final CaptureA activity;
   private final DecodeThread decodeThread;
   private State state;
   private final CameraManager cameraManager;
@@ -48,7 +48,7 @@ public final class CaptureActivityHandler extends Handler {
     DONE
   }
 
-  public CaptureActivityHandler(CaptureActivity activity,
+  public CaptureActivityHandler(CaptureA activity,
                          CameraManager cameraManager) {
     this.activity = activity;
     decodeThread = new DecodeThread(activity, 

@@ -30,7 +30,9 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"/>
   
-  <include layout="@layout/capture_mask"/>
+  <include layout="@layout/layout_capture_2"/>
+  
+  <include layout="@layout/layout_capture_tab"/>
 
 
 </FrameLayout>

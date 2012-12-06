@@ -16,6 +16,17 @@
  -->
 <resources>
   <string name="app_name">小小二维码</string>
+  
+  <string name="home_scan">扫描</string>
+  <string name="home_history">历史</string>  
+  <string name="home_new">生成</string>
+  <string name="home_about">关于</string>
+  
+  <string name="history_title">扫描历史</string>
+  <string name="new_title">生成二维码</string>
+  <string name="qrcode_title">扫描结果</string>
+  
+  
   <string name="app_picker_name">应用</string>
   <string name="bookmark_picker_name">书签</string>
   <string name="button_add_calendar">添加事件至日历</string>
@@ -56,7 +67,6 @@
   <string name="history_empty">空的</string>
   <string name="history_empty_detail">没有条码扫描已记录</string>
   <string name="history_send">发送历史</string>
-  <string name="history_title">历史</string>
   <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>
   <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
   <string name="msg_default_format">格式</string>

@@ -17,7 +17,7 @@
 package com.google.zxing.client.android;
 
 import android.graphics.Bitmap;
-import cn.xxd.qr.CaptureActivity;
+import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
 
 import com.google.zxing.BinaryBitmap;
@@ -43,11 +43,11 @@ final class DecodeHandler extends Handler {
 
   private static final String TAG = DecodeHandler.class.getSimpleName();
 
-  private final CaptureActivity activity;
+  private final CaptureA activity;
   private final MultiFormatReader multiFormatReader;
   private boolean running = true;
 
-  DecodeHandler(CaptureActivity activity, Map<DecodeHintType,Object> hints) {
+  DecodeHandler(CaptureA activity, Map<DecodeHintType,Object> hints) {
     multiFormatReader = new MultiFormatReader();
     multiFormatReader.setHints(hints);
     this.activity = activity;

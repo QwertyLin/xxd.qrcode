@@ -163,7 +163,7 @@ public final class CameraManager {
   }
 
   /**
-   * Convenience method for {@link cn.xxd.qr.CaptureActivity}
+   * Convenience method for {@link cn.xxd.qr.CaptureA}
    */
   public synchronized void setTorch(boolean newSetting) {
     if (camera != null) {

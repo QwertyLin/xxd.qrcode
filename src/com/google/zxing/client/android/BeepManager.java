@@ -28,11 +28,11 @@ import java.io.IOException;
 
 import q.util.QConfig;
 
-import cn.xxd.qr.CaptureActivity;
+import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
 
 /**
- * Manages beeps and vibrations for {@link CaptureActivity}.
+ * Manages beeps and vibrations for {@link CaptureA}.
  */
 public final class BeepManager {
 

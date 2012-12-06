@@ -49,10 +49,10 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//UpdateUtil.check(this, false);
+		setContentView(R.layout.base_layout);
+		UiBaseHeader.btnBack(this, getString(R.string.qrcode_title));
+		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_qrcode, null));
 		//
-		setContentView(R.layout.layout_qrcode);
-		UiBaseHeader.btnBack(this, "");
 		int height = WindowMgr.getInstance(this).getHeight();
 		//
 		fileMgr = FileMgr.getInstance(QrCodeA.this);

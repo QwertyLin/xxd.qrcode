@@ -8,6 +8,7 @@ import java.util.Calendar;
 import com.google.zxing.WriterException;
 
 import cn.xxd.qr.service.QrCodeEncodeService;
+import cn.xxd.qr.view.UiBaseHeader;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -21,7 +22,6 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 import q.base.ActivityBase;
-import q.base.UiBaseHeader;
 import q.util.FileMgr;
 import q.util.InputMethodUtil;
 import q.util.IntentUtil;
@@ -47,7 +47,18 @@ public class NewA extends ActivityBase implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.base_layout);
-		UiBaseHeader.btnBack(this, "生成二维码");
+		UiBaseHeader.btnSaveShare(this, getString(R.string.new_title), 
+			new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					onClickSave();
+				}
+			}, new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					onClickShare();
+				}
+			});
 		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_new, null));
 		//
 		vText = (TextView)findViewById(R.id.new_text); vText.setText(mText);
@@ -59,8 +70,6 @@ public class NewA extends ActivityBase implements OnClickListener {
 		findViewById(R.id.new_text).setOnClickListener(this);
 		findViewById(R.id.base_dialog_footer_ok).setOnClickListener(this);
 		findViewById(R.id.base_dialog_footer_cancel).setOnClickListener(this);
-		findViewById(R.id.new_save).setOnClickListener(this);
-		findViewById(R.id.new_share).setOnClickListener(this);
 		//
 		vColor.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			@Override
@@ -90,12 +99,6 @@ public class NewA extends ActivityBase implements OnClickListener {
 			break;
 		case R.id.base_dialog_footer_cancel:
 			onClickInputCancel();
-			break;
-		case R.id.new_save:
-			onClickSave();
-			break;
-		case R.id.new_share:
-			onClickShare();
 			break;
 		}
 	}
