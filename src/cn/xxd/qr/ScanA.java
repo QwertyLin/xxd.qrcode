@@ -17,6 +17,7 @@ public class ScanA extends Activity {
 		if(HomeA.GO_TO_SCAN){
 			HomeA.GO_TO_SCAN = false;
 			startActivity(new Intent(this, CaptureA.class));
+			HomeA.HOME_A.getRadioGroup().check(HomeA.POSITION);
 		}
 	}
 	

@@ -15,9 +15,9 @@
 	        android:layout_height="fill_parent"
 	        android:orientation="vertical"
 	        >
-	        <com.zhuamob.android.ZhuamobLayout
+	        <!-- <com.zhuamob.android.ZhuamobLayout
 		    	android:layout_width="fill_parent"
-		    	android:layout_height="wrap_content"/>
+		    	android:layout_height="wrap_content"/> -->
 
 	        <ImageView 
 		        android:id="@+id/qrcode_img"

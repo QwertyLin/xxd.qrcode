@@ -20,7 +20,7 @@
             />
         <cn.xxd.qr.view.CaptureTabButton 
             style="@style/QTabBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@null"
             android:text="@string/home_about"
@@ -40,7 +40,7 @@
             />
         <cn.xxd.qr.view.CaptureTabButton 
             style="@style/QTabBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@null"
             android:text="@string/home_new"
@@ -60,7 +60,7 @@
             />
         <cn.xxd.qr.view.CaptureTabButton 
             style="@style/QTabBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@null"
             android:text="@string/home_history"
@@ -80,7 +80,7 @@
             />
         <cn.xxd.qr.view.CaptureTabButton 
             style="@style/QTabBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@null"
             android:text="@string/home_scan"
@@ -104,17 +104,7 @@
         <View 
             android:layout_width="1dip"
             android:layout_height="0dip"
-            android:layout_weight="1"
-            />
-        <View 
-            android:layout_width="1dip"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            />
-        <View 
-            android:layout_width="1dip"
-            android:layout_height="0dip"
-            android:layout_weight="1"
+            android:layout_weight="3"
             />
         <View 
             android:layout_width="1dip"

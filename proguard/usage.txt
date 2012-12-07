@@ -1,6 +1,10 @@
 android.annotation.SuppressLint
 android.annotation.TargetApi
 cn.xxd.qr.BuildConfig
+cn.xxd.qr.CaptureA:
+    302:307:public void restartPreviewAfterDelay(long)
+cn.xxd.qr.HomeA:
+    public static final int DEFUALT_POSITION
 cn.xxd.qr.MainA:
     36:45:private void tempInitHistoryData()
 cn.xxd.qr.NewA:
@@ -17,22 +21,20 @@ cn.xxd.qr.R$layout
 cn.xxd.qr.R$raw
 cn.xxd.qr.R$string
 cn.xxd.qr.R$style
-cn.xxd.qr.bean.Color:
-    19:20:public void setName(java.lang.String)
-    25:26:public void setColor(int)
 cn.xxd.qr.bean.HistoryDb:
     private static final int PAGE_COUNT
     46:46:public java.util.List queryAll()
     1:1:protected bridge synthetic q.util.SqliteBase$ISqlite buildEntity(android.database.Cursor)
 cn.xxd.qr.bean.QrCode:
     private static final long serialVersionUID
+cn.xxd.qr.service.CaptureTabInitService:
+    9:9:public CaptureTabInitService()
 cn.xxd.qr.service.QrCodeEncodeService:
     17:17:public QrCodeEncodeService()
-cn.xxd.qr.service.UpdateUtil
-cn.xxd.qr.service.UpdateUtil$1
-cn.xxd.qr.service.UpdateUtil$1$1
-cn.xxd.qr.service.UpdateUtil$1$1$1
-cn.xxd.qr.service.UpdateUtil$1$2
+cn.xxd.qr.view.CaptureTabButton:
+    30:31:public void setRotate(float)
+cn.xxd.qr.view.UiBaseHeader:
+    9:9:public UiBaseHeader()
 com.baidu.mobstat.StatService:
     public static final int EXCEPTION_LOG
     public StatService()
@@ -52,11 +54,6 @@ com.baidu.mobstat.g:
     public void a(int)
     public void a(android.content.Context,com.baidu.mobstat.SendStrategyEnum,int,boolean)
     public void a(boolean,android.content.Context)
-com.cnzz.mobile.zhuamob.DeviceAgent:
-    public DeviceAgent()
-    public static java.lang.String getPublicKey(android.content.Context)
-com.cnzz.mobile.zhuamob.MobileProbe:
-    public MobileProbe()
 com.google.zxing.Binarizer:
     public abstract com.google.zxing.common.BitArray getBlackRow(int,com.google.zxing.common.BitArray)
     public abstract com.google.zxing.Binarizer createBinarizer(com.google.zxing.LuminanceSource)
@@ -370,22 +367,32 @@ com.google.zxing.qrcode.encoder.QRCode:
     46:46:public com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getECLevel()
     50:50:public com.google.zxing.qrcode.decoder.Version getVersion()
     54:54:public int getMaskPattern()
-net.youmi.android.AdManager:
-    public AdManager()
-    public static void disableUpdateApp()
-    public static void setDonotClearWebViewCache()
+net.youmi.android.AdManager
 net.youmi.android.AdView:
     public AdView(android.app.Activity)
+    public AdView(android.app.Activity,int,int,int)
     void a(android.app.Activity)
+    void a(android.app.Activity,int,int,int)
+    public void setAdViewListener(net.youmi.android.AdViewListener)
     public void refreshAd()
     void e()
     void f()
 net.youmi.android.ae
 net.youmi.android.af
 net.youmi.android.ag:
+    static void a(boolean)
+    static void a(java.lang.String)
+    static java.lang.String b()
+    static void b(java.lang.String)
+    static void a(int)
+    static int c()
     static void f()
     static void g()
+net.youmi.android.ai:
+    static java.lang.String f()
 net.youmi.android.an
+net.youmi.android.bb:
+    static void a(android.content.Context)
 net.youmi.android.bi
 net.youmi.android.bn
 net.youmi.android.bv
@@ -437,6 +444,8 @@ net.youmi.android.fz:
 net.youmi.android.gb:
     public void a(java.lang.String,int,java.lang.String)
 net.youmi.android.gz:
+    public static void a(java.lang.String)
+    private static void a(java.lang.String,java.lang.String)
     public static void d(java.lang.String)
     private static void c(java.lang.String,java.lang.String)
     public static void e(java.lang.String)
@@ -452,49 +461,38 @@ q.base.R$attr
 q.base.R$color
 q.base.R$dimen
 q.base.R$drawable:
-    public static final int a_action_about_x
-    public static final int a_av_download_dark
-    public static final int a_collections_view_as_list_x
     public static final int a_content_copy_dark
     public static final int a_content_edit_m
-    public static final int a_content_picture_x
-    public static final int a_content_save_dark
-    public static final int a_device_access_flash_off_x
-    public static final int a_device_access_flash_on_x
+    public static final int a_content_save
     public static final int a_location_web_site_dark
-    public static final int a_navigation_accept
-    public static final int a_navigation_next_item_m_dark
-    public static final int a_navigation_next_item_m_light
     public static final int a_social_share
+    public static final int a_social_share_dark
+    public static final int base_bg_transparent
     public static final int base_btn_bg
     public static final int base_btn_bg_gray
-    public static final int base_btn_pressed
     public static final int base_checkbox
     public static final int base_checkbox_checked
     public static final int base_checkbox_normal
-    public static final int base_divider
     public static final int base_edittext
     public static final int base_edittext_normal
     public static final int base_edittext_pressed
-    public static final int base_footer_diviver
-    public static final int base_header_bg
-    public static final int base_header_bg_raw
-    public static final int base_header_btn
-    public static final int base_header_btn_back
-    public static final int base_list_item_arrow_icon
-    public static final int base_list_item_bg
-    public static final int base_list_item_bg_pressed
-    public static final int base_tab_bg
-    public static final int base_tab_bg_raw
-    public static final int base_transparent
-    public static final int base_viewpage_tab_blue
+    public static final int base_icon_arrow
+    public static final int base_icon_arrow_normal
+    public static final int base_icon_arrow_pressd
+    public static final int base_tab_btn_bg
+    public static final int base_tab_btn_bg_pressed
+    public static final int base_viewpage_tab
     public static final int base_viewpage_tab_normal
     public static final int base_viewpage_tab_selected
-    public static final int bg_dialog_new
-    public static final int ic_launcher
+    public static final int btn_trans_gray
+    public static final int capture_about
+    public static final int capture_flash_off
+    public static final int capture_flash_on
+    public static final int capture_history
+    public static final int capture_new
     public static final int icon
     public static final int new_color_radio
-    219:219:public R$drawable()
+    215:215:public R$drawable()
 q.base.R$id:
     public static final int BtnCancel
     public static final int BtnLayout
@@ -792,9 +790,7 @@ q.base.R$id:
     public static final int canknow_group_expand_icon
     public static final int canknow_group_name
     public static final int capture_flash
-    public static final int capture_history
-    public static final int capture_new
-    public static final int capture_setting
+    public static final int capture_tab_layout
     public static final int card
     public static final int card_view
     public static final int cardtitle
@@ -1537,8 +1533,6 @@ q.base.R$id:
     public static final int new_img
     public static final int new_input_layout
     public static final int new_input_text
-    public static final int new_save
-    public static final int new_share
     public static final int new_text
     public static final int nine
     public static final int no_longer_tips
@@ -1660,7 +1654,6 @@ q.base.R$id:
     public static final int qq_verifycode_img
     public static final int qq_verifycode_input_edit
     public static final int qrcode_copy
-    public static final int qrcode_download
     public static final int qrcode_img
     public static final int qrcode_share
     public static final int qrcode_text
@@ -2072,18 +2065,54 @@ q.base.R$id:
     public static final int y
     public static final int z
     public static final int zero
-    264:264:public R$id()
-q.base.R$layout
+    249:249:public R$id()
+q.base.R$layout:
+    public static final int base
+    public static final int base_dialog
+    public static final int base_dialog_footer
+    public static final int base_footer
+    public static final int base_header
+    public static final int base_header_1
+    public static final int base_layout
+    public static final int base_list
+    public static final int base_list_item
+    public static final int base_list_item_arrow
+    public static final int base_list_item_kv
+    public static final int base_more
+    public static final int layout_about
+    public static final int layout_capture
+    public static final int layout_capture_2
+    public static final int layout_capture_tab
+    public static final int layout_history_item
+    public static final int layout_new
+    public static final int layout_new_color
+    public static final int layout_qrcode
+    public static final int list_item_color
+    public static final int list_item_color_kv
+    public static final int listview_divider_line2
+    public static final int main
+    public static final int tui_dialog
+    1826:1826:public R$layout()
 q.base.R$raw
 q.base.R$string
 q.base.R$style
 q.base.UiBaseHeader:
     9:9:public UiBaseHeader()
-    29:34:public static final void btnBackOk(android.app.Activity,java.lang.String,android.view.View$OnClickListener)
+q.out.Color:
+    19:20:public void setName(java.lang.String)
+    25:26:public void setColor(int)
 q.out.ColorAdapter:
-    22:23:public ColorAdapter(android.content.Context,java.util.List)
+    21:22:public ColorAdapter(android.content.Context,java.util.List)
 q.out.ColorDialog:
     public static final java.lang.String EXTRA_COLOR
+q.out.QHttpUtil
+q.out.QHttpUtil$1
+q.out.QHttpUtil$2
+q.out.UpdateUtil
+q.out.UpdateUtil$1
+q.out.UpdateUtil$1$1
+q.out.UpdateUtil$1$1$1
+q.out.UpdateUtil$1$2
 q.util.AppUtil:
     7:7:public AppUtil()
 q.util.BitmapUtil:
@@ -2104,11 +2133,7 @@ q.util.IntentUtil:
     56:65:public static final android.graphics.Bitmap resultBitmap(android.content.Context,android.content.Intent)
     76:101:public static final void mapGoogle(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
 q.util.IntentUtil$Open
-q.util.ListViewUtil
 q.util.QConfig
-q.util.QHttpUtil
-q.util.QHttpUtil$1
-q.util.QHttpUtil$2
 q.util.QLog:
     public static final int EVENT_SCAN
     public static final int EVENT_NEW
@@ -2146,5 +2171,3 @@ q.view.EndlessListViewHelper:
     private static final int MSG_SUCCESS
     private static final int MSG_ENABLE
     private static final int MSG_DISABLE
-q.view.RotateImageButton:
-    27:28:public void setRotate(float)

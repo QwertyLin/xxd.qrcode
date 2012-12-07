@@ -31,11 +31,11 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
-import android.view.Window;
 import android.view.WindowManager;
 import java.io.IOException;
 
@@ -58,13 +58,12 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
   private CameraManager cameraManager;
   private CaptureActivityHandler handler;
   private ViewfinderView viewfinderView;
-  private Result lastResult; //用来判断是处于扫描页面还是结果页面
   private boolean hasSurface;
   private BeepManager beepManager;
   private CaptureA2 homeA;//TODO add HomeA
 
   public ViewfinderView getViewfinderView() {
-	  //QLog.log(this, "getViewfinderView");
+	  QLog.log(this, "getViewfinderView");
     return viewfinderView;
   }
 
@@ -82,9 +81,7 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
   public void onCreate(Bundle icicle) {
 	  QLog.log(this, "onCreate");
     super.onCreate(icicle);
-
-    Window window = getWindow();
-    window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     setContentView(R.layout.layout_capture);
 
     hasSurface = false;
@@ -92,67 +89,61 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
 
     homeA = new CaptureA2(this);
     homeA.onCreate();
+    
+    //
   }
-
+  
   @Override
   protected void onResume() {
-	  QLog.log(this, "onResume");
-    super.onResume();
+	  System.out.println("onResume");
+		super.onResume();
+		cameraManager = new CameraManager(getApplication());
+	    
+	    //TODO
+	    homeA.setCameraManager(cameraManager);
 
-    // CameraManager must be initialized here, not in onCreate(). This is necessary because we don't
-    // want to open the camera driver and measure the screen size if we're going to show the help on
-    // first launch. That led to bugs where the scanning rectangle was the wrong size and partially
-    // off screen.
-    cameraManager = new CameraManager(getApplication());
-    
-    //TODO
-    homeA.setCameraManager(cameraManager);
+	    viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
+	    viewfinderView.setCameraManager(cameraManager);
 
-    viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
-    viewfinderView.setCameraManager(cameraManager);
+	    handler = null;
 
-    handler = null;
-    lastResult = null;
+	    SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+	    SurfaceHolder surfaceHolder = surfaceView.getHolder();
+	    if (hasSurface) {
+	      // The activity was paused but not stopped, so the surface still exists. Therefore
+	      // surfaceCreated() won't be called, so init the camera here.
+	      initCamera(surfaceHolder);
+	    } else {
+	      // Install the callback and wait for surfaceCreated() to init the camera.
+	      surfaceHolder.addCallback(CaptureA.this);
+	      surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+	    }
 
-    resetStatusView();
-
-    SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
-    SurfaceHolder surfaceHolder = surfaceView.getHolder();
-    if (hasSurface) {
-      // The activity was paused but not stopped, so the surface still exists. Therefore
-      // surfaceCreated() won't be called, so init the camera here.
-      initCamera(surfaceHolder);
-    } else {
-      // Install the callback and wait for surfaceCreated() to init the camera.
-      surfaceHolder.addCallback(this);
-      surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
-    }
-
-    beepManager.updatePrefs();
-    
-  }
+	    beepManager.updatePrefs();
+		
+	}
 
   @Override
   protected void onPause() {
 	  QLog.log(this, "onPause");
-    if (handler != null) {
-      handler.quitSynchronously();
-      handler = null;
-    }
-    cameraManager.closeDriver();
-    if (!hasSurface) {
-      SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
-      SurfaceHolder surfaceHolder = surfaceView.getHolder();
-      surfaceHolder.removeCallback(this);
-    }
-    super.onPause();
+	  super.onPause();
+	  new Thread(){
+			public void run() {
+				if (handler != null) {
+				      handler.quitSynchronously();
+				      handler = null;
+				    }
+				    cameraManager.closeDriver();
+				    /*if (!hasSurface) {
+				      SurfaceView surfaceView = (SurfaceView) findViewById(R.id.preview_view);
+				      SurfaceHolder surfaceHolder = surfaceView.getHolder();
+				      surfaceHolder.removeCallback(CaptureA.this);
+				    }*/
+			};
+		}.start();
+	  finish();
   }
-
-  @Override
-  protected void onDestroy() {
-	  QLog.log(this, "onPause");
-    super.onDestroy();
-  }
+  
 
   @Override
   public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -212,8 +203,6 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
    */
   public void handleDecode(Result rawResult, Bitmap barcode) {
 	  QLog.log(this, "handleDecode");
-    lastResult = rawResult;
-
     if (barcode != null) {
       // Then not from history, so beep/vibrate and we have an image to draw on
       beepManager.playBeepSoundAndVibrate();
@@ -296,20 +285,6 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
     builder.setPositiveButton(R.string.button_ok, new FinishListener(this));
     builder.setOnCancelListener(new FinishListener(this));
     builder.show();
-  }
-
-  public void restartPreviewAfterDelay(long delayMS) {
-	  QLog.log(this, "restartPreviewAfterDelay");
-    if (handler != null) {
-      handler.sendEmptyMessageDelayed(R.id.restart_preview, delayMS);
-    }
-    resetStatusView();
-  }
-
-  private void resetStatusView() {
-	  QLog.log(this, "resetStatusView");
-	  //TODO
-	  lastResult = null;
   }
 
   public void drawViewfinder() {

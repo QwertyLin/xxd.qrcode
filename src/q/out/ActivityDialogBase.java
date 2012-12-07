@@ -18,7 +18,7 @@ public abstract class ActivityDialogBase extends ActivityBase {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setBackgroundDrawableResource(R.drawable.base_transparent);
+		getWindow().setBackgroundDrawableResource(R.drawable.base_bg_transparent);
 		setContentView(R.layout.base_dialog);
 		((FrameLayout)findViewById(R.id.base_dialog_layout)).addView(initView());
 		//

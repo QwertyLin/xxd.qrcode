@@ -1,14 +1,24 @@
 package cn.xxd.qr.service;
 
 import cn.xxd.qr.HomeA;
+import cn.xxd.qr.R;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 
 public class CaptureTabInitService {
 	
 	public static final void initLayoutClick(final Activity act, View layout){
+		FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(HomeA.TAB_HEIGHT, FrameLayout.LayoutParams.FILL_PARENT);
+		lp.gravity = Gravity.RIGHT;
+		act.findViewById(R.id.capture_tab_layout).setLayoutParams(lp);
 		layout.setOnTouchListener(new OnTouchListener() {
 			    int maxX, maxY;
 			    float x, y;
@@ -42,6 +52,7 @@ public class CaptureTabInitService {
 						//intent.putExtra(HomeA.EXTRA_POSITION, 1);
 					}
 					//ctx.startActivity(intent);
+					//((Context)act).startActivity(new Intent(act, HomeA.class));
 					act.finish();
 					return true;
 				}

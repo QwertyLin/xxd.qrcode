@@ -44,10 +44,10 @@
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
       
       <!-- ZM -->
-      <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
-      <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" />
+      <!-- <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
+      <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" /> -->
      <!-- 声明Youmi的Activity -->
-     <activity
+     <!-- <activity
          android:name="net.youmi.android.AdActivity"
          android:configChanges="keyboard|keyboardHidden|orientation" />
      <receiver android:name="net.youmi.android.YoumiReceiver">
@@ -56,7 +56,7 @@
              <action android:name="android.intent.action.PACKAGE_INSTALL"/>
              <data android:scheme="package"/>
          </intent-filter>
-     </receiver>
+     </receiver> -->
         
       <activity android:name=".MainA">
           <intent-filter>
