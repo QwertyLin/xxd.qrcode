@@ -19,7 +19,6 @@ package cn.xxd.qr;
 import cn.xxd.qr.R;
 
 import com.google.zxing.Result;
-import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.BeepManager;
 import com.google.zxing.client.android.CaptureActivityHandler;
 import com.google.zxing.client.android.FinishListener;
@@ -27,11 +26,8 @@ import com.google.zxing.client.android.ViewfinderView;
 import com.google.zxing.client.android.camera.CameraManager;
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
-import android.graphics.Canvas;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.SystemClock;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
@@ -40,7 +36,6 @@ import android.view.WindowManager;
 import java.io.IOException;
 
 import q.base.ActivityBase;
-import q.util.QConfig;
 import q.util.QLog;
 
 /**
@@ -141,7 +136,7 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
 				    }*/
 			};
 		}.start();
-	  finish();
+	  //finish();
   }
   
 
@@ -206,49 +201,9 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
     if (barcode != null) {
       // Then not from history, so beep/vibrate and we have an image to draw on
       beepManager.playBeepSoundAndVibrate();
-      drawResultPoints(barcode, rawResult);
     }
 
-    handleDecodeInternally(rawResult, barcode);
-  }
-
-  /**
-   * 在结果图上画定位点
-   * Superimpose a line for 1D or dots for 2D to highlight the key features of the barcode.
-   *
-   * @param barcode   A bitmap of the captured image.
-   * @param rawResult The decoded results which contains the points to draw.
-   */
-  private void drawResultPoints(Bitmap barcode, Result rawResult) {
-	  if(QConfig.QR_SCAN_RESULT_POINT_DRAW){
-		  QLog.log(this, "drawResultPoints");
-		    ResultPoint[] points = rawResult.getResultPoints();
-		    if (points != null && points.length > 0) {
-		      Canvas canvas = new Canvas(barcode);
-		      Paint paint = new Paint();
-		      paint.setColor(QConfig.QR_SCAN_RESULT_POINT_COLOR);
-		      //
-		      paint.setStrokeWidth(10.0f);
-		      for (ResultPoint point : points) {
-		        canvas.drawPoint(point.getX(), point.getY(), paint);
-		      }
-		    }
-	  }
-  }
-
-  // Put up our own UI for how to handle the decoded contents.
-  private void handleDecodeInternally(Result rawResult, Bitmap barcode) {
-	  QLog.log(this, "handleDecodeInternally");
-	  //TODO 
-	  homeA.handleDecode(rawResult, barcode);
-   /* TextView supplementTextView = (TextView) findViewById(R.id.contents_supplement_text_view);
-    supplementTextView.setText("");
-    supplementTextView.setOnClickListener(null);
-    if (QConfig.SETTING_SUPPLEMENTAL) {
-      SupplementalInfoRetriever.maybeInvokeRetrieval(supplementTextView,
-                                                     resultHandler.getResult(),
-                                                     this);
-    }*/
+    homeA.handleDecode(rawResult, barcode);
   }
 
   private void initCamera(SurfaceHolder surfaceHolder) {
