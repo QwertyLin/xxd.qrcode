@@ -4,6 +4,7 @@ import java.util.Calendar;
 
 import q.util.BitmapUtil;
 import q.util.FileMgr;
+import q.util.OttoHelper;
 
 import com.google.zxing.Result;
 import com.google.zxing.client.android.camera.CameraManager;
@@ -16,17 +17,22 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
 
 public class CaptureA2 implements OnClickListener {
 	
-	private Activity mAct;
+	private FragmentActivity mAct;
 	private CameraManager mCameraMgr;
 	
 	public CaptureA2(Context ctx){
-		mAct = (Activity)ctx;
+		mAct = (FragmentActivity)ctx;
 	}
 	
 	public void setCameraManager(CameraManager cameraMgr){
@@ -39,6 +45,14 @@ public class CaptureA2 implements OnClickListener {
 		btnFlash.setOnClickListener(this);
 		//
 		CaptureTabInitService.initLayoutClick(mAct, mAct.findViewById(R.id.capture_tab_layout));
+		
+		((RadioButton)mAct.findViewById(R.id.capture_opera)).setOnCheckedChangeListener(new OnCheckedChangeListener() {
+			
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				OttoHelper.get().post(new CaptureOpF.CaptureOperaEvent(new CaptureOpF()));
+			}
+		});
 	}
 	
 	@Override

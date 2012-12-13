@@ -28,6 +28,7 @@ import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
@@ -36,6 +37,7 @@ import android.view.WindowManager;
 import java.io.IOException;
 
 import q.base.ActivityBase;
+import q.util.OttoHelper;
 import q.util.QLog;
 
 /**
@@ -46,7 +48,7 @@ import q.util.QLog;
  * @author dswitkin@google.com (Daniel Switkin)
  * @author Sean Owen
  */
-public final class CaptureA extends ActivityBase implements SurfaceHolder.Callback {
+public final class CaptureA extends FragmentActivity implements SurfaceHolder.Callback {
 
   private static final String TAG = CaptureA.class.getSimpleName();
 
@@ -92,6 +94,7 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
   protected void onResume() {
 	  System.out.println("onResume");
 		super.onResume();
+		OttoHelper.get().register(this);
 		cameraManager = new CameraManager(getApplication());
 	    
 	    //TODO
@@ -122,6 +125,7 @@ public final class CaptureA extends ActivityBase implements SurfaceHolder.Callba
   protected void onPause() {
 	  QLog.log(this, "onPause");
 	  super.onPause();
+	  OttoHelper.get().unregister(this);
 	  new Thread(){
 			public void run() {
 				if (handler != null) {

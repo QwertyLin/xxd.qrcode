@@ -30,6 +30,12 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"/>
   
+  <FrameLayout 
+      android:id="@+id/capture_opera_layout"
+      android:layout_width="400dip"
+      android:layout_height="fill_parent"
+      />
+  
   <include layout="@layout/layout_capture_2"/>
   
   <include layout="@layout/layout_capture_tab"/>

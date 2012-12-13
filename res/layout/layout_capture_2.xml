@@ -21,6 +21,15 @@
            />
     </LinearLayout>
     
+    <RadioButton 
+        android:id="@+id/capture_opera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="50dip"
+        />
+    
     <!-- <LinearLayout 
         android:layout_width="@dimen/base_footer_height"
         android:layout_height="fill_parent"
