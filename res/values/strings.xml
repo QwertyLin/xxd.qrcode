@@ -17,6 +17,13 @@
 <resources>
   <string name="app_name">小小二维码</string>
   
+  <string name="menu_history">历史</string>
+  <string name="menu_new">生成</string>
+  <string name="menu_about">关于</string>
+  
+  <string name="capture_menu_flash_on">开灯</string>
+  <string name="capture_menu_flash_off">关灯</string>
+  
   <string name="home_scan">扫描</string>
   <string name="home_history">历史</string>  
   <string name="home_new">生成</string>

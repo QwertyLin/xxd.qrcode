@@ -21,14 +21,25 @@
            />
     </LinearLayout>
     
-    <RadioButton 
-        android:id="@+id/capture_opera"
+    <CheckBox 
+        android:id="@+id/capture_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/icon"
         android:layout_gravity="right|center_vertical"
         android:layout_marginRight="50dip"
         />
+    
+    <!-- 用于计算菜单按钮大小 -->
+    <TextView
+        android:id="@+id/capture_menu_sample"
+        style="@style/CaptureMenuItem"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Sample"
+       android:drawableTop="@drawable/a_content_save"
+       android:visibility="invisible"
+       />
     
     <!-- <LinearLayout 
         android:layout_width="@dimen/base_footer_height"

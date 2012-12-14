@@ -17,7 +17,6 @@
 package cn.xxd.qr;
 
 import cn.xxd.qr.R;
-
 import com.google.zxing.Result;
 import com.google.zxing.client.android.BeepManager;
 import com.google.zxing.client.android.CaptureActivityHandler;
@@ -36,8 +35,6 @@ import android.view.SurfaceView;
 import android.view.WindowManager;
 import java.io.IOException;
 
-import q.base.ActivityBase;
-import q.util.OttoHelper;
 import q.util.QLog;
 
 /**
@@ -94,7 +91,9 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
   protected void onResume() {
 	  System.out.println("onResume");
 		super.onResume();
-		OttoHelper.get().register(this);
+		homeA.onResume();
+		
+		
 		cameraManager = new CameraManager(getApplication());
 	    
 	    //TODO
@@ -125,7 +124,9 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
   protected void onPause() {
 	  QLog.log(this, "onPause");
 	  super.onPause();
-	  OttoHelper.get().unregister(this);
+	  homeA.onPause();
+	  
+	  
 	  new Thread(){
 			public void run() {
 				if (handler != null) {
@@ -143,13 +144,14 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
 	  //finish();
   }
   
-
   @Override
   public boolean onKeyDown(int keyCode, KeyEvent event) {
     switch (keyCode) {
+    case KeyEvent.KEYCODE_MENU:
+    	homeA.onKeyDownMenu();
+    	return true;
       case KeyEvent.KEYCODE_BACK:
-    	  HomeA.FINISH_FROM_SCAN = true;
-    	  finish();
+    	  homeA.onKeyDownBack();
     	  return true;
     	  
         /*if (lastResult != null) {
