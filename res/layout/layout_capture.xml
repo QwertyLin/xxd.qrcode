@@ -30,11 +30,30 @@
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"/>
   
+  <CheckBox 
+        android:id="@+id/capture_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/icon"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="50dip"
+        />
+    
+    <!-- 用于计算菜单按钮大小 -->
+    <TextView
+        android:id="@+id/capture_menu_sample"
+        style="@style/CaptureMenuItem"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Sample"
+       android:drawableTop="@drawable/a_content_save"
+       android:visibility="invisible"
+       />
+  
   <FrameLayout 
       android:id="@+id/capture_menu_layout"
       android:layout_width="wrap_content"
       android:layout_height="fill_parent"
-      android:layout_gravity="center_horizontal"
       />
   
   <include layout="@layout/layout_capture_2"/>

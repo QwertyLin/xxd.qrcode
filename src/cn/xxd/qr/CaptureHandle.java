@@ -15,7 +15,7 @@ public final class CaptureHandle {
 	public final void onMenuCheckedChange(OttoEvent.CaptureMenuCheckedChange event){		
 		if(event.isChecked){
 			event.act.getSupportFragmentManager().beginTransaction()
-			.add(R.id.capture_menu_layout, new CaptureMenuF(event.act.findViewById(R.id.capture_menu_sample).getHeight()))
+			.add(R.id.capture_menu_layout, new CaptureAMenu(event.act.findViewById(R.id.capture_menu_sample).getHeight()))
 			.commit();
 		}else{
 			event.act.getSupportFragmentManager().beginTransaction()

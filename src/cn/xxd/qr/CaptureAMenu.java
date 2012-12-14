@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-public class CaptureMenuF extends Fragment {
+public class CaptureAMenu extends Fragment {
 	
 	private Data data = new Data();
 	
-	public CaptureMenuF(int btnSize){
+	public CaptureAMenu(int btnSize){
 		data.btnSize = btnSize;
 	}
 	
