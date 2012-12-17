@@ -14,7 +14,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="fill_parent"
              android:layout_height="fill_parent">
              
@@ -35,7 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/icon"
-        android:layout_gravity="right|center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
         android:layout_marginRight="50dip"
         />
     
@@ -54,11 +55,8 @@
       android:id="@+id/capture_menu_layout"
       android:layout_width="wrap_content"
       android:layout_height="fill_parent"
+      android:layout_toLeftOf="@id/capture_menu"
+      android:layout_marginRight="10dip"
       />
-  
-  <include layout="@layout/layout_capture_2"/>
-  
-  <include layout="@layout/layout_capture_tab"/>
 
-
-</FrameLayout>
+</RelativeLayout>

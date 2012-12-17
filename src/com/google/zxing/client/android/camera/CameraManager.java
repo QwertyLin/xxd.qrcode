@@ -176,6 +176,16 @@ public final class CameraManager {
       }
     }
   }
+  
+  public synchronized boolean getTorch(){
+	  if (camera == null) {
+		  return false;
+	  }
+	  if(camera.getParameters().getFlashMode().contains(Camera.Parameters.FLASH_MODE_OFF)){
+		  return false;
+	  }
+	  return true;
+  }
 
   /**
    * A single preview frame will be returned to the handler supplied. The data will arrive as byte[]

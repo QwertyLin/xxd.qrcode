@@ -9,6 +9,7 @@ import com.google.zxing.WriterException;
 
 import cn.xxd.qr.service.QrCodeEncodeService;
 import cn.xxd.qr.view.UiBaseHeader;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -184,6 +185,8 @@ public class NewA extends ActivityBase implements OnClickListener {
 				onClickInputCancel();
 				return true;
 			}
+			startActivity(new Intent(this, CaptureA.class));
+			finish();
 			break;
 		}
 		return super.onKeyDown(keyCode, event);

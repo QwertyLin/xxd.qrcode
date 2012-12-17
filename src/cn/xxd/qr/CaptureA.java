@@ -35,6 +35,7 @@ import android.view.SurfaceView;
 import android.view.WindowManager;
 import java.io.IOException;
 
+import q.util.EventHelper;
 import q.util.QLog;
 
 /**
@@ -126,7 +127,6 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
 	  super.onPause();
 	  homeA.onPause();
 	  
-	  
 	  new Thread(){
 			public void run() {
 				if (handler != null) {
@@ -142,16 +142,20 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
 			};
 		}.start();
 	  //finish();
+		
+		finish();
+		System.gc();
   }
+  
   
   @Override
   public boolean onKeyDown(int keyCode, KeyEvent event) {
     switch (keyCode) {
     case KeyEvent.KEYCODE_MENU:
-    	homeA.onKeyDownMenu();
+    	EventHelper.get().post(new CaptureEvent.ClickKeyMenu());
     	return true;
       case KeyEvent.KEYCODE_BACK:
-    	  homeA.onKeyDownBack();
+    	  EventHelper.get().post(new CaptureEvent.ClickKeyBack());
     	  return true;
     	  
         /*if (lastResult != null) {
@@ -209,7 +213,7 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
       beepManager.playBeepSoundAndVibrate();
     }
 
-    homeA.handleDecode(rawResult, barcode);
+    EventHelper.get().post(new CaptureEvent.FindQrCode(barcode, rawResult.getText()));
   }
 
   private void initCamera(SurfaceHolder surfaceHolder) {

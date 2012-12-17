@@ -14,12 +14,12 @@
 	    >
 	    
 		<LinearLayout 
-		    android:id="@+id/capture_menu_1"
 		    android:layout_width="wrap_content"
 		    android:layout_height="fill_parent"
 		    android:orientation="vertical"
 		    >
 		    <FrameLayout 
+		        android:id="@+id/capture_menu_about"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
 		        android:layout_weight="1"
@@ -35,6 +35,7 @@
 			        />
 		    </FrameLayout>
 		    <FrameLayout 
+		        android:id="@+id/capture_menu_history"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
 		        android:layout_weight="1"
@@ -50,6 +51,7 @@
 			        />
 		    </FrameLayout>
 		    <FrameLayout 
+		        android:id="@+id/capture_menu_new"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
 		        android:layout_weight="1"
@@ -67,7 +69,6 @@
 		</LinearLayout>
 		
 		<LinearLayout 
-		    android:id="@+id/capture_menu_2"
 		    android:layout_width="wrap_content"
 		    android:layout_height="fill_parent"
 		    android:orientation="vertical"
@@ -79,6 +80,7 @@
 		        android:layout_weight="1"
 		        />
 		    <FrameLayout 
+		        android:id="@+id/capture_menu_flash"
 		        android:layout_width="wrap_content"
 		        android:layout_height="0dip"
 		        android:layout_weight="1"
@@ -86,11 +88,10 @@
 		        android:clickable="true"
 		        >
 		        <cn.xxd.qr.view.CaptureMenuTextView 
+		            android:id="@+id/capture_menu_flash_desc"
 		            style="@style/CaptureMenuItem"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
-			        android:text="@string/capture_menu_flash_on"
-			        android:drawableTop="@drawable/a_content_save"
 			        />
 		    </FrameLayout>
 		    <View
