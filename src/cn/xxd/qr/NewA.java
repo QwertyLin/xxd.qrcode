@@ -187,7 +187,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 			}
 			startActivity(new Intent(this, CaptureA.class));
 			finish();
-			break;
+			return true;
 		}
 		return super.onKeyDown(keyCode, event);
 	}

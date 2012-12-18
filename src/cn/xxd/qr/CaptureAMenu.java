@@ -12,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationSet;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -67,14 +65,10 @@ public class CaptureAMenu extends Fragment implements OnClickListener {
 		super.onResume();
 		EventHelper.get().register(this);
 		//
-		AnimationSet aniSet = new AnimationSet(false);
-		Animation ani = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
-		aniSet.addAnimation(ani);
-		ani = new AlphaAnimation(0.5f, 1);
-		aniSet.addAnimation(ani);
-		aniSet.setDuration(200);
+		Animation ani = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 1, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
+		ani.setDuration(100);
 		mView.clearAnimation();
-		mView.startAnimation(aniSet);
+		mView.startAnimation(ani);
 	}
 	
 	@Override
@@ -106,13 +100,9 @@ public class CaptureAMenu extends Fragment implements OnClickListener {
 	
 	@Subscribe
 	public void onHideMenuStart(CaptureEvent.HideMenuStart event){
-		AnimationSet aniSet = new AnimationSet(false);
-		Animation ani = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
-		aniSet.addAnimation(ani);
-		ani = new AlphaAnimation(1, 0.5f);
-		aniSet.addAnimation(ani);
-		aniSet.setDuration(200);
-		aniSet.setAnimationListener(new AnimationListener() {
+		Animation ani = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 1, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
+		ani.setDuration(100);
+		ani.setAnimationListener(new AnimationListener() {
 			
 			@Override
 			public void onAnimationStart(Animation animation) { }
@@ -126,7 +116,7 @@ public class CaptureAMenu extends Fragment implements OnClickListener {
 			}
 		});
 		mView.clearAnimation();
-		mView.startAnimation(aniSet);
+		mView.startAnimation(ani);
 	}
 	
 	@Subscribe

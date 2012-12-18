@@ -12,6 +12,7 @@ import q.view.EndlessListViewHelper;
 import q.view.EndlessListViewHelper.OnEndlessListViewListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -41,6 +42,17 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
         adapter = new HistoryAdapter(this, datas);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			startActivity(new Intent(this, CaptureA.class));
+			finish();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 	@Override

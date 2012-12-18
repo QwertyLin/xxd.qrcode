@@ -11,6 +11,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -56,6 +57,17 @@ public class AboutA extends ActivityBase implements OnClickListener {
 			onClickShare();
 			break;
 		}
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			startActivity(new Intent(this, CaptureA.class));
+			finish();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 	
 	private void onClickWebsite(){

@@ -23,6 +23,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.text.ClipboardManager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -83,6 +84,17 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		}
 		//统计
 		QLog.event(this, QLog.EVENT_SCAN, qrcode.getText());
+	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			startActivity(new Intent(this, CaptureA.class));
+			finish();
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 		
 	private void initState(Intent intent){
