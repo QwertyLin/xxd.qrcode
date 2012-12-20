@@ -12,11 +12,11 @@ public class UiBaseHeader extends q.base.UiBaseHeader {
 		btnBack(act, text);
 		ImageButton btn = (ImageButton)act.findViewById(R.id.base_header_btn_right);
 		btn.setVisibility(View.VISIBLE);
-		btn.setImageResource(R.drawable.a_social_share);
+		//btn.setImageResource(R.drawable.a_social_share);
 		btn.setOnClickListener(onClickShare);
 		btn = (ImageButton)act.findViewById(R.id.base_header_btn_left);
 		btn.setVisibility(View.VISIBLE);
-		btn.setImageResource(R.drawable.a_content_save);
+		//btn.setImageResource(R.drawable.a_content_save);
 		btn.setOnClickListener(onClickSave);
 	}
 
