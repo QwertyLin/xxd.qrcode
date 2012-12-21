@@ -17,7 +17,7 @@
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:textSize="@dimen/base_text_small"
-	        android:textColor="@color/base_btn_text"
+	        android:textColor="#ff535353"
 	        android:singleLine="true"
 	        android:ellipsize="end"
 	        android:paddingTop="5dip"

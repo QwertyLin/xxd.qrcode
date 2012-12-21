@@ -2,8 +2,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionCode="2"
-          android:versionName="12.12"
+          android:versionCode="3"
+          android:versionName="13.01"
           android:installLocation="auto">
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8"/>
 
@@ -31,7 +31,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
     <!-- youmi -->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
 
   <application android:icon="@drawable/icon"
                android:label="@string/app_name"
@@ -65,12 +65,11 @@
 	      </intent-filter>
       </activity>
       
-      <activity android:name=".HomeA" android:screenOrientation="portrait"  />
+      <activity android:name=".HomeA" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
       <activity android:name=".ScanA" android:screenOrientation="portrait"  />
       <activity android:name=".QrCodeA" android:screenOrientation="portrait"  />
       <activity android:name=".NewA" android:screenOrientation="portrait"  />
       <activity android:name=".HistoryA" android:screenOrientation="portrait"  />
-      <activity android:name=".SettingA" android:screenOrientation="portrait"  />
       <activity android:name=".AboutA" android:screenOrientation="portrait"  />
                   
     <activity android:name=".CaptureA"

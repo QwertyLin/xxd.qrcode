@@ -26,7 +26,8 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import q.util.QConfig;
+
+import cn.xxd.qr.util.QConfig;
 
 import com.google.zxing.client.android.common.executor.AsyncTaskExecInterface;
 import com.google.zxing.client.android.common.executor.AsyncTaskExecManager;

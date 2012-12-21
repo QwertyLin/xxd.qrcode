@@ -6,87 +6,69 @@ import java.io.FileOutputStream;
 import java.util.Calendar;
 
 import com.google.zxing.WriterException;
+import com.squareup.otto.Subscribe;
 
+import cn.xxd.qr.service.NewColorService;
 import cn.xxd.qr.service.QrCodeEncodeService;
-import cn.xxd.qr.view.UiBaseHeader;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import q.base.ActivityBase;
+import q.util.EventHelper;
 import q.util.FileMgr;
 import q.util.InputMethodUtil;
 import q.util.IntentUtil;
 import q.util.QLog;
 
-public class NewA extends ActivityBase implements OnClickListener {
+public class NewA extends FragmentActivity implements OnClickListener {
 	
+	private static final int DEFAULT_COLOR = 0xFF000000;
 	private static final String DEFAULT_TEXT = "小小二维码"; 
 	
-	private int mColor; 
+	private int mColor = DEFAULT_COLOR;
 	private String mText = DEFAULT_TEXT;
 	
 	private long time = Calendar.getInstance().getTimeInMillis();
 	private Bitmap qrBitmap;
-	private RadioGroup vColor;
 	private TextView vText;
 	private ImageView vImg;
-	private View vInputLayout;
-	private EditText vInputText;
+	private View vColorLayout;
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.base_layout);
-		UiBaseHeader.btnSaveShare(this, getString(R.string.new_title), 
-			new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					onClickSave();
-				}
-			}, new OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					onClickShare();
-				}
-			});
-		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_new, null));
+		setContentView(R.layout.layout_new);
 		//
+		vColorLayout = findViewById(R.id.new_color_layout);
 		vText = (TextView)findViewById(R.id.new_text); vText.setText(mText);
-		vColor = (RadioGroup)findViewById(R.id.new_color);
 		vImg = (ImageView)findViewById(R.id.new_img);
-		vInputLayout = findViewById(R.id.new_input_layout);
-		vInputText = (EditText)findViewById(R.id.new_input_text);
 		//
-		findViewById(R.id.new_text).setOnClickListener(this);
-		findViewById(R.id.base_dialog_footer_ok).setOnClickListener(this);
-		findViewById(R.id.base_dialog_footer_cancel).setOnClickListener(this);
+		vText.setOnClickListener(this);
+		findViewById(R.id.new_color).setOnClickListener(this);
+		findViewById(R.id.new_save).setOnClickListener(this);
+		findViewById(R.id.new_share).setOnClickListener(this);
 		//
-		vColor.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				RadioButton rb = (RadioButton)findViewById(checkedId);
-				mColor = rb.getTextColors().getDefaultColor();
-				onEncode();
-			}
-		});
-		vColor.check(R.id.new_color_black);
+		encode();
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		EventHelper.get().register(this);
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
-		InputMethodUtil.hide(this, vInputText);
+		EventHelper.get().unregister(this);
 	}
 
 	@Override
@@ -95,43 +77,53 @@ public class NewA extends ActivityBase implements OnClickListener {
 		case R.id.new_text:
 			onClickText();
 			break;
-		case R.id.base_dialog_footer_ok:
-			onClickInputOk();
+		case R.id.new_color:
+			onClickColor();
 			break;
-		case R.id.base_dialog_footer_cancel:
-			onClickInputCancel();
+		case R.id.new_save:
+			onClickSave();
 			break;
+		case R.id.new_share:
+			onClickShare();
+			break;
+		}
+	}
+	
+	private void onClickColor(){
+		if(getSupportFragmentManager().findFragmentById(R.id.new_color_layout) == null){
+			getSupportFragmentManager().beginTransaction().add(R.id.new_color_layout, new NewColorF()).commit();
+		}
+		if(vColorLayout.getVisibility() == View.VISIBLE){
+			vColorLayout.setVisibility(View.GONE);
+		}else{
+			vColorLayout.setVisibility(View.VISIBLE);
 		}
 	}
 	
 	private void onClickText(){
-		vInputLayout.setVisibility(View.VISIBLE);
-		InputMethodUtil.show(this, vInputText);
-	}
-	
-	private void onClickInputOk(){
-		vInputLayout.setVisibility(View.GONE);
-		InputMethodUtil.hide(this, vInputText);
-		//
-		mText = vInputText.getText().toString().trim();
-		vInputText.setText(mText);
-		vInputText.setSelection(mText.length());
-		if(mText.length() == 0){
-			mText = DEFAULT_TEXT;
+		final EditText et = new EditText(this);
+		if(!mText.equals(DEFAULT_TEXT)){
+			et.setText(mText);
+			et.setSelection(mText.length());
 		}
-		vText.setText(mText);
-		qrBitmap = null;
-		vImg.setImageBitmap(null);
-		//
-		onEncode();
+		new AlertDialog.Builder(this)
+		.setView(et)
+		.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				mText = et.getText().toString().trim();
+				if(mText.length() == 0){
+					mText = DEFAULT_TEXT;
+				}
+				vText.setText(mText);
+				encode();
+			}
+		})
+		.setNegativeButton("取消", null)
+		.show();
 	}
 	
-	private void onClickInputCancel(){
-		vInputLayout.setVisibility(View.GONE);
-		InputMethodUtil.hide(this, vInputText);
-		vInputText.setText(mText);
-		vInputText.setSelection(mText.length());
-	}
+	
 	
 	private void onClickSave(){
 		File temp = new File(FileMgr.getInstance(this).getNew(time));
@@ -149,7 +141,7 @@ public class NewA extends ActivityBase implements OnClickListener {
 		File temp = new File(FileMgr.getInstance(this).getNew(time));
 		try {
 			qrBitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(temp));
-			IntentUtil.sendImage(this, "小小二维码分享：" + mText, temp.getPath());
+			IntentUtil.sendImage(this, "", temp.getPath());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -157,14 +149,18 @@ public class NewA extends ActivityBase implements OnClickListener {
 		QLog.event(this, QLog.EVENT_NEW_SHARE, "");
 	}
 	
-	private void onEncode(){
+	private void encode(){
 		new Thread(){
 			public void run() {
 				try {
-					qrBitmap = QrCodeEncodeService.encode(NewA.this, mText, mColor);
+					final Bitmap bmTemp = QrCodeEncodeService.encode(NewA.this, mText, mColor);
 					runOnUiThread(new Runnable(){
 						public void run() {
-							vImg.setImageBitmap(qrBitmap);
+							vImg.setImageBitmap(bmTemp);
+							if(qrBitmap != null && !qrBitmap.isRecycled()){
+								qrBitmap.isRecycled();
+							}
+							qrBitmap = bmTemp;
 						};
 					});
 				} catch (WriterException e) {
@@ -176,20 +172,11 @@ public class NewA extends ActivityBase implements OnClickListener {
 		QLog.event(this, QLog.EVENT_NEW, mText);
 		QLog.event(this, QLog.EVENT_NEW_COLOR, String.valueOf(mColor));
 	}
-	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		switch (keyCode) {
-		case KeyEvent.KEYCODE_BACK:
-			if(vInputLayout.getVisibility() == View.VISIBLE){
-				onClickInputCancel();
-				return true;
-			}
-			startActivity(new Intent(this, CaptureA.class));
-			finish();
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
+		
+	@Subscribe
+	public void onColorChange(NewColorService.ColorChange event){
+		mColor = event.color;
+		encode();
 	}
 	
 }

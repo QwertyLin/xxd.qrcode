@@ -31,7 +31,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import q.util.QConfig;
+import cn.xxd.qr.util.QConfig;
+
 
 /**
  * A class which deals with reading, parsing, and setting the camera parameters which are used to

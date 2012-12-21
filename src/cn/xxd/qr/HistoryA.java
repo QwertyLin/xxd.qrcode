@@ -7,7 +7,6 @@ import cn.xxd.qr.bean.QrCode;
 import cn.xxd.qr.bean.HistoryDb;
 
 import q.base.ActivityBase;
-import q.base.UiBaseHeader;
 import q.view.EndlessListViewHelper;
 import q.view.EndlessListViewHelper.OnEndlessListViewListener;
 import android.content.Intent;
@@ -27,34 +26,20 @@ public class HistoryA extends ActivityBase implements OnItemClickListener, OnEnd
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.base_layout);
-		//
-		UiBaseHeader.text(this, getString(R.string.history_title));
+		 ListView lv = (ListView)getLayoutInflater().inflate(R.layout.base_list, null);
+		setContentView(lv);
 		//
 		HistoryDb db = new HistoryDb(this);
 		db.open(false);
 		datas = db.queryAll(page);
 		db.close();
 		//
-        ListView lv = (ListView)getLayoutInflater().inflate(R.layout.base_list, null);
-        addToBaseLayout(lv);
         new EndlessListViewHelper(lv, getLayoutInflater().inflate(R.layout.base_more, null), this).setEnable(true);
         adapter = new HistoryAdapter(this, datas);
 		lv.setAdapter(adapter);
 		lv.setOnItemClickListener(this);
 	}
 	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		switch (keyCode) {
-		case KeyEvent.KEYCODE_BACK:
-			startActivity(new Intent(this, CaptureA.class));
-			finish();
-			return true;
-		}
-		return super.onKeyDown(keyCode, event);
-	}
-
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {

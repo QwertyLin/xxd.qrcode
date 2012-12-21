@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="base_bg">#FFFFFFFF</color><!-- base_white -->
+    <color name="base_header_bg">#FF0099CC</color><!-- base_blue_dark -->
+    
+    <color name="base_blue_light">#33B5E5</color>
+    <color name="base_blue_dark">#0099CC</color><!-- 153 204 -->
+    <color name="base_green_light">#99CC00</color>
+    <color name="base_green_dark">#669900</color>
+    <color name="base_red_light">#FF4444</color>
+    <color name="base_red_dark">#CC0000</color>
+    <color name="base_yellow_light">#FFBB33</color>
+    <color name="base_yellow_dark">#FF8800</color>
+    <color name="base_purple_light">#AA66CC</color>
+    <color name="base_purple_dark">#9933CC</color>
+    <color name="base_white">#ffffff</color>
+    <color name="base_black">#000000</color>
+    <color name="base_gray_light">#E8E8E8</color><!-- #F0F0F0 -->
+    <color name="base_gray_dark">#CCCCCC</color><!-- #F0F0F0 -->
+    
+    <color name="base_list_item_bg_normal">#fff1f1f1</color>
+</resources>

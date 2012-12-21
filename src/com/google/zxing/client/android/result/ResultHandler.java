@@ -18,7 +18,6 @@ package com.google.zxing.client.android.result;
 
 import java.util.Locale;
 
-import q.util.QConfig;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
@@ -27,6 +26,7 @@ import android.net.Uri;
 import android.provider.ContactsContract;
 import android.util.Log;
 import cn.xxd.qr.R;
+import cn.xxd.qr.util.QConfig;
 
 import com.google.zxing.Result;
 import com.google.zxing.client.android.Contents;

@@ -2,8 +2,11 @@ package cn.xxd.qr;
 
 import java.util.Date;
 
+import com.baidu.mobstat.StatService;
+
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
+import cn.xxd.qr.service.AboutService;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +14,13 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-public class MainA extends FragmentActivity {
+public class MainA extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		AboutService.checkUpdate(this);
 		
 		FrameLayout layout = new FrameLayout(this);
 		//
@@ -27,16 +32,28 @@ public class MainA extends FragmentActivity {
 		//tempInitHistoryData();
 		//startActivity(new Intent(this, CaptureA.class));
 		//startActivity(new Intent(this, NewA.class));
-		//startActivity(new Intent(this, HomeA.class));
+		startActivity(new Intent(this, HomeA.class));
 		//startActivity(new Intent(this, ColorDialog.class));
 		//startActivity(new Intent(this, UpdateA.class));
 		//startActivity(new Intent(this, GuideA.class));
-		startActivity(new Intent(this, AboutA.class));
+		//startActivity(new Intent(this, AboutA.class));
 		//startActivity(new Intent(this, SettingA.class));
 		//startActivity(new Intent(this, HistoryA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
 		finish();
 	}
+	
+	@Override
+    protected void onResume() {
+    	super.onResume();
+    	StatService.onResume(this);
+    }
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+    	StatService.onPause(this); 
+    }
 		
 	private void tempInitHistoryData(){
 		HistoryDb db = new HistoryDb(this);

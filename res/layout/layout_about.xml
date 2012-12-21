@@ -2,79 +2,106 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="fill_parent"
      android:layout_height="fill_parent"
-     android:background="#666666"
+     android:background="@drawable/shape_g_black"
      >
 <LinearLayout 
-	    android:layout_width="fill_parent"
+	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
 	    android:orientation="vertical"
+	    android:layout_gravity="center"
+	    android:paddingBottom="20dip"
 	    >
 	    
-	    <ImageView 
-	        style="@style/QAboutIcon"
-	         android:background="@drawable/icon"
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView 
+	        android:layout_width="60dip"
+	        android:layout_height="60dip"
+	        android:background="@drawable/icon"
 	         />
-	    
-	    <TextView 
+        <TextView 
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:layout_gravity="center_horizontal"
-		    android:textSize="@dimen/base_text_large"
-		    android:textColor="@color/base_blue_dark"
-		    android:layout_marginTop="10dip"
+		    android:textSize="22sp"
+		    android:textColor="#ffffff"
 		    android:text="@string/app_name"
+		    android:layout_gravity="center_vertical"
+		    android:layout_marginLeft="10dip"
 		    />   
-		    
-		 <TextView 
-		     android:id="@+id/about_version"
+    </LinearLayout>
+    
+    <LinearLayout 
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:orientation="horizontal"
+	     android:layout_marginTop="15dip"
+	     android:gravity="center_vertical"
+	     >
+	     <TextView 
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:layout_gravity="center_horizontal"
-		    android:gravity="center_vertical"
-		    android:textSize="@dimen/base_text_medium"
-		    android:textColor="@color/base_gray_dark"
-		    android:layout_marginTop="5dip"
-		    />   
-	    
+		    android:textColor="#ffffff"
+		    android:text="@string/about_version"
+		    />  
+		 <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffff"
+		    android:text=" : "
+		    />  
 	    <TextView 
-	        android:id="@+id/about_website"
-	         android:layout_width="wrap_content"
-	         android:layout_height="wrap_content"
-	         android:layout_gravity="center_horizontal"
-	         android:background="@color/base_blue_light"
-	         android:textColor="@color/base_white"
-	         android:padding="3dip"
-	         android:layout_marginTop="10dip"
-	         />
-
-
-	    <LinearLayout  style="@style/QSettingLayout">	
-
-			   <TextView style="@style/QSettingHeader" android:text="@string/about_more" />
-	
-			   <View style="@style/QLineBlue" />
-			   
-			   <TextView
-			       style="@style/QSettingItem"
-			       android:id="@+id/setting_share"
-			       android:text="@string/about_share"
-			          />
-			   
-			   <View style="@style/QLineGray" />
-			   
-			   <TextView
-			       style="@style/QSettingItem"
-			       android:id="@+id/setting_market"
-			       android:text="@string/about_market"
-			          />
-			   
-	     </LinearLayout>
-	     
-	    <ImageButton 
+	        android:id="@+id/about_version"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_gravity="center_horizontal"
-	        
+	        android:textColor="#ffffff"
 	        />
+	 </LinearLayout>
+	    
+	 <LinearLayout 
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:orientation="horizontal"
+	     android:layout_marginTop="15dip"
+	     android:gravity="center_vertical"
+	     >
+	     <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffff"
+		    android:text="@string/about_website"
+		    />  
+		 <TextView 
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textColor="#ffffff"
+		    android:text=" : "
+		    />  
+	    <TextView 
+	        android:id="@+id/about_website"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:background="@drawable/btn_blue"
+	        android:paddingLeft="5dip"
+	        android:paddingRight="5dip"
+	        />
+	 </LinearLayout>
+	 
+	 <Button 
+	     android:id="@+id/about_update"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:text="@string/about_update"
+	     android:layout_marginTop="35dip"
+	     android:layout_gravity="center_horizontal"
+	     android:background="@drawable/btn_red"
+	     android:textColor="#ffffff"
+	     android:padding="10dip"
+	     android:visibility="gone"
+	     />
+	    
 	</LinearLayout>
 </ScrollView>

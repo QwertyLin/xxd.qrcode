@@ -18,6 +18,7 @@ package com.google.zxing.client.android.encode;
 
 import android.provider.ContactsContract;
 import cn.xxd.qr.R;
+import cn.xxd.qr.util.QConfig;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
@@ -49,7 +50,6 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
-import q.util.QConfig;
 
 /**
  * This class does the work of decoding the user's request and extracting all the data

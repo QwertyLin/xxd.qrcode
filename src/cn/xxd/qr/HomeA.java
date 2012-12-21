@@ -3,6 +3,7 @@ package cn.xxd.qr;
 import q.base.TabActivityBase;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 
@@ -24,39 +25,8 @@ public class HomeA extends TabActivityBase {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		HOME_A = this;
-		radioGroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				if(checkedId == 0){
-					TAB_HEIGHT = radioGroup.getHeight();
-					GO_TO_SCAN = true;
-				}else{
-					POSITION = checkedId; //选择后重新打开
-				}
-				tabHost.setCurrentTab(checkedId);
-			}
-		});
-		radioGroup.check(POSITION);
-	}
-	
-	@Override
-	protected void onResume() {
-		//POSITION不能为0，只能1-3
-		if(POSITION == 0){ 
-			POSITION = DEFUALT_POSITION;
-		}
-		//
-		//radioGroup.check(POSITION);
-		super.onResume();
-		if(FINISH_FROM_SCAN){
-			FINISH_FROM_SCAN = false;
-			finish();
-			return;
-		}
-		
-	}
-	
+		radioGroup.check(2);
+	}	
 	
 	@Override
 	protected int getCount() {
@@ -89,5 +59,7 @@ public class HomeA extends TabActivityBase {
 	protected int getBtnDrawable(int position) {
 		return R.drawable.base_checkbox;
 	}
+	
+	
 
 }

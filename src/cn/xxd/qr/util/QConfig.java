@@ -1,4 +1,4 @@
-package q.util;
+package cn.xxd.qr.util;
 
 public class QConfig {
 	

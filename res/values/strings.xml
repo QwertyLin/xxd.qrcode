@@ -33,6 +33,12 @@
   <string name="new_title">生成二维码</string>
   <string name="qrcode_title">扫描结果</string>
   
+  <string name="about_version">软件版本</string>
+  <string name="about_website">官方网站</string>
+  <string name="about_update">亲，您的版本out了哦\n赶紧更新吧！</string>
+  
+  <string name="scan_opening">正在启动摄像头...</string>
+  
   
   <string name="app_picker_name">应用</string>
   <string name="bookmark_picker_name">书签</string>

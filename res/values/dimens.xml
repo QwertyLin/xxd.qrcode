@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+        
+    <dimen name="base_text_micro">12sp</dimen>
+    <dimen name="base_text_small">14sp</dimen>
+    <dimen name="base_text_medium">18sp</dimen>
+    <dimen name="base_text_large">22sp</dimen> 
+    
+    
+    <dimen name="base_footer_height">53dip</dimen>
+    
+    <dimen name="title_text">20sp</dimen>
+    <dimen name="moreset_itemtext">16sp</dimen>
+    <dimen name="rdo1">0px</dimen>
+    <dimen name="rdo2">240px</dimen>
+    
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">25dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">10dp</dimen>
+    <dimen name="header_footer_internal_padding">20dp</dimen>
+</resources>

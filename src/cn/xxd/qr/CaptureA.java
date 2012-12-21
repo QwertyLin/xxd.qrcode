@@ -23,11 +23,12 @@ import com.google.zxing.client.android.CaptureActivityHandler;
 import com.google.zxing.client.android.FinishListener;
 import com.google.zxing.client.android.ViewfinderView;
 import com.google.zxing.client.android.camera.CameraManager;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.SurfaceHolder;
@@ -35,7 +36,6 @@ import android.view.SurfaceView;
 import android.view.WindowManager;
 import java.io.IOException;
 
-import q.util.EventHelper;
 import q.util.QLog;
 
 /**
@@ -46,7 +46,7 @@ import q.util.QLog;
  * @author dswitkin@google.com (Daniel Switkin)
  * @author Sean Owen
  */
-public final class CaptureA extends FragmentActivity implements SurfaceHolder.Callback {
+public final class CaptureA extends Activity implements SurfaceHolder.Callback {
 
   private static final String TAG = CaptureA.class.getSimpleName();
 
@@ -92,7 +92,6 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
   protected void onResume() {
 	  System.out.println("onResume");
 		super.onResume();
-		homeA.onResume();
 		
 		
 		cameraManager = new CameraManager(getApplication());
@@ -125,7 +124,6 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
   protected void onPause() {
 	  QLog.log(this, "onPause");
 	  super.onPause();
-	  homeA.onPause();
 	  
 	  new Thread(){
 			public void run() {
@@ -150,14 +148,7 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
   
   @Override
   public boolean onKeyDown(int keyCode, KeyEvent event) {
-    switch (keyCode) {
-    case KeyEvent.KEYCODE_MENU:
-    	EventHelper.get().post(new CaptureEvent.ClickKeyMenu());
-    	return true;
-      case KeyEvent.KEYCODE_BACK:
-    	  EventHelper.get().post(new CaptureEvent.ClickKeyBack());
-    	  return true;
-    	  
+    switch (keyCode) {    	  
         /*if (lastResult != null) {
           restartPreviewAfterDelay(0L);
           return true;
@@ -213,7 +204,7 @@ public final class CaptureA extends FragmentActivity implements SurfaceHolder.Ca
       beepManager.playBeepSoundAndVibrate();
     }
 
-    EventHelper.get().post(new CaptureEvent.FindQrCode(barcode, rawResult.getText()));
+    homeA.onFindQrCode(barcode, rawResult.getText());
   }
 
   private void initCamera(SurfaceHolder surfaceHolder) {

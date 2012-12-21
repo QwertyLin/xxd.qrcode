@@ -16,14 +16,12 @@
 
 package com.google.zxing.client.android;
 
-import cn.xxd.qr.R;
+import cn.xxd.qr.util.QConfig;
 
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.camera.CameraManager;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -31,10 +29,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
-import q.util.QConfig;
 
 /**
  * This view is overlaid on top of the camera preview. It adds the viewfinder rectangle and partial
@@ -52,9 +48,7 @@ public final class ViewfinderView extends View {
 
   private CameraManager cameraManager;
   private final Paint paint;
-  private final int maskColor;
   private final int laserColor;
-  private final int frameColor;
   private final int resultPointColor;
   private int scannerAlpha;
   private List<ResultPoint> possibleResultPoints;
@@ -66,11 +60,9 @@ public final class ViewfinderView extends View {
 
     // Initialize these once for performance rather than calling them every time in onDraw().
     paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    Resources resources = getResources();
-    maskColor = QConfig.VIEW_FINDER_MASK_COLOR;//maskColor = resources.getColor(R.color.viewfinder_mask);
+    getResources();
     //resultColor = resources.getColor(R.color.result_view);
     laserColor = QConfig.VIEW_FINDER_LASER_COLOR;//laserColor = resources.getColor(R.color.viewfinder_laser);
-    frameColor = QConfig.VIEW_FINDER_FRAME_COLOR;
     resultPointColor = 0xc0ffbd21;
     scannerAlpha = 0;
     possibleResultPoints = new ArrayList<ResultPoint>(5);
@@ -103,16 +95,19 @@ public final class ViewfinderView extends View {
     canvas.drawRect(0, frame.bottom, width, height, paint);*/
     
     //Draw frame
-    paint.setColor(frameColor);
     int third = (frame.right - frame.left) / 3;
     int weight = 5;
-    canvas.drawRect(frame.left, frame.top, frame.left + third, frame.top + weight, paint);
-    canvas.drawRect(frame.right - third, frame.top, frame.right, frame.top + weight, paint);
+    paint.setColor(0xFF0099CC);
     canvas.drawRect(frame.left, frame.bottom - weight, frame.left + third, frame.bottom, paint);
-    canvas.drawRect(frame.right - third, frame.bottom - weight, frame.right, frame.bottom, paint);
-    canvas.drawRect(frame.left, frame.top, frame.left + weight, frame.top + third, paint);
     canvas.drawRect(frame.left, frame.bottom - third, frame.left + weight, frame.bottom, paint);
+    paint.setColor(0xFF669900);
+    canvas.drawRect(frame.left, frame.top, frame.left + third, frame.top + weight, paint);
+    canvas.drawRect(frame.left, frame.top, frame.left + weight, frame.top + third, paint);
+    paint.setColor(0xFFCC0000);
+    canvas.drawRect(frame.right - third, frame.top, frame.right, frame.top + weight, paint);
     canvas.drawRect(frame.right - weight, frame.top, frame.right, frame.top + third, paint);
+    paint.setColor(0xFFFF8800);
+    canvas.drawRect(frame.right - third, frame.bottom - weight, frame.right, frame.bottom, paint);
     canvas.drawRect(frame.right - weight, frame.bottom - third, frame.right, frame.bottom, paint);
 
       // Draw a red "laser scanner" line through the middle to show decoding is active

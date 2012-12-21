@@ -4,6 +4,20 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" 
     >
+    
+    <RelativeLayout style="@style/Header">
+	
+	    <ImageButton
+	        android:id="@+id/base_header_btn_left"
+	        style="@style/HeaderBtn"
+	         />
+	
+	    <TextView
+	        android:id="@+id/base_header_text"
+	        style="@style/HeaderText"
+	        />
+	
+	</RelativeLayout>
    
 	<ScrollView 
 	    android:layout_width="fill_parent"
@@ -38,11 +52,7 @@
 	    </LinearLayout>
 	</ScrollView>
     
-	<View 
-	    android:layout_width="fill_parent"
-	    android:layout_height="0.5dip"
-	    android:background="@color/base_gray_light"
-	    />
+	<View style="@style/LineGray"/>
 	
 	<LinearLayout 
 	    android:layout_width="fill_parent"

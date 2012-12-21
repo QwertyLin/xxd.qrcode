@@ -26,10 +26,10 @@ import android.util.Log;
 
 import java.io.IOException;
 
-import q.util.QConfig;
 
 import cn.xxd.qr.CaptureA;
 import cn.xxd.qr.R;
+import cn.xxd.qr.util.QConfig;
 
 /**
  * Manages beeps and vibrations for {@link CaptureA}.

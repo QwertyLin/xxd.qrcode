@@ -1,67 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout 
+<LinearLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     >
+    
+    <RelativeLayout style="@style/Header">
+	
+	    <ImageButton
+	        android:id="@+id/new_color"
+	        style="@style/HeaderBtn"
+	        android:src="@drawable/a_content_save"
+	         />
+	    
+	    <ImageButton
+	        android:id="@+id/new_share"
+	        style="@style/HeaderBtn"
+	        android:layout_alignParentRight="true"
+	        android:src="@drawable/a_content_save"
+	         />
+	    
+	    <ImageButton
+	        android:id="@+id/new_save"
+	        style="@style/HeaderBtn"
+	        android:layout_toLeftOf="@id/new_share"
+	        android:src="@drawable/a_content_save"
+	         />
+	
+	</RelativeLayout>
 
 	<ScrollView 
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
 	    >
-	    <LinearLayout 
+	    <FrameLayout 
 	        android:layout_width="fill_parent"
 	        android:layout_height="wrap_content"
 	        android:orientation="vertical"
 	        >
+	        <LinearLayout 
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="vertical"
+		        >
+		        
+		        <ImageView 
+			        android:id="@+id/new_img"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_gravity="center_horizontal"
+			        />
+		        	        
+		        <TextView 
+		            android:id="@+id/new_text"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:gravity="top"
+		            android:minLines="2"
+		            android:textSize="@dimen/base_text_medium"
+		            android:padding="5dip"
+		            android:lineSpacingExtra="5dip"
+		            android:layout_margin="5dip"
+		            style="@style/QEditText"
+		            />
 	        
-	        <TextView 
-	            android:id="@+id/new_text"
+	        </LinearLayout>
+	        
+	        <FrameLayout 
+	            android:id="@+id/new_color_layout"
 	            android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
-	            android:gravity="top"
-	            android:minLines="2"
-	            android:textSize="@dimen/base_text_medium"
-	            android:padding="5dip"
-	            android:lineSpacingExtra="5dip"
-	            android:layout_margin="5dip"
-	            style="@style/QEditText"
-	            />
-	        
-	        <include layout="@layout/layout_new_color"  />
-	        
-	        <ImageView 
-		        android:id="@+id/new_img"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:layout_gravity="center_horizontal"
-		        />
+	            android:visibility="gone"
+	            >
+	        </FrameLayout>
 	        	        
-	    </LinearLayout>
+	    </FrameLayout>
 	</ScrollView>
-	
-	<LinearLayout 
-	    android:id="@+id/new_input_layout"
-	    android:layout_width="fill_parent"
-	    android:layout_height="fill_parent"
-	    android:orientation="vertical"
-	    android:clickable="true"
-	    android:background="#BB333333"
-	    android:visibility="gone"
-	    >
-	    <EditText 
-	        android:id="@+id/new_input_text"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:minLines="2"
-            android:textSize="@dimen/base_text_medium"
-            android:textColor="@color/base_blue_dark"
-            android:padding="5dip"
-            android:lineSpacingExtra="5dip"
-            android:layout_margin="5dip"
-            style="@style/QEditText"
-	            />
-	    <include layout="@layout/base_dialog_footer"/>
-	</LinearLayout>
-</FrameLayout>
+</LinearLayout>

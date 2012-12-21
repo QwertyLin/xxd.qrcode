@@ -11,7 +11,6 @@ import com.google.zxing.WriterException;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import q.base.ActivityBase;
-import q.base.UiBaseHeader;
 import q.util.FileMgr;
 import q.util.IntentUtil;
 import q.util.QLog;
@@ -50,9 +49,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.base_layout);
-		UiBaseHeader.btnBack(this, getString(R.string.qrcode_title));
-		addToBaseLayout(getLayoutInflater().inflate(R.layout.layout_qrcode, null));
+		setContentView(R.layout.layout_qrcode);
 		//
 		int height = WindowMgr.getInstance(this).getHeight();
 		//

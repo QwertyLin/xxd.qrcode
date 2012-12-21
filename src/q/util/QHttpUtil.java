@@ -1,4 +1,4 @@
-package q.out;
+package q.util;
 
 
 import java.io.BufferedReader;
@@ -21,7 +21,6 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
-import q.util.QLog;
 
 
 public class QHttpUtil {
