@@ -15,7 +15,7 @@
  limitations under the License.
  -->
 <resources>
-  <string name="app_name">小小二维码</string>
+  <string name="app_name">二维码 X</string>
   
   <string name="menu_history">历史</string>
   <string name="menu_new">生成</string>
@@ -32,6 +32,8 @@
   <string name="history_title">扫描历史</string>
   <string name="new_title">生成二维码</string>
   <string name="qrcode_title">扫描结果</string>
+  
+  <string name="history_empty">空空如也</string>
   
   <string name="about_version">软件版本</string>
   <string name="about_website">官方网站</string>
@@ -77,7 +79,6 @@
   <string name="history_clear_one_history_text">删除</string>
   <string name="history_clear_text">删除历史</string>
   <string name="history_email_title">条码扫描器历史</string>
-  <string name="history_empty">空的</string>
   <string name="history_empty_detail">没有条码扫描已记录</string>
   <string name="history_send">发送历史</string>
   <string name="msg_bulk_mode_scanned">批量扫描：找到条码，已保存</string>

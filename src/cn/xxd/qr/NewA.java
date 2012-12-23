@@ -30,7 +30,7 @@ import q.util.QLog;
 public class NewA extends FragmentActivity implements OnClickListener {
 	
 	private static final int DEFAULT_COLOR = 0xFF000000;
-	private static final String DEFAULT_TEXT = "小小二维码"; 
+	private static final String DEFAULT_TEXT = "二维码 X"; 
 	
 	private int mColor = DEFAULT_COLOR;
 	private String mText = DEFAULT_TEXT;

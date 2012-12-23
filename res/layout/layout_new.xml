@@ -11,7 +11,7 @@
 	    <ImageButton
 	        android:id="@+id/new_color"
 	        style="@style/HeaderBtn"
-	        android:src="@drawable/a_content_save"
+	        android:src="@drawable/new_color"
 	         />
 	    
 	    <ImageButton

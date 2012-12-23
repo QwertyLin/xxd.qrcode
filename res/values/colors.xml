@@ -11,7 +11,7 @@
     <color name="base_red_light">#FF4444</color>
     <color name="base_red_dark">#CC0000</color>
     <color name="base_yellow_light">#FFBB33</color>
-    <color name="base_yellow_dark">#FF8800</color>
+    <color name="base_yellow_dark">#FF8800</color><!-- 255 136  -->
     <color name="base_purple_light">#AA66CC</color>
     <color name="base_purple_dark">#9933CC</color>
     <color name="base_white">#ffffff</color>
