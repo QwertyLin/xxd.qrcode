@@ -17,6 +17,9 @@
 <resources>
   <string name="app_name">二维码 X</string>
   
+  <string name="dialog_ok">确定</string>
+    <string name="dialog_cancel">取消</string>
+  
   <string name="menu_history">历史</string>
   <string name="menu_new">生成</string>
   <string name="menu_about">关于</string>

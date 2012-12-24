@@ -6,28 +6,26 @@ import java.io.FileOutputStream;
 import java.util.Calendar;
 
 import com.google.zxing.WriterException;
-import com.squareup.otto.Subscribe;
-
-import cn.xxd.qr.service.NewColorService;
 import cn.xxd.qr.service.QrCodeEncodeService;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import q.util.EventHelper;
 import q.util.FileMgr;
-import q.util.InputMethodUtil;
 import q.util.IntentUtil;
 import q.util.QLog;
 
-public class NewA extends FragmentActivity implements OnClickListener {
+public class NewA extends Activity implements OnClickListener, OnCheckedChangeListener {
 	
 	private static final int DEFAULT_COLOR = 0xFF000000;
 	private static final String DEFAULT_TEXT = "二维码 X"; 
@@ -39,7 +37,6 @@ public class NewA extends FragmentActivity implements OnClickListener {
 	private Bitmap qrBitmap;
 	private TextView vText;
 	private ImageView vImg;
-	private View vColorLayout;
 	
 	
 	@Override
@@ -47,7 +44,6 @@ public class NewA extends FragmentActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_new);
 		//
-		vColorLayout = findViewById(R.id.new_color_layout);
 		vText = (TextView)findViewById(R.id.new_text); vText.setText(mText);
 		vImg = (ImageView)findViewById(R.id.new_img);
 		//
@@ -59,18 +55,6 @@ public class NewA extends FragmentActivity implements OnClickListener {
 		encode();
 	}
 	
-	@Override
-	protected void onResume() {
-		super.onResume();
-		EventHelper.get().register(this);
-	}
-	
-	@Override
-	protected void onPause() {
-		super.onPause();
-		EventHelper.get().unregister(this);
-	}
-
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
@@ -88,18 +72,7 @@ public class NewA extends FragmentActivity implements OnClickListener {
 			break;
 		}
 	}
-	
-	private void onClickColor(){
-		if(getSupportFragmentManager().findFragmentById(R.id.new_color_layout) == null){
-			getSupportFragmentManager().beginTransaction().add(R.id.new_color_layout, new NewColorF()).commit();
-		}
-		if(vColorLayout.getVisibility() == View.VISIBLE){
-			vColorLayout.setVisibility(View.GONE);
-		}else{
-			vColorLayout.setVisibility(View.VISIBLE);
-		}
-	}
-	
+		
 	private void onClickText(){
 		final EditText et = new EditText(this);
 		if(!mText.equals(DEFAULT_TEXT)){
@@ -172,10 +145,30 @@ public class NewA extends FragmentActivity implements OnClickListener {
 		QLog.event(this, QLog.EVENT_NEW, mText);
 		QLog.event(this, QLog.EVENT_NEW_COLOR, String.valueOf(mColor));
 	}
-		
-	@Subscribe
-	public void onColorChange(NewColorService.ColorChange event){
-		mColor = event.color;
+	
+	protected void ________Color(){};
+	
+	private AlertDialog dialogColor;
+	
+	private void onClickColor(){
+		if(dialogColor == null){
+			View v = getLayoutInflater().inflate(R.layout.layout_new_color, null);
+			RadioGroup rg = (RadioGroup)v.findViewById(R.id.new_color);
+			rg.check(R.id.new_color_black);
+			rg.setOnCheckedChangeListener(this);
+			dialogColor = new AlertDialog.Builder(this)
+			.setView(v)
+			.setNeutralButton(R.string.dialog_cancel, null)
+			.create();
+		}
+		dialogColor.show();
+	}
+	
+	@Override
+	public void onCheckedChanged(RadioGroup group, int checkedId) {
+		dialogColor.dismiss();
+		RadioButton rb = (RadioButton)group.findViewById(checkedId);
+		mColor = rb.getTextColors().getDefaultColor();
 		encode();
 	}
 	
