@@ -68,24 +68,20 @@
 	
 	<LinearLayout 
 	    android:layout_width="fill_parent"
-	    android:layout_height="@dimen/base_footer_height"
+	    android:layout_height="wrap_content"
 	    android:orientation="horizontal"
 	    >
-	    <ImageButton 
-	        android:id="@+id/new_share"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_content_copy_dark"
-	        />
-	    <ImageButton 
+	    <Button 
+	        style="@style/BottomBtn"
 	        android:id="@+id/new_save"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_social_share_dark"
+	        android:drawableTop="@drawable/a_content_save"
+	        android:text="@string/new_save"
+	        />
+	    <Button 
+	        style="@style/BottomBtn"
+	         android:id="@+id/new_share"
+	        android:drawableTop="@drawable/a_social_share_dark"
+	        android:text="@string/new_share"
 	        />
 	</LinearLayout>
 </LinearLayout>

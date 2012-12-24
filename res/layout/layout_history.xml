@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    
+    <ListView 
+        style="@style/QListView"
+        android:id="@+id/history_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ></ListView>
+    
+    <TextView 
+        android:id="@+id/history_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/history_empty"
+        android:textColor="#888888"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        />
+    
+    <ImageButton 
+        android:id="@+id/history_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/history_clean"
+        android:layout_gravity="right|bottom"
+        android:padding="10dip"
+        android:background="@drawable/capture_btn"
+        android:layout_margin="10dip"
+        />
+
+</FrameLayout>

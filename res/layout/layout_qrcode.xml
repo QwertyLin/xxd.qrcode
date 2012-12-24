@@ -5,18 +5,14 @@
     android:orientation="vertical" 
     >
     
-    <RelativeLayout style="@style/Header">
-	
-	    <ImageButton
-	        android:id="@+id/base_header_btn_left"
-	        style="@style/HeaderBtn"
-	         />
-	
-	    <TextView
-	        android:id="@+id/base_header_text"
-	        style="@style/HeaderText"
-	        />
-	
+    <RelativeLayout style="@style/Header"
+        android:background="@null"
+        >
+        <ImageButton 
+            style="@style/HeaderBtn"
+            android:id="@+id/qrcode_back"
+            android:src="@drawable/a_navigation_back_dark"
+            />
 	</RelativeLayout>
    
 	<ScrollView 
@@ -56,32 +52,26 @@
 	
 	<LinearLayout 
 	    android:layout_width="fill_parent"
-	    android:layout_height="@dimen/base_footer_height"
+	    android:layout_height="wrap_content"
 	    android:orientation="horizontal"
 	    >
-	    <ImageButton 
+	    <Button 
+	        style="@style/BottomBtn"
 	        android:id="@+id/qrcode_copy"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_content_copy_dark"
+	        android:drawableTop="@drawable/a_content_copy_dark"
+	        android:text="@string/qrcode_copy"
 	        />
-	    <ImageButton 
+	    <Button 
+	        style="@style/BottomBtn"
 	        android:id="@+id/qrcode_share"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_social_share_dark"
+	        android:drawableTop="@drawable/a_social_share_dark"
+	        android:text="@string/qrcode_share"
 	        />
-	    <ImageButton 
+	    <Button 
+	        style="@style/BottomBtn"
 	        android:id="@+id/qrcode_website"
-	        android:layout_width="0dip"
-	        android:layout_height="fill_parent"
-	        android:layout_weight="1"
-	        android:background="@drawable/base_btn_bg"
-	        android:src="@drawable/a_location_web_site_dark"
+	        android:drawableTop="@drawable/a_location_web_site_dark"
+	        android:text="@string/qrcode_browser"
 	        android:visibility="gone"
 	        />
 	</LinearLayout>

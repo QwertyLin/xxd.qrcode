@@ -4,10 +4,7 @@ import java.util.Calendar;
 
 import q.util.BitmapUtil;
 import q.util.FileMgr;
-
-import com.google.zxing.client.android.camera.CameraManager;
-import cn.xxd.qr.R;
-import cn.xxd.qr.bean.QrCode;
+import q.util.WindowUtil;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -16,7 +13,11 @@ import android.graphics.Matrix;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import cn.xxd.qr.bean.QrCode;
+
+import com.google.zxing.client.android.camera.CameraManager;
 
 public class CaptureA2 implements OnClickListener {
 	
@@ -36,6 +37,15 @@ public class CaptureA2 implements OnClickListener {
 		vLight = (ImageButton)mAct.findViewById(R.id.capture_light);
 		vLight.setOnClickListener(this);
 		mAct.findViewById(R.id.capture_home).setOnClickListener(this);
+	}
+	
+	public void onWindowFocusChanged(){
+		System.out.println("change");
+		LinearLayout layout = (LinearLayout) mAct.findViewById(R.id.capture_op_layout);
+		RelativeLayout.LayoutParams lp = (RelativeLayout.LayoutParams)layout.getLayoutParams();
+		int margin = (WindowUtil.getHeight(mAct) - (WindowUtil.getWidth(mAct) * 7 / 8) ) / 8;
+		lp.setMargins(0, 0, margin, 0);
+		layout.setLayoutParams(lp);
 	}
 		
 	public void onFindQrCode(final Bitmap barcodeImg, String barcode){

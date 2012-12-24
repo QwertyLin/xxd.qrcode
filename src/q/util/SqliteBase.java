@@ -98,7 +98,7 @@ public abstract class SqliteBase<T extends SqliteBase.ISqlite> extends SQLiteOpe
 	
 	public void empty(){
 		db.execSQL("DELETE FROM " + tableName);
-		db.execSQL("update sqlite_sequence set seq=0 where name='"+ tableName +"'");
+		//db.execSQL("update sqlite_sequence set seq=0 where name='"+ tableName +"'");
 	}
 
 	/**

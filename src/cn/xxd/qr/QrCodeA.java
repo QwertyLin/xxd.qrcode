@@ -67,6 +67,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		ivImage.setLayoutParams(ivlp);
 		((TextView)findViewById(R.id.qrcode_text)).setText(qrcode.getText());
 		//
+		findViewById(R.id.qrcode_back).setOnClickListener(this);
 		findViewById(R.id.qrcode_copy).setOnClickListener(this);
 		findViewById(R.id.qrcode_share).setOnClickListener(this);
 		//
@@ -87,8 +88,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		switch (keyCode) {
 		case KeyEvent.KEYCODE_BACK:
-			startActivity(new Intent(this, CaptureA.class));
-			finish();
+			onClickBack();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
@@ -168,6 +168,9 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch(v.getId()){
+		case R.id.qrcode_back:
+			onClickBack();
+			break;
 		case R.id.qrcode_copy:
 			onClickCopy();
 			break;
@@ -178,6 +181,13 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 			onClickWebsite();
 			break;
 		}
+	}
+	
+	private void onClickBack(){
+		if(state == State.IMAGE_SCAN){
+			startActivity(new Intent(this, CaptureA.class));	
+		}
+		finish();
 	}
 	
 	private void onClickCopy(){
@@ -203,7 +213,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 			imagePath = fileMgr.getScan(qrcode.getTime());
 		}
 		//
-		IntentUtil.sendImage(this, "小小二维码分享：" + qrcode.getText(), imagePath);
+		IntentUtil.sendImage(this, "", imagePath);
 		//
 		QLog.event(this, QLog.EVENT_SCAN_SHARE, "");
 	}

@@ -8,8 +8,6 @@
     <dimen name="base_text_large">22sp</dimen> 
     
     
-    <dimen name="base_footer_height">53dip</dimen>
-    
     <dimen name="title_text">20sp</dimen>
     <dimen name="moreset_itemtext">16sp</dimen>
     <dimen name="rdo1">0px</dimen>

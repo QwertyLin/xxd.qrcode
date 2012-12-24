@@ -10,9 +10,6 @@ import cn.xxd.qr.service.AboutService;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 public class MainA extends Activity {
 
@@ -22,7 +19,7 @@ public class MainA extends Activity {
 		
 		AboutService.checkUpdate(this);
 		
-		FrameLayout layout = new FrameLayout(this);
+		//FrameLayout layout = new FrameLayout(this);
 		//
 		//initVersion();
 		//
@@ -30,9 +27,9 @@ public class MainA extends Activity {
 		//intent
 
 		//tempInitHistoryData();
-		//startActivity(new Intent(this, CaptureA.class));
+		startActivity(new Intent(this, CaptureA.class));
 		//startActivity(new Intent(this, NewA.class));
-		startActivity(new Intent(this, HomeA.class));
+		//startActivity(new Intent(this, HomeA.class));
 		//startActivity(new Intent(this, ColorDialog.class));
 		//startActivity(new Intent(this, UpdateA.class));
 		//startActivity(new Intent(this, GuideA.class));

@@ -31,24 +31,12 @@
       android:layout_height="fill_parent"/>
   
   <LinearLayout 
+      android:id="@+id/capture_op_layout"
       android:layout_width="wrap_content"
       android:layout_height="fill_parent"
       android:layout_alignParentRight="true"
       android:orientation="vertical"
       >
-      <View 
-          android:layout_width="1dip"
-          android:layout_height="0dip"
-          android:layout_weight="1"
-          />
-      <ImageButton
-      android:id="@+id/capture_light"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:src="@drawable/capture_light_normal"
-       android:padding="10dip"
-       android:background="@drawable/capture_btn"
-       />
       <View 
           android:layout_width="1dip"
           android:layout_height="0dip"
@@ -62,6 +50,19 @@
         android:padding="10dip"
        android:background="@drawable/capture_btn"
         />
+      <View 
+          android:layout_width="1dip"
+          android:layout_height="0dip"
+          android:layout_weight="1"
+          />
+      <ImageButton
+      android:id="@+id/capture_light"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/capture_light_normal"
+       android:padding="10dip"
+       android:background="@drawable/capture_btn"
+       />
       <View 
           android:layout_width="1dip"
           android:layout_height="0dip"

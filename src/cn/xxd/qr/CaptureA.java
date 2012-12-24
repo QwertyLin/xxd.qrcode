@@ -89,6 +89,12 @@ public final class CaptureA extends Activity implements SurfaceHolder.Callback {
   }
   
   @Override
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		homeA.onWindowFocusChanged();
+	}
+  
+  @Override
   protected void onResume() {
 	  System.out.println("onResume");
 		super.onResume();

@@ -1,5 +1,6 @@
 package cn.xxd.qr;
 
+import cn.xxd.qr.util.QSp;
 import q.base.TabActivityBase;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,7 +24,12 @@ public class HomeA extends TabActivityBase {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		radioGroup.check(2);
+		//
+		if(QSp.getUpdateUrl(this) != null){
+			radioGroup.check(3); //有更新是跳到关于
+		}else{
+			radioGroup.check(1);
+		}
 	}	
 	
 	@Override
