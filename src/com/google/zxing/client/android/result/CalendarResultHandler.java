@@ -40,7 +40,7 @@ public final class CalendarResultHandler extends ResultHandler {
   private static final String TAG = CalendarResultHandler.class.getSimpleName();
 
   private static final int[] buttons = {
-      R.string.button_add_calendar
+      /*R.string.button_add_calendar*/
   };
 
   public CalendarResultHandler(Activity activity, ParsedResult result) {

@@ -89,19 +89,6 @@
 	        android:paddingRight="5dip"
 	        />
 	 </LinearLayout>
-	 
-	 <Button 
-	     android:id="@+id/about_update"
-	     android:layout_width="wrap_content"
-	     android:layout_height="wrap_content"
-	     android:text="@string/about_update"
-	     android:layout_marginTop="35dip"
-	     android:layout_gravity="center_horizontal"
-	     android:background="@drawable/btn_red"
-	     android:textColor="#ffffff"
-	     android:padding="10dip"
-	     android:visibility="gone"
-	     />
 	    
 	</LinearLayout>
 </ScrollView>

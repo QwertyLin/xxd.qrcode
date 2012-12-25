@@ -5,6 +5,7 @@ cn.xxd.qr.CaptureA
 cn.xxd.qr.CaptureA: CaptureA()
 cn.xxd.qr.HistoryA
 cn.xxd.qr.HistoryA: HistoryA()
+cn.xxd.qr.HistoryA: void onClick(android.view.View)
 cn.xxd.qr.HomeA
 cn.xxd.qr.HomeA: HomeA()
 cn.xxd.qr.MainA
@@ -19,8 +20,10 @@ cn.xxd.qr.QrCodeA$State: cn.xxd.qr.QrCodeA$State[] values()
 cn.xxd.qr.QrCodeA$State: cn.xxd.qr.QrCodeA$State valueOf(java.lang.String)
 cn.xxd.qr.ScanA
 cn.xxd.qr.ScanA: ScanA()
-cn.xxd.qr.view.CaptureTabButton
-cn.xxd.qr.view.CaptureTabButton: CaptureTabButton(android.content.Context,android.util.AttributeSet)
+cn.xxd.qr.view.CaptureMenuTextView
+cn.xxd.qr.view.CaptureMenuTextView: CaptureMenuTextView(android.content.Context,android.util.AttributeSet)
+cn.xxd.qr.view.RotateImageView
+cn.xxd.qr.view.RotateImageView: RotateImageView(android.content.Context,android.util.AttributeSet)
 com.baidu.mobstat.SendStrategyEnum: com.baidu.mobstat.SendStrategyEnum[] values()
 com.baidu.mobstat.SendStrategyEnum: com.baidu.mobstat.SendStrategyEnum valueOf(java.lang.String)
 com.baidu.mobstat.StatActivity
@@ -49,14 +52,7 @@ com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.de
 com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.decoder.ErrorCorrectionLevel valueOf(java.lang.String)
 com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode[] values()
 com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode valueOf(java.lang.String)
-net.youmi.android.AdActivity
-net.youmi.android.AdView
-net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeSet)
-net.youmi.android.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
-net.youmi.android.YoumiReceiver
 q.base.ActivityBase
 q.base.ActivityBase: ActivityBase()
 q.base.TabActivityBase
 q.base.TabActivityBase: TabActivityBase()
-q.out.ActivityDialogBase
-q.out.ColorDialog

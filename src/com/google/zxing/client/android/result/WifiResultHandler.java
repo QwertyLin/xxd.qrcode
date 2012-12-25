@@ -55,7 +55,8 @@ public final class WifiResultHandler extends ResultHandler {
 
   @Override
   public int getButtonText(int index) {
-    return R.string.button_wifi;
+    /*return R.string.button_wifi;*/
+	  return 0;
   }
 
   @Override

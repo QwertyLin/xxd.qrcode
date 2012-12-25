@@ -4,12 +4,11 @@ import cn.xxd.qr.util.QConfig;
 import cn.xxd.qr.util.QSp;
 import q.base.ActivityBase;
 import q.util.IntentUtil;
-import android.app.Activity;
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -27,16 +26,20 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		TextView tvWebsite = (TextView)findViewById(R.id.about_website);
 		tvWebsite.setText(QConfig.BASE_WEBSITE_URL);
 		tvWebsite.setOnClickListener(this);
-		
 		//
-		
 	}
 	
 	private void initUpdate(){
 		if(QSp.getUpdateUrl(this) != null){
-			View v = findViewById(R.id.about_update);
-			v.setVisibility(View.VISIBLE);
-			v.setOnClickListener(this);
+			new AlertDialog.Builder(this)
+			.setMessage(R.string.about_update)
+			.setNeutralButton(R.string.about_update_go, new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					IntentUtil.openBrowser(AboutA.this, "http://android.myapp.com/android/down.jsp?appid=653022");
+				}
+			})
+			.show();
 		}
 	}
 	
@@ -55,9 +58,6 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		case R.id.about_website:
 			onClickWebsite();
 			break;
-		case R.id.about_update:
-			onClickUpdate();
-			break;
 		}
 	}
 	
@@ -65,9 +65,6 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		IntentUtil.openBrowser(this, QConfig.BASE_WEBSITE_URL);
 	}
 	
-	private void onClickUpdate(){
-		IntentUtil.openBrowser(this, "http://android.myapp.com/android/down.jsp?appid=653022");
-	}
 	
 	/*private void onClickMarket(){
 		startActivity(

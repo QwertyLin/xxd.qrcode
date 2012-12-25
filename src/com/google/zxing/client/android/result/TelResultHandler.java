@@ -31,8 +31,8 @@ import android.telephony.PhoneNumberUtils;
  */
 public final class TelResultHandler extends ResultHandler {
   private static final int[] buttons = {
-      R.string.button_dial,
-      R.string.button_add_contact
+      /*R.string.button_dial,
+      R.string.button_add_contact*/
   };
 
   public TelResultHandler(Activity activity, ParsedResult result) {

@@ -53,10 +53,10 @@ public final class AddressBookResultHandler extends ResultHandler {
   }
 
   private static final int[] BUTTON_TEXTS = {
-    R.string.button_add_contact,
+    /*R.string.button_add_contact,
     R.string.button_show_map,
     R.string.button_dial,
-    R.string.button_email,
+    R.string.button_email,*/
   };
 
   private final boolean[] fields;

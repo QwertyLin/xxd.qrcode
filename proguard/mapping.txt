@@ -1,22 +1,24 @@
 cn.xxd.qr.AboutA -> cn.xxd.qr.AboutA:
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
+cn.xxd.qr.AboutA$1 -> cn.xxd.qr.a:
+    cn.xxd.qr.AboutA this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
 cn.xxd.qr.CaptureA -> cn.xxd.qr.CaptureA:
     java.lang.String TAG -> a
     com.google.zxing.client.android.camera.CameraManager cameraManager -> b
     com.google.zxing.client.android.CaptureActivityHandler handler -> c
     com.google.zxing.client.android.ViewfinderView viewfinderView -> d
-    com.google.zxing.Result lastResult -> e
-    boolean hasSurface -> f
-    com.google.zxing.client.android.BeepManager beepManager -> g
-    cn.xxd.qr.CaptureA2 homeA -> h
+    boolean hasSurface -> e
+    com.google.zxing.client.android.BeepManager beepManager -> f
+    cn.xxd.qr.CaptureA2 homeA -> g
     com.google.zxing.client.android.ViewfinderView getViewfinderView() -> a
     android.os.Handler getHandler() -> b
     com.google.zxing.client.android.camera.CameraManager getCameraManager() -> c
     void onCreate(android.os.Bundle) -> onCreate
+    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
     void onResume() -> onResume
     void onPause() -> onPause
-    void onDestroy() -> onDestroy
     boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
     void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
@@ -25,19 +27,25 @@ cn.xxd.qr.CaptureA -> cn.xxd.qr.CaptureA:
     void initCamera(android.view.SurfaceHolder) -> a
     void displayFrameworkBugMessageAndExit() -> e
     void drawViewfinder() -> d
-cn.xxd.qr.CaptureA2 -> cn.xxd.qr.a:
+    com.google.zxing.client.android.CaptureActivityHandler access$0(cn.xxd.qr.CaptureA) -> a
+    void access$1$1ce7e68d(cn.xxd.qr.CaptureA) -> b
+    com.google.zxing.client.android.camera.CameraManager access$2(cn.xxd.qr.CaptureA) -> c
+cn.xxd.qr.CaptureA$1 -> cn.xxd.qr.b:
+    cn.xxd.qr.CaptureA this$0 -> a
+    void run() -> run
+cn.xxd.qr.CaptureA2 -> cn.xxd.qr.c:
     android.app.Activity mAct -> a
     com.google.zxing.client.android.camera.CameraManager mCameraMgr -> b
-    android.widget.ImageButton btnFlash -> c
-    boolean isFlashOn -> d
+    android.widget.ImageButton vLight -> c
     void setCameraManager(com.google.zxing.client.android.camera.CameraManager) -> a
     void onCreate() -> a
+    void onWindowFocusChanged() -> b
+    void onFindQrCode(android.graphics.Bitmap,java.lang.String) -> a
     void onClick(android.view.View) -> onClick
-    void handleDecode(com.google.zxing.Result,android.graphics.Bitmap) -> a
     android.app.Activity access$0(cn.xxd.qr.CaptureA2) -> a
-cn.xxd.qr.CaptureA2$1 -> cn.xxd.qr.b:
+cn.xxd.qr.CaptureA2$1 -> cn.xxd.qr.d:
     cn.xxd.qr.CaptureA2 this$0 -> a
-    android.graphics.Bitmap val$barcode -> b
+    android.graphics.Bitmap val$barcodeImg -> b
     cn.xxd.qr.bean.QrCode val$qrcode -> c
     void run() -> run
 cn.xxd.qr.HistoryA -> cn.xxd.qr.HistoryA:
@@ -48,60 +56,62 @@ cn.xxd.qr.HistoryA -> cn.xxd.qr.HistoryA:
     void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
     boolean onEndlessListViewBackground() -> a
     void onEndlessListViewSuccess() -> b
+    void onClick(android.view.View) -> onClick
+    java.util.List access$0(cn.xxd.qr.HistoryA) -> a
+    cn.xxd.qr.adapter.HistoryAdapter access$1(cn.xxd.qr.HistoryA) -> b
+cn.xxd.qr.HistoryA$1 -> cn.xxd.qr.e:
+    cn.xxd.qr.HistoryA this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+    cn.xxd.qr.HistoryA access$0(cn.xxd.qr.HistoryA$1) -> a
+cn.xxd.qr.HistoryA$1$1 -> cn.xxd.qr.f:
+    cn.xxd.qr.HistoryA$1 this$1 -> a
+    void run() -> run
+    cn.xxd.qr.HistoryA$1 access$0(cn.xxd.qr.HistoryA$1$1) -> a
+cn.xxd.qr.HistoryA$1$1$1 -> cn.xxd.qr.g:
+    cn.xxd.qr.HistoryA$1$1 this$2 -> a
+    void run() -> run
 cn.xxd.qr.HomeA -> cn.xxd.qr.HomeA:
     boolean GO_TO_SCAN -> a
     boolean FINISH_FROM_SCAN -> b
-    int POSITION -> c
     void onCreate(android.os.Bundle) -> onCreate
-    void onResume() -> onResume
     android.content.Intent getIntent(int) -> a
     java.lang.String getBtnText(int) -> b
-    android.widget.TabHost access$0(cn.xxd.qr.HomeA) -> a
-cn.xxd.qr.HomeA$1 -> cn.xxd.qr.c:
-    cn.xxd.qr.HomeA this$0 -> a
-    void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+    int getBtnDrawable(int) -> c
 cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
     void onCreate(android.os.Bundle) -> onCreate
+    void onResume() -> onResume
+    void onPause() -> onPause
 cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
     int mColor -> a
     java.lang.String mText -> b
     long time -> c
     android.graphics.Bitmap qrBitmap -> d
-    android.widget.RadioGroup vColor -> e
-    android.widget.TextView vText -> f
-    android.widget.ImageView vImg -> g
-    android.view.View vInputLayout -> h
-    android.widget.EditText vInputText -> i
+    android.widget.TextView vText -> e
+    android.widget.ImageView vImg -> f
+    android.app.AlertDialog dialogColor -> g
     void onCreate(android.os.Bundle) -> onCreate
-    void onPause() -> onPause
     void onClick(android.view.View) -> onClick
-    void onClickInputCancel() -> a
-    void onEncode() -> b
-    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-    void access$0(cn.xxd.qr.NewA) -> a
-    void access$1(cn.xxd.qr.NewA) -> b
-    void access$2(cn.xxd.qr.NewA,int) -> a
-    void access$3(cn.xxd.qr.NewA) -> c
-    java.lang.String access$4(cn.xxd.qr.NewA) -> d
-    int access$5(cn.xxd.qr.NewA) -> e
-    void access$6(cn.xxd.qr.NewA,android.graphics.Bitmap) -> a
-    android.widget.ImageView access$7(cn.xxd.qr.NewA) -> f
-    android.graphics.Bitmap access$8(cn.xxd.qr.NewA) -> g
-cn.xxd.qr.NewA$1 -> cn.xxd.qr.d:
-    cn.xxd.qr.NewA this$0 -> a
-    void onClick(android.view.View) -> onClick
-cn.xxd.qr.NewA$2 -> cn.xxd.qr.e:
-    cn.xxd.qr.NewA this$0 -> a
-    void onClick(android.view.View) -> onClick
-cn.xxd.qr.NewA$3 -> cn.xxd.qr.f:
-    cn.xxd.qr.NewA this$0 -> a
+    void encode() -> a
     void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
-cn.xxd.qr.NewA$4 -> cn.xxd.qr.g:
+    void access$0(cn.xxd.qr.NewA,java.lang.String) -> a
+    java.lang.String access$1(cn.xxd.qr.NewA) -> a
+    android.widget.TextView access$2(cn.xxd.qr.NewA) -> b
+    void access$3(cn.xxd.qr.NewA) -> c
+    int access$4(cn.xxd.qr.NewA) -> d
+    android.widget.ImageView access$5(cn.xxd.qr.NewA) -> e
+    android.graphics.Bitmap access$6(cn.xxd.qr.NewA) -> f
+    void access$7(cn.xxd.qr.NewA,android.graphics.Bitmap) -> a
+cn.xxd.qr.NewA$1 -> cn.xxd.qr.h:
+    cn.xxd.qr.NewA this$0 -> a
+    android.widget.EditText val$et -> b
+    void onClick(android.content.DialogInterface,int) -> onClick
+cn.xxd.qr.NewA$2 -> cn.xxd.qr.i:
     cn.xxd.qr.NewA this$0 -> a
     void run() -> run
-    cn.xxd.qr.NewA access$0(cn.xxd.qr.NewA$4) -> a
-cn.xxd.qr.NewA$4$1 -> cn.xxd.qr.h:
-    cn.xxd.qr.NewA$4 this$1 -> a
+    cn.xxd.qr.NewA access$0(cn.xxd.qr.NewA$2) -> a
+cn.xxd.qr.NewA$2$1 -> cn.xxd.qr.j:
+    cn.xxd.qr.NewA$2 this$1 -> a
+    android.graphics.Bitmap val$bmTemp -> b
     void run() -> run
 cn.xxd.qr.QrCodeA -> cn.xxd.qr.QrCodeA:
     android.graphics.Bitmap SCAN_BITMAP -> a
@@ -112,37 +122,39 @@ cn.xxd.qr.QrCodeA -> cn.xxd.qr.QrCodeA:
     android.widget.ImageView ivImage -> f
     int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType -> g
     void onCreate(android.os.Bundle) -> onCreate
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
     void onClick(android.view.View) -> onClick
-    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType() -> a
+    void onClickBack() -> a
+    int[] $SWITCH_TABLE$com$google$zxing$client$result$ParsedResultType() -> b
     cn.xxd.qr.bean.QrCode access$1(cn.xxd.qr.QrCodeA) -> a
     android.widget.ImageView access$2(cn.xxd.qr.QrCodeA) -> b
     void access$3(cn.xxd.qr.QrCodeA,android.graphics.Bitmap) -> a
     android.graphics.Bitmap access$4(cn.xxd.qr.QrCodeA) -> c
-cn.xxd.qr.QrCodeA$1 -> cn.xxd.qr.i:
+cn.xxd.qr.QrCodeA$1 -> cn.xxd.qr.k:
     cn.xxd.qr.QrCodeA this$0 -> a
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$1) -> a
-cn.xxd.qr.QrCodeA$1$1 -> cn.xxd.qr.j:
+cn.xxd.qr.QrCodeA$1$1 -> cn.xxd.qr.l:
     cn.xxd.qr.QrCodeA$1 this$1 -> a
     android.graphics.Bitmap val$bm -> b
     void run() -> run
-cn.xxd.qr.QrCodeA$2 -> cn.xxd.qr.k:
+cn.xxd.qr.QrCodeA$2 -> cn.xxd.qr.m:
     cn.xxd.qr.QrCodeA this$0 -> a
     java.io.File val$imageFile -> b
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$2) -> a
-cn.xxd.qr.QrCodeA$2$1 -> cn.xxd.qr.l:
+cn.xxd.qr.QrCodeA$2$1 -> cn.xxd.qr.n:
     cn.xxd.qr.QrCodeA$2 this$1 -> a
     android.graphics.Bitmap val$bm -> b
     void run() -> run
-cn.xxd.qr.QrCodeA$3 -> cn.xxd.qr.m:
+cn.xxd.qr.QrCodeA$3 -> cn.xxd.qr.o:
     cn.xxd.qr.QrCodeA this$0 -> a
     void run() -> run
     cn.xxd.qr.QrCodeA access$0(cn.xxd.qr.QrCodeA$3) -> a
-cn.xxd.qr.QrCodeA$3$1 -> cn.xxd.qr.n:
+cn.xxd.qr.QrCodeA$3$1 -> cn.xxd.qr.p:
     cn.xxd.qr.QrCodeA$3 this$1 -> a
     void run() -> run
-cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.o:
+cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.q:
     cn.xxd.qr.QrCodeA$State IMAGE_SCAN -> a
     cn.xxd.qr.QrCodeA$State IMAGE_SRC -> b
     cn.xxd.qr.QrCodeA$State IMAGE_BUILD -> c
@@ -152,8 +164,14 @@ cn.xxd.qr.QrCodeA$State -> cn.xxd.qr.o:
 cn.xxd.qr.ScanA -> cn.xxd.qr.ScanA:
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
+cn.xxd.qr.ScanA$1 -> cn.xxd.qr.r:
+    cn.xxd.qr.ScanA this$0 -> a
+    void run() -> run
+    cn.xxd.qr.ScanA access$0(cn.xxd.qr.ScanA$1) -> a
+cn.xxd.qr.ScanA$1$1 -> cn.xxd.qr.s:
+    cn.xxd.qr.ScanA$1 this$1 -> a
+    void run() -> run
 cn.xxd.qr.adapter.HistoryAdapter -> cn.xxd.qr.a.a:
-    int getLayoutId() -> a
     java.lang.Object getHolder(android.view.View) -> a
     void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
 cn.xxd.qr.adapter.HistoryAdapter$Holder -> cn.xxd.qr.a.b:
@@ -178,27 +196,22 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.b:
     java.lang.String getTimeStr() -> d
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-cn.xxd.qr.service.CaptureTabInitService -> cn.xxd.qr.c.a:
-    void initLayoutClick(android.app.Activity,android.view.View) -> a
-cn.xxd.qr.service.CaptureTabInitService$1 -> cn.xxd.qr.c.b:
-    int maxX -> a
-    int maxY -> b
-    float x -> c
-    float y -> d
-    float y1 -> e
-    float y2 -> f
-    float y3 -> g
-    android.app.Activity val$act -> h
-    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
-cn.xxd.qr.service.QrCodeEncodeService -> cn.xxd.qr.c.c:
+cn.xxd.qr.service.QrCodeEncodeService -> cn.xxd.qr.c.a:
     android.graphics.Bitmap encode(android.content.Context,java.lang.String,int) -> a
-cn.xxd.qr.view.CaptureTabButton -> cn.xxd.qr.view.CaptureTabButton:
-    float rotation -> a
-    float width -> b
-    float height -> c
+cn.xxd.qr.util.QSp -> cn.xxd.qr.d.a:
+    java.lang.String getUpdateUrl(android.content.Context) -> a
+cn.xxd.qr.view.CaptureMenuTextView -> cn.xxd.qr.view.CaptureMenuTextView:
+    int ROTATION -> a
+    int width -> b
+    int height -> c
     void onDraw(android.graphics.Canvas) -> onDraw
     void onLayout(boolean,int,int,int,int) -> onLayout
-cn.xxd.qr.view.UiBaseHeader -> cn.xxd.qr.view.a:
+cn.xxd.qr.view.RotateImageView -> cn.xxd.qr.view.RotateImageView:
+    int ROTATION -> a
+    int width -> b
+    int height -> c
+    void onDraw(android.graphics.Canvas) -> onDraw
+    void onLayout(boolean,int,int,int,int) -> onLayout
 com.baidu.mobstat.SendStrategyEnum -> com.baidu.mobstat.a:
     com.baidu.mobstat.SendStrategyEnum APP_START -> a
     com.baidu.mobstat.SendStrategyEnum ONCE_A_DAY -> b
@@ -549,7 +562,6 @@ com.google.zxing.client.android.CaptureActivityHandler -> com.google.zxing.clien
     com.google.zxing.client.android.camera.CameraManager cameraManager -> e
     void handleMessage(android.os.Message) -> handleMessage
     void quitSynchronously() -> a
-    void restartPreviewAndDecode() -> b
 com.google.zxing.client.android.CaptureActivityHandler$State -> com.google.zxing.client.android.d:
     com.google.zxing.client.android.CaptureActivityHandler$State PREVIEW -> a
     com.google.zxing.client.android.CaptureActivityHandler$State SUCCESS -> b
@@ -581,13 +593,11 @@ com.google.zxing.client.android.ViewfinderView -> com.google.zxing.client.androi
     int[] SCANNER_ALPHA -> a
     com.google.zxing.client.android.camera.CameraManager cameraManager -> b
     android.graphics.Paint paint -> c
-    int maskColor -> d
-    int laserColor -> e
-    int frameColor -> f
-    int resultPointColor -> g
-    int scannerAlpha -> h
-    java.util.List possibleResultPoints -> i
-    java.util.List lastPossibleResultPoints -> j
+    int laserColor -> d
+    int resultPointColor -> e
+    int scannerAlpha -> f
+    java.util.List possibleResultPoints -> g
+    java.util.List lastPossibleResultPoints -> h
     void setCameraManager(com.google.zxing.client.android.camera.CameraManager) -> a
     void onDraw(android.graphics.Canvas) -> onDraw
     void drawViewfinder() -> a
@@ -641,9 +651,10 @@ com.google.zxing.client.android.camera.CameraManager -> com.google.zxing.client.
     void startPreview() -> c
     void stopPreview() -> d
     void setTorch(boolean) -> a
+    boolean getTorch() -> e
     void requestPreviewFrame$2a8797e(android.os.Handler) -> a
-    android.graphics.Rect getFramingRect() -> e
-    android.graphics.Rect getFramingRectInPreview() -> f
+    android.graphics.Rect getFramingRect() -> f
+    android.graphics.Rect getFramingRectInPreview() -> g
     void setManualFramingRect(int,int) -> a
     com.google.zxing.PlanarYUVLuminanceSource buildLuminanceSource(byte[],int,int) -> a
 com.google.zxing.client.android.camera.PreviewCallback -> com.google.zxing.client.android.a.f:
@@ -1159,2063 +1170,10 @@ com.google.zxing.qrcode.encoder.QRCode -> com.google.zxing.b.c.f:
     void setVersion(com.google.zxing.qrcode.decoder.Version) -> a
     void setMaskPattern(int) -> a
     void setMatrix(com.google.zxing.qrcode.encoder.ByteMatrix) -> a
-net.youmi.android.AdActivity -> net.youmi.android.AdActivity:
-    net.youmi.android.cz a -> a
-    net.youmi.android.d b -> b
-    net.youmi.android.dm c -> c
-    void onCreate(android.os.Bundle) -> onCreate
-    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
-    void a() -> a
-    void a(android.app.Activity) -> a
-    void a(android.app.Activity,java.lang.String[],java.lang.String,java.lang.String) -> a
-    void b(android.app.Activity) -> b
-    android.content.Intent a(android.content.Context) -> a
-net.youmi.android.AdView -> net.youmi.android.AdView:
-    net.youmi.android.bw a -> a
-    net.youmi.android.ib b -> b
-    android.os.Handler c -> c
-    android.app.Activity d -> d
-    net.youmi.android.fp e -> e
-    net.youmi.android.dm f -> f
-    int g -> g
-    int h -> h
-    int i -> i
-    net.youmi.android.AdViewListener j -> j
-    int k -> k
-    int l -> l
-    void a$2b0683e7(android.app.Activity,android.util.AttributeSet,int,int,int) -> a
-    net.youmi.android.bw a() -> a
-    void onAttachedToWindow() -> onAttachedToWindow
-    void onDetachedFromWindow() -> onDetachedFromWindow
-    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
-    void setVisibility(int) -> setVisibility
-    int getAdWidth() -> b
-    int getAdHeight() -> c
-    net.youmi.android.dm b() -> d
-    int c() -> e
-    int d() -> f
-    void onLayout(boolean,int,int,int,int) -> onLayout
-    void onMeasure(int,int) -> onMeasure
-    void g() -> g
-    void h() -> h
-    void addView(android.view.View) -> addView
-    void addView(android.view.View,int) -> addView
-    void addView(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addView
-    void addView(android.view.View,int,int) -> addView
-    void addView(android.view.View,android.view.ViewGroup$LayoutParams) -> addView
-    boolean addViewInLayout(android.view.View,int,android.view.ViewGroup$LayoutParams) -> addViewInLayout
-    boolean addViewInLayout(android.view.View,int,android.view.ViewGroup$LayoutParams,boolean) -> addViewInLayout
-    android.app.Activity getActivity() -> i
-net.youmi.android.AdViewListener -> net.youmi.android.a:
-net.youmi.android.YoumiReceiver -> net.youmi.android.YoumiReceiver:
-    void onReceive(android.content.Context,android.content.Intent) -> onReceive
-net.youmi.android.a -> net.youmi.android.b:
-    java.util.Hashtable a -> a
-    java.util.Hashtable b -> b
-    java.util.Hashtable c -> c
-    java.util.Hashtable d -> d
-    void a(android.content.Context,java.lang.String,net.youmi.android.ce,int) -> a
-    void a(android.content.Context,java.lang.String,java.lang.String) -> a
-    void a(android.content.Context,java.lang.String,net.youmi.android.ce) -> a
-    void a(android.content.Context,net.youmi.android.ce,int) -> a
-    net.youmi.android.ce a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
-net.youmi.android.aa -> net.youmi.android.c:
-    android.widget.Button a -> a
-    net.youmi.android.dz b -> b
-    net.youmi.android.dm c -> c
-net.youmi.android.ab -> net.youmi.android.d:
-    net.youmi.android.aa a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.ac -> net.youmi.android.e:
-    android.app.Activity a -> a
-    net.youmi.android.dm b -> b
-    boolean c -> c
-    boolean d -> d
-    net.youmi.android.ad e -> e
-    java.util.ArrayList f -> f
-    java.util.ArrayList g -> g
-    android.widget.ExpandableListView h -> h
-    net.youmi.android.fo i -> i
-    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
-    void a() -> a
-    void onDetachedFromWindow() -> onDetachedFromWindow
-net.youmi.android.ad -> net.youmi.android.f:
-    android.app.Activity a -> a
-    net.youmi.android.dm b -> b
-    int c -> c
-    int d -> d
-    net.youmi.android.ac e -> e
-    android.widget.ExpandableListView f -> f
-    net.youmi.android.ac g -> g
-    void a() -> a
-    java.lang.Object getChild(int,int) -> getChild
-    long getChildId(int,int) -> getChildId
-    android.view.View getChildView(int,int,boolean,android.view.View,android.view.ViewGroup) -> getChildView
-    int getChildrenCount(int) -> getChildrenCount
-    java.lang.Object getGroup(int) -> getGroup
-    int getGroupCount() -> getGroupCount
-    long getGroupId(int) -> getGroupId
-    android.view.View getGroupView(int,boolean,android.view.View,android.view.ViewGroup) -> getGroupView
-    boolean hasStableIds() -> hasStableIds
-    boolean isChildSelectable(int,int) -> isChildSelectable
-net.youmi.android.ag -> net.youmi.android.g:
-    boolean a -> a
-    boolean b -> b
-    boolean c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    java.lang.String f -> f
-    int g -> g
-    long h -> h
-    int i -> i
-    int j -> j
-    boolean k -> k
-    boolean l -> l
-    boolean a() -> a
-    java.lang.String a(android.content.Context) -> a
-    boolean b(android.content.Context) -> b
-    java.lang.String c(android.content.Context) -> c
-    int d(android.content.Context) -> d
-    long d() -> b
-    int e(android.content.Context) -> e
-    boolean e() -> c
-    boolean h() -> d
-net.youmi.android.ah -> net.youmi.android.h:
-    int d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    int h -> h
-    java.lang.String i -> i
-    java.lang.String j -> j
-    int k -> k
-    java.lang.String l -> l
-    java.lang.String m -> m
-    java.lang.String n -> n
-    net.youmi.android.dg o -> o
-    java.lang.String p -> p
-    java.lang.String q -> q
-    int r -> r
-    long a -> a
-    long b -> b
-    boolean c -> c
-    net.youmi.android.dg a(android.content.Context) -> a
-    java.lang.String b(android.content.Context) -> b
-    java.lang.String a() -> a
-    java.lang.String b() -> b
-    java.lang.String c() -> c
-    void c(android.content.Context) -> g
-    java.lang.String d(android.content.Context) -> c
-    java.lang.String e(android.content.Context) -> d
-    java.lang.String d() -> d
-    boolean f(android.content.Context) -> e
-    boolean a(int) -> a
-    void b(int) -> b
-    void e() -> e
-    int f() -> f
-    boolean a(long) -> a
-    java.lang.String g(android.content.Context) -> f
-    java.lang.String h() -> g
-    java.lang.String i() -> h
-net.youmi.android.aj -> net.youmi.android.i:
-    long a -> a
-    long a() -> a
-    void a(int) -> a
-net.youmi.android.ak -> net.youmi.android.j:
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String a(java.lang.String,java.lang.String) -> a
-net.youmi.android.al -> net.youmi.android.k:
-    byte[] a(byte[]) -> a
-    void b(java.io.InputStream,java.io.OutputStream) -> a
-net.youmi.android.am -> net.youmi.android.l:
-    java.security.Key a(java.lang.String) -> a
-    java.lang.String a(java.lang.String,java.lang.String,byte[]) -> a
-    java.lang.String b(java.lang.String,java.lang.String,byte[]) -> b
-net.youmi.android.ao -> net.youmi.android.m:
-    net.youmi.android.cz a(android.content.Context,java.lang.String,long,long) -> a
-    net.youmi.android.cz a(android.app.Activity,net.youmi.android.dm) -> a
-    void a(android.content.Context,long) -> a
-    void a(android.content.Context,net.youmi.android.cz) -> a
-    void a(android.content.Context,long,java.lang.String,java.lang.String,long,long,long,int,int,int,int) -> a
-    void a(android.content.Context,java.lang.String,java.lang.String,int) -> a
-    void a(android.content.Context,net.youmi.android.dm,net.youmi.android.cz) -> a
-    java.lang.String a$575cd654$54019bb6(android.content.Context,int,int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String) -> b
-    void a(android.app.Activity,java.lang.String) -> a
-    void b$273ed034$17edf16(android.content.Context,int,int,int,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String) -> a
-    net.youmi.android.cl a(android.content.Context) -> a
-    boolean b(android.content.Context) -> b
-net.youmi.android.ap -> net.youmi.android.n:
-    android.app.Activity a -> a
-    java.lang.String b -> b
-    void run() -> run
-net.youmi.android.aq -> net.youmi.android.o:
-    void a(java.io.ByteArrayOutputStream) -> a
-    java.lang.String a(android.app.Activity,net.youmi.android.dm,long) -> a
-    java.lang.String a$1ba3ca71(long) -> a
-    java.lang.String a(android.content.Context,net.youmi.android.cz) -> a
-    java.lang.String a(android.content.Context,long,java.lang.String,java.lang.String,long,long,long,int,int,int,int) -> a
-    java.lang.String a(android.content.Context,java.lang.String,java.lang.String,int) -> a
-    java.lang.String b(android.content.Context) -> b
-    java.lang.String b(android.content.Context,java.util.ArrayList) -> b
-    java.lang.String a(android.content.Context) -> a
-    java.lang.String a(android.content.Context,java.util.ArrayList) -> a
-net.youmi.android.ar -> net.youmi.android.p:
-    net.youmi.android.cz a -> a
-net.youmi.android.as -> net.youmi.android.q:
-    android.location.Location a -> a
-    net.youmi.android.ge b -> b
-    void a(android.content.Context,android.os.Handler) -> a
-    void a(android.location.Location) -> a
-    android.location.Location a$78c4b975() -> a
-    net.youmi.android.ge a() -> b
-net.youmi.android.at -> net.youmi.android.r:
-    android.location.LocationManager a -> a
-    void run() -> run
-net.youmi.android.au -> net.youmi.android.s:
-    boolean b(android.app.Activity,java.lang.String) -> a
-    boolean c(android.app.Activity,java.lang.String) -> b
-net.youmi.android.av -> net.youmi.android.t:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    java.lang.String f -> f
-    java.lang.String g -> g
-    java.lang.String h -> h
-    java.lang.String i -> i
-    java.lang.String a() -> a
-    java.lang.String b() -> b
-    java.lang.String c() -> c
-    java.lang.String d() -> d
-    java.lang.String e() -> e
-    java.lang.String f() -> f
-    java.lang.String g() -> g
-    java.lang.String h() -> h
-    java.lang.String i() -> i
-net.youmi.android.aw -> net.youmi.android.u:
-    long a -> a
-    long b -> b
-    void a(android.content.Context) -> a
-    boolean a(java.lang.String,java.lang.String) -> a
-net.youmi.android.ax -> net.youmi.android.v:
-    android.content.Context a -> a
-    void run() -> run
-net.youmi.android.ay -> net.youmi.android.w:
-    android.view.animation.Animation a -> a
-    android.view.animation.Animation b -> b
-    android.view.animation.Animation c -> c
-    android.view.animation.Animation d -> d
-    android.view.animation.Animation a(net.youmi.android.dm) -> a
-    android.view.animation.Animation b(net.youmi.android.dm) -> b
-    android.view.animation.Animation c$2d10c81f() -> a
-    android.view.animation.Animation d$2d10c81f() -> b
-net.youmi.android.az -> net.youmi.android.x:
-    net.youmi.android.cg a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    void a(android.app.Activity) -> a
-    void b(android.app.Activity) -> b
-    net.youmi.android.cg c(android.app.Activity) -> c
-    boolean d(android.app.Activity) -> d
-    boolean e(android.app.Activity) -> e
-net.youmi.android.b -> net.youmi.android.y:
-    android.content.Context a -> a
-    net.youmi.android.ce b -> b
-    int c -> c
-    void run() -> run
-net.youmi.android.ba -> net.youmi.android.z:
-    int a -> a
-    int b -> b
-    int c -> c
-    int d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    java.lang.String a(android.content.Context) -> a
-    java.lang.String b(android.content.Context) -> b
-    boolean a(android.content.Context,java.lang.String) -> a
-    boolean b(android.content.Context,java.lang.String) -> b
-    boolean a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
-    java.lang.String a(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
-    int a(android.app.Activity) -> a
-    net.youmi.android.cz b(android.app.Activity) -> b
-    net.youmi.android.cz c(android.app.Activity) -> c
-    net.youmi.android.cz d(android.app.Activity) -> d
-    net.youmi.android.cz e(android.app.Activity) -> e
-    net.youmi.android.cz f(android.app.Activity) -> f
-    net.youmi.android.cz g(android.app.Activity) -> g
-    net.youmi.android.cz h(android.app.Activity) -> h
-    net.youmi.android.cz a(android.app.Activity,java.lang.String,java.lang.String,int) -> a
-net.youmi.android.bb -> net.youmi.android.aa:
-    long a -> a
-    void a(android.app.Activity,android.os.Handler) -> a
-net.youmi.android.bc -> net.youmi.android.ab:
-    android.app.Activity a -> a
-    void run() -> run
-net.youmi.android.bd -> net.youmi.android.ac:
-    boolean a(android.app.Activity,android.os.Handler) -> a
-    boolean a$74a1c312(android.content.Context,java.io.File) -> a
-net.youmi.android.be -> net.youmi.android.ad:
-    android.app.Activity a -> a
-    void run() -> run
-net.youmi.android.bf -> net.youmi.android.ae:
-    net.youmi.android.dd a -> a
-    net.youmi.android.dd b -> b
-    net.youmi.android.dd c -> c
-    net.youmi.android.dd d -> d
-    net.youmi.android.dd e -> e
-    net.youmi.android.dd f -> f
-    net.youmi.android.dd g -> g
-    net.youmi.android.dd h -> h
-    net.youmi.android.dd a() -> a
-    net.youmi.android.dd b() -> b
-    net.youmi.android.dd c() -> c
-    net.youmi.android.dd d() -> d
-    net.youmi.android.dd e() -> e
-    net.youmi.android.dd f() -> f
-    net.youmi.android.dd g() -> g
-    net.youmi.android.dd h() -> h
-net.youmi.android.bg -> net.youmi.android.af:
-    android.app.Notification a -> a
-    int b -> b
-    android.app.Notification a(android.content.Context) -> e
-    void b(android.content.Context) -> a
-    void c(android.content.Context) -> b
-    void d(android.content.Context) -> c
-    void e(android.content.Context) -> d
-    java.util.ArrayList a() -> a
-    java.lang.String a(java.io.File) -> a
-    boolean a(net.youmi.android.dh) -> a
-    boolean a(net.youmi.android.di) -> b
-    boolean b(net.youmi.android.dh) -> b
-    java.util.ArrayList b() -> b
-    net.youmi.android.di a(java.lang.String,long) -> a
-    net.youmi.android.di a(java.lang.String) -> a
-    net.youmi.android.dh b(net.youmi.android.di) -> a
-    net.youmi.android.dh b(java.lang.String) -> b
-net.youmi.android.bh -> net.youmi.android.ag:
-    java.util.regex.Pattern[] a -> a
-    java.lang.String[] b -> b
-    java.lang.String[] c -> c
-    java.util.ArrayList a(java.lang.String) -> a
-    java.lang.String a(java.lang.String,java.lang.String) -> a
-    java.lang.String a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String) -> a
-    void a(android.app.Activity,android.webkit.WebView) -> a
-net.youmi.android.bj -> net.youmi.android.ah:
-    int[] a -> a
-    int a(byte[],int,int) -> a
-    int a(byte,int,int) -> a
-    void a(int,int,java.io.ByteArrayOutputStream) -> a
-    void a$5d066d17(long,java.io.ByteArrayOutputStream) -> a
-    void a(java.lang.String,java.io.ByteArrayOutputStream) -> a
-net.youmi.android.bk -> net.youmi.android.ai:
-    boolean a(java.io.File,java.io.File) -> a
-net.youmi.android.bl -> net.youmi.android.aj:
-    java.util.regex.Pattern a -> a
-    java.util.regex.Pattern b -> b
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String b(java.lang.String) -> b
-    java.lang.String c(java.lang.String) -> c
-net.youmi.android.bm -> net.youmi.android.ak:
-    boolean a(android.app.Activity,java.lang.String) -> a
-    boolean a(android.app.Activity,java.lang.String,int) -> a
-    boolean b(android.app.Activity,java.lang.String) -> b
-    void a(android.content.Context,java.lang.String) -> a
-    void b(android.content.Context,java.lang.String) -> b
-    boolean f(android.app.Activity,java.lang.String) -> c
-    boolean g(android.app.Activity,java.lang.String) -> d
-    boolean a(android.app.Activity,java.lang.String,java.lang.String) -> a
-    boolean a(android.app.Activity,android.net.Uri) -> a
-    boolean h(android.app.Activity,java.lang.String) -> e
-net.youmi.android.bo -> net.youmi.android.al:
-    android.widget.RelativeLayout$LayoutParams a() -> a
-    android.widget.RelativeLayout$LayoutParams b(int) -> a
-    android.widget.RelativeLayout$LayoutParams a(int,int) -> a
-net.youmi.android.bp -> net.youmi.android.am:
-    android.content.pm.PackageInfo a(android.content.Context,java.lang.String) -> a
-    int a$607b6e67(android.content.Context,java.lang.String) -> b
-    boolean b(android.content.Context,java.lang.String) -> c
-    int c(android.content.Context,java.lang.String) -> d
-net.youmi.android.bq -> net.youmi.android.an:
-    java.util.Properties a(android.content.Context,java.lang.String) -> a
-    boolean a(android.content.Context,java.util.Properties,java.lang.String) -> a
-    java.lang.String a$1395ba05(java.util.Properties,java.lang.String) -> b
-    int a$76c6a1b(java.util.Properties,java.lang.String) -> a
-net.youmi.android.br -> net.youmi.android.ao:
-    boolean a(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap) -> a
-    boolean a(android.content.Context,java.lang.String,java.lang.String,android.graphics.Bitmap,net.youmi.android.cz) -> a
-    byte[] a(android.graphics.Bitmap) -> a
-net.youmi.android.bs -> net.youmi.android.ap:
-    java.lang.String[] a(java.lang.String,java.lang.String) -> a
-    java.lang.String a$7790472d(java.lang.StringBuilder) -> a
-net.youmi.android.bt -> net.youmi.android.aq:
-    boolean a(android.content.Context) -> a
-net.youmi.android.bu -> net.youmi.android.ar:
-    void a(android.content.Context,java.lang.String,int) -> a
-net.youmi.android.bw -> net.youmi.android.as:
-    boolean a -> a
-    boolean b -> b
-    boolean c -> c
-    boolean d -> d
-    long e -> e
-    boolean a() -> a
-    void b() -> b
-    void c() -> c
-    boolean a(net.youmi.android.AdView) -> a
-net.youmi.android.bx -> net.youmi.android.at:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String a() -> a
-    void a(java.lang.String) -> a
-    java.lang.String b() -> b
-net.youmi.android.by -> net.youmi.android.au:
-    net.youmi.android.cc a -> a
-    android.app.Activity b -> b
-    net.youmi.android.cz c -> c
-    void i() -> i
-    void a(net.youmi.android.bx) -> a
-    void a() -> a
-    void b() -> b
-    boolean c() -> c
-    void d() -> d
-    void b(net.youmi.android.bx) -> b
-    void a(net.youmi.android.fr,net.youmi.android.bx) -> a
-    void e() -> e
-    void a(net.youmi.android.fr,java.io.File,java.lang.String) -> a
-    void f() -> f
-    void b(net.youmi.android.fr,java.io.File,java.lang.String) -> b
-    void a(net.youmi.android.fr) -> a
-    void g() -> g
-    void h() -> h
-    void a(int) -> a
-net.youmi.android.bz -> net.youmi.android.av:
-    net.youmi.android.by a -> a
-    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-net.youmi.android.c -> net.youmi.android.aw:
-    net.youmi.android.AdActivity a -> a
-    net.youmi.android.cz b -> b
-    void onClick(android.content.DialogInterface,int) -> onClick
-net.youmi.android.ca -> net.youmi.android.ax:
-    net.youmi.android.by a -> a
-    void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
-    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
-net.youmi.android.cb -> net.youmi.android.ay:
-    net.youmi.android.by a -> a
-    void onDownloadStart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,long) -> onDownloadStart
-net.youmi.android.cc -> net.youmi.android.az:
-    net.youmi.android.cd b -> b
-    java.util.Stack c -> c
-    net.youmi.android.bx d -> d
-    java.util.Stack e -> e
-    net.youmi.android.by a -> a
-    net.youmi.android.bx a() -> a
-    net.youmi.android.bx b() -> b
-    net.youmi.android.bx c() -> c
-    net.youmi.android.bx a(net.youmi.android.bx) -> a
-    boolean d() -> d
-    boolean e() -> e
-    boolean f() -> f
-net.youmi.android.cd -> net.youmi.android.ba:
-    void a(net.youmi.android.cc) -> a
-net.youmi.android.ce -> net.youmi.android.bb:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    net.youmi.android.cf e -> e
-    net.youmi.android.cf f -> f
-    net.youmi.android.cf g -> g
-    int h -> h
-    int i -> i
-    java.lang.String j -> j
-    org.json.JSONObject a() -> a
-net.youmi.android.cf -> net.youmi.android.bc:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    int c -> c
-net.youmi.android.cg -> net.youmi.android.bd:
-    int a -> a
-    int b -> b
-    boolean c -> c
-    void a() -> a
-    boolean b() -> b
-net.youmi.android.ch -> net.youmi.android.be:
-    android.app.Notification c -> c
-    android.app.PendingIntent a -> a
-    java.lang.String d -> d
-    java.lang.String e -> e
-    long f -> f
-    long g -> g
-    net.youmi.android.cl h -> h
-    android.content.Context b -> b
-    java.io.File a(java.lang.String[]) -> a
-    void b(java.lang.String) -> b
-    void a(int) -> a
-    void a() -> a
-    void a(java.lang.String) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.ci -> net.youmi.android.bf:
-    android.content.Context a -> a
-    net.youmi.android.cl a$6aab738f() -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-net.youmi.android.cj -> net.youmi.android.bg:
-    net.youmi.android.ci a -> a
-    void onClick(android.content.DialogInterface,int) -> onClick
-net.youmi.android.ck -> net.youmi.android.bh:
-    net.youmi.android.ci a -> a
-    net.youmi.android.cl b -> b
-    void onClick(android.content.DialogInterface,int) -> onClick
-net.youmi.android.cl -> net.youmi.android.bi:
-    int a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-net.youmi.android.cm -> net.youmi.android.bj:
-    java.lang.Object[] a -> a
-    java.lang.Object a(int,java.lang.Object) -> a
-net.youmi.android.cn -> net.youmi.android.bk:
-    java.lang.String a -> a
-    long b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    java.lang.String f -> f
-    android.content.Context g -> g
-    int h -> h
-    net.youmi.android.ce i -> i
-    boolean a$607b6a95(android.content.Context,java.lang.String) -> a
-    boolean a(android.content.Context,java.lang.String,java.lang.String,java.lang.String,net.youmi.android.ce) -> a
-    net.youmi.android.fy a$6aab8065() -> a
-    net.youmi.android.fy a(net.youmi.android.cn) -> a
-    boolean b(net.youmi.android.cn) -> b
-    boolean c(net.youmi.android.cn) -> c
-    net.youmi.android.fy d(net.youmi.android.cn) -> d
-    java.lang.String a(android.content.Context) -> a
-    java.lang.String a(java.io.File) -> a
-    boolean a(android.content.Context,java.lang.String,java.lang.String) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-net.youmi.android.co -> net.youmi.android.bl:
-    android.content.Context a -> a
-    net.youmi.android.gc b -> b
-    net.youmi.android.ey c -> c
-    java.io.File d -> d
-    boolean e -> e
-    net.youmi.android.fa f -> f
-    java.lang.String g -> g
-    int h -> h
-    int i -> i
-    long j -> j
-    int k -> k
-    java.lang.Void a$10299ca() -> b
-    boolean a(int,java.io.File) -> a
-    boolean a(java.io.File) -> a
-    void b() -> c
-    boolean a() -> a
-    void a(java.lang.String,int,int) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.cp -> net.youmi.android.bm:
-    net.youmi.android.cz a -> a
-    java.lang.String b -> b
-    net.youmi.android.cz a() -> a
-    void a(net.youmi.android.cz) -> a
-    void a(java.lang.String) -> a
-    net.youmi.android.cz a(android.app.Activity,net.youmi.android.dm) -> a
-    void a(net.youmi.android.cz,android.app.Activity,net.youmi.android.dm) -> a
-    void a(android.content.Context,net.youmi.android.cz,boolean) -> a
-    void a(android.content.Context,net.youmi.android.cz) -> a
-net.youmi.android.cq -> net.youmi.android.bn:
-    net.youmi.android.cz a -> a
-    android.app.Activity b -> b
-    net.youmi.android.dm c -> c
-    void run() -> run
-net.youmi.android.cr -> net.youmi.android.bo:
-    android.content.Context a -> a
-    long b -> b
-    void run() -> run
-net.youmi.android.cs -> net.youmi.android.bp:
-    android.content.Context a -> a
-    net.youmi.android.cz b -> b
-    void run() -> run
-net.youmi.android.ct -> net.youmi.android.bq:
-    android.content.Context a -> a
-    net.youmi.android.cz b -> b
-    void run() -> run
-net.youmi.android.cu -> net.youmi.android.br:
-    java.io.InputStream a -> a
-    int[] b -> b
-    int c -> c
-    boolean d -> d
-    int read() -> read
-    void close() -> close
-net.youmi.android.cv -> net.youmi.android.bs:
-    java.lang.String a -> a
-    char b -> b
-net.youmi.android.cw -> net.youmi.android.bt:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    long c -> c
-    long d -> d
-    android.content.Context e -> e
-    int f -> f
-    net.youmi.android.df g -> g
-    java.lang.String h -> h
-    org.apache.http.impl.client.DefaultHttpClient c() -> a
-    int d() -> b
-    java.lang.String e() -> c
-    void a(long) -> a
-    void f() -> d
-    int g() -> e
-    int h() -> f
-    int a(android.content.Context,java.lang.String) -> a
-net.youmi.android.cx -> net.youmi.android.bu:
-    net.youmi.android.cw a -> a
-    boolean isRedirectRequested(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext) -> isRedirectRequested
-    java.net.URI getLocationURI(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext) -> getLocationURI
-net.youmi.android.cy -> net.youmi.android.bv:
-    net.youmi.android.cy a -> a
-    net.youmi.android.cy b -> b
-    net.youmi.android.cy c -> c
-    net.youmi.android.cy d -> d
-    int e -> e
-    int f -> f
-    int a() -> a
-    int b() -> b
-net.youmi.android.cz -> net.youmi.android.bw:
-    long b -> b
-    long c -> c
-    long d -> d
-    long e -> e
-    boolean f -> f
-    boolean g -> g
-    boolean h -> h
-    boolean i -> i
-    boolean j -> j
-    boolean k -> k
-    boolean l -> l
-    boolean m -> m
-    boolean n -> n
-    boolean o -> o
-    boolean p -> p
-    boolean q -> q
-    boolean r -> r
-    int s -> s
-    int t -> t
-    int u -> u
-    int v -> v
-    int w -> w
-    int x -> x
-    int y -> y
-    int z -> z
-    int A -> A
-    int B -> B
-    int C -> C
-    java.lang.String D -> D
-    java.lang.String E -> E
-    java.lang.String F -> F
-    java.lang.String G -> G
-    java.lang.String H -> H
-    java.lang.String I -> I
-    java.lang.String J -> J
-    java.lang.String K -> K
-    java.lang.String L -> L
-    java.lang.String M -> M
-    java.lang.String N -> N
-    java.lang.String O -> O
-    java.lang.String P -> P
-    java.lang.String Q -> Q
-    java.lang.String R -> R
-    java.lang.String S -> S
-    java.lang.String T -> T
-    java.lang.String U -> U
-    java.lang.String V -> V
-    java.lang.String W -> W
-    java.lang.String[] X -> X
-    android.graphics.Bitmap Y -> Y
-    android.graphics.Bitmap Z -> Z
-    android.graphics.Bitmap aa -> aa
-    android.graphics.Bitmap ab -> ab
-    net.youmi.android.bx ac -> ac
-    net.youmi.android.bx ad -> ad
-    net.youmi.android.ee ae -> ae
-    net.youmi.android.ih af -> af
-    java.lang.String a -> a
-    net.youmi.android.cz a$5f103763(android.content.Context,java.lang.String,java.lang.String,java.lang.String,int,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.util.ArrayList,boolean,boolean,java.lang.String,long,long,java.lang.String,int,boolean,boolean,java.lang.String,int,boolean,boolean,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean,java.lang.String,java.lang.String,long,int,java.lang.String,java.lang.String) -> a
-    int a() -> a
-    int b() -> b
-    java.lang.String c() -> c
-    java.lang.String d() -> d
-    android.graphics.Bitmap e() -> e
-    java.lang.String f() -> f
-    java.lang.String g() -> g
-    java.lang.String h() -> h
-    net.youmi.android.bx i() -> i
-    net.youmi.android.bx j() -> j
-    java.lang.String k() -> k
-    java.lang.String l() -> l
-    net.youmi.android.ee m() -> m
-    android.graphics.Bitmap n() -> n
-    java.lang.String o() -> o
-    java.lang.String p() -> p
-    boolean q() -> q
-    void r() -> r
-    boolean s() -> s
-    boolean t() -> t
-    boolean u() -> u
-    void v() -> v
-    void w() -> w
-    boolean x() -> x
-    boolean y() -> y
-    boolean z() -> z
-    java.lang.String A() -> A
-    java.lang.String B() -> B
-    int C() -> C
-    void a(int) -> a
-    int D() -> D
-    boolean E() -> E
-    java.lang.String[] F() -> F
-    void a(net.youmi.android.bx) -> a
-    boolean G() -> G
-    java.lang.String H() -> H
-    long I() -> I
-    long J() -> J
-    long K() -> K
-    boolean L() -> L
-    boolean M() -> M
-    int N() -> N
-    java.lang.String O() -> O
-    java.lang.String P() -> P
-    java.lang.String Q() -> Q
-    android.graphics.Bitmap R() -> R
-    void b(int) -> b
-    int S() -> S
-    boolean T() -> T
-    java.lang.String U() -> U
-    java.lang.String V() -> V
-    java.lang.String W() -> W
-    java.lang.String X() -> X
-    int Y() -> Y
-    long Z() -> Z
-    int aa() -> aa
-    void a(net.youmi.android.ih) -> a
-    net.youmi.android.ih ab() -> ab
-    void c(int) -> c
-    int ac() -> ac
-    void d(int) -> d
-    int ad() -> ad
-    void e(int) -> e
-    int ae() -> ae
-net.youmi.android.d -> net.youmi.android.bx:
-    void a() -> a
-    android.view.View b() -> b
-net.youmi.android.dc -> net.youmi.android.by:
-    int a -> a
-    int b -> b
-    float c -> c
-    float d -> d
-    float e -> e
-    java.lang.String f -> f
-    float g -> g
-    float h -> h
-    float i -> i
-    float j -> j
-    float k -> k
-    float l -> l
-    float m -> m
-    float n -> n
-    android.graphics.Rect o -> o
-    float p -> p
-    float q -> q
-    android.graphics.RectF r -> r
-    android.graphics.RectF s -> s
-    android.graphics.RectF t -> t
-    int u -> u
-    int v -> v
-    int w -> w
-    int x -> x
-    int y -> y
-    int z -> z
-    int A -> A
-    int B -> B
-    float C -> C
-    float D -> D
-    android.graphics.Path E -> E
-    android.graphics.Path F -> F
-    android.graphics.Path G -> G
-    android.graphics.Path H -> H
-    android.graphics.Paint I -> I
-    android.graphics.Paint J -> J
-    android.graphics.Shader K -> K
-    android.graphics.Shader L -> L
-    int M -> M
-    int N -> N
-    net.youmi.android.dm O -> O
-    int a() -> a
-    void draw(android.graphics.Canvas) -> draw
-    int getOpacity() -> getOpacity
-    void setAlpha(int) -> setAlpha
-    void setColorFilter(android.graphics.ColorFilter) -> setColorFilter
-net.youmi.android.dd -> net.youmi.android.bz:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    long c -> c
-    long d -> d
-    void a() -> a
-    java.lang.String[] b() -> b
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String b(java.lang.String) -> f
-    java.lang.String c(java.lang.String) -> b
-    java.io.File d(java.lang.String) -> c
-    boolean e(java.lang.String) -> d
-    android.graphics.Bitmap g(java.lang.String) -> e
-    boolean a$51162a88(java.lang.String,byte[]) -> a
-    java.lang.String a(net.youmi.android.dd) -> a
-    boolean a(net.youmi.android.dd,java.io.File) -> a
-    long b(net.youmi.android.dd) -> b
-net.youmi.android.de -> net.youmi.android.ca:
-    net.youmi.android.dd a -> a
-    void run() -> run
-net.youmi.android.df -> net.youmi.android.cb:
-net.youmi.android.dg -> net.youmi.android.cc:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    java.lang.String f -> f
-    boolean g -> g
-    java.lang.String a(android.content.Context) -> a
-    java.lang.String b(android.content.Context) -> b
-    java.lang.String c(android.content.Context) -> c
-    boolean g() -> g
-    java.lang.String a() -> a
-    java.lang.String b() -> b
-    java.lang.String c() -> c
-    java.lang.String d() -> d
-    java.lang.String e() -> e
-    boolean f() -> f
-net.youmi.android.dh -> net.youmi.android.cd:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.io.File c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-net.youmi.android.di -> net.youmi.android.ce:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.io.File c -> c
-    long d -> d
-    java.lang.String e -> e
-    java.lang.String toString() -> toString
-net.youmi.android.dj -> net.youmi.android.cf:
-    char[] b -> b
-    int[] c -> c
-    char[] a -> a
-    char d -> d
-    char e -> e
-    char f -> f
-    char g -> g
-    char h -> h
-    char i -> i
-    char[] j -> j
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String b(java.lang.String) -> b
-    java.lang.String a(byte[]) -> a
-    java.lang.String c(java.lang.String) -> c
-    java.lang.String a$47921032() -> a
-    java.lang.String d(java.lang.String) -> d
-    java.lang.String b(byte[]) -> b
-    java.lang.String a(byte[],java.lang.String) -> a
-net.youmi.android.dk -> net.youmi.android.cg:
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String a(java.io.File) -> a
-    boolean a(java.io.File,java.lang.String) -> a
-net.youmi.android.dl -> net.youmi.android.ch:
-    java.lang.String a(java.lang.String,java.lang.String) -> a
-    java.lang.String b(java.lang.String,java.lang.String) -> b
-net.youmi.android.dm -> net.youmi.android.ci:
-    boolean a -> a
-    net.youmi.android.dn b -> b
-    net.youmi.android.dq c -> c
-    net.youmi.android.dr d -> d
-    int e -> e
-    int f -> f
-    float g -> g
-    int h -> h
-    int i -> i
-    int j -> j
-    net.youmi.android.ds k -> k
-    net.youmi.android.dn a() -> a
-    net.youmi.android.dq b() -> b
-    net.youmi.android.dr c() -> c
-    boolean d() -> d
-    int e() -> e
-    int f() -> f
-    int g() -> g
-    float h() -> h
-    net.youmi.android.dm a(android.app.Activity) -> a
-    int i() -> i
-    int j() -> j
-    int k() -> k
-    int a(int) -> a
-    float a(float) -> a
-    net.youmi.android.ds l() -> l
-net.youmi.android.dn -> net.youmi.android.cj:
-    net.youmi.android.dm b -> b
-    net.youmi.android.cy c -> c
-    net.youmi.android.dp d -> d
-    net.youmi.android.do e -> e
-    net.youmi.android.dm a -> a
-    int a() -> a
-    net.youmi.android.cy b() -> b
-    net.youmi.android.dp c() -> c
-    net.youmi.android.do d() -> d
-net.youmi.android.do -> net.youmi.android.ck:
-    int b -> b
-    int c -> c
-    int d -> d
-    int e -> e
-    int f -> f
-    float g -> g
-    net.youmi.android.dn a -> a
-    int a() -> a
-    int b() -> b
-    int c() -> c
-    int d() -> d
-    int e() -> e
-    float f() -> f
-net.youmi.android.dp -> net.youmi.android.cl:
-    int b -> b
-    int c -> c
-    net.youmi.android.dn a -> a
-    int a() -> a
-    int b() -> b
-net.youmi.android.dq -> net.youmi.android.cm:
-    int b -> b
-    int c -> c
-    int d -> d
-    net.youmi.android.dm a -> a
-    int a() -> a
-    int b() -> b
-    int c() -> c
-net.youmi.android.dr -> net.youmi.android.cn:
-    int b -> b
-    int c -> c
-    int d -> d
-    net.youmi.android.dm a -> a
-    int a() -> a
-    int b() -> b
-    int c() -> c
-net.youmi.android.ds -> net.youmi.android.co:
-    float b -> b
-    float c -> c
-    float d -> d
-    net.youmi.android.dm a -> a
-    float a() -> a
-    float b() -> b
-    float c() -> c
-net.youmi.android.dt -> net.youmi.android.cp:
-    android.app.Activity a -> a
-    net.youmi.android.dm b -> b
-    net.youmi.android.dw c -> c
-    net.youmi.android.du d -> d
-    int g -> g
-    int h -> h
-    int e -> e
-    int f -> f
-    void a(net.youmi.android.di) -> a
-    void a(net.youmi.android.dh) -> a
-    void a(int) -> a
-net.youmi.android.du -> net.youmi.android.cq:
-    android.widget.TextView a -> a
-    android.app.Activity b -> b
-    java.lang.String c -> c
-    void a(net.youmi.android.dh) -> a
-net.youmi.android.dv -> net.youmi.android.cr:
-    net.youmi.android.du a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.dw -> net.youmi.android.cs:
-    android.app.Activity a -> a
-    net.youmi.android.dm b -> b
-    net.youmi.android.ac c -> c
-    android.widget.TextView d -> d
-    android.widget.TextView e -> e
-    net.youmi.android.gt f -> f
-    void a(net.youmi.android.di) -> a
-net.youmi.android.dx -> net.youmi.android.ct:
-    android.graphics.drawable.Drawable a(net.youmi.android.dm) -> a
-    android.graphics.drawable.Drawable a(int[],android.graphics.drawable.Drawable,int[],android.graphics.drawable.Drawable,int[],android.graphics.drawable.Drawable) -> a
-    android.graphics.drawable.Drawable a(int[],android.graphics.drawable.Drawable,int[],android.graphics.drawable.Drawable) -> a
-    android.graphics.drawable.Drawable b(net.youmi.android.dm) -> b
-    android.graphics.drawable.Drawable a(net.youmi.android.dm,int[],int[],int[]) -> a
-    android.graphics.drawable.Drawable b(net.youmi.android.dm,int[],int[],int[]) -> b
-    android.graphics.drawable.Drawable a(net.youmi.android.dm,int[],int[]) -> a
-    android.graphics.drawable.Drawable b(net.youmi.android.dm,int[],int[]) -> b
-    android.graphics.drawable.Drawable c(net.youmi.android.dm,int[],int[],int[]) -> c
-net.youmi.android.dy -> net.youmi.android.cu:
-    void draw(android.graphics.Canvas,android.graphics.Paint) -> draw
-net.youmi.android.dz -> net.youmi.android.cv:
-    void c() -> c
-net.youmi.android.e -> net.youmi.android.cw:
-    net.youmi.android.by a -> a
-    net.youmi.android.g b -> b
-    net.youmi.android.AdActivity c -> c
-    net.youmi.android.dm d -> d
-    void a(net.youmi.android.bx) -> a
-    void e() -> c
-    void f() -> d
-    void g() -> e
-    void h() -> f
-    void i() -> g
-    void a() -> a
-    android.view.View b() -> b
-    void a(net.youmi.android.cc) -> a
-    net.youmi.android.AdActivity a(net.youmi.android.e) -> a
-    net.youmi.android.by b(net.youmi.android.e) -> b
-net.youmi.android.ea -> net.youmi.android.cx:
-    android.content.Context a -> a
-    org.apache.http.impl.client.DefaultHttpClient b -> b
-    net.youmi.android.eb c -> c
-    long d -> d
-    long e -> e
-    java.lang.String f -> f
-    java.lang.String g -> g
-    boolean h -> h
-    java.lang.String i -> i
-    java.lang.String j -> j
-    long k -> k
-    long l -> l
-    void a(java.lang.String) -> a
-    java.lang.String[] a(java.lang.String[]) -> a
-    boolean a(org.apache.http.HttpResponse,java.io.File) -> a
-    java.lang.String a(java.lang.String,java.lang.String) -> a
-    boolean a(java.io.InputStream,java.io.OutputStream) -> a
-    java.lang.String[] a(java.lang.String[][]) -> a
-    long a() -> a
-    boolean b() -> b
-    long c() -> c
-    long d() -> d
-    java.lang.String e() -> e
-    java.lang.String f() -> f
-    java.lang.String g() -> g
-    java.lang.String h() -> h
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.eb -> net.youmi.android.cy:
-    void a() -> a
-    void a(net.youmi.android.ea,java.lang.String[]) -> a
-    void b(int) -> b
-net.youmi.android.ec -> net.youmi.android.cz:
-    android.content.Context a -> a
-    java.util.ArrayList b -> b
-    int c -> c
-    net.youmi.android.ec a(android.content.Context,java.lang.String[],int) -> a
-    int getCount() -> getCount
-    java.lang.Object getItem(int) -> getItem
-    net.youmi.android.ed a(int) -> a
-    long getItemId(int) -> getItemId
-    android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-net.youmi.android.ed -> net.youmi.android.da:
-    java.lang.String a -> a
-    android.net.Uri b -> b
-    android.graphics.Bitmap c -> c
-    java.lang.String d -> d
-net.youmi.android.ee -> net.youmi.android.db:
-    byte[] a -> a
-    int b -> b
-    int c -> c
-    int d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    int h -> h
-    int i -> i
-    int j -> j
-    int k -> k
-    int l -> l
-    int m -> m
-    int n -> n
-    int o -> o
-    java.util.Vector p -> p
-    int q -> q
-    int[] r -> r
-    int s -> s
-    int[] t -> t
-    byte[] u -> u
-    int[] v -> v
-    byte[] w -> w
-    short[] x -> x
-    byte[] y -> y
-    byte[] z -> z
-    void a(java.io.InputStream) -> a
-    void g() -> d
-    void a(int,int) -> a
-    void h() -> e
-    int c() -> a
-    android.graphics.Bitmap e() -> b
-    int f() -> c
-    byte[] a(net.youmi.android.ee) -> a
-    int b(net.youmi.android.ee) -> b
-    void a(net.youmi.android.ee,int) -> a
-    int c(net.youmi.android.ee) -> c
-net.youmi.android.ef -> net.youmi.android.dc:
-    int a -> a
-    int b -> b
-    int c -> c
-    int d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    int h -> h
-    int i -> i
-    int j -> j
-    int k -> k
-    byte l -> l
-    int m -> m
-    int[] n -> n
-    net.youmi.android.ee o -> o
-    void a(int) -> a
-    void a(net.youmi.android.ef) -> a
-net.youmi.android.eg -> net.youmi.android.dd:
-    boolean a -> a
-    net.youmi.android.eh b -> b
-    void a() -> a
-    java.lang.Integer a(net.youmi.android.ee[]) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.eh -> net.youmi.android.de:
-    net.youmi.android.ee a -> a
-    net.youmi.android.eg b -> b
-    android.graphics.Bitmap c -> c
-    boolean d -> d
-    void a(android.graphics.Bitmap) -> a
-    void a() -> a
-    void a(net.youmi.android.ee) -> a
-    void b() -> b
-    void c() -> c
-    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
-    void onDetachedFromWindow() -> onDetachedFromWindow
-net.youmi.android.ei -> net.youmi.android.df:
-    java.lang.String a -> a
-    java.lang.String a() -> a
-net.youmi.android.ej -> net.youmi.android.dg:
-    java.lang.String a -> a
-    java.lang.String a() -> a
-net.youmi.android.ek -> net.youmi.android.dh:
-    android.graphics.Bitmap i -> i
-    android.graphics.Bitmap i() -> g
-    boolean a(byte[]) -> a
-    boolean a(java.io.File) -> a
-net.youmi.android.el -> net.youmi.android.di:
-    net.youmi.android.ee i -> i
-    net.youmi.android.ee i() -> g
-    boolean a(byte[]) -> a
-    boolean a(java.io.File) -> a
-net.youmi.android.em -> net.youmi.android.dj:
-    java.lang.String h -> h
-    java.lang.String i -> i
-    java.util.List j -> j
-    boolean k -> k
-    int g() -> e
-    int h() -> f
-    java.lang.String i() -> g
-net.youmi.android.eo -> net.youmi.android.dk:
-    java.lang.String[] e -> e
-    java.lang.String f -> f
-    java.lang.String g -> g
-    net.youmi.android.AdActivity a -> a
-    net.youmi.android.dm h -> h
-    int i -> i
-    android.widget.Gallery j -> j
-    android.widget.ImageSwitcher k -> k
-    android.widget.ImageView l -> l
-    android.widget.ImageView m -> m
-    android.view.GestureDetector b -> b
-    net.youmi.android.ec n -> n
-    net.youmi.android.ed o -> o
-    android.view.animation.Animation p -> p
-    android.view.animation.Animation q -> q
-    android.view.animation.Animation r -> r
-    android.view.animation.Animation s -> s
-    android.view.animation.Animation t -> t
-    android.view.animation.Animation u -> u
-    int c -> c
-    long d -> d
-    android.view.View makeView() -> makeView
-    boolean onDown(android.view.MotionEvent) -> onDown
-    boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
-    void onLongPress(android.view.MotionEvent) -> onLongPress
-    boolean onScroll(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onScroll
-    void onShowPress(android.view.MotionEvent) -> onShowPress
-    boolean onSingleTapUp(android.view.MotionEvent) -> onSingleTapUp
-    void a() -> a
-    android.view.View b() -> b
-    net.youmi.android.ec a(net.youmi.android.eo) -> a
-    net.youmi.android.ed b(net.youmi.android.eo) -> b
-    void c(net.youmi.android.eo) -> c
-    android.widget.ImageSwitcher d(net.youmi.android.eo) -> d
-    void a(net.youmi.android.eo,net.youmi.android.ed) -> a
-    android.widget.Gallery e(net.youmi.android.eo) -> e
-    java.lang.String f(net.youmi.android.eo) -> f
-    java.lang.String g(net.youmi.android.eo) -> g
-net.youmi.android.ep -> net.youmi.android.dl:
-    net.youmi.android.eo a -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-net.youmi.android.eq -> net.youmi.android.dm:
-    net.youmi.android.eo a -> a
-    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
-net.youmi.android.er -> net.youmi.android.dn:
-    net.youmi.android.eo a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.es -> net.youmi.android.do:
-    net.youmi.android.eo a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.et -> net.youmi.android.dp:
-    net.youmi.android.eo a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.eu -> net.youmi.android.dq:
-net.youmi.android.ew -> net.youmi.android.dr:
-    void a(java.lang.String,java.lang.String) -> a
-net.youmi.android.ex -> net.youmi.android.ds:
-    void a(java.lang.String) -> a
-net.youmi.android.ey -> net.youmi.android.dt:
-    boolean a$746d7c65(java.io.File,net.youmi.android.gc) -> a
-    net.youmi.android.gv a(android.content.Context,java.lang.String,long) -> a
-    net.youmi.android.gv a(android.content.Context,net.youmi.android.gc) -> a
-    java.io.File b(android.content.Context,net.youmi.android.gc) -> b
-    java.lang.String a(net.youmi.android.gc) -> a
-    boolean b(net.youmi.android.gc) -> b
-    java.io.File b(android.content.Context,java.io.File,net.youmi.android.gc) -> a
-net.youmi.android.f -> net.youmi.android.du:
-    net.youmi.android.e a -> a
-    void run() -> run
-net.youmi.android.fa -> net.youmi.android.dv:
-    void a(java.lang.String) -> a
-    void a$25eccc4e(java.lang.String,java.io.File) -> a
-    void a(java.lang.String,java.io.File) -> b
-    void a$44bd9260(java.lang.String,int) -> a
-net.youmi.android.fb -> net.youmi.android.dw:
-    void a(java.lang.String,int,int) -> a
-net.youmi.android.fc -> net.youmi.android.dx:
-    java.io.FileOutputStream a(android.content.Context,java.lang.String) -> a
-    int a() -> a
-    java.io.File b(android.content.Context,java.lang.String) -> b
-net.youmi.android.fd -> net.youmi.android.dy:
-    void a(android.webkit.WebView,int) -> a
-net.youmi.android.fe -> net.youmi.android.dz:
-    void a(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> a
-    void a(android.webkit.WebView,int,java.lang.String,java.lang.String) -> a
-    void a(android.webkit.WebView,java.lang.String) -> a
-net.youmi.android.fm -> net.youmi.android.ea:
-    net.youmi.android.eu a -> a
-net.youmi.android.fn -> net.youmi.android.eb:
-net.youmi.android.fo -> net.youmi.android.ec:
-    net.youmi.android.ad a -> a
-    java.lang.Boolean a$5f8445a4() -> a
-    net.youmi.android.fo a(net.youmi.android.ad) -> a
-    net.youmi.android.fo b(net.youmi.android.ad) -> b
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.fp -> net.youmi.android.ed:
-    android.app.Activity a -> a
-    net.youmi.android.fq b -> b
-    android.os.Handler c -> c
-    java.lang.Boolean a$5f8445a4() -> b
-    net.youmi.android.fp a(android.app.Activity,net.youmi.android.fq,android.os.Handler) -> a
-    net.youmi.android.fp a() -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.fq -> net.youmi.android.ee:
-    void a(net.youmi.android.cz) -> a
-    net.youmi.android.dm b() -> b
-    boolean c() -> c
-net.youmi.android.fr -> net.youmi.android.ef:
-    android.content.Context a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    net.youmi.android.fs d -> d
-    long e -> e
-    java.lang.String h -> h
-    java.lang.String f -> f
-    java.io.File g -> g
-    java.lang.String i -> i
-    long j -> j
-    long k -> k
-    int l -> l
-    java.lang.String a() -> a
-    java.lang.String b() -> b
-    java.lang.String c() -> c
-    java.lang.Integer a(java.lang.String[]) -> a
-    int a(org.apache.http.HttpResponse,org.apache.http.HttpEntity) -> a
-    boolean f() -> f
-    boolean a(org.apache.http.HttpResponse) -> a
-    int a(org.apache.http.HttpEntity) -> a
-    long d() -> d
-    long e() -> e
-    void a(java.lang.String) -> a
-    void onPostExecute(java.lang.Object) -> onPostExecute
-    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
-    void onProgressUpdate(java.lang.Object[]) -> onProgressUpdate
-net.youmi.android.fs -> net.youmi.android.eg:
-    void a(net.youmi.android.fr,net.youmi.android.bx) -> a
-    void a(net.youmi.android.fr,java.io.File,java.lang.String) -> a
-    void e() -> e
-    void f() -> f
-    void b(net.youmi.android.fr,java.io.File,java.lang.String) -> b
-    void a(net.youmi.android.fr) -> a
-    void h() -> h
-    void g() -> g
-    void a(int) -> a
-net.youmi.android.ft -> net.youmi.android.eh:
-    android.content.Context a -> a
-    java.lang.String b -> b
-    java.lang.String a$1d591b0(java.lang.String) -> c
-    java.lang.String b(java.lang.String) -> b
-    void a(java.lang.String) -> a
-net.youmi.android.fu -> net.youmi.android.ei:
-    int a(android.content.Context,java.lang.String) -> a
-net.youmi.android.fv -> net.youmi.android.ej:
-    int a -> a
-    int b -> b
-    long c -> c
-    net.youmi.android.fz d -> d
-    net.youmi.android.fw e -> e
-    net.youmi.android.ga f -> f
-    net.youmi.android.fx g -> g
-    int a() -> a
-    void a(int) -> a
-    void a(net.youmi.android.fz) -> a
-    net.youmi.android.fw b() -> b
-    void a(net.youmi.android.fw) -> a
-    net.youmi.android.ga c() -> c
-    void a(net.youmi.android.ga) -> a
-    void a(net.youmi.android.fx) -> a
-    net.youmi.android.fx d() -> d
-net.youmi.android.fw -> net.youmi.android.ek:
-    int a -> a
-    int b -> b
-    int c -> c
-    int e -> d
-    java.lang.String f -> e
-    int a() -> a
-    void a(int) -> a
-    void b$13462e() -> b
-    void b(java.lang.String) -> a
-    java.lang.String b() -> c
-    void c$13462e() -> d
-    int c() -> e
-net.youmi.android.fx -> net.youmi.android.el:
-    int a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    long d -> d
-    void a(int) -> a
-    java.lang.String a() -> a
-    void a(java.lang.String) -> a
-    java.lang.String b() -> b
-    void b(java.lang.String) -> b
-    long c() -> c
-    void a(long) -> a
-net.youmi.android.fy -> net.youmi.android.em:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String c -> c
-    long d -> d
-    net.youmi.android.ce e -> e
-    net.youmi.android.fy a(java.lang.String,java.lang.String,java.lang.String,net.youmi.android.ce) -> a
-    net.youmi.android.fy a(java.lang.String,java.lang.String,java.lang.String,long,net.youmi.android.ce) -> a
-    java.lang.String a() -> a
-    java.lang.String b() -> b
-    net.youmi.android.ce e() -> c
-    boolean f() -> d
-    boolean a$1349f3() -> e
-    java.lang.String a(net.youmi.android.fy,java.lang.String) -> a
-    net.youmi.android.fy a(java.lang.String,java.lang.String) -> a
-net.youmi.android.fz -> net.youmi.android.en:
-    boolean a -> a
-    boolean b -> b
-    boolean c -> c
-    boolean d -> d
-    int e -> e
-    boolean a(android.content.Context,java.lang.String) -> a
-    void a$1385ff() -> a
-net.youmi.android.g -> net.youmi.android.eo:
-    android.app.Activity a -> a
-    android.view.View b -> b
-    android.view.View c -> c
-    android.view.View d -> d
-    android.view.View e -> e
-    android.view.View f -> f
-    net.youmi.android.n g -> g
-    net.youmi.android.dm h -> h
-    net.youmi.android.m i -> i
-    android.view.View a(android.view.View$OnClickListener) -> a
-    void a(net.youmi.android.cc) -> a
-    int[] a() -> a
-    int[] b() -> b
-    int[] c() -> c
-net.youmi.android.ga -> net.youmi.android.ep:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    java.lang.String a() -> a
-    void a(java.lang.String) -> a
-    java.lang.String b() -> b
-    void b(java.lang.String) -> b
-net.youmi.android.gb -> net.youmi.android.eq:
-    java.lang.String b -> b
-    boolean c -> c
-    android.app.Notification d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    android.app.PendingIntent h -> h
-    java.lang.String i -> i
-    java.lang.String j -> j
-    java.lang.String k -> k
-    boolean l -> l
-    java.lang.String m -> m
-    int n -> n
-    java.lang.String o -> o
-    long a -> a
-    net.youmi.android.fv p -> p
-    net.youmi.android.ce q -> q
-    net.youmi.android.fv a() -> a
-    java.lang.String b() -> b
-    boolean c() -> c
-    boolean d() -> d
-    android.app.Notification a$7a5cd5d5(boolean) -> a
-    android.app.PendingIntent a(android.content.Context) -> d
-    java.lang.String e() -> k
-    java.lang.String f() -> l
-    java.lang.String g() -> m
-    boolean a(android.content.Context,java.lang.String) -> a
-    boolean b(android.content.Context) -> a
-    boolean c(android.content.Context) -> b
-    boolean a(android.content.Context,java.io.File) -> a
-    boolean a(android.content.Context,int,long) -> a
-    boolean d$faab209() -> e
-    boolean a$3047fd97(int,int) -> a
-    boolean b$5ffc0101(java.lang.String) -> a
-    boolean e$faab209() -> f
-    boolean f(android.content.Context) -> c
-    boolean a(android.content.Context,java.io.File,java.lang.String) -> a
-net.youmi.android.gc -> net.youmi.android.er:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    long c -> c
-    java.lang.String h() -> g
-    java.lang.String i() -> h
-    boolean j() -> i
-    long k() -> j
-net.youmi.android.gd -> net.youmi.android.es:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    long c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    android.content.Context f -> f
-    org.apache.http.impl.client.DefaultHttpClient g -> g
-    java.io.InputStream h -> h
-    java.io.OutputStream i -> i
-    java.util.List j -> j
-    int k -> k
-    void a(java.lang.String) -> a
-    int a(java.util.List) -> a
-    int a$134621() -> c
-    boolean a() -> a
-    boolean b() -> b
-net.youmi.android.ge -> net.youmi.android.et:
-    android.content.Context a -> a
-    void onLocationChanged(android.location.Location) -> onLocationChanged
-    void onProviderDisabled(java.lang.String) -> onProviderDisabled
-    void onProviderEnabled(java.lang.String) -> onProviderEnabled
-    void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
-net.youmi.android.gf -> net.youmi.android.eu:
-    java.lang.String l -> l
-    java.io.ByteArrayOutputStream m -> m
-    java.lang.String c() -> c
-    boolean a() -> a
-    boolean b() -> b
-net.youmi.android.gg -> net.youmi.android.ev:
-    net.youmi.android.gg a -> a
-    java.util.LinkedList b -> b
-    net.youmi.android.gg a() -> a
-    java.util.LinkedList b() -> b
-    void a(net.youmi.android.ew) -> a
-    void b(net.youmi.android.ew) -> b
-    void a(java.lang.String,java.lang.String) -> a
-net.youmi.android.gh -> net.youmi.android.ew:
-    java.util.Hashtable a -> a
-    net.youmi.android.gh b -> b
-    void a$52e835e0(android.webkit.WebView,java.lang.String) -> a
-    void a(java.lang.String,java.lang.String) -> a
-    net.youmi.android.gh a() -> a
-net.youmi.android.gi -> net.youmi.android.ex:
-    java.util.Hashtable a -> a
-    net.youmi.android.gi b -> b
-    void a(android.content.Context,android.webkit.WebView,java.lang.String) -> a
-    net.youmi.android.gi a() -> a
-net.youmi.android.gj -> net.youmi.android.ey:
-    boolean a(android.content.Context,int,android.app.Notification) -> a
-    boolean a(android.content.Context,int) -> a
-net.youmi.android.gk -> net.youmi.android.ez:
-    android.content.Context a -> a
-    net.youmi.android.gk b -> b
-    java.util.Hashtable c -> c
-    java.util.HashSet d -> d
-    net.youmi.android.gk a() -> a
-    void a(java.lang.String,net.youmi.android.gb) -> a
-    net.youmi.android.gb b(java.lang.String) -> b
-    void a(android.content.Context,net.youmi.android.gb) -> a
-    void a(java.lang.String,int,int) -> a
-    void a(java.lang.String) -> a
-    void a$44bd9260(java.lang.String,int) -> a
-    void a$25eccc4e(java.lang.String,java.io.File) -> a
-    void a(java.lang.String,java.io.File) -> b
-    void b(java.lang.String,java.io.File) -> c
-net.youmi.android.gl -> net.youmi.android.fa:
-    net.youmi.android.gl a -> a
-    java.io.FileOutputStream a(android.content.Context,java.lang.String) -> a
-    net.youmi.android.gl b() -> b
-    int a() -> a
-    java.io.File b(android.content.Context,java.lang.String) -> b
-net.youmi.android.gm -> net.youmi.android.fb:
-    net.youmi.android.gm a -> a
-    net.youmi.android.gm a() -> a
-    boolean a$746d7c65(java.io.File,net.youmi.android.gc) -> a
-    net.youmi.android.gv a(android.content.Context,java.lang.String,long) -> a
-    java.io.File b(android.content.Context,net.youmi.android.gc) -> b
-    boolean b(net.youmi.android.gc) -> b
-    java.io.File b(android.content.Context,java.io.File,net.youmi.android.gc) -> a
-net.youmi.android.gn -> net.youmi.android.fc:
-    net.youmi.android.gv a(android.content.Context,net.youmi.android.gc) -> a
-    java.lang.String a(java.lang.String) -> a
-    java.lang.String a(net.youmi.android.gc) -> a
-net.youmi.android.go -> net.youmi.android.fd:
-    java.lang.String a -> a
-    java.lang.String b -> b
-    long c -> c
-    long d -> d
-    net.youmi.android.go e -> e
-    java.io.File a(java.lang.String) -> a
-    net.youmi.android.go a() -> a
-    java.lang.String a(net.youmi.android.go) -> a
-    boolean a(net.youmi.android.go,java.io.File) -> a
-    long b(net.youmi.android.go) -> b
-net.youmi.android.gp -> net.youmi.android.fe:
-    net.youmi.android.go a -> a
-    void run() -> run
-net.youmi.android.gq -> net.youmi.android.ff:
-    net.youmi.android.gq a -> a
-    java.util.Hashtable b -> b
-    net.youmi.android.gq a() -> a
-    java.io.File a(android.content.Context,net.youmi.android.ey,net.youmi.android.gc,net.youmi.android.fa) -> a
-net.youmi.android.gr -> net.youmi.android.fg:
-    net.youmi.android.gr a -> a
-    net.youmi.android.go b -> b
-    java.io.FileOutputStream a(android.content.Context,java.lang.String) -> a
-    net.youmi.android.gr b() -> b
-    int a() -> a
-    java.io.File b(android.content.Context,java.lang.String) -> b
-net.youmi.android.gs -> net.youmi.android.fh:
-    android.webkit.WebView a -> a
-    java.lang.String b -> b
-    void run() -> run
-net.youmi.android.gt -> net.youmi.android.fi:
-    android.graphics.RectF a -> a
-    int b -> b
-    int c -> c
-    android.graphics.RectF d -> d
-    android.graphics.Paint e -> e
-    float f -> f
-    int g -> g
-    net.youmi.android.dm h -> h
-    float i -> i
-    void onAttachedToWindow() -> onAttachedToWindow
-    void onDraw(android.graphics.Canvas) -> onDraw
-net.youmi.android.gu -> net.youmi.android.fj:
-    net.youmi.android.dd h -> h
-    int g() -> e
-    boolean a(byte[]) -> a
-    boolean a(java.io.File) -> a
-    int h() -> f
-net.youmi.android.gv -> net.youmi.android.fk:
-    java.lang.String a -> a
-    java.io.File b -> b
-    boolean c -> c
-    android.content.Context d -> d
-    net.youmi.android.fc e -> e
-    boolean a() -> a
-    boolean b() -> b
-    java.io.File c() -> c
-    long d() -> d
-    java.io.FileOutputStream f() -> e
-net.youmi.android.gw -> net.youmi.android.fl:
-    java.lang.String a(java.lang.String) -> a
-net.youmi.android.gx -> net.youmi.android.fm:
-    char[] a -> a
-    char[] b -> b
-    byte a(char) -> a
-    java.lang.String a(byte[]) -> a
-net.youmi.android.gy -> net.youmi.android.fn:
-    java.util.Random a -> a
-    int a(int) -> a
-    int a() -> a
-net.youmi.android.gz -> net.youmi.android.fo:
-    boolean a -> a
-    void b(java.lang.String) -> a
-    void a(java.lang.String,java.lang.Throwable) -> a
-    void c$552c4e01() -> a
-    void a$786b7c60() -> b
-net.youmi.android.h -> net.youmi.android.fp:
-    net.youmi.android.g a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.ha -> net.youmi.android.fq:
-    java.util.Hashtable a -> a
-    void a(java.lang.String) -> a
-    void a(java.lang.String,java.lang.String) -> a
-    void b(java.lang.String) -> b
-    java.lang.String a(long) -> a
-    java.lang.String b(long) -> b
-net.youmi.android.hb -> net.youmi.android.fr:
-    org.json.JSONObject a(java.lang.String) -> a
-    java.lang.String a(org.json.JSONObject,java.lang.String,java.lang.String) -> a
-    int a(org.json.JSONObject,java.lang.String,int) -> a
-    long a(org.json.JSONObject,java.lang.String,long) -> a
-    org.json.JSONObject a$6c924219(org.json.JSONObject,java.lang.String) -> a
-    org.json.JSONObject a$6090df28(org.json.JSONArray,int) -> a
-    org.json.JSONArray a$530bd67d(org.json.JSONObject,java.lang.String) -> b
-net.youmi.android.hc -> net.youmi.android.fs:
-    java.lang.String a(android.content.Context) -> a
-net.youmi.android.hd -> net.youmi.android.ft:
-    int a$2da554d8(android.content.Context,java.lang.String,net.youmi.android.gv,java.lang.String,net.youmi.android.fb) -> a
-    int a$638a201e(java.lang.String,org.apache.http.client.HttpClient,java.lang.String,net.youmi.android.gv,net.youmi.android.fb) -> a
-net.youmi.android.he -> net.youmi.android.fu:
-    java.lang.String a$1b0c658e(android.content.Context,java.lang.String) -> a
-    java.lang.String b(android.content.Context,java.lang.String) -> b
-net.youmi.android.hf -> net.youmi.android.fv:
-    java.lang.String a -> a
-    java.lang.String a() -> a
-    org.apache.http.impl.client.DefaultHttpClient b(android.content.Context) -> a
-    org.apache.http.impl.client.DefaultHttpClient a(android.content.Context,net.youmi.android.ex) -> a
-    boolean c(android.content.Context) -> b
-net.youmi.android.hg -> net.youmi.android.fw:
-    void a(java.lang.String) -> a
-net.youmi.android.hh -> net.youmi.android.fx:
-    net.youmi.android.ex a -> a
-    boolean isRedirectRequested(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext) -> isRedirectRequested
-    java.net.URI getLocationURI(org.apache.http.HttpResponse,org.apache.http.protocol.HttpContext) -> getLocationURI
-net.youmi.android.hi -> net.youmi.android.fy:
-    boolean a(android.content.Context) -> a
-    boolean b(android.content.Context) -> b
-net.youmi.android.hj -> net.youmi.android.fz:
-    android.webkit.WebViewClient a(net.youmi.android.fe) -> a
-    int a() -> a
-    android.webkit.WebChromeClient a(net.youmi.android.fd) -> a
-net.youmi.android.hk -> net.youmi.android.ga:
-    int a() -> a
-net.youmi.android.hl -> net.youmi.android.gb:
-    net.youmi.android.fd a -> a
-    net.youmi.android.hl a(net.youmi.android.fd) -> a
-    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
-net.youmi.android.hm -> net.youmi.android.gc:
-    net.youmi.android.fd a -> a
-    net.youmi.android.hm a(net.youmi.android.fd) -> a
-    void onExceededDatabaseQuota(java.lang.String,java.lang.String,long,long,long,android.webkit.WebStorage$QuotaUpdater) -> onExceededDatabaseQuota
-    void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
-    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
-net.youmi.android.hn -> net.youmi.android.gd:
-    net.youmi.android.fd a -> a
-    net.youmi.android.hn a(net.youmi.android.fd) -> a
-    void onExceededDatabaseQuota(java.lang.String,java.lang.String,long,long,long,android.webkit.WebStorage$QuotaUpdater) -> onExceededDatabaseQuota
-    void onReachedMaxAppCacheSize(long,long,android.webkit.WebStorage$QuotaUpdater) -> onReachedMaxAppCacheSize
-    void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
-    void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
-net.youmi.android.ho -> net.youmi.android.ge:
-    net.youmi.android.fe a -> a
-    net.youmi.android.ho a(net.youmi.android.fe) -> a
-    boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
-    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
-    void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
-    void onReceivedError(android.webkit.WebView,int,java.lang.String,java.lang.String) -> onReceivedError
-net.youmi.android.hs -> net.youmi.android.gf:
-    android.content.Context a -> a
-    java.lang.String b -> b
-    android.webkit.WebView c -> c
-    void run() -> run
-net.youmi.android.ht -> net.youmi.android.gg:
-    boolean a(long) -> a
-net.youmi.android.hu -> net.youmi.android.gh:
-    boolean a(java.io.File,java.lang.String) -> a
-    boolean a(java.io.File,java.io.File) -> a
-    boolean b(java.io.File,java.io.File) -> b
-net.youmi.android.hv -> net.youmi.android.gi:
-    boolean a(android.content.Context,java.lang.String) -> a
-    android.content.pm.PackageInfo b(android.content.Context,java.lang.String) -> b
-    void d(android.content.Context,java.lang.String) -> c
-net.youmi.android.hw -> net.youmi.android.gj:
-    boolean a(android.content.Context,java.lang.String) -> a
-    boolean a$faab209() -> a
-    boolean i(android.content.Context) -> a
-net.youmi.android.hx -> net.youmi.android.gk:
-    boolean a$faab209() -> a
-    boolean a$1a54e735(long) -> a
-net.youmi.android.hy -> net.youmi.android.gl:
-    boolean b -> b
-    boolean c -> c
-    boolean d -> d
-    boolean e -> e
-    net.youmi.android.fd f -> f
-    net.youmi.android.fe g -> g
-    android.content.Context a -> a
-    void a$1385ff() -> a
-    void b$1385ff() -> b
-    void a(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> a
-    void a(android.webkit.WebView,int,java.lang.String,java.lang.String) -> a
-    void a(android.webkit.WebView,java.lang.String) -> a
-    void a(android.webkit.WebView,int) -> a
-    void a(java.lang.String,java.lang.String) -> a
-    void onAttachedToWindow() -> onAttachedToWindow
-    void onDetachedFromWindow() -> onDetachedFromWindow
-net.youmi.android.hz -> net.youmi.android.gm:
-    net.youmi.android.hy a -> a
-    void onDownloadStart(java.lang.String,java.lang.String,java.lang.String,java.lang.String,long) -> onDownloadStart
-net.youmi.android.i -> net.youmi.android.gn:
-    net.youmi.android.g a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.ia -> net.youmi.android.go:
-    net.youmi.android.hy a -> a
-    java.lang.String b -> b
-    void run() -> run
-net.youmi.android.ib -> net.youmi.android.gp:
-    net.youmi.android.q a -> a
-    net.youmi.android.if b -> b
-    boolean c -> c
-    net.youmi.android.ie d -> d
-    net.youmi.android.AdView e -> e
-    net.youmi.android.cz k -> k
-    int f -> f
-    android.app.Activity g -> g
-    net.youmi.android.o h -> h
-    android.view.animation.Animation i -> i
-    android.view.animation.Animation j -> j
-    void i() -> d
-    void b(net.youmi.android.cz) -> b
-    void onWindowFocusChanged(boolean) -> onWindowFocusChanged
-    void a(int) -> a
-    void a(net.youmi.android.fr,net.youmi.android.bx) -> a
-    void a(net.youmi.android.fr,java.io.File,java.lang.String) -> a
-    void e() -> e
-    void f() -> f
-    void b(net.youmi.android.fr,java.io.File,java.lang.String) -> b
-    void a(net.youmi.android.fr) -> a
-    void g() -> g
-    void h() -> h
-    void a() -> a
-    void a(net.youmi.android.ea,java.lang.String[]) -> a
-    void b(int) -> b
-    void a(net.youmi.android.cz) -> a
-    net.youmi.android.dm b() -> b
-    boolean c() -> c
-net.youmi.android.ic -> net.youmi.android.gq:
-    net.youmi.android.ib a -> a
-    net.youmi.android.cz b -> b
-    net.youmi.android.fr c -> c
-    void run() -> run
-net.youmi.android.id -> net.youmi.android.gr:
-    net.youmi.android.ib a -> a
-    net.youmi.android.ea b -> b
-    void run() -> run
-net.youmi.android.ie -> net.youmi.android.gs:
-    float a -> a
-    int b -> b
-    float c -> c
-    int d -> d
-    int e -> e
-    int f -> f
-    int g -> g
-    float h -> h
-    float i -> i
-    int j -> j
-    int k -> k
-    int l -> l
-    int m -> m
-    android.graphics.LinearGradient n -> n
-    android.graphics.LinearGradient o -> o
-    float p -> p
-    float q -> q
-    float r -> r
-    float s -> s
-    android.graphics.drawable.ShapeDrawable t -> t
-    android.graphics.Rect u -> u
-    android.graphics.RectF v -> v
-    android.graphics.RectF w -> w
-    int x -> x
-    int y -> y
-    float z -> z
-    float A -> A
-    float B -> B
-    int C -> C
-    int F -> F
-    android.graphics.Paint D -> D
-    android.graphics.Path E -> E
-    void a(int) -> a
-    void a() -> a
-    void onDraw(android.graphics.Canvas) -> onDraw
-net.youmi.android.if -> net.youmi.android.gt:
-    android.graphics.Shader a -> a
-    int b -> b
-    int c -> c
-    net.youmi.android.dm d -> d
-    net.youmi.android.ib e -> e
-    android.graphics.drawable.Drawable f -> f
-    net.youmi.android.AdView g -> g
-    net.youmi.android.cz x -> x
-    android.graphics.Paint h -> h
-    android.graphics.Paint i -> i
-    android.graphics.Rect j -> j
-    android.graphics.RectF k -> k
-    android.graphics.RectF l -> l
-    android.graphics.RectF m -> m
-    android.graphics.Rect n -> n
-    float o -> o
-    float p -> p
-    float q -> q
-    float r -> r
-    int s -> s
-    int t -> t
-    boolean u -> u
-    java.lang.String v -> v
-    java.lang.Runnable w -> w
-    void a(net.youmi.android.cz) -> a
-    boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
-    void onDraw(android.graphics.Canvas) -> onDraw
-    net.youmi.android.cz a(net.youmi.android.if) -> a
-net.youmi.android.ig -> net.youmi.android.gu:
-    net.youmi.android.if a -> a
-    void run() -> run
-net.youmi.android.ih -> net.youmi.android.gv:
-    android.app.Dialog a -> a
-    android.content.Context e -> e
-    android.app.Activity f -> f
-    java.lang.String g -> g
-    java.lang.String h -> h
-    net.youmi.android.cz b -> b
-    net.youmi.android.hy c -> c
-    android.widget.FrameLayout i -> i
-    android.widget.FrameLayout j -> j
-    android.widget.ProgressBar k -> k
-    android.widget.RelativeLayout l -> l
-    android.widget.LinearLayout m -> m
-    net.youmi.android.ij n -> n
-    android.widget.LinearLayout o -> o
-    android.widget.ImageButton p -> p
-    long q -> q
-    long r -> r
-    net.youmi.android.dm d -> d
-    void c() -> a
-    void d() -> b
-    void a(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> a
-    void a(android.webkit.WebView,int,java.lang.String,java.lang.String) -> a
-    void a(android.webkit.WebView,java.lang.String) -> a
-    void a(android.webkit.WebView,int) -> a
-net.youmi.android.ii -> net.youmi.android.gw:
-    net.youmi.android.ih a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.ij -> net.youmi.android.gx:
-    android.graphics.Shader a -> a
-    android.graphics.Paint b -> b
-    android.graphics.RectF c -> c
-    int e -> e
-    int f -> f
-    net.youmi.android.ih d -> d
-    void onLayout(boolean,int,int,int,int) -> onLayout
-    void onMeasure(int,int) -> onMeasure
-    void onDraw(android.graphics.Canvas) -> onDraw
-net.youmi.android.j -> net.youmi.android.gy:
-    net.youmi.android.g a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.k -> net.youmi.android.gz:
-    net.youmi.android.g a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.l -> net.youmi.android.ha:
-    net.youmi.android.g a -> a
-    void onClick(android.view.View) -> onClick
-net.youmi.android.m -> net.youmi.android.hb:
-    android.graphics.drawable.Drawable b -> b
-    android.graphics.drawable.Drawable c -> c
-    android.graphics.drawable.Drawable d -> d
-    android.graphics.drawable.Drawable e -> e
-    android.graphics.drawable.Drawable f -> f
-    net.youmi.android.g a -> a
-    android.graphics.drawable.Drawable a(java.lang.String) -> a
-    android.graphics.drawable.Drawable a() -> a
-    android.graphics.drawable.Drawable b() -> b
-    android.graphics.drawable.Drawable c() -> c
-    android.graphics.drawable.Drawable d() -> d
-    android.graphics.drawable.Drawable e() -> e
-    android.graphics.drawable.Drawable a(android.graphics.drawable.Drawable,android.graphics.drawable.Drawable) -> a
-net.youmi.android.n -> net.youmi.android.hc:
-    void e() -> c
-    void f() -> d
-    void g() -> e
-    void h() -> f
-    void i() -> g
-net.youmi.android.o -> net.youmi.android.hd:
-    long c -> c
-    java.lang.String d -> d
-    java.lang.String e -> e
-    long f -> f
-    long g -> g
-    long h -> h
-    long i -> i
-    boolean a -> a
-    android.content.Context b -> b
-    void a() -> a
-    long a(net.youmi.android.o) -> a
-    java.lang.String b(net.youmi.android.o) -> b
-    java.lang.String c(net.youmi.android.o) -> c
-    long d(net.youmi.android.o) -> d
-    long e(net.youmi.android.o) -> e
-    long f(net.youmi.android.o) -> f
-net.youmi.android.p -> net.youmi.android.he:
-    net.youmi.android.o a -> a
-    void run() -> run
-net.youmi.android.q -> net.youmi.android.hf:
-    net.youmi.android.cz a -> a
-    net.youmi.android.v b -> b
-    net.youmi.android.w c -> c
-    net.youmi.android.x d -> d
-    net.youmi.android.s e -> e
-    net.youmi.android.t f -> f
-    net.youmi.android.u g -> g
-    net.youmi.android.AdView h -> h
-    net.youmi.android.ib i -> i
-    net.youmi.android.dm j -> j
-    android.app.Activity k -> k
-    int l -> l
-    int m -> m
-    int n -> n
-    android.widget.FrameLayout$LayoutParams o -> o
-    void a(net.youmi.android.cz) -> a
-    int a(net.youmi.android.q) -> a
-    int b(net.youmi.android.q) -> b
-net.youmi.android.r -> net.youmi.android.hg:
-    android.widget.TextView a -> a
-    android.widget.TextView b -> b
-    net.youmi.android.q c -> c
-    boolean a(net.youmi.android.cz) -> a
-net.youmi.android.s -> net.youmi.android.hh:
-    net.youmi.android.ee a -> a
-    net.youmi.android.eh b -> b
-    net.youmi.android.q c -> c
-    void a() -> a
-    boolean a(net.youmi.android.cz) -> a
-    void b() -> b
-    void c() -> c
-    void a(android.view.animation.Animation) -> a
-    void d() -> d
-    java.lang.Object a(java.lang.Object) -> a
-net.youmi.android.t -> net.youmi.android.hi:
-    net.youmi.android.by b -> b
-    android.app.Activity c -> c
-    net.youmi.android.AdView d -> d
-    net.youmi.android.bx e -> e
-    net.youmi.android.q a -> a
-    void e() -> e
-    boolean a(net.youmi.android.cz) -> a
-    void b() -> b
-    void d() -> d
-    void a(android.view.animation.Animation) -> a
-    void a() -> a
-    void c() -> c
-net.youmi.android.u -> net.youmi.android.hj:
-    void b() -> b
-    void d() -> d
-    void a(android.view.animation.Animation) -> a
-    void a() -> a
-    void c() -> c
-net.youmi.android.v -> net.youmi.android.hk:
-    net.youmi.android.dm a -> a
-    android.app.Activity b -> b
-    int c -> c
-    net.youmi.android.y d -> d
-    net.youmi.android.w e -> e
-    net.youmi.android.q f -> f
-    boolean a(net.youmi.android.cz) -> a
-    void d() -> d
-    void a() -> a
-    void c() -> c
-    void a(android.view.animation.Animation) -> a
-    void b() -> b
-net.youmi.android.w -> net.youmi.android.hl:
-    android.widget.ImageView a -> a
-    android.widget.ImageView b -> b
-    android.widget.ImageView c -> c
-    android.view.animation.Animation d -> d
-    android.view.animation.Animation e -> e
-    net.youmi.android.q f -> f
-    android.widget.ImageView e() -> e
-    boolean a(net.youmi.android.cz) -> a
-    void d() -> d
-    void a() -> a
-    void c() -> c
-    void a(android.view.animation.Animation) -> a
-    void b() -> b
-net.youmi.android.x -> net.youmi.android.hm:
-    net.youmi.android.dm a -> a
-    int b -> b
-    android.app.Activity c -> c
-    int d -> d
-    net.youmi.android.y e -> e
-    net.youmi.android.q f -> f
-    boolean a(net.youmi.android.cz) -> a
-    void d() -> d
-    void a() -> a
-    void c() -> c
-    void a(android.view.animation.Animation) -> a
-    void b() -> b
-net.youmi.android.y -> net.youmi.android.hn:
-    net.youmi.android.r a -> a
-    net.youmi.android.r b -> b
-    net.youmi.android.r c -> c
-    android.view.animation.Animation d -> d
-    android.view.animation.Animation e -> e
-    int f -> f
-    net.youmi.android.q g -> g
-    net.youmi.android.r e() -> e
-    void a() -> a
-    boolean a(net.youmi.android.cz) -> a
-    void b() -> b
-    void c() -> c
-    void a(android.view.animation.Animation) -> a
-    void d() -> d
-net.youmi.android.z -> net.youmi.android.ho:
-    net.youmi.android.AdActivity a -> a
-    net.youmi.android.ac b -> b
-    net.youmi.android.aa c -> c
-    net.youmi.android.dm d -> d
-    void c() -> c
-    void a() -> a
-    void d() -> d
-    android.view.View b() -> b
 q.base.ActivityBase -> q.base.ActivityBase:
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume
     void onPause() -> onPause
-    void addToBaseLayout(android.view.View) -> a
 q.base.AdapterBase -> q.base.a:
     java.util.List mDatas -> a
     android.content.Context mCtx -> b
@@ -3224,86 +1182,46 @@ q.base.AdapterBase -> q.base.a:
     java.lang.Object getItem(int) -> getItem
     long getItemId(int) -> getItemId
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
-    int getLayoutId() -> a
     java.lang.Object getHolder(android.view.View) -> a
     void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
-q.base.R -> q.base.b:
-q.base.R$drawable -> q.base.c:
-    int base_icon_back -> a
-q.base.R$id -> q.base.d:
-    int base_header_btn_left -> a
-    int base_header_text -> b
-    int base_layout -> c
-    int tabhost_btns_layout -> d
-q.base.R$layout -> q.base.e:
-    int base_tab -> a
-    int base_tab_btn -> b
 q.base.TabActivityBase -> q.base.TabActivityBase:
-    android.widget.RadioGroup radioGroup -> d
-    android.widget.TabHost tabHost -> e
+    android.widget.RadioGroup radioGroup -> c
+    android.widget.TabHost tabHost -> d
     void onCreate(android.os.Bundle) -> onCreate
     void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
     android.content.Intent getIntent(int) -> a
     java.lang.String getBtnText(int) -> b
-q.base.UiBaseHeader -> q.base.f:
-    void text(android.app.Activity,java.lang.String) -> a
-    void btnBack(android.app.Activity,java.lang.String) -> b
-q.base.UiBaseHeader$1 -> q.base.g:
-    android.app.Activity val$act -> a
-    void onClick(android.view.View) -> onClick
-q.out.ActivityDialogBase -> q.out.ActivityDialogBase:
-    android.view.View vOk -> a
-    android.view.View vClose -> b
-    android.view.View vCancel -> c
-    void onCreate(android.os.Bundle) -> onCreate
-    android.view.View initView() -> a
-q.out.Color -> q.out.a:
-    java.lang.String name -> a
-    int color -> b
-    java.lang.String getName() -> a
-    int getColor() -> b
-q.out.ColorAdapter -> q.out.b:
-    int mCurColor -> d
-    int getLayoutId() -> a
-    java.lang.Object getHolder(android.view.View) -> a
-    void initItem$51f9981a(java.lang.Object,java.lang.Object) -> a
-q.out.ColorAdapter$Holder -> q.out.c:
-    android.widget.TextView vName -> a
-    android.view.View vColor -> b
-    android.widget.RadioButton vCheck -> c
-    q.out.ColorAdapter this$0 -> d
-q.out.ColorDialog -> q.out.ColorDialog:
-    java.util.List colors -> d
-    void onCreate(android.os.Bundle) -> onCreate
-    android.view.View initView() -> a
-    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
-q.out.ColorDialog$1 -> q.out.d:
-    q.out.ColorDialog this$0 -> a
-    void onClick(android.view.View) -> onClick
-q.util.AppUtil -> q.a.a:
-    java.lang.String getChannel(android.content.Context) -> a
-q.util.BitmapUtil -> q.a.b:
+    int getBtnDrawable(int) -> c
+q.util.BitmapUtil -> q.a.a:
     boolean save(android.graphics.Bitmap,java.lang.String) -> a
-q.util.FileMgr -> q.a.c:
+q.util.FileMgr -> q.a.b:
     q.util.FileMgr nInstance -> a
     java.lang.String nRoot -> b
     q.util.FileMgr getInstance(android.content.Context) -> a
     java.lang.String get(java.lang.String) -> a
     java.lang.String getScan(long) -> a
     java.lang.String getNew(long) -> b
-q.util.InputMethodUtil -> q.a.d:
-    void hide(android.content.Context,android.view.View) -> a
-q.util.IntentUtil -> q.a.e:
+q.util.IntentUtil -> q.a.c:
     void openBrowser(android.content.Context,java.lang.String) -> a
     void sendImage(android.content.Context,java.lang.String,java.lang.String) -> a
-q.util.QLog -> q.a.f:
+q.util.QHttpUtil -> q.a.d:
+    java.lang.String get(java.lang.String) -> a
+    java.lang.String get(java.lang.String,java.lang.String) -> a
+    javax.net.ssl.HttpsURLConnection initHttpsConn(java.net.URL) -> a
+q.util.QHttpUtil$1 -> q.a.e:
+    java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+    void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+q.util.QHttpUtil$2 -> q.a.f:
+    boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+q.util.QLog -> q.a.g:
     boolean available -> a
     void event(android.content.Context,int,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,int) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,float) -> a
     void log(java.lang.Object,java.lang.String) -> a
-q.util.SqliteBase -> q.a.g:
+q.util.SqliteBase -> q.a.h:
     android.database.sqlite.SQLiteDatabase db -> a
     java.lang.String tableName -> b
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
@@ -3311,10 +1229,11 @@ q.util.SqliteBase -> q.a.g:
     void open(boolean) -> a
     void close() -> close
     void insert(q.util.SqliteBase$ISqlite) -> b
+    void empty() -> b
     java.lang.String getSqlCreateTable() -> a
     android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
-q.util.SqliteBase$ISqlite -> q.a.h:
-q.util.WindowMgr -> q.a.i:
+q.util.SqliteBase$ISqlite -> q.a.i:
+q.util.WindowMgr -> q.a.j:
     q.util.WindowMgr nInstance -> a
     int nWidth -> b
     int nHeight -> c
@@ -3324,6 +1243,11 @@ q.util.WindowMgr -> q.a.i:
     float nScaleText -> g
     q.util.WindowMgr getInstance(android.content.Context) -> a
     int getHeight() -> a
+q.util.WindowUtil -> q.a.k:
+    int nWidth -> a
+    int nHeight -> b
+    int getWidth(android.content.Context) -> a
+    int getHeight(android.content.Context) -> b
 q.view.EndlessListViewHelper -> q.b.a:
     q.view.EndlessListViewHelper$OnEndlessListViewListener mListener -> a
     android.widget.ListView mListView -> b
