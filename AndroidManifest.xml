@@ -39,7 +39,7 @@
                >
 
      <!-- baidu -->
-     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="test" />
+     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="google" />
      <meta-data android:name="BaiduMobAd_STAT_ID" android:value="49cc811488" />
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
       
