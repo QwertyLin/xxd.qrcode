@@ -82,25 +82,27 @@ cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
     void onResume() -> onResume
     void onPause() -> onPause
 cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
-    int mColor -> a
-    java.lang.String mText -> b
-    long time -> c
-    android.graphics.Bitmap qrBitmap -> d
-    android.widget.TextView vText -> e
-    android.widget.ImageView vImg -> f
-    android.app.AlertDialog dialogColor -> g
+    java.lang.String DEFAULT_TEXT -> a
+    int mColor -> b
+    java.lang.String mText -> c
+    long time -> d
+    android.graphics.Bitmap qrBitmap -> e
+    android.widget.TextView vText -> f
+    android.widget.ImageView vImg -> g
+    android.app.AlertDialog dialogColor -> h
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
-    void encode() -> a
+    void encode() -> b
     void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
     void access$0(cn.xxd.qr.NewA,java.lang.String) -> a
     java.lang.String access$1(cn.xxd.qr.NewA) -> a
-    android.widget.TextView access$2(cn.xxd.qr.NewA) -> b
-    void access$3(cn.xxd.qr.NewA) -> c
-    int access$4(cn.xxd.qr.NewA) -> d
-    android.widget.ImageView access$5(cn.xxd.qr.NewA) -> e
-    android.graphics.Bitmap access$6(cn.xxd.qr.NewA) -> f
-    void access$7(cn.xxd.qr.NewA,android.graphics.Bitmap) -> a
+    java.lang.String access$2() -> a
+    android.widget.TextView access$3(cn.xxd.qr.NewA) -> b
+    void access$4(cn.xxd.qr.NewA) -> c
+    int access$5(cn.xxd.qr.NewA) -> d
+    android.widget.ImageView access$6(cn.xxd.qr.NewA) -> e
+    android.graphics.Bitmap access$7(cn.xxd.qr.NewA) -> f
+    void access$8(cn.xxd.qr.NewA,android.graphics.Bitmap) -> a
 cn.xxd.qr.NewA$1 -> cn.xxd.qr.h:
     cn.xxd.qr.NewA this$0 -> a
     android.widget.EditText val$et -> b

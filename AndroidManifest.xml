@@ -2,8 +2,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionCode="5"
-          android:versionName="13.01"
+          android:versionCode="7"
+          android:versionName="13.01.01"
           android:installLocation="auto">
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8"/>
 
@@ -39,7 +39,7 @@
                >
 
      <!-- baidu -->
-     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="eoemarket" />
+     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="meizu" />
      <meta-data android:name="BaiduMobAd_STAT_ID" android:value="49cc811488" />
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
       

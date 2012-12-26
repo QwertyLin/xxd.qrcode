@@ -3461,7 +3461,7 @@ Interfaces (count = 2):
   + Class [android/view/View$OnClickListener]
   + Class [android/widget/RadioGroup$OnCheckedChangeListener]
 
-Constant Pool (count = 282):
+Constant Pool (count = 287):
   + Integer [-16777216]
   + Integer [2130903047]
   + Integer [2130903048]
@@ -3471,9 +3471,9 @@ Constant Pool (count = 282):
   + Integer [2131165206]
   + Integer [2131165207]
   + Integer [2131165208]
+  + Integer [2131230720]
   + Integer [2131230722]
   + String []
-  + String [二维码 X]
   + String [取消]
   + String [已保存至：]
   + String [确定]
@@ -3506,13 +3506,14 @@ Constant Pool (count = 282):
   + Class [q/a/d]
   + Class [q/a/h]
   + Fieldref [android/graphics/Bitmap$CompressFormat.PNG Landroid/graphics/Bitmap$CompressFormat;]
-  + Fieldref [cn/xxd/qr/NewA.a I]
-  + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-  + Fieldref [cn/xxd/qr/NewA.c J]
-  + Fieldref [cn/xxd/qr/NewA.d Landroid/graphics/Bitmap;]
-  + Fieldref [cn/xxd/qr/NewA.e Landroid/widget/TextView;]
-  + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/ImageView;]
-  + Fieldref [cn/xxd/qr/NewA.g Landroid/app/AlertDialog;]
+  + Fieldref [cn/xxd/qr/NewA.a Ljava/lang/String;]
+  + Fieldref [cn/xxd/qr/NewA.b I]
+  + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+  + Fieldref [cn/xxd/qr/NewA.d J]
+  + Fieldref [cn/xxd/qr/NewA.e Landroid/graphics/Bitmap;]
+  + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/TextView;]
+  + Fieldref [cn/xxd/qr/NewA.g Landroid/widget/ImageView;]
+  + Fieldref [cn/xxd/qr/NewA.h Landroid/app/AlertDialog;]
   + Methodref [android/app/Activity.<init> ()V]
   + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
   + Methodref [android/app/AlertDialog.dismiss ()V]
@@ -3541,9 +3542,10 @@ Constant Pool (count = 282):
   + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
   + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + Methodref [android/widget/Toast.show ()V]
-  + Methodref [cn/xxd/qr/NewA.a ()V]
+  + Methodref [cn/xxd/qr/NewA.b ()V]
   + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
   + Methodref [cn/xxd/qr/NewA.getLayoutInflater ()Landroid/view/LayoutInflater;]
+  + Methodref [cn/xxd/qr/NewA.getString (I)Ljava/lang/String;]
   + Methodref [cn/xxd/qr/NewA.setContentView (I)V]
   + Methodref [cn/xxd/qr/h.<init> (Lcn/xxd/qr/NewA;Landroid/widget/EditText;)V]
   + Methodref [cn/xxd/qr/i.<init> (Lcn/xxd/qr/NewA;)V]
@@ -3571,32 +3573,34 @@ Constant Pool (count = 282):
   + NameAndType [<init> (Ljava/io/File;)V]
   + NameAndType [<init> (Ljava/lang/String;)V]
   + NameAndType [PNG Landroid/graphics/Bitmap$CompressFormat;]
-  + NameAndType [a ()V]
   + NameAndType [a (Landroid/content/Context;)Lq/a/c;]
   + NameAndType [a (Landroid/content/Context;ILjava/lang/String;)V]
   + NameAndType [a (Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V]
-  + NameAndType [a I]
+  + NameAndType [a Ljava/lang/String;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+  + NameAndType [b ()V]
   + NameAndType [b (J)Ljava/lang/String;]
-  + NameAndType [b Ljava/lang/String;]
-  + NameAndType [c J]
+  + NameAndType [b I]
+  + NameAndType [c Ljava/lang/String;]
   + NameAndType [check (I)V]
   + NameAndType [compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
   + NameAndType [create ()Landroid/app/AlertDialog;]
-  + NameAndType [d Landroid/graphics/Bitmap;]
+  + NameAndType [d J]
   + NameAndType [dismiss ()V]
-  + NameAndType [e Landroid/widget/TextView;]
+  + NameAndType [e Landroid/graphics/Bitmap;]
   + NameAndType [equals (Ljava/lang/Object;)Z]
-  + NameAndType [f Landroid/widget/ImageView;]
+  + NameAndType [f Landroid/widget/TextView;]
   + NameAndType [findViewById (I)Landroid/view/View;]
-  + NameAndType [g Landroid/app/AlertDialog;]
+  + NameAndType [g Landroid/widget/ImageView;]
   + NameAndType [getDefaultColor ()I]
   + NameAndType [getId ()I]
   + NameAndType [getInstance ()Ljava/util/Calendar;]
   + NameAndType [getLayoutInflater ()Landroid/view/LayoutInflater;]
   + NameAndType [getPath ()Ljava/lang/String;]
+  + NameAndType [getString (I)Ljava/lang/String;]
   + NameAndType [getTextColors ()Landroid/content/res/ColorStateList;]
   + NameAndType [getTimeInMillis ()J]
+  + NameAndType [h Landroid/app/AlertDialog;]
   + NameAndType [inflate (ILandroid/view/ViewGroup;)Landroid/view/View;]
   + NameAndType [length ()I]
   + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
@@ -3708,8 +3712,10 @@ Constant Pool (count = 282):
   + Utf8 [getInstance]
   + Utf8 [getLayoutInflater]
   + Utf8 [getPath]
+  + Utf8 [getString]
   + Utf8 [getTextColors]
   + Utf8 [getTimeInMillis]
+  + Utf8 [h]
   + Utf8 [inflate]
   + Utf8 [java/io/File]
   + Utf8 [java/io/FileNotFoundException]
@@ -3739,422 +3745,431 @@ Constant Pool (count = 282):
   + Utf8 [start]
   + Utf8 [toString]
   + Utf8 [valueOf]
-  + Utf8 [二维码 X]
   + Utf8 [取消]
   + Utf8 [已保存至：]
   + Utf8 [确定]
 
-Fields (count = 7):
-  + Field:        a I
+Fields (count = 8):
+  + Field:        a Ljava/lang/String;
+    Access flags: 0xa
+      = private static java.lang.String a
+  + Field:        b I
     Access flags: 0x2
-      = private int a
-  + Field:        b Ljava/lang/String;
+      = private int b
+  + Field:        c Ljava/lang/String;
     Access flags: 0x2
-      = private java.lang.String b
-  + Field:        c J
+      = private java.lang.String c
+  + Field:        d J
     Access flags: 0x2
-      = private long c
-  + Field:        d Landroid/graphics/Bitmap;
+      = private long d
+  + Field:        e Landroid/graphics/Bitmap;
     Access flags: 0x2
-      = private android.graphics.Bitmap d
-  + Field:        e Landroid/widget/TextView;
+      = private android.graphics.Bitmap e
+  + Field:        f Landroid/widget/TextView;
     Access flags: 0x2
-      = private android.widget.TextView e
-  + Field:        f Landroid/widget/ImageView;
+      = private android.widget.TextView f
+  + Field:        g Landroid/widget/ImageView;
     Access flags: 0x2
-      = private android.widget.ImageView f
-  + Field:        g Landroid/app/AlertDialog;
+      = private android.widget.ImageView g
+  + Field:        h Landroid/app/AlertDialog;
     Access flags: 0x2
-      = private android.app.AlertDialog g
+      = private android.app.AlertDialog h
 
-Methods (count = 13):
+Methods (count = 14):
   - Method:       <init>()V
     Access flags: 0x1
       = public NewA()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 27, locals = 1, stack = 3):
+    + Code attribute instructions (code length = 21, locals = 1, stack = 3):
       [0] aload_0 v0
-      [1] invokespecial #52
+      [1] invokespecial #53
         + Methodref [android/app/Activity.<init> ()V]
       [4] aload_0 v0
       [5] ldc #1
         + Integer [-16777216]
-      [7] putfield #45
-        + Fieldref [cn/xxd/qr/NewA.a I]
+      [7] putfield #46
+        + Fieldref [cn/xxd/qr/NewA.b I]
       [10] aload_0 v0
-      [11] ldc #12
-        + String [二维码 X]
-      [13] putfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [16] aload_0 v0
-      [17] invokestatic #97
+      [11] invokestatic #99
         + Methodref [java/util/Calendar.getInstance ()Ljava/util/Calendar;]
-      [20] invokevirtual #98
+      [14] invokevirtual #100
         + Methodref [java/util/Calendar.getTimeInMillis ()J]
-      [23] putfield #47
-        + Fieldref [cn/xxd/qr/NewA.c J]
-      [26] return
+      [17] putfield #48
+        + Fieldref [cn/xxd/qr/NewA.d J]
+      [20] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onCreate(Landroid/os/Bundle;)V
     Access flags: 0x4
       = protected void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 91, locals = 2, stack = 3):
+    + Code attribute instructions (code length = 107, locals = 2, stack = 3):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #53
+      [2] invokespecial #54
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
       [6] ldc #2
         + Integer [2130903047]
-      [8] invokevirtual #83
+      [8] invokevirtual #85
         + Methodref [cn/xxd/qr/NewA.setContentView (I)V]
       [11] aload_0 v0
-      [12] aload_0 v0
-      [13] ldc #6
-        + Integer [2131165205]
-      [15] invokevirtual #81
-        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
-      [18] checkcast #30
-        + Class [android/widget/TextView]
-      [21] putfield #49
-        + Fieldref [cn/xxd/qr/NewA.e Landroid/widget/TextView;]
-      [24] aload_0 v0
-      [25] getfield #49
-        + Fieldref [cn/xxd/qr/NewA.e Landroid/widget/TextView;]
+      [12] ldc #10
+        + Integer [2131230720]
+      [14] invokevirtual #84
+        + Methodref [cn/xxd/qr/NewA.getString (I)Ljava/lang/String;]
+      [17] putstatic #45
+        + Fieldref [cn/xxd/qr/NewA.a Ljava/lang/String;]
+      [20] aload_0 v0
+      [21] getstatic #45
+        + Fieldref [cn/xxd/qr/NewA.a Ljava/lang/String;]
+      [24] putfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [27] aload_0 v0
       [28] aload_0 v0
-      [29] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [32] invokevirtual #77
+      [29] ldc #6
+        + Integer [2131165205]
+      [31] invokevirtual #82
+        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
+      [34] checkcast #30
+        + Class [android/widget/TextView]
+      [37] putfield #50
+        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/TextView;]
+      [40] aload_0 v0
+      [41] getfield #50
+        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/TextView;]
+      [44] aload_0 v0
+      [45] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [48] invokevirtual #78
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [35] aload_0 v0
-      [36] aload_0 v0
-      [37] ldc #4
-        + Integer [2131165203]
-      [39] invokevirtual #81
-        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
-      [42] checkcast #26
-        + Class [android/widget/ImageView]
-      [45] putfield #50
-        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/ImageView;]
-      [48] aload_0 v0
-      [49] getfield #49
-        + Fieldref [cn/xxd/qr/NewA.e Landroid/widget/TextView;]
+      [51] aload_0 v0
       [52] aload_0 v0
-      [53] invokevirtual #76
+      [53] ldc #4
+        + Integer [2131165203]
+      [55] invokevirtual #82
+        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
+      [58] checkcast #26
+        + Class [android/widget/ImageView]
+      [61] putfield #51
+        + Fieldref [cn/xxd/qr/NewA.g Landroid/widget/ImageView;]
+      [64] aload_0 v0
+      [65] getfield #50
+        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/TextView;]
+      [68] aload_0 v0
+      [69] invokevirtual #77
         + Methodref [android/widget/TextView.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [56] aload_0 v0
-      [57] ldc #5
-        + Integer [2131165204]
-      [59] invokevirtual #81
-        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
-      [62] aload_0 v0
-      [63] invokevirtual #68
-        + Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [66] aload_0 v0
-      [67] ldc #7
-        + Integer [2131165206]
-      [69] invokevirtual #81
-        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
       [72] aload_0 v0
-      [73] invokevirtual #68
-        + Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [76] aload_0 v0
-      [77] ldc #8
-        + Integer [2131165207]
-      [79] invokevirtual #81
+      [73] ldc #5
+        + Integer [2131165204]
+      [75] invokevirtual #82
         + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
-      [82] aload_0 v0
-      [83] invokevirtual #68
+      [78] aload_0 v0
+      [79] invokevirtual #69
         + Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
-      [86] aload_0 v0
-      [87] invokespecial #80
-        + Methodref [cn/xxd/qr/NewA.a ()V]
-      [90] return
+      [82] aload_0 v0
+      [83] ldc #7
+        + Integer [2131165206]
+      [85] invokevirtual #82
+        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
+      [88] aload_0 v0
+      [89] invokevirtual #69
+        + Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [92] aload_0 v0
+      [93] ldc #8
+        + Integer [2131165207]
+      [95] invokevirtual #82
+        + Methodref [cn/xxd/qr/NewA.findViewById (I)Landroid/view/View;]
+      [98] aload_0 v0
+      [99] invokevirtual #69
+        + Methodref [android/view/View.setOnClickListener (Landroid/view/View$OnClickListener;)V]
+      [102] aload_0 v0
+      [103] invokespecial #81
+        + Methodref [cn/xxd/qr/NewA.b ()V]
+      [106] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       onClick(Landroid/view/View;)V
     Access flags: 0x1
       = public void onClick(android.view.View)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 340, locals = 4, stack = 6):
+    + Code attribute instructions (code length = 341, locals = 4, stack = 6):
       [0] aload_1 v1
-      [1] invokevirtual #67
+      [1] invokevirtual #68
         + Methodref [android/view/View.getId ()I]
-      [4] tableswitch (4 offsets, default=335) (target=339)
-        2131165204: offset = 111, target = 115
+      [4] tableswitch (4 offsets, default=336) (target=340)
+        2131165204: offset = 112, target = 116
         2131165205: offset = 32, target = 36
-        2131165206: offset = 185, target = 189
-        2131165207: offset = 269, target = 273
-        default: offset = 335, target = 339
+        2131165206: offset = 186, target = 190
+        2131165207: offset = 270, target = 274
+        default: offset = 336, target = 340
       [36] aload_0 v0
       [37] astore_1 v1
       [38] new #25
         + Class [android/widget/EditText]
       [41] dup
       [42] aload_1 v1
-      [43] invokespecial #69
+      [43] invokespecial #70
         + Methodref [android/widget/EditText.<init> (Landroid/content/Context;)V]
       [46] astore_2 v2
       [47] aload_1 v1
-      [48] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [51] ldc #12
-        + String [二维码 X]
-      [53] invokevirtual #91
+      [48] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [51] getstatic #45
+        + Fieldref [cn/xxd/qr/NewA.a Ljava/lang/String;]
+      [54] invokevirtual #93
         + Methodref [java/lang/String.equals (Ljava/lang/Object;)Z]
-      [56] ifne +22 (target=78)
-      [59] aload_2 v2
-      [60] aload_1 v1
-      [61] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [64] invokevirtual #71
+      [57] ifne +22 (target=79)
+      [60] aload_2 v2
+      [61] aload_1 v1
+      [62] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [65] invokevirtual #72
         + Methodref [android/widget/EditText.setText (Ljava/lang/CharSequence;)V]
-      [67] aload_2 v2
-      [68] aload_1 v1
-      [69] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [72] invokevirtual #92
+      [68] aload_2 v2
+      [69] aload_1 v1
+      [70] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [73] invokevirtual #94
         + Methodref [java/lang/String.length ()I]
-      [75] invokevirtual #70
+      [76] invokevirtual #71
         + Methodref [android/widget/EditText.setSelection (I)V]
-      [78] new #18
+      [79] new #18
         + Class [android/app/AlertDialog$Builder]
-      [81] dup
-      [82] aload_1 v1
-      [83] invokespecial #56
+      [82] dup
+      [83] aload_1 v1
+      [84] invokespecial #57
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [86] aload_2 v2
-      [87] invokevirtual #61
+      [87] aload_2 v2
+      [88] invokevirtual #62
         + Methodref [android/app/AlertDialog$Builder.setView (Landroid/view/View;)Landroid/app/AlertDialog$Builder;]
-      [90] ldc #15
+      [91] ldc #15
         + String [确定]
-      [92] new #33
+      [93] new #33
         + Class [cn/xxd/qr/h]
-      [95] dup
-      [96] aload_1 v1
-      [97] aload_2 v2
-      [98] invokespecial #84
+      [96] dup
+      [97] aload_1 v1
+      [98] aload_2 v2
+      [99] invokespecial #86
         + Methodref [cn/xxd/qr/h.<init> (Lcn/xxd/qr/NewA;Landroid/widget/EditText;)V]
-      [101] invokevirtual #60
+      [102] invokevirtual #61
         + Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [104] ldc #13
+      [105] ldc #13
         + String [取消]
-      [106] aconst_null
-      [107] invokevirtual #58
+      [107] aconst_null
+      [108] invokevirtual #59
         + Methodref [android/app/AlertDialog$Builder.setNegativeButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [110] invokevirtual #62
+      [111] invokevirtual #63
         + Methodref [android/app/AlertDialog$Builder.show ()Landroid/app/AlertDialog;]
-      [113] pop
-      [114] return
-      [115] aload_0 v0
-      [116] dup
-      [117] astore_1 v1
-      [118] getfield #51
-        + Fieldref [cn/xxd/qr/NewA.g Landroid/app/AlertDialog;]
-      [121] ifnonnull +60 (target=181)
-      [124] aload_1 v1
-      [125] invokevirtual #82
+      [114] pop
+      [115] return
+      [116] aload_0 v0
+      [117] dup
+      [118] astore_1 v1
+      [119] getfield #52
+        + Fieldref [cn/xxd/qr/NewA.h Landroid/app/AlertDialog;]
+      [122] ifnonnull +60 (target=182)
+      [125] aload_1 v1
+      [126] invokevirtual #83
         + Methodref [cn/xxd/qr/NewA.getLayoutInflater ()Landroid/view/LayoutInflater;]
-      [128] ldc #3
+      [129] ldc #3
         + Integer [2130903048]
-      [130] aconst_null
-      [131] invokevirtual #65
+      [131] aconst_null
+      [132] invokevirtual #66
         + Methodref [android/view/LayoutInflater.inflate (ILandroid/view/ViewGroup;)Landroid/view/View;]
-      [134] dup
-      [135] astore_2 v2
-      [136] ldc #5
+      [135] dup
+      [136] astore_2 v2
+      [137] ldc #5
         + Integer [2131165204]
-      [138] invokevirtual #66
+      [139] invokevirtual #67
         + Methodref [android/view/View.findViewById (I)Landroid/view/View;]
-      [141] checkcast #28
+      [142] checkcast #28
         + Class [android/widget/RadioGroup]
-      [144] dup
-      [145] astore_3 v3
-      [146] ldc #9
+      [145] dup
+      [146] astore_3 v3
+      [147] ldc #9
         + Integer [2131165208]
-      [148] invokevirtual #73
+      [149] invokevirtual #74
         + Methodref [android/widget/RadioGroup.check (I)V]
-      [151] aload_3 v3
-      [152] aload_1 v1
-      [153] invokevirtual #75
+      [152] aload_3 v3
+      [153] aload_1 v1
+      [154] invokevirtual #76
         + Methodref [android/widget/RadioGroup.setOnCheckedChangeListener (Landroid/widget/RadioGroup$OnCheckedChangeListener;)V]
-      [156] aload_1 v1
-      [157] new #18
+      [157] aload_1 v1
+      [158] new #18
         + Class [android/app/AlertDialog$Builder]
-      [160] dup
-      [161] aload_1 v1
-      [162] invokespecial #56
+      [161] dup
+      [162] aload_1 v1
+      [163] invokespecial #57
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [165] aload_2 v2
-      [166] invokevirtual #61
+      [166] aload_2 v2
+      [167] invokevirtual #62
         + Methodref [android/app/AlertDialog$Builder.setView (Landroid/view/View;)Landroid/app/AlertDialog$Builder;]
-      [169] ldc #10
+      [170] ldc #11
         + Integer [2131230722]
-      [171] aconst_null
-      [172] invokevirtual #59
+      [172] aconst_null
+      [173] invokevirtual #60
         + Methodref [android/app/AlertDialog$Builder.setNeutralButton (ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
-      [175] invokevirtual #57
+      [176] invokevirtual #58
         + Methodref [android/app/AlertDialog$Builder.create ()Landroid/app/AlertDialog;]
-      [178] putfield #51
-        + Fieldref [cn/xxd/qr/NewA.g Landroid/app/AlertDialog;]
-      [181] aload_1 v1
-      [182] getfield #51
-        + Fieldref [cn/xxd/qr/NewA.g Landroid/app/AlertDialog;]
-      [185] invokevirtual #55
+      [179] putfield #52
+        + Fieldref [cn/xxd/qr/NewA.h Landroid/app/AlertDialog;]
+      [182] aload_1 v1
+      [183] getfield #52
+        + Fieldref [cn/xxd/qr/NewA.h Landroid/app/AlertDialog;]
+      [186] invokevirtual #56
         + Methodref [android/app/AlertDialog.show ()V]
-      [188] return
-      [189] aload_0 v0
-      [190] astore_1 v1
-      [191] new #35
+      [189] return
+      [190] aload_0 v0
+      [191] astore_1 v1
+      [192] new #35
         + Class [java/io/File]
-      [194] dup
-      [195] aload_1 v1
-      [196] invokestatic #99
+      [195] dup
+      [196] aload_1 v1
+      [197] invokestatic #101
         + Methodref [q/a/c.a (Landroid/content/Context;)Lq/a/c;]
-      [199] aload_1 v1
-      [200] getfield #47
-        + Fieldref [cn/xxd/qr/NewA.c J]
-      [203] invokevirtual #100
+      [200] aload_1 v1
+      [201] getfield #48
+        + Fieldref [cn/xxd/qr/NewA.d J]
+      [204] invokevirtual #102
         + Methodref [q/a/c.b (J)Ljava/lang/String;]
-      [206] invokespecial #87
+      [207] invokespecial #89
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [209] astore_2 v2
-      [210] aload_1 v1
-      [211] getfield #48
-        + Fieldref [cn/xxd/qr/NewA.d Landroid/graphics/Bitmap;]
-      [214] getstatic #44
+      [210] astore_2 v2
+      [211] aload_1 v1
+      [212] getfield #49
+        + Fieldref [cn/xxd/qr/NewA.e Landroid/graphics/Bitmap;]
+      [215] getstatic #44
         + Fieldref [android/graphics/Bitmap$CompressFormat.PNG Landroid/graphics/Bitmap$CompressFormat;]
-      [217] bipush 100
-      [219] new #37
+      [218] bipush 100
+      [220] new #37
         + Class [java/io/FileOutputStream]
-      [222] dup
-      [223] aload_2 v2
-      [224] invokespecial #90
+      [223] dup
+      [224] aload_2 v2
+      [225] invokespecial #92
         + Methodref [java/io/FileOutputStream.<init> (Ljava/io/File;)V]
-      [227] invokevirtual #64
+      [228] invokevirtual #65
         + Methodref [android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
-      [230] pop
-      [231] aload_1 v1
-      [232] new #39
+      [231] pop
+      [232] aload_1 v1
+      [233] new #39
         + Class [java/lang/StringBuilder]
-      [235] dup
-      [236] ldc #14
+      [236] dup
+      [237] ldc #14
         + String [已保存至：]
-      [238] invokespecial #94
+      [239] invokespecial #96
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [241] aload_2 v2
-      [242] invokevirtual #88
+      [242] aload_2 v2
+      [243] invokevirtual #90
         + Methodref [java/io/File.getPath ()Ljava/lang/String;]
-      [245] invokevirtual #95
+      [246] invokevirtual #97
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [248] invokevirtual #96
+      [249] invokevirtual #98
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [251] iconst_0
-      [252] invokestatic #78
+      [252] iconst_0
+      [253] invokestatic #79
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [255] invokevirtual #79
+      [256] invokevirtual #80
         + Methodref [android/widget/Toast.show ()V]
-      [258] goto +6 (target=264)
-      [261] invokevirtual #89
+      [259] goto +6 (target=265)
+      [262] invokevirtual #91
         + Methodref [java/io/FileNotFoundException.printStackTrace ()V]
-      [264] aload_1 v1
-      [265] bipush 6
-      [267] ldc #11
+      [265] aload_1 v1
+      [266] bipush 6
+      [268] ldc #12
         + String []
-      [269] invokestatic #102
+      [270] invokestatic #104
         + Methodref [q/a/h.a (Landroid/content/Context;ILjava/lang/String;)V]
-      [272] return
-      [273] aload_0 v0
-      [274] astore_1 v1
-      [275] new #35
+      [273] return
+      [274] aload_0 v0
+      [275] astore_1 v1
+      [276] new #35
         + Class [java/io/File]
-      [278] dup
-      [279] aload_1 v1
-      [280] invokestatic #99
+      [279] dup
+      [280] aload_1 v1
+      [281] invokestatic #101
         + Methodref [q/a/c.a (Landroid/content/Context;)Lq/a/c;]
-      [283] aload_1 v1
-      [284] getfield #47
-        + Fieldref [cn/xxd/qr/NewA.c J]
-      [287] invokevirtual #100
+      [284] aload_1 v1
+      [285] getfield #48
+        + Fieldref [cn/xxd/qr/NewA.d J]
+      [288] invokevirtual #102
         + Methodref [q/a/c.b (J)Ljava/lang/String;]
-      [290] invokespecial #87
+      [291] invokespecial #89
         + Methodref [java/io/File.<init> (Ljava/lang/String;)V]
-      [293] astore_2 v2
-      [294] aload_1 v1
-      [295] getfield #48
-        + Fieldref [cn/xxd/qr/NewA.d Landroid/graphics/Bitmap;]
-      [298] getstatic #44
+      [294] astore_2 v2
+      [295] aload_1 v1
+      [296] getfield #49
+        + Fieldref [cn/xxd/qr/NewA.e Landroid/graphics/Bitmap;]
+      [299] getstatic #44
         + Fieldref [android/graphics/Bitmap$CompressFormat.PNG Landroid/graphics/Bitmap$CompressFormat;]
-      [301] bipush 100
-      [303] new #37
+      [302] bipush 100
+      [304] new #37
         + Class [java/io/FileOutputStream]
-      [306] dup
-      [307] aload_2 v2
-      [308] invokespecial #90
+      [307] dup
+      [308] aload_2 v2
+      [309] invokespecial #92
         + Methodref [java/io/FileOutputStream.<init> (Ljava/io/File;)V]
-      [311] invokevirtual #64
+      [312] invokevirtual #65
         + Methodref [android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z]
-      [314] pop
-      [315] aload_1 v1
-      [316] ldc #11
+      [315] pop
+      [316] aload_1 v1
+      [317] ldc #12
         + String []
-      [318] aload_2 v2
-      [319] invokevirtual #88
+      [319] aload_2 v2
+      [320] invokevirtual #90
         + Methodref [java/io/File.getPath ()Ljava/lang/String;]
-      [322] invokestatic #101
+      [323] invokestatic #103
         + Methodref [q/a/d.a (Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V]
-      [325] goto +6 (target=331)
-      [328] invokevirtual #89
+      [326] goto +6 (target=332)
+      [329] invokevirtual #91
         + Methodref [java/io/FileNotFoundException.printStackTrace ()V]
-      [331] aload_1 v1
-      [332] bipush 7
-      [334] ldc #11
+      [332] aload_1 v1
+      [333] bipush 7
+      [335] ldc #12
         + String []
-      [336] invokestatic #102
+      [337] invokestatic #104
         + Methodref [q/a/h.a (Landroid/content/Context;ILjava/lang/String;)V]
-      [339] return
+      [340] return
       Code attribute exceptions (count = 2):
-      - ExceptionInfo (210 -> 258: 261):
+      - ExceptionInfo (211 -> 259: 262):
       + Class [java/io/FileNotFoundException]
-      - ExceptionInfo (294 -> 325: 328):
+      - ExceptionInfo (295 -> 326: 329):
       + Class [java/io/FileNotFoundException]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 5):
         - [36] Var: ..., Stack: (empty)
-        - [115] Var: ..., Stack: (empty)
-        - [189] Var: ..., Stack: (empty)
-        - [273] Var: ..., Stack: (empty)
-        - [339] Var: ..., Stack: (empty)
-  + Method:       a()V
+        - [116] Var: ..., Stack: (empty)
+        - [190] Var: ..., Stack: (empty)
+        - [274] Var: ..., Stack: (empty)
+        - [340] Var: ..., Stack: (empty)
+  + Method:       b()V
     Access flags: 0x2
-      = private void a()
+      = private void b()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 34, locals = 1, stack = 3):
       [0] new #34
         + Class [cn/xxd/qr/i]
       [3] dup
       [4] aload_0 v0
-      [5] invokespecial #85
+      [5] invokespecial #87
         + Methodref [cn/xxd/qr/i.<init> (Lcn/xxd/qr/NewA;)V]
-      [8] invokevirtual #86
+      [8] invokevirtual #88
         + Methodref [cn/xxd/qr/i.start ()V]
       [11] aload_0 v0
       [12] iconst_2
       [13] aload_0 v0
-      [14] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
-      [17] invokestatic #102
+      [14] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
+      [17] invokestatic #104
         + Methodref [q/a/h.a (Landroid/content/Context;ILjava/lang/String;)V]
       [20] aload_0 v0
       [21] bipush 8
       [23] aload_0 v0
-      [24] getfield #45
-        + Fieldref [cn/xxd/qr/NewA.a I]
-      [27] invokestatic #93
+      [24] getfield #46
+        + Fieldref [cn/xxd/qr/NewA.b I]
+      [27] invokestatic #95
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [30] invokestatic #102
+      [30] invokestatic #104
         + Methodref [q/a/h.a (Landroid/content/Context;ILjava/lang/String;)V]
       [33] return
       Code attribute exceptions (count = 0):
@@ -4165,28 +4180,28 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 32, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] getfield #51
-        + Fieldref [cn/xxd/qr/NewA.g Landroid/app/AlertDialog;]
-      [4] invokevirtual #54
+      [1] getfield #52
+        + Fieldref [cn/xxd/qr/NewA.h Landroid/app/AlertDialog;]
+      [4] invokevirtual #55
         + Methodref [android/app/AlertDialog.dismiss ()V]
       [7] aload_1 v1
       [8] iload_2 v2
-      [9] invokevirtual #74
+      [9] invokevirtual #75
         + Methodref [android/widget/RadioGroup.findViewById (I)Landroid/view/View;]
       [12] checkcast #27
         + Class [android/widget/RadioButton]
       [15] astore_1 v1
       [16] aload_0 v0
       [17] aload_1 v1
-      [18] invokevirtual #72
+      [18] invokevirtual #73
         + Methodref [android/widget/RadioButton.getTextColors ()Landroid/content/res/ColorStateList;]
-      [21] invokevirtual #63
+      [21] invokevirtual #64
         + Methodref [android/content/res/ColorStateList.getDefaultColor ()I]
-      [24] putfield #45
-        + Fieldref [cn/xxd/qr/NewA.a I]
+      [24] putfield #46
+        + Fieldref [cn/xxd/qr/NewA.b I]
       [27] aload_0 v0
-      [28] invokespecial #80
-        + Methodref [cn/xxd/qr/NewA.a ()V]
+      [28] invokespecial #81
+        + Methodref [cn/xxd/qr/NewA.b ()V]
       [31] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4197,8 +4212,8 @@ Methods (count = 13):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
+      [2] putfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4208,9 +4223,19 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #46
-        + Fieldref [cn/xxd/qr/NewA.b Ljava/lang/String;]
+      [1] getfield #47
+        + Fieldref [cn/xxd/qr/NewA.c Ljava/lang/String;]
       [4] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 0):
+  + Method:       a()Ljava/lang/String;
+    Access flags: 0x1008
+      = static synthetic java.lang.String a()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 4, locals = 0, stack = 1):
+      [0] getstatic #45
+        + Fieldref [cn/xxd/qr/NewA.a Ljava/lang/String;]
+      [3] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       b(Lcn/xxd/qr/NewA;)Landroid/widget/TextView;
@@ -4219,8 +4244,8 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #49
-        + Fieldref [cn/xxd/qr/NewA.e Landroid/widget/TextView;]
+      [1] getfield #50
+        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/TextView;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4230,8 +4255,8 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #80
-        + Methodref [cn/xxd/qr/NewA.a ()V]
+      [1] invokespecial #81
+        + Methodref [cn/xxd/qr/NewA.b ()V]
       [4] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4241,8 +4266,8 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #45
-        + Fieldref [cn/xxd/qr/NewA.a I]
+      [1] getfield #46
+        + Fieldref [cn/xxd/qr/NewA.b I]
       [4] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4252,8 +4277,8 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #50
-        + Fieldref [cn/xxd/qr/NewA.f Landroid/widget/ImageView;]
+      [1] getfield #51
+        + Fieldref [cn/xxd/qr/NewA.g Landroid/widget/ImageView;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4263,8 +4288,8 @@ Methods (count = 13):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] getfield #48
-        + Fieldref [cn/xxd/qr/NewA.d Landroid/graphics/Bitmap;]
+      [1] getfield #49
+        + Fieldref [cn/xxd/qr/NewA.e Landroid/graphics/Bitmap;]
       [4] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4275,8 +4300,8 @@ Methods (count = 13):
     + Code attribute instructions (code length = 6, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #48
-        + Fieldref [cn/xxd/qr/NewA.d Landroid/graphics/Bitmap;]
+      [2] putfield #49
+        + Fieldref [cn/xxd/qr/NewA.e Landroid/graphics/Bitmap;]
       [5] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
@@ -4295,7 +4320,6 @@ Interfaces (count = 1):
   + Class [android/content/DialogInterface$OnClickListener]
 
 Constant Pool (count = 68):
-  + String [二维码 X]
   + Class [android/content/DialogInterface$OnClickListener]
   + Class [android/text/Editable]
   + Class [android/widget/EditText]
@@ -4308,6 +4332,7 @@ Constant Pool (count = 68):
   + Fieldref [cn/xxd/qr/h.b Landroid/widget/EditText;]
   + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
   + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+  + Methodref [cn/xxd/qr/NewA.a ()Ljava/lang/String;]
   + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;)Ljava/lang/String;]
   + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;Ljava/lang/String;)V]
   + Methodref [cn/xxd/qr/NewA.b (Lcn/xxd/qr/NewA;)Landroid/widget/TextView;]
@@ -4317,6 +4342,7 @@ Constant Pool (count = 68):
   + Methodref [java/lang/String.trim ()Ljava/lang/String;]
   + InterfaceMethodref [android/text/Editable.toString ()Ljava/lang/String;]
   + NameAndType [<init> ()V]
+  + NameAndType [a ()Ljava/lang/String;]
   + NameAndType [a (Lcn/xxd/qr/NewA;)Ljava/lang/String;]
   + NameAndType [a (Lcn/xxd/qr/NewA;Ljava/lang/String;)V]
   + NameAndType [a Lcn/xxd/qr/NewA;]
@@ -4361,7 +4387,6 @@ Constant Pool (count = 68):
   + Utf8 [setText]
   + Utf8 [toString]
   + Utf8 [trim]
-  + Utf8 [二维码 X]
 
 Fields (count = 2):
   + Field:        a Lcn/xxd/qr/NewA;
@@ -4379,11 +4404,11 @@ Methods (count = 2):
     + Code attribute instructions (code length = 15, locals = 3, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] putfield #10
+      [2] putfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
       [5] aload_0 v0
       [6] aload_2 v2
-      [7] putfield #11
+      [7] putfield #10
         + Fieldref [cn/xxd/qr/h.b Landroid/widget/EditText;]
       [10] aload_0 v0
       [11] invokespecial #18
@@ -4395,14 +4420,14 @@ Methods (count = 2):
     Access flags: 0x11
       = public final void onClick(android.content.DialogInterface,int)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 69, locals = 3, stack = 2):
+    + Code attribute instructions (code length = 70, locals = 3, stack = 2):
       [0] aload_0 v0
-      [1] getfield #10
+      [1] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
       [4] aload_0 v0
-      [5] getfield #11
+      [5] getfield #10
         + Fieldref [cn/xxd/qr/h.b Landroid/widget/EditText;]
-      [8] invokevirtual #12
+      [8] invokevirtual #11
         + Methodref [android/widget/EditText.getText ()Landroid/text/Editable;]
       [11] invokeinterface #21
         + InterfaceMethodref [android/text/Editable.toString ()Ljava/lang/String;]
@@ -4411,42 +4436,42 @@ Methods (count = 2):
       [19] invokestatic #15
         + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;Ljava/lang/String;)V]
       [22] aload_0 v0
-      [23] getfield #10
+      [23] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
       [26] invokestatic #14
         + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;)Ljava/lang/String;]
       [29] invokevirtual #19
         + Methodref [java/lang/String.length ()I]
-      [32] ifne +12 (target=44)
+      [32] ifne +13 (target=45)
       [35] aload_0 v0
-      [36] getfield #10
+      [36] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
-      [39] ldc #1
-        + String [二维码 X]
-      [41] invokestatic #15
+      [39] invokestatic #13
+        + Methodref [cn/xxd/qr/NewA.a ()Ljava/lang/String;]
+      [42] invokestatic #15
         + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;Ljava/lang/String;)V]
-      [44] aload_0 v0
-      [45] getfield #10
+      [45] aload_0 v0
+      [46] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
-      [48] invokestatic #16
+      [49] invokestatic #16
         + Methodref [cn/xxd/qr/NewA.b (Lcn/xxd/qr/NewA;)Landroid/widget/TextView;]
-      [51] aload_0 v0
-      [52] getfield #10
+      [52] aload_0 v0
+      [53] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
-      [55] invokestatic #14
+      [56] invokestatic #14
         + Methodref [cn/xxd/qr/NewA.a (Lcn/xxd/qr/NewA;)Ljava/lang/String;]
-      [58] invokevirtual #13
+      [59] invokevirtual #12
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [61] aload_0 v0
-      [62] getfield #10
+      [62] aload_0 v0
+      [63] getfield #9
         + Fieldref [cn/xxd/qr/h.a Lcn/xxd/qr/NewA;]
-      [65] invokestatic #17
+      [66] invokestatic #17
         + Methodref [cn/xxd/qr/NewA.c (Lcn/xxd/qr/NewA;)V]
-      [68] return
+      [69] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 1):
-        - [44] Var: ..., Stack: (empty)
+        - [45] Var: ..., Stack: (empty)
 
 Class file attributes (count = 0):
 

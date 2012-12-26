@@ -11,8 +11,7 @@ cn.xxd.qr.MainA:
     56:65:private void tempInitHistoryData()
 cn.xxd.qr.NewA:
     private static final int DEFAULT_COLOR
-    private static final java.lang.String DEFAULT_TEXT
-    149:149:protected void ________Color()
+    151:151:protected void ________Color()
 cn.xxd.qr.QrCodeA:
     public static final java.lang.String EXTRA_QRCODE
 cn.xxd.qr.R
