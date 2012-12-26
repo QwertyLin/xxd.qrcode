@@ -219,7 +219,11 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 	}
 	
 	private void onClickWebsite(){
-		IntentUtil.openBrowser(this, qrcode.getText());
+		try {
+			IntentUtil.openBrowser(this, qrcode.getText());
+		} catch (Exception e) {
+			Toast.makeText(this, R.string.error_browser, Toast.LENGTH_SHORT).show();
+		}
 		//
 		QLog.event(this, QLog.EVENT_SCAN_BROWSER, qrcode.getText());
 	}

@@ -7,54 +7,51 @@ qqqqqqQ1
 linhq
 none
 
-XXDcn工作室
+XXD工作室
 
 
-google改名繁体为中文
-
-tap.myapp.com linhqqq
-play.google.com/apps/publish q123816@gmail.com 
-独立
+Y tap.myapp.com linhqqq
+YY play.google.com/apps/publish q123816@gmail.com 
+--------------------------------------------------
 Y dev.apk.hiapk.com  q@xxd.cn
-eoemarket.com linhqeoe q@xxd.cn
+Y dev.eoemarket.com linhqeoe q@xxd.cn
 Y dev.appchina.com linhqapp q@xxd.cn
 Y dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
-dev.anzhi.com linhqa q@xxd.cn
-Y crossmo.com linhq q@xxd.cn
-imobile.com.cn linhqi q@xxd.cn
-dev.app.360.cn q@xxd.cn
-Y developer.lenovomm.com linhq
-m.163.com/dev linhq q@xxd.cn
-www.eomarket.com linhq q@xxd.cn
-developer.baidu.com linhqbd 123816@qq.com
+YY dev.anzhi.com linhqa q@xxd.cn
+YY dev.crossmo.com linhq q@xxd.cn
+apk.imobile.com.cn linhqi q@xxd.cn
+Y dev.app.360.cn q@xxd.cn
+Y dev.wo.com.cn linhq q@xxd.cn
+YY developer.lenovomm.com linhq
+YY m.163.com/dev linhq q@xxd.cn
+Y www.eomarket.com linhq q@xxd.cn
+Y developer.baidu.com linhqbd 123816@qq.com
 Y dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
-Y dev.hicloud.com q@xxd.cn
-developer.xiaomi.com q@xxd.cn 需先去掉有米SDK
-
-统一
-market.sj.91.com q@xxd.cn 
-dev.wo.com.cn linhq q@xxd.cn
-download.sohu.com/developer linhqs@sohu.com 
+dev.hicloud.com q@xxd.cn
+YY developer.xiaomi.com q@xxd.cn 需先去掉有米SDK
+Y developer.meizu.com linhqmz
 
 暂不
 starandroid.com linhq q@xxd.cn
 iandroid.cn linhq
+market.sj.91.com q@xxd.cn 
+download.sohu.com/developer linhqs@sohu.com 
 
-http://developer.meizu.com linhqmz
+
 
 http://wiki.youmi.net/Wiki/PromotionChannelIDs
 
 简洁轻巧的二维码扫描利器。
 
 【主要功能】
-1.二维码扫描，扫描结果可选择复制到剪贴板、或分享截图到其他APP、或用浏览器打开URL地址。
-2.二维码生成，可自定义图案颜色。
-3.扫描结果自动保存至历史记录，方便回顾。
+1、二维码扫描，扫描结果可选择复制到剪贴板、或分享截图到其他APP、或用浏览器打开URL地址；
+2、二维码生成，可自定义图案颜色；
+3、扫描结果自动保存至历史记录，方便回顾。
 
 【V13.01 更新】
-1."小小二维码"正式改名"二维码 X"，新版UI震撼登场。
-2.优化扫描速度。
-3.提高用户体验，全面减少广告。
+1、"小小二维码"正式改名"二维码 X"，新版UI震撼登场；
+2、优化扫描速度；
+3、提高用户体验，全面减少广告。
 
 
 二维码 X

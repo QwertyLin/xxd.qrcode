@@ -3,7 +3,9 @@ package cn.xxd.qr;
 import cn.xxd.qr.util.QConfig;
 import cn.xxd.qr.util.QSp;
 import q.base.ActivityBase;
+import q.util.AppUtil;
 import q.util.IntentUtil;
+import q.util.QLog;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
@@ -12,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AboutA extends ActivityBase implements OnClickListener {
 
@@ -26,6 +29,7 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		TextView tvWebsite = (TextView)findViewById(R.id.about_website);
 		tvWebsite.setText(QConfig.BASE_WEBSITE_URL);
 		tvWebsite.setOnClickListener(this);
+		findViewById(R.id.about_market).setOnClickListener(this);
 		//
 	}
 	
@@ -36,7 +40,11 @@ public class AboutA extends ActivityBase implements OnClickListener {
 			.setNeutralButton(R.string.about_update_go, new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					IntentUtil.openBrowser(AboutA.this, "http://android.myapp.com/android/down.jsp?appid=653022");
+					try {
+						IntentUtil.openBrowser(AboutA.this, "http://android.myapp.com/android/down.jsp?appid=653022");
+					} catch (Exception e) {
+						Toast.makeText(AboutA.this, R.string.error_browser, Toast.LENGTH_SHORT).show();
+					}
 				}
 			})
 			.show();
@@ -58,23 +66,30 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		case R.id.about_website:
 			onClickWebsite();
 			break;
+		case R.id.about_market:
+			onClickMarket();
+			break;
 		}
 	}
 	
 	private void onClickWebsite(){
-		IntentUtil.openBrowser(this, QConfig.BASE_WEBSITE_URL);
+		try {
+			IntentUtil.openBrowser(this, QConfig.BASE_WEBSITE_URL);
+		} catch (Exception e) {
+			Toast.makeText(this, R.string.error_browser, Toast.LENGTH_SHORT).show();
+		}
 	}
 	
 	
-	/*private void onClickMarket(){
-		startActivity(
-				new Intent(Intent.ACTION_VIEW)
-				.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-				.setData(Uri.parse("market://details?id=" + getPackageName()))
-				);
+	private void onClickMarket(){
+		try {
+			IntentUtil.openMarket(this);
+		} catch (Exception e) {
+			Toast.makeText(this, R.string.error_market, Toast.LENGTH_SHORT).show();
+		}
 		//
 		QLog.event(this, QLog.EVENT_ABOUT_MARKET, AppUtil.getChannel(this));
-	}*/
+	}
 	
 	/*private void onClickShare(){
 		startActivity(

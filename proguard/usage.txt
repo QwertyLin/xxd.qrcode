@@ -375,7 +375,8 @@ com.google.zxing.qrcode.encoder.QRCode:
     46:46:public com.google.zxing.qrcode.decoder.ErrorCorrectionLevel getECLevel()
     50:50:public com.google.zxing.qrcode.decoder.Version getVersion()
     54:54:public int getMaskPattern()
-q.util.AppUtil
+q.util.AppUtil:
+    7:7:public AppUtil()
 q.util.BitmapUtil:
     14:14:public BitmapUtil()
     17:23:public static final java.lang.String toString(android.graphics.Bitmap)
@@ -388,10 +389,10 @@ q.util.BitmapUtil:
 q.util.InputMethodUtil
 q.util.IntentUtil:
     17:17:public IntentUtil()
-    40:43:public static final void contentImage(android.app.Activity,int)
-    49:50:public static final void mediaCamera(android.app.Activity,int)
-    56:65:public static final android.graphics.Bitmap resultBitmap(android.content.Context,android.content.Intent)
-    76:101:public static final void mapGoogle(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
+    57:60:public static final void contentImage(android.app.Activity,int)
+    66:67:public static final void mediaCamera(android.app.Activity,int)
+    73:82:public static final android.graphics.Bitmap resultBitmap(android.content.Context,android.content.Intent)
+    93:118:public static final void mapGoogle(android.content.Context,java.lang.String,java.lang.String,java.lang.String)
 q.util.IntentUtil$Open
 q.util.QHttpUtil:
     113:114:public static void getFile(java.lang.String,java.lang.String)

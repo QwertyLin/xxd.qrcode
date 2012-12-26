@@ -16,16 +16,33 @@ import android.widget.Toast;
 
 public class IntentUtil {
 	
-	public static final void openBrowser(Context ctx, String url){
+	public static final void openBrowser(Context ctx, String url) throws Exception{
 		if (url.startsWith("HTTP://")) {
 	      url = "http" + url.substring(4);
 	    } else if (url.startsWith("HTTPS://")) {
 	      url = "https" + url.substring(5);
 	    }
-	    ctx.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+		try {
+			ctx.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new Exception();
+		}
+	}
+	
+	public static final void openMarket(Context ctx) throws Exception{
+		Intent intent = new Intent(Intent.ACTION_VIEW)
+		.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+		.setData(Uri.parse("market://details?id=" + ctx.getPackageName()));
+		try {
+			ctx.startActivity(intent);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new Exception();
+		}
 	}
 		
-	public static final void sendImage(Context ctx, String text, String imagePath){
+	public static final void sendImage(Context ctx, String text, String imagePath) {
 		Intent intent = new Intent(Intent.ACTION_SEND).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK).setType("image/*")//.setType("text/plain")
 				.putExtra(Intent.EXTRA_TEXT, text);
 		intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(imagePath)));

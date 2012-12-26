@@ -196,7 +196,12 @@ cn.xxd.qr.bean.QrCode -> cn.xxd.qr.b.b:
     java.lang.String getTimeStr() -> d
     int hashCode() -> hashCode
     boolean equals(java.lang.Object) -> equals
-cn.xxd.qr.service.QrCodeEncodeService -> cn.xxd.qr.c.a:
+cn.xxd.qr.service.AboutService -> cn.xxd.qr.c.a:
+    void checkUpdate(android.content.Context) -> a
+cn.xxd.qr.service.AboutService$1 -> cn.xxd.qr.c.b:
+    android.content.Context val$ctx -> a
+    void run() -> run
+cn.xxd.qr.service.QrCodeEncodeService -> cn.xxd.qr.c.c:
     android.graphics.Bitmap encode(android.content.Context,java.lang.String,int) -> a
 cn.xxd.qr.util.QSp -> cn.xxd.qr.d.a:
     java.lang.String getUpdateUrl(android.content.Context) -> a
@@ -1192,36 +1197,38 @@ q.base.TabActivityBase -> q.base.TabActivityBase:
     android.content.Intent getIntent(int) -> a
     java.lang.String getBtnText(int) -> b
     int getBtnDrawable(int) -> c
-q.util.BitmapUtil -> q.a.a:
+q.util.AppUtil -> q.a.a:
+    java.lang.String getChannel(android.content.Context) -> a
+q.util.BitmapUtil -> q.a.b:
     boolean save(android.graphics.Bitmap,java.lang.String) -> a
-q.util.FileMgr -> q.a.b:
+q.util.FileMgr -> q.a.c:
     q.util.FileMgr nInstance -> a
     java.lang.String nRoot -> b
     q.util.FileMgr getInstance(android.content.Context) -> a
     java.lang.String get(java.lang.String) -> a
     java.lang.String getScan(long) -> a
     java.lang.String getNew(long) -> b
-q.util.IntentUtil -> q.a.c:
+q.util.IntentUtil -> q.a.d:
     void openBrowser(android.content.Context,java.lang.String) -> a
     void sendImage(android.content.Context,java.lang.String,java.lang.String) -> a
-q.util.QHttpUtil -> q.a.d:
+q.util.QHttpUtil -> q.a.e:
     java.lang.String get(java.lang.String) -> a
     java.lang.String get(java.lang.String,java.lang.String) -> a
     javax.net.ssl.HttpsURLConnection initHttpsConn(java.net.URL) -> a
-q.util.QHttpUtil$1 -> q.a.e:
+q.util.QHttpUtil$1 -> q.a.f:
     java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
     void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
     void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
-q.util.QHttpUtil$2 -> q.a.f:
+q.util.QHttpUtil$2 -> q.a.g:
     boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
-q.util.QLog -> q.a.g:
+q.util.QLog -> q.a.h:
     boolean available -> a
     void event(android.content.Context,int,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,java.lang.String) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,int) -> a
     void kv(java.lang.Object,java.lang.String,java.lang.String,float) -> a
     void log(java.lang.Object,java.lang.String) -> a
-q.util.SqliteBase -> q.a.h:
+q.util.SqliteBase -> q.a.i:
     android.database.sqlite.SQLiteDatabase db -> a
     java.lang.String tableName -> b
     void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
@@ -1232,8 +1239,8 @@ q.util.SqliteBase -> q.a.h:
     void empty() -> b
     java.lang.String getSqlCreateTable() -> a
     android.content.ContentValues buildContentValues(q.util.SqliteBase$ISqlite) -> a
-q.util.SqliteBase$ISqlite -> q.a.i:
-q.util.WindowMgr -> q.a.j:
+q.util.SqliteBase$ISqlite -> q.a.j:
+q.util.WindowMgr -> q.a.k:
     q.util.WindowMgr nInstance -> a
     int nWidth -> b
     int nHeight -> c
@@ -1243,7 +1250,7 @@ q.util.WindowMgr -> q.a.j:
     float nScaleText -> g
     q.util.WindowMgr getInstance(android.content.Context) -> a
     int getHeight() -> a
-q.util.WindowUtil -> q.a.k:
+q.util.WindowUtil -> q.a.l:
     int nWidth -> a
     int nHeight -> b
     int getWidth(android.content.Context) -> a

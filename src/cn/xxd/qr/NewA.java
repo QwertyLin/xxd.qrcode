@@ -28,21 +28,23 @@ import q.util.QLog;
 public class NewA extends Activity implements OnClickListener, OnCheckedChangeListener {
 	
 	private static final int DEFAULT_COLOR = 0xFF000000;
-	private static final String DEFAULT_TEXT = "二维码 X"; 
+	private static String DEFAULT_TEXT; 
 	
 	private int mColor = DEFAULT_COLOR;
-	private String mText = DEFAULT_TEXT;
+	private String mText;
 	
 	private long time = Calendar.getInstance().getTimeInMillis();
 	private Bitmap qrBitmap;
 	private TextView vText;
 	private ImageView vImg;
-	
-	
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_new);
+		//
+		DEFAULT_TEXT = getString(R.string.app_name);
+		mText = DEFAULT_TEXT;
 		//
 		vText = (TextView)findViewById(R.id.new_text); vText.setText(mText);
 		vImg = (ImageView)findViewById(R.id.new_img);

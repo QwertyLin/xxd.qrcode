@@ -89,6 +89,20 @@
 	        android:paddingRight="5dip"
 	        />
 	 </LinearLayout>
+	 
+	 <Button 
+	     android:id="@+id/about_market"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:layout_gravity="center"
+	     android:paddingLeft="10dip"
+	     android:paddingRight="10dip"
+	     android:paddingTop="5dip"
+	     android:paddingBottom="5dip"
+	     android:text="@string/about_market"
+	     android:background="@drawable/btn_green"
+	     android:layout_marginTop="25dip"
+	     />
 	    
 	</LinearLayout>
 </ScrollView>
