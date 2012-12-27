@@ -2,8 +2,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionCode="7"
-          android:versionName="13.01.01"
+          android:versionCode="8"
+          android:versionName="13.01.02"
           android:installLocation="auto">
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8"/>
 
@@ -26,10 +26,12 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_LOGS" /> <!-- 错误日志统计 -->
-    <!-- ZM -->
-    <!-- <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
+    <!-- QQ -->
+    <!--  <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />   -->
     <!-- youmi -->
     <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
 
@@ -40,12 +42,13 @@
 
      <!-- baidu -->
      <meta-data android:name="BaiduMobAd_CHANNEL" android:value="meizu" />
-     <meta-data android:name="BaiduMobAd_STAT_ID" android:value="49cc811488" />
+     <meta-data android:name="BaiduMobAd_STAT_ID" android:value="03aa66e5c5" />
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
-      
-      <!-- ZM -->
-      <!-- <meta-data android:name="ZHUAMOB_APPKEY" android:value="74c8c821ad1bd5eaf9a07a98" />
-      <meta-data android:name="ZHUAMOB_CHANNELID" android:value="none" /> -->
+     <!-- QQ -->
+     <!-- <meta-data
+            android:name="APP_ID"
+            android:value="30EFDA62DC4057F6BACC3A440CDBC1CC" /> -->
+     
      <!-- 声明Youmi的Activity -->
      <!-- <activity
          android:name="net.youmi.android.AdActivity"
