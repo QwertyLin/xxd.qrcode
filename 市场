@@ -9,26 +9,37 @@ none
 
 XXD工作室
 
+//QQ广告
+Y tap.myapp.com linhqqq dev.app.qq.com
+YY play.google.com/apps/publish q123816@gmail.com 
 
-Y tap.myapp.com linhqqq
-Y play.google.com/apps/publish q123816@gmail.com 
+m.163.com/dev q@xxd.cn
+dev.app.360.cn q@xxd.cn
+
 --------------------------------------------------
-Y dev.apk.hiapk.com  q@xxd.cn
 Y dev.eoemarket.com linhqeoe q@xxd.cn
-Y dev.appchina.com linhqapp q@xxd.cn
-Y dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
 Y dev.anzhi.com linhqa q@xxd.cn
-Y dev.crossmo.com linhq q@xxd.cn
+
+//百度广告
+YY developer.baidu.com linhqbd 123816@qq.com
+
+//无广告
+YY developer.xiaomi.com q@xxd.cn 不能使用有米
+
+//抓猫更新 MobWin
+dev.crossmo.com linhq q@xxd.cn
 apk.imobile.com.cn linhqi q@xxd.cn
-Y dev.app.360.cn q@xxd.cn
-Y dev.wo.com.cn linhq q@xxd.cn
-developer.lenovomm.com linhq
-Y m.163.com/dev q@xxd.cn
 www.eomarket.com linhq q@xxd.cn
-Y developer.baidu.com linhqbd 123816@qq.com
+
+dev.apk.hiapk.com  q@xxd.cn
+dev.appchina.com linhqapp q@xxd.cn
+dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
+
+dev.wo.com.cn linhq q@xxd.cn
+developer.lenovomm.com linhq
+
 dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
 dev.hicloud.com q@xxd.cn
-Y developer.xiaomi.com q@xxd.cn 需先去掉有米SDK
 developer.meizu.com linhqmz
 
 暂不
@@ -36,8 +47,6 @@ starandroid.com linhq q@xxd.cn
 iandroid.cn linhq
 market.sj.91.com q@xxd.cn 
 download.sohu.com/developer linhqs@sohu.com 
-
-
 
 http://wiki.youmi.net/Wiki/PromotionChannelIDs
 
@@ -71,3 +80,12 @@ q123816@gmail.com
 
 12.12更新
 优化了版本升级机制。
+
+
+
+http://www.cnblogs.com/abob/archive/2010/12/16/1908356.html
+http://www.2cto.com/kf/201201/116827.html
+http://www.eefocus.com/bbs/article_867_133012.html
+
+应用管家
+每次进入读取缓存，同时更新。

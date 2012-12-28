@@ -30,7 +30,6 @@ public class AboutA extends ActivityBase implements OnClickListener {
 		tvWebsite.setText(QConfig.BASE_WEBSITE_URL);
 		tvWebsite.setOnClickListener(this);
 		findViewById(R.id.about_market).setOnClickListener(this);
-		//
 	}
 	
 	private void initUpdate(){

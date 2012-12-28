@@ -15,6 +15,7 @@ import q.util.FileMgr;
 import q.util.IntentUtil;
 import q.util.QLog;
 import q.util.WindowMgr;
+import ad.AdManager;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -59,6 +60,7 @@ public class QrCodeA extends ActivityBase implements OnClickListener {
 		qrcode = (QrCode) intent.getSerializableExtra(EXTRA_QRCODE);
 		initState(intent);
 		//
+		AdManager.add(this);
 		//
 		ivImage = (ImageView)findViewById(R.id.qrcode_img);
 		LinearLayout.LayoutParams ivlp = (LinearLayout.LayoutParams)ivImage.getLayoutParams();

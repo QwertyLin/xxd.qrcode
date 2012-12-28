@@ -1,3 +1,5 @@
+ad.AdManager -> a.a:
+    void add(android.app.Activity) -> a
 cn.xxd.qr.AboutA -> cn.xxd.qr.AboutA:
     void onCreate(android.os.Bundle) -> onCreate
     void onClick(android.view.View) -> onClick
@@ -79,6 +81,7 @@ cn.xxd.qr.HomeA -> cn.xxd.qr.HomeA:
     int getBtnDrawable(int) -> c
 cn.xxd.qr.MainA -> cn.xxd.qr.MainA:
     void onCreate(android.os.Bundle) -> onCreate
+    void onDestroy() -> onDestroy
     void onResume() -> onResume
     void onPause() -> onPause
 cn.xxd.qr.NewA -> cn.xxd.qr.NewA:
@@ -1177,6 +1180,321 @@ com.google.zxing.qrcode.encoder.QRCode -> com.google.zxing.b.c.f:
     void setVersion(com.google.zxing.qrcode.decoder.Version) -> a
     void setMaskPattern(int) -> a
     void setMatrix(com.google.zxing.qrcode.encoder.ByteMatrix) -> a
+com.tencent.exmobwin.Type -> com.tencent.exmobwin.a:
+com.tencent.exmobwin.a.a -> com.tencent.exmobwin.a.a:
+    com.tencent.exmobwin.a.e a -> a
+    java.util.ArrayList b -> b
+    void run() -> run
+com.tencent.exmobwin.a.b -> com.tencent.exmobwin.a.b:
+    byte[] s -> a
+    java.util.List t -> b
+    java.util.HashMap u -> c
+    java.util.HashMap v -> d
+    java.util.HashMap w -> e
+    boolean x -> f
+    com.tencent.exmobwin.c.f y -> g
+    android.content.Context z -> h
+    com.tencent.exmobwin.b.h A -> i
+    boolean C -> j
+    void a(com.tencent.exmobwin.c.c) -> a
+    void a(org.apache.http.HttpResponse,com.tencent.exmobwin.b.b) -> a
+    void a(int,com.tencent.exmobwin.b.b) -> a
+    void b(com.tencent.exmobwin.c.c) -> b
+    void a(int) -> a
+    void a(boolean) -> a
+    void b() -> a
+com.tencent.exmobwin.a.c -> com.tencent.exmobwin.a.c:
+    java.util.WeakHashMap b -> a
+com.tencent.exmobwin.a.d -> com.tencent.exmobwin.a.d:
+    android.content.Context a -> g
+    java.lang.String f -> a
+    java.lang.String g -> b
+    java.lang.String h -> c
+    java.lang.String i -> d
+    java.lang.String j -> e
+    int k -> f
+    java.lang.String e() -> a
+    java.lang.String f() -> b
+    void b(android.content.Context) -> a
+    boolean h() -> c
+    boolean a(int) -> a
+    void b() -> d
+    void d() -> e
+com.tencent.exmobwin.a.e -> com.tencent.exmobwin.a.e:
+    java.lang.Object g -> b
+    com.tencent.exmobwin.a.e h -> c
+    long s -> d
+    android.content.Context t -> e
+    java.util.HashMap z -> f
+    int A -> g
+    com.tencent.exmobwin.c.f B -> h
+    com.tencent.exmobwin.a.b C -> i
+    boolean e -> a
+    boolean D -> j
+    com.tencent.exmobwin.a.e a() -> a
+    void a(android.content.Context,int[]) -> a
+    void a$78a511a1() -> b
+    void a(org.apache.http.HttpResponse,com.tencent.exmobwin.b.b) -> a
+    void a(int,com.tencent.exmobwin.b.b) -> a
+    java.lang.String c() -> c
+    java.util.ArrayList a(boolean) -> a
+    com.tencent.exmobwin.c.a a(boolean,int) -> a
+    org.json.JSONObject a(java.util.ArrayList) -> a
+    java.util.ArrayList a(java.lang.String) -> a
+    void d() -> d
+    void e() -> e
+    android.content.Context a(com.tencent.exmobwin.a.e) -> a
+com.tencent.exmobwin.a.f -> com.tencent.exmobwin.a.f:
+    boolean a -> a
+    void a(java.lang.String,java.lang.String) -> a
+    void b(java.lang.String,java.lang.String) -> b
+    void d(java.lang.String,java.lang.String) -> c
+com.tencent.exmobwin.a.g -> com.tencent.exmobwin.a.g:
+    int c -> a
+    java.lang.String b$1afe14f3() -> b
+    int[] a() -> a
+    java.lang.String c(android.content.Context) -> b
+    java.lang.String a(android.content.Context) -> a
+    void b$5ffc00fd(java.lang.String) -> a
+    void c(android.content.Context,java.lang.String) -> a
+    java.lang.String a(java.lang.String) -> b
+    int b(java.lang.String) -> c
+com.tencent.exmobwin.a.h -> com.tencent.exmobwin.a.h:
+    byte[] a$5cf121cf(byte[],int,int[]) -> a
+    byte[] b$5cf121cf(byte[],int,int[]) -> b
+    int[] a(byte[],int) -> a
+    byte[] a$1c973543(int[]) -> a
+    int a(byte) -> a
+    byte[] a(java.lang.String) -> a
+    java.lang.String a(byte[]) -> a
+    byte[] b(byte[]) -> b
+    byte[] c(byte[]) -> c
+com.tencent.exmobwin.a.i -> com.tencent.exmobwin.a.i:
+    com.tencent.exmobwin.a.e a -> a
+    void run() -> run
+com.tencent.exmobwin.b.a -> com.tencent.exmobwin.b.a:
+    void a(boolean) -> a
+com.tencent.exmobwin.b.b -> com.tencent.exmobwin.b.b:
+    com.tencent.exmobwin.b.e a -> a
+    int e -> b
+    boolean f -> c
+    java.lang.String h -> d
+    boolean o -> j
+    byte[] p -> k
+    int i -> e
+    android.os.Handler j -> f
+    org.apache.http.client.methods.HttpPost k -> g
+    org.apache.http.client.methods.HttpGet l -> h
+    com.tencent.exmobwin.c.c m -> i
+    java.util.Map q -> l
+    java.net.URI r -> m
+    void a(java.lang.String,java.lang.String) -> a
+    void a$13462e() -> a
+    void a(com.tencent.exmobwin.b.b,int) -> a
+com.tencent.exmobwin.b.c -> com.tencent.exmobwin.b.c:
+com.tencent.exmobwin.b.d -> com.tencent.exmobwin.b.d:
+    com.tencent.exmobwin.b.h a -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+com.tencent.exmobwin.b.e -> com.tencent.exmobwin.b.e:
+    void a(org.apache.http.HttpResponse,com.tencent.exmobwin.b.b) -> a
+    void a(int,com.tencent.exmobwin.b.b) -> a
+com.tencent.exmobwin.b.f -> com.tencent.exmobwin.b.f:
+    com.tencent.exmobwin.b.b a -> a
+    int b -> b
+    void run() -> run
+com.tencent.exmobwin.b.g -> com.tencent.exmobwin.b.g:
+com.tencent.exmobwin.b.h -> com.tencent.exmobwin.b.h:
+    android.content.Context e -> c
+    java.lang.String b -> a
+    boolean c -> b
+    com.tencent.exmobwin.b.d f -> d
+    com.tencent.exmobwin.b.a g -> e
+    boolean k -> f
+    int l -> g
+    int m -> h
+    void a(com.tencent.exmobwin.b.a) -> a
+    int a() -> a
+    int b() -> b
+    void c() -> c
+    int a(android.content.Context) -> a
+    boolean e() -> d
+    void f() -> e
+    com.tencent.exmobwin.b.a a(com.tencent.exmobwin.b.h) -> a
+com.tencent.exmobwin.banner.AdListener -> com.tencent.exmobwin.banner.a:
+com.tencent.exmobwin.banner.DialogActivity -> com.tencent.exmobwin.banner.DialogActivity:
+    java.lang.Class c -> a
+    java.lang.Object d -> b
+    android.os.Handler e -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onRestart() -> onRestart
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void a(java.lang.String) -> a
+com.tencent.exmobwin.banner.MobWINBrowserActivity -> com.tencent.exmobwin.banner.MobWINBrowserActivity:
+    java.lang.Class e -> a
+    java.lang.Object f -> b
+    android.os.Handler g -> c
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void onRestart() -> onRestart
+    void onResume() -> onResume
+    void onPause() -> onPause
+    void onStop() -> onStop
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    boolean onKeyUp(int,android.view.KeyEvent) -> onKeyUp
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onDestroy() -> onDestroy
+    boolean onKeyDown(int,android.view.KeyEvent) -> onKeyDown
+    void a(java.lang.String) -> a
+com.tencent.exmobwin.banner.TAdView -> com.tencent.exmobwin.banner.TAdView:
+    com.tencent.exmobwin.banner.d b -> a
+    java.lang.String c -> b
+    void onLayout(boolean,int,int,int,int) -> onLayout
+    void onDetachedFromWindow() -> onDetachedFromWindow
+    void onWindowVisibilityChanged(int) -> onWindowVisibilityChanged
+com.tencent.exmobwin.banner.a -> com.tencent.exmobwin.banner.b:
+    java.lang.Object p -> k
+    com.tencent.exmobwin.banner.a q -> l
+    java.lang.ref.WeakReference a -> g
+    java.lang.ref.WeakReference b -> h
+    java.lang.Class c -> i
+    boolean r -> m
+    boolean s -> n
+    java.util.Map t -> o
+    boolean u -> p
+    boolean v -> q
+    android.os.Handler d -> j
+    void a(android.content.Context) -> b
+    com.tencent.exmobwin.banner.a a() -> f
+    void a(java.lang.String,com.tencent.exmobwin.banner.d) -> a
+    void a(java.lang.String) -> a
+    void b(java.lang.String) -> b
+    void b() -> d
+    com.tencent.exmobwin.banner.d c(java.lang.String) -> c
+    android.widget.RelativeLayout c(android.content.Context) -> c
+    void c() -> g
+    void d() -> e
+    com.tencent.exmobwin.banner.d a(com.tencent.exmobwin.banner.a,java.lang.String) -> a
+    void a(com.tencent.exmobwin.banner.a,com.tencent.exmobwin.banner.d) -> a
+com.tencent.exmobwin.banner.b -> com.tencent.exmobwin.banner.c:
+    com.tencent.exmobwin.banner.DialogActivity a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.tencent.exmobwin.banner.c -> com.tencent.exmobwin.banner.d:
+    com.tencent.exmobwin.banner.MobWINBrowserActivity a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.tencent.exmobwin.banner.d -> com.tencent.exmobwin.banner.e:
+    java.lang.ref.WeakReference a -> a
+    android.widget.RelativeLayout b -> b
+    boolean c -> c
+    boolean d -> d
+    java.lang.ref.WeakReference e -> e
+    com.tencent.exmobwin.banner.AdListener a() -> a
+    void a$1385ff() -> b
+    boolean b() -> c
+    android.content.Context c() -> d
+    android.widget.RelativeLayout d() -> e
+    void b(boolean) -> a
+    boolean e() -> f
+com.tencent.exmobwin.banner.e -> com.tencent.exmobwin.banner.f:
+    com.tencent.exmobwin.banner.a a -> a
+    void handleMessage(android.os.Message) -> handleMessage
+com.tencent.exmobwin.c.a -> com.tencent.exmobwin.c.a:
+    java.lang.String b -> a
+    int c -> b
+    void b(java.lang.String) -> a
+    java.lang.String b() -> a
+    int c() -> b
+    void a(int) -> a
+com.tencent.exmobwin.c.b -> com.tencent.exmobwin.c.b:
+    java.lang.String a -> a
+    java.lang.String b -> b
+    java.lang.String c -> c
+    java.lang.String d -> d
+    int e -> e
+    java.lang.String a() -> a
+    java.lang.String b() -> b
+    java.lang.String c() -> c
+    int d() -> d
+com.tencent.exmobwin.c.c -> com.tencent.exmobwin.c.c:
+    java.lang.String d -> a
+    int e -> b
+    int f -> c
+    int g -> d
+    java.lang.String h -> e
+    java.lang.String i -> f
+    java.lang.String j -> g
+    java.lang.String k -> h
+    int l -> i
+    java.lang.String m -> j
+    long n -> k
+    long o -> l
+    int p -> m
+    int a() -> a
+    void a(int) -> a
+    int b() -> b
+    void b(int) -> b
+    java.lang.String c() -> c
+    void a(java.lang.String) -> a
+    int d() -> d
+    void c(int) -> c
+    java.lang.String e() -> e
+    void b(java.lang.String) -> b
+    int f() -> f
+    void d(int) -> d
+    java.lang.String g() -> g
+    void c(java.lang.String) -> c
+    java.lang.String h() -> h
+    void d(java.lang.String) -> d
+    java.lang.String i() -> i
+    void e(java.lang.String) -> e
+    void f(java.lang.String) -> f
+    long k() -> j
+    void a(long) -> a
+    long l() -> k
+    void b(long) -> b
+    int m() -> l
+    void e(int) -> e
+com.tencent.exmobwin.c.d -> com.tencent.exmobwin.c.d:
+    java.lang.String b -> a
+    java.lang.String c -> b
+    java.lang.String d -> c
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+com.tencent.exmobwin.c.f -> com.tencent.exmobwin.c.e:
+    android.content.Context c -> a
+    boolean d -> b
+    android.database.sqlite.SQLiteDatabase a(com.tencent.exmobwin.c.d) -> a
+    void c(com.tencent.exmobwin.c.c) -> a
+    boolean a(int) -> b
+    com.tencent.exmobwin.c.c b(int) -> a
+com.tencent.exmobwin.d.a -> com.tencent.exmobwin.d.a:
+    char[] b -> a
+    java.lang.String a(byte[]) -> a
+    java.lang.String a(java.io.File) -> a
+    boolean a(java.lang.String,int) -> a
+    byte[] a(java.io.InputStream) -> a
+    java.lang.String a() -> a
+    java.lang.String a(android.content.Context) -> a
+    void b(android.content.Context) -> b
+    void c(java.lang.String) -> c
+    void a(java.lang.String) -> a
+    boolean b(java.lang.String) -> b
+    int a(java.lang.String,java.lang.String) -> a
+    java.lang.String a(android.content.Context,boolean) -> a
+    java.lang.String b(android.content.Context,boolean) -> b
+    int b() -> b
+    void c() -> c
+    void d() -> d
+    void a(android.content.Context,java.lang.String,java.lang.String) -> a
+com.tencent.exmobwin.d.b -> com.tencent.exmobwin.d.b:
+    boolean accept(java.io.File,java.lang.String) -> accept
 q.base.ActivityBase -> q.base.ActivityBase:
     void onCreate(android.os.Bundle) -> onCreate
     void onResume() -> onResume

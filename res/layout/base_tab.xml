@@ -15,6 +15,12 @@
             android:layout_height="0dip"
             android:layout_weight="1"
             ></FrameLayout>
+        <!-- 仅用于广告审核 -->
+        <!-- <FrameLayout 
+	        android:id="@+id/ad"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        ></FrameLayout> -->
         <RadioGroup 
             android:id="@+id/tabhost_btns_layout"
             android:layout_width="fill_parent"
@@ -22,6 +28,7 @@
     		android:orientation="horizontal"
     		android:background="#000000"
             ></RadioGroup>
+        
         <TabWidget 
             android:id="@android:id/tabs"
             android:layout_width="fill_parent"

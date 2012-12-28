@@ -7,6 +7,7 @@ import com.baidu.mobstat.StatService;
 import cn.xxd.qr.bean.HistoryDb;
 import cn.xxd.qr.bean.QrCode;
 import cn.xxd.qr.service.AboutService;
+import ad.AdManager;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +17,9 @@ public class MainA extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+		//
+		AdManager.init(this);
+		//
 		AboutService.checkUpdate(this);
 		
 		//FrameLayout layout = new FrameLayout(this);
@@ -38,6 +41,12 @@ public class MainA extends Activity {
 		//startActivity(new Intent(this, HistoryA.class));
 		//startActivity(new Intent(this, QrCodeA.class));
 		finish();
+	}
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		AdManager.destroy();
 	}
 	
 	@Override

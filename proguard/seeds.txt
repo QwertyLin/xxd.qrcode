@@ -52,6 +52,12 @@ com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.de
 com.google.zxing.qrcode.decoder.ErrorCorrectionLevel: com.google.zxing.qrcode.decoder.ErrorCorrectionLevel valueOf(java.lang.String)
 com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode[] values()
 com.google.zxing.qrcode.decoder.Mode: com.google.zxing.qrcode.decoder.Mode valueOf(java.lang.String)
+com.tencent.exmobwin.banner.DialogActivity
+com.tencent.exmobwin.banner.DialogActivity: DialogActivity()
+com.tencent.exmobwin.banner.MobWINBrowserActivity
+com.tencent.exmobwin.banner.MobWINBrowserActivity: MobWINBrowserActivity()
+com.tencent.exmobwin.banner.TAdView
+com.tencent.exmobwin.banner.TAdView: TAdView(android.content.Context,android.util.AttributeSet)
 q.base.ActivityBase
 q.base.ActivityBase: ActivityBase()
 q.base.TabActivityBase

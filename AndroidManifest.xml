@@ -2,8 +2,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="cn.xxd.qr"
-          android:versionCode="8"
-          android:versionName="13.01.02"
+          android:versionCode="9"
+          android:versionName="13.01.03"
           android:installLocation="auto">
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="8"/>
 
@@ -41,13 +41,13 @@
                >
 
      <!-- baidu -->
-     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="meizu" />
+     <meta-data android:name="BaiduMobAd_CHANNEL" android:value="google" />
      <meta-data android:name="BaiduMobAd_STAT_ID" android:value="03aa66e5c5" />
      <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" /><!-- 错误日志统计 -->
      <!-- QQ -->
-     <!-- <meta-data
-            android:name="APP_ID"
-            android:value="30EFDA62DC4057F6BACC3A440CDBC1CC" /> -->
+     <meta-data android:name="APP_ID" android:value="30EFDA62DC4057F6BACC3A440CDBC1CC" />
+     <activity android:name="com.tencent.exmobwin.banner.MobWINBrowserActivity" />
+     <activity android:name="com.tencent.exmobwin.banner.DialogActivity" android:theme="@android:style/Theme.Dialog"/>
      
      <!-- 声明Youmi的Activity -->
      <!-- <activity

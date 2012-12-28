@@ -2,6 +2,7 @@ package cn.xxd.qr;
 
 import cn.xxd.qr.util.QSp;
 import q.base.TabActivityBase;
+import ad.AdManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioGroup;
@@ -30,6 +31,8 @@ public class HomeA extends TabActivityBase {
 		}else{
 			radioGroup.check(1);
 		}
+		//
+		AdManager.add(this);
 	}	
 	
 	@Override

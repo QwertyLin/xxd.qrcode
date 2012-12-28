@@ -56,11 +56,12 @@ VIP帐号每天早上8点自动重置密码，早起的鸟儿有虫吃！
 
 id
 user  
-password  
-encode 密码加密
+pw  加密了的密码
 state 0可用、1不可用
 
 手机，发送请求。
-服务器，发送id、encode
-手机，返回解密字符。服务器比较id对应的password是否等于解密字符
-服务器，发送帐号密码。服务器state=1。
+服务器，发送第一个pw
+手机，发送pw，user，服务器判断user是否有效，发送可用的pw，同时state=1。
+
+12-28 17:01:29.409: I/System.out(20911): Unv391EyYZlZewLwtkLPGMS3i9ziiJPr
+1356688102
