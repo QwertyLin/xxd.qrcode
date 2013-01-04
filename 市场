@@ -10,34 +10,30 @@ XXD工作室
 Y tap.myapp.com linhqqq dev.app.qq.com
 YY play.google.com/apps/publish q123816@gmail.com 
 
-m.163.com/dev q@xxd.cn
 dev.app.360.cn q@xxd.cn
+YY developer.baidu.com linhqbd 123816@qq.com
+YY developer.xiaomi.com q@xxd.cn 不能使用有米
+dev.wo.com.cn linhq q@xxd.cn
+developer.lenovomm.com linhq
+dev.hicloud.com q@xxd.cn
+developer.meizu.com linhqmz
+
+不带广告
+
+带广告
+m.163.com/dev q@xxd.cn
 
 --------------------------------------------------
 Y dev.eoemarket.com linhqeoe q@xxd.cn
 Y dev.anzhi.com linhqa q@xxd.cn
-
-//百度广告
-YY developer.baidu.com linhqbd 123816@qq.com
-
-//无广告
-YY developer.xiaomi.com q@xxd.cn 不能使用有米
-
-//抓猫更新 MobWin
 dev.crossmo.com linhq q@xxd.cn
 apk.imobile.com.cn linhqi q@xxd.cn
 www.eomarket.com linhq q@xxd.cn
-
 dev.apk.hiapk.com  q@xxd.cn
 dev.appchina.com linhqapp q@xxd.cn
 dev.gfan.com q@xxd.cn linhqgf <meta-data android:name="YOUMI_CHANNEL" android:value="10020" />
-
-dev.wo.com.cn linhq q@xxd.cn
-developer.lenovomm.com linhq
-
 dev.mumayi.com linhq q@xxd.cn  <meta-data android:name="YOUMI_CHANNEL" android:value="10070" />
-dev.hicloud.com q@xxd.cn
-developer.meizu.com linhqmz
+
 
 暂不
 starandroid.com linhq q@xxd.cn
@@ -50,22 +46,27 @@ dev.10086.cn q@xxd.cn(!)
 http://wiki.youmi.net/Wiki/PromotionChannelIDs
 
 您的二维码助手！
-===============
-【主要功能】
-1、二维码扫描，扫描结果可选择复制到剪贴板、或分享截图到其他APP、或用浏览器打开URL地址；
-2、二维码生成，可自定义图案颜色；
-3、扫描结果自动保存至历史记录，方便回顾。
-===============
-【V13.01 更新】
-1、新版UI震撼登场；
-2、优化扫描速度；
-3、提高用户体验，全面减少广告。
+
+【功能】：
+1、二维码扫描；
+2、二维码生成。
+
+【与同类应用的比较】
+
+【体积】
+二维码助手 --> 0.1 MB
+快拍二维码 --> 6.4 MB
+我查查 ------> 4.0 MB
+
+【权限】
+二维码助手 -->  5 项 (摄像头、读写SD卡、振动、闪光灯、联网)
+快拍二维码 --> 20 项 (含读写个人敏感信息等)
+我查查 ------> 20 项 (含读写个人敏感信息等)
+
 
 二维码助手
 13.01.02
-二维码;助手;扫描;生成
-
-
+二维码;扫描;生成
 
 
 该app的包命为cn.xxd.qr，对应的官网地址为www.xxd.cn，本人帐号的邮箱为q@xxd.cn，与官网www.xxd.cn底部的邮箱地址一致。
