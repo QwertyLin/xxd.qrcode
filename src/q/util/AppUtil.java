@@ -3,6 +3,7 @@ package q.util;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 
 public class AppUtil {
 
@@ -15,5 +16,14 @@ public class AppUtil {
 			return "error";
 		}
 		
+	}
+	
+	public static final int getVersion(Context ctx){
+		try {
+			return ctx.getPackageManager().getPackageInfo(ctx.getPackageName(), 0).versionCode;
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+			return 0;
+		}
 	}
 }
